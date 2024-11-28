@@ -60,15 +60,13 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scenes\Enum.cs" />
-    <Compile Include="Assets\Scenes\Item.cs" />
-    <Compile Include="Assets\Scenes\Skill.cs" />
-    <Compile Include="Assets\Scenes\Object.cs" />
-    <Compile Include="Assets\Scenes\Monster.cs" />
-    <Compile Include="Assets\Scenes\Player.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Scenes\gitignore.txt" />
+    <Compile Include="Assets\Script\Skill.cs" />
+    <Compile Include="Assets\Script\Object.cs" />
+    <Compile Include="Assets\Script\Item.cs" />
+    <Compile Include="Assets\Script\Player.cs" />
+    <Compile Include="Assets\Scenes\TogleScript.cs" />
+    <Compile Include="Assets\Script\Enum.cs" />
+    <Compile Include="Assets\Script\Monster.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
