@@ -4,7 +4,8 @@ public enum STATE
 {
     NONE,
     IDLE,
-    MOVE,
+    WALK,
+    RUN,
     ATTACK,
     DIE,
     ENUM_END

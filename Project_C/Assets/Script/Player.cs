@@ -12,16 +12,18 @@ public class Player : Object
     int Def;
     [SerializeField]
     float Speed;
+    float WalkSpeed;
+    float RunSpeed;
 
     STATE Curr_State;
     STATE Prev_State;
 
     [SerializeField]
-    Monster Target;
+    Monster target;
 
-    //스킬
-    [SerializeField]
-    Skill skill_shot;
+    Animator animator;
+    Rigidbody rb;
+    
     //인벤토리 - 아이템
 
     void Start()
@@ -36,11 +38,7 @@ public class Player : Object
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("q"))
-        {
-            Debug.Log("Player_attack");
-            DoAttack(Target);
-        }
+        UpdateAnimation();
     }
     public override void UpdateData()
     {
@@ -57,21 +55,91 @@ public class Player : Object
         Mp = 100;
         Atk = 50;
         Def = 5;
-        Speed = 5.5f;
+        WalkSpeed = Speed = 5.5f;
+        RunSpeed = 10.0f;
         Curr_State = STATE.NONE;
         Prev_State = STATE.NONE;
+
+        animator = GetComponentInChildren<Animator>();
+        rb = GetComponent<Rigidbody>();
     }
     void Move() 
     {
-        float fx = Input.GetAxis("Horizontal") * Speed * Time.deltaTime;
-        float fz = Input.GetAxis("Vertical") * Speed * Time.deltaTime;
+        if (Curr_State == STATE.ATTACK)
+        {
+            return;
+        }
 
-        transform.Translate(fx, 0.0f, fz, Space.World);
+        float fx = Input.GetAxis("Horizontal");
+        float fz = Input.GetAxis("Vertical");
+
+        transform.Translate(fx * Speed * Time.deltaTime, 0.0f, fz *Speed * Time.deltaTime, Space.World);
+
+        Vector3 dir = new Vector3(fx, 0.0f, fz).normalized;
+        transform.LookAt(transform.position + dir, Vector3.up);
+
+        if(fx == 0.0f && fz == 0.0f)
+        {
+            Debug.Log("Idle");
+            animator.SetInteger("Ani_State", (int)STATE.IDLE);
+        }
+        else
+        {
+            animator.SetInteger("Ani_State", (int)STATE.WALK);
+        }
     }
+
+    void UpdateAnimation()
+    {
+        if (Curr_State == STATE.ATTACK)
+        {
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space)) // 공격
+        {
+            animator.SetTrigger("Ani_ATK");
+            ChangeState(STATE.ATTACK);
+        }
+        else if (Input.GetKey(KeyCode.LeftShift)) // 달리기
+        {
+            Debug.Log("Run");
+            Speed = RunSpeed;
+            animator.SetInteger("Ani_State", (int)STATE.RUN);
+            ChangeState(STATE.RUN);
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift)) // 걷기
+        {
+            Debug.Log("Walk");
+            Speed = WalkSpeed;
+            animator.SetInteger("Ani_State", (int)STATE.WALK);
+            ChangeState(STATE.WALK);
+        }
+    }
+
+    public void OnAttack()
+    {
+        if (Curr_State == STATE.ATTACK)
+        {
+            return;
+        }
+
+        animator.SetTrigger("Ani_ATK");
+        ChangeState(STATE.ATTACK);
+    }
+
     void ChangeState(STATE newstate)
     {
+        if (Curr_State == newstate) 
+            return;
+
         Prev_State = Curr_State;
         Curr_State = newstate;
+    }
+
+    public void AniATKEnd()
+    {
+        Curr_State = Prev_State;
     }
     void DoAttack(Monster monster)
     {
@@ -82,6 +150,15 @@ public class Player : Object
         int value = Hp + (Def - damage);
         Hp = value;
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("TAG_MONSTER"))
+        {
+            other.GetComponent<Monster>().Hit(Atk);
+        }
+    }
+
     void CheckHP()
     {
         if(Hp <= 0)
