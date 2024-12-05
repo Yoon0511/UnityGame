@@ -63,6 +63,8 @@ public class Player : Object
         animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
     }
+
+    //키보드 조작
     void Move() 
     {
         if (Curr_State == STATE.ATTACK)
@@ -89,6 +91,35 @@ public class Player : Object
         }
     }
 
+    public void JoystickMove(Vector3 _dir,float _dist)
+    {
+        if (Curr_State == STATE.ATTACK)
+        {
+            return;
+        }
+
+        float fx = _dir.x * Speed * _dist * Time.deltaTime;
+        float fz = _dir.y * Speed * _dist * Time.deltaTime;
+
+        transform.Translate(fx, 0.0f, fz, Space.World);
+
+        Vector3 dir = new Vector3(fx, 0.0f, fz).normalized;
+        transform.LookAt(transform.position + dir, Vector3.up);
+
+        if (fx == 0.0f && fz == 0.0f)
+        {
+            Debug.Log("Idle");
+            animator.SetInteger("Ani_State", (int)STATE.IDLE);
+            ChangeState(STATE.IDLE);
+        }
+        else
+        {
+            animator.SetInteger("Ani_State", (int)STATE.WALK);
+            ChangeState(STATE.WALK);
+        }
+    }
+
+    //키보드 조작
     void UpdateAnimation()
     {
         if (Curr_State == STATE.ATTACK)
