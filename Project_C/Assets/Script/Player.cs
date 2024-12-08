@@ -15,7 +15,9 @@ public class Player : Object
     float WalkSpeed;
     float RunSpeed;
 
+    [SerializeField]
     STATE Curr_State;
+    [SerializeField]
     STATE Prev_State;
 
     [SerializeField]
@@ -33,16 +35,16 @@ public class Player : Object
 
     private void FixedUpdate()
     {
-        Move();
+        //키보드
+        //Move();
     }
     // Update is called once per frame
     void Update()
     {
-        UpdateAnimation();
+        //UpdateAnimation();
     }
     public override void UpdateData()
     {
-        Debug.Log("Player_UpdateData");
         Init();
     }
     IEnumerator asd()
@@ -55,9 +57,10 @@ public class Player : Object
         Mp = 100;
         Atk = 50;
         Def = 5;
-        WalkSpeed = Speed = 5.5f;
+        Speed = 8.0f;
+        WalkSpeed = 5.5f;
         RunSpeed = 10.0f;
-        Curr_State = STATE.NONE;
+        Curr_State = STATE.IDLE;
         Prev_State = STATE.NONE;
 
         animator = GetComponentInChildren<Animator>();
@@ -82,7 +85,6 @@ public class Player : Object
 
         if(fx == 0.0f && fz == 0.0f)
         {
-            Debug.Log("Idle");
             animator.SetInteger("Ani_State", (int)STATE.IDLE);
         }
         else
@@ -98,17 +100,32 @@ public class Player : Object
             return;
         }
 
-        float fx = _dir.x * Speed * _dist * Time.deltaTime;
-        float fz = _dir.y * Speed * _dist * Time.deltaTime;
+        float DistSpeed = Speed * _dist;
+        float fx = _dir.x * DistSpeed * Time.deltaTime;
+        float fz = _dir.y * DistSpeed * Time.deltaTime;
 
         transform.Translate(fx, 0.0f, fz, Space.World);
 
         Vector3 dir = new Vector3(fx, 0.0f, fz).normalized;
         transform.LookAt(transform.position + dir, Vector3.up);
 
-        if (fx == 0.0f && fz == 0.0f)
+        animator.SetFloat("Ani_Speed", DistSpeed);
+
+        if (DistSpeed >= Speed * 0.6f)
         {
-            Debug.Log("Idle");
+            ChangeState(STATE.RUN);
+        }
+        else if(DistSpeed > Speed * 0.4f)
+        {
+            ChangeState(STATE.WALK);
+        }
+        else
+        {
+            ChangeState(STATE.IDLE);
+        }
+        /*
+        if (fx == 0.0f && fz == 0.0f)
+        { 
             animator.SetInteger("Ani_State", (int)STATE.IDLE);
             ChangeState(STATE.IDLE);
         }
@@ -116,7 +133,7 @@ public class Player : Object
         {
             animator.SetInteger("Ani_State", (int)STATE.WALK);
             ChangeState(STATE.WALK);
-        }
+        }*/
     }
 
     //키보드 조작
@@ -134,14 +151,12 @@ public class Player : Object
         }
         else if (Input.GetKey(KeyCode.LeftShift)) // 달리기
         {
-            Debug.Log("Run");
             Speed = RunSpeed;
             animator.SetInteger("Ani_State", (int)STATE.RUN);
             ChangeState(STATE.RUN);
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift)) // 걷기
         {
-            Debug.Log("Walk");
             Speed = WalkSpeed;
             animator.SetInteger("Ani_State", (int)STATE.WALK);
             ChangeState(STATE.WALK);
@@ -159,18 +174,28 @@ public class Player : Object
         ChangeState(STATE.ATTACK);
     }
 
-    void ChangeState(STATE newstate)
+    void ChangeState(STATE _newstate)
     {
-        if (Curr_State == newstate) 
-            return;
+        if (Curr_State == _newstate)
+           return;
 
         Prev_State = Curr_State;
-        Curr_State = newstate;
+        Curr_State = _newstate;
     }
 
     public void AniATKEnd()
     {
-        Curr_State = Prev_State;
+        ChangeState(Prev_State);
+    }
+
+    public STATE GetCurrState()
+    {
+        return Curr_State;
+    }
+
+    public STATE GetPrevState()
+    {
+        return Prev_State;
     }
     void DoAttack(Monster monster)
     {

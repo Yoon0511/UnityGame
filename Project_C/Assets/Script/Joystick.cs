@@ -14,8 +14,8 @@ public class Joystick : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHan
     float MaxRange = 100f;
     Vector2 InputPos;
     Vector3 Pos;
-
-    float dist = 0.0f;
+    float Dist = 0.0f;
+    bool IsDrag = false;
 
     private RectTransform stick;
     private RectTransform bg;
@@ -23,22 +23,27 @@ public class Joystick : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHan
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        
+        IsDrag = true;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        IsDrag = true;
+
         InputPos = eventData.position - (Vector2)bg.position;
 
         Pos = InputPos.magnitude < MaxRange ? InputPos : InputPos.normalized * MaxRange;
         stick.anchoredPosition = Pos;
 
-        dist = Pos.magnitude / 100.0f;
+        Dist = Pos.magnitude / 100.0f;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        IsDrag = false;
+
         stick.anchoredPosition = Vector2.zero;
+        player.JoystickMove(InputPos.normalized, 0.0f);
     }
 
     void Start()
@@ -47,8 +52,17 @@ public class Joystick : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHan
         bg = BG.GetComponent<RectTransform>();
         player = TARGET.GetComponent<Player>();
     }
+
     private void FixedUpdate()
     {
-        
+        if (IsDrag == false)
+            return;
+
+        MoveToPlayer();
+    }
+
+    void MoveToPlayer()
+    {
+        player.JoystickMove(InputPos.normalized, Dist);
     }
 }
