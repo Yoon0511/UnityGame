@@ -2,31 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 public class Player : Object
 {
     // Start is called before the first frame update
-    [SerializeField]
-    int Hp;
-    int Mp;
-    int Atk;
-    int Def;
-    [SerializeField]
+    float MaxHp;
+    float Hp;
+    float MaxMp;
+    float Mp;
+    float Atk;
+    float Def;
     float Speed;
     float WalkSpeed;
     float RunSpeed;
 
-    [SerializeField]
     STATE Curr_State;
-    [SerializeField]
     STATE Prev_State;
 
-    [SerializeField]
-    Monster target;
-
+    Monster Target;
     Animator animator;
-    Rigidbody rb;
+
+    [SerializeField]
+    Image HP_BAR;
+    [SerializeField]
+    Image MP_BAR;
     
-    //인벤토리 - 아이템
 
     void Start()
     {
@@ -42,6 +42,25 @@ public class Player : Object
     void Update()
     {
         //UpdateAnimation();
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Hit(5.5f);
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Mp -= 5.5f;
+            UpdateMpbar();
+        }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Hp += 5.0f;
+            UpdateHpbar();
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            Mp += 5.5f;
+            UpdateMpbar();
+        }
     }
     public override void UpdateData()
     {
@@ -53,10 +72,12 @@ public class Player : Object
     }
     void Init()
     {
-        Hp = 100;
-        Mp = 100;
-        Atk = 50;
-        Def = 5;
+        MaxHp = 100.0f;
+        MaxMp = 100.0f;
+        Hp = MaxHp;
+        Mp = MaxMp;
+        Atk = 50.0f;
+        Def = 2.0f;
         Speed = 8.0f;
         WalkSpeed = 5.5f;
         RunSpeed = 10.0f;
@@ -64,7 +85,6 @@ public class Player : Object
         Prev_State = STATE.NONE;
 
         animator = GetComponentInChildren<Animator>();
-        rb = GetComponent<Rigidbody>();
     }
 
     //키보드 조작
@@ -123,17 +143,6 @@ public class Player : Object
         {
             ChangeState(STATE.IDLE);
         }
-        /*
-        if (fx == 0.0f && fz == 0.0f)
-        { 
-            animator.SetInteger("Ani_State", (int)STATE.IDLE);
-            ChangeState(STATE.IDLE);
-        }
-        else
-        {
-            animator.SetInteger("Ani_State", (int)STATE.WALK);
-            ChangeState(STATE.WALK);
-        }*/
     }
 
     //키보드 조작
@@ -201,10 +210,11 @@ public class Player : Object
     {
         monster.Hit(Atk);
     }
-    public void Hit(int damage)
+    public void Hit(float damage)
     {
-        int value = Hp + (Def - damage);
+        float value = Hp + (Def - damage);
         Hp = value;
+        UpdateHpbar();
     }
 
     public void OnTriggerEnter(Collider other)
@@ -213,6 +223,17 @@ public class Player : Object
         {
             other.GetComponent<Monster>().Hit(Atk);
         }
+    }
+
+    void UpdateHpbar()
+    {
+        float value = Hp / MaxHp;
+        HP_BAR.fillAmount = value;
+    }
+    void UpdateMpbar()
+    {
+        float value = Mp / MaxMp;
+        MP_BAR.fillAmount = value;
     }
 
     void CheckHP()

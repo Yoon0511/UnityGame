@@ -19,10 +19,5 @@ public class Temp : MonoBehaviour
     {
         //string curr_state = player.GetCurrState().ToString();
         //string prev_state = player.GetPrevState().ToString();
-        
-    }
-    void Update()
-    {
-       
     }
 }

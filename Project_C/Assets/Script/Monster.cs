@@ -5,10 +5,12 @@ using static UnityEngine.GraphicsBuffer;
 public class Monster : Object
 {
     [SerializeField]
-    int Hp;
-    int Mp;
-    int Atk;
-    int Def;
+    float MaxHp;
+    float Hp;
+    float MaxMp;
+    float Mp;
+    float Atk;
+    float Def;
     float Speed;
 
     STATE Curr_State;
@@ -46,10 +48,12 @@ public class Monster : Object
 
     void Init()
     {
-        Hp = 100;
-        Mp = 100;
-        Atk = 10;
-        Def = 5;
+        MaxHp = 100.0f;
+        MaxMp = 100.0f;
+        Hp = MaxHp;
+        Mp = MaxMp;
+        Atk = 10.0f;
+        Def = 2.0f;
         Speed = 5.5f;
         Curr_State = STATE.NONE;
         Prev_State = STATE.NONE;
@@ -65,9 +69,9 @@ public class Monster : Object
         Prev_State = Curr_State;
         Curr_State = newstate;
     }
-    public void Hit(int damage)
+    public void Hit(float damage)
     {
-        int value = Hp + (Def - damage);
+        float value = Hp + (Def - damage);
         Hp = value;
         
         if(CheckHP())
