@@ -61,6 +61,12 @@ public class Player : Object
             Mp += 5.5f;
             UpdateMpbar();
         }
+
+        if (Input.GetKeyDown(KeyCode.Space)) // АјАн
+        {
+            animator.SetTrigger("Ani_ATK");
+            ChangeState(STATE.ATTACK);
+        }
     }
     public override void UpdateData()
     {
