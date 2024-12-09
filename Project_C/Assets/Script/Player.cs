@@ -26,8 +26,10 @@ public class Player : Object
     Image HP_BAR;
     [SerializeField]
     Image MP_BAR;
-    
 
+    [SerializeField]
+    Inventory inventory;
+    public GameObject item;
     void Start()
     {
         Init();
@@ -66,6 +68,12 @@ public class Player : Object
         {
             animator.SetTrigger("Ani_ATK");
             ChangeState(STATE.ATTACK);
+        }
+
+        if (Input.GetKeyDown(KeyCode.F3))
+        {
+            Item obj = Instantiate(item).GetComponent<Item>();
+            inventory.AddItem(obj);
         }
     }
     public override void UpdateData()

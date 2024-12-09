@@ -1,0 +1,531 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.44f1 (c3ae09b9f03c) revision 12824073'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'ko' Physical Memory: 32656 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.44f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker5
+-projectPath
+C:/Users/kmwkm/OneDrive/ë°”íƒ• í™”ë©´/UnityGame/Project_C
+-logFile
+Logs/AssetImportWorker5.log
+-srvPort
+63892
+Successfully changed project path to: C:/Users/kmwkm/OneDrive/ë°”íƒ• í™”ë©´/UnityGame/Project_C
+C:/Users/kmwkm/OneDrive/ë°”íƒ• í™”ë©´/UnityGame/Project_C
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [24352]  Target information:
+
+Player connection [24352]  * "[IP] 125.180.29.63 [Port] 0 [Flags] 2 [Guid] 3538266498 [EditorId] 3538266498 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-3PP078T) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [24352] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [24352] Host joined alternative multi-casting on [225.0.0.222:34997]...
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+Refreshing native plugins compatible for Editor in 14.96 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.44f1 (c3ae09b9f03c)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/kmwkm/OneDrive/ë°”íƒ• í™”ë©´/UnityGame/Project_C/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2484)
+    Vendor:   NVIDIA
+    VRAM:     8018 MB
+    Driver:   32.0.15.6590
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56176
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.018074 seconds.
+- Loaded All Assemblies, in  0.430 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 383 ms
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.677 seconds
+Domain Reload Profiling: 1104ms
+	BeginReloadAssembly (126ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (81ms)
+	LoadAllAssembliesAndSetupDomain (164ms)
+		LoadAssemblies (124ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (161ms)
+			TypeCache.Refresh (160ms)
+				TypeCache.ScanAssembly (145ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (678ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (634ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (470ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (111ms)
+			ProcessInitializeOnLoadMethodAttributes (48ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.637 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.600 seconds
+Domain Reload Profiling: 1232ms
+	BeginReloadAssembly (149ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (23ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (394ms)
+		LoadAssemblies (298ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (186ms)
+			TypeCache.Refresh (167ms)
+				TypeCache.ScanAssembly (151ms)
+			ScanForSourceGeneratedMonoScriptInfo (14ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (600ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (467ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (20ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (63ms)
+			ProcessInitializeOnLoadAttributes (346ms)
+			ProcessInitializeOnLoadMethodAttributes (21ms)
+			AfterProcessingInitializeOnLoad (13ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 5.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3115 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 19 unused Assets / (54.6 KB). Loaded Objects now: 3584.
+Memory consumption went from 127.3 MB to 127.2 MB.
+Total: 3.735600 ms (FindLiveObjects: 0.257700 ms CreateObjectMapping: 0.182600 ms MarkObjects: 3.185800 ms  DeleteObjects: 0.108100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 16547.487393 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Sword1.png
+  artifactKey: Guid(bd9c74b285862ad43b62f5e62d40d57b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Sword1.png using Guid(bd9c74b285862ad43b62f5e62d40d57b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'f07cc7a1b10bc75233d01126012b824a') in 0.156821 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Wand1.png
+  artifactKey: Guid(b2b2cac2e07af854ea102134c22cb6cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Wand1.png using Guid(b2b2cac2e07af854ea102134c22cb6cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '33cb2584656ee6b67497bad60558b642') in 0.031446 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.213449 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Wand3.png
+  artifactKey: Guid(2f20c3385207c8c42890df81cfc934f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Wand3.png using Guid(2f20c3385207c8c42890df81cfc934f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'b0e082dd0f533fd83f71d1c9a4df16eb') in 0.021862 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.001936 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Warhammer1.png
+  artifactKey: Guid(fa9cca2412970aa4c98ac36411738330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Warhammer1.png using Guid(fa9cca2412970aa4c98ac36411738330) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '5c9f54af6a8c3305a403d5b97883fcb2') in 0.018631 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.457078 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Warhammer3.png
+  artifactKey: Guid(91128cbd1689b6645a717e007b6a3f39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Warhammer3.png using Guid(91128cbd1689b6645a717e007b6a3f39) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'afe7e11725a2d01196cddc2bd93a9214') in 0.022587 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Warhammer4.png
+  artifactKey: Guid(1cd3466cddd375e429517ce1ea4aa2c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Warhammer4.png using Guid(1cd3466cddd375e429517ce1ea4aa2c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '519cd62d3c9532f3a965b2f158fa773d') in 0.020250 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 131.374365 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_02.png
+  artifactKey: Guid(b6827d89660e3f440aae922e041e2a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_02.png using Guid(b6827d89660e3f440aae922e041e2a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '1d16d4874b9a812d0c748d69c1140a7c') in 0.022655 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.006237 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_05.png
+  artifactKey: Guid(60b76f82ce8c49d4b89709facf7f02af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_05.png using Guid(60b76f82ce8c49d4b89709facf7f02af) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'b58324f1aa63217ab670f339c40526b2') in 0.021516 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000504 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_09.png
+  artifactKey: Guid(0198218525425d546b5132f3884567d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_09.png using Guid(0198218525425d546b5132f3884567d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '3f16462bd84e3424d30bca5980bb4b2d') in 0.028349 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_12.png
+  artifactKey: Guid(cb19e9b3506e2854e8e22f02c8996e63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_12.png using Guid(cb19e9b3506e2854e8e22f02c8996e63) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'b84d7511a440d6871aeb366c82f65d01') in 0.029006 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_15.png
+  artifactKey: Guid(718255a38331c384085e74f65ece70ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_15.png using Guid(718255a38331c384085e74f65ece70ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '77972ebbc162959522c8e55d6ea1db07') in 0.020687 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_20.png
+  artifactKey: Guid(99a7b848a9745084d83a7c268a8561ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_20.png using Guid(99a7b848a9745084d83a7c268a8561ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'c690f66c68fb8b66fe90925a036948f8') in 0.026032 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_08.png
+  artifactKey: Guid(c2b2e1323c8ef8b489afe04fc2018a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_08.png using Guid(c2b2e1323c8ef8b489afe04fc2018a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '1dd0f30dbd1a337b0c61d68063d740ed') in 0.024428 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_18.png
+  artifactKey: Guid(334b7085edbca194d91ceafd85fa49f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_18.png using Guid(334b7085edbca194d91ceafd85fa49f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'b14d301913baa597fd0084f512624eb9') in 0.023821 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_07.png
+  artifactKey: Guid(1328fdac4f9659944ba1f9ef1a937afc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_07.png using Guid(1328fdac4f9659944ba1f9ef1a937afc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '453ade60495db7458982ba6751a34965') in 0.025450 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_22.png
+  artifactKey: Guid(462b86aadd93c124383d63a3d044a774) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_22.png using Guid(462b86aadd93c124383d63a3d044a774) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'e47941af0f7997d68c0fd787a987578c') in 0.021487 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_03.png
+  artifactKey: Guid(e56754035317f39499a6e224c8287033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_03.png using Guid(e56754035317f39499a6e224c8287033) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'abf37698e0d8d7054456a1a2cabf6240') in 0.023123 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_21.png
+  artifactKey: Guid(73291901d9ff21244b47fafa7b7a25a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_21.png using Guid(73291901d9ff21244b47fafa7b7a25a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'f45ae6224f6c44e350303c7ad5edfc31') in 0.018659 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.771647 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_25.png
+  artifactKey: Guid(4c16caeddfd7a73488c836b4b12c7502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_25.png using Guid(4c16caeddfd7a73488c836b4b12c7502) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'e2558301d8cd7ccecbc56ff2ffce1de0') in 0.023781 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.091631 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_27.png
+  artifactKey: Guid(6ac270cb5af314a42af64960c696a8a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_27.png using Guid(6ac270cb5af314a42af64960c696a8a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '3818366ba759dec2249eec5c715381d0') in 0.022670 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.073692 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_29.png
+  artifactKey: Guid(2478f8cf7e8fc72428a23ba6ce8fbf0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_29.png using Guid(2478f8cf7e8fc72428a23ba6ce8fbf0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'e8738669a6f8e516aa21cf87925bc2c2') in 0.021741 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.754385 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_31.png
+  artifactKey: Guid(441067a78a2670142a4bb41517cb8911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_31.png using Guid(441067a78a2670142a4bb41517cb8911) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '353a2ba61ccac3ab04d8d44728846f33') in 0.018946 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.034412 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_33.png
+  artifactKey: Guid(aac17542da4f00c419f924475ecb69c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_33.png using Guid(aac17542da4f00c419f924475ecb69c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '4b2d7e83f8b65c50f55a1810395807d4') in 0.019056 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.685099 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_35.png
+  artifactKey: Guid(608716fb89152f34594d344a65006ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_35.png using Guid(608716fb89152f34594d344a65006ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '397bd33d909f3332766a330f4c6387a9') in 0.023723 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.008496 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_37.png
+  artifactKey: Guid(164491c0007fd0d46a69050892d997f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_37.png using Guid(164491c0007fd0d46a69050892d997f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '6a9b2865d6560e5c6c6e8ccc9a58b07f') in 0.018759 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.036446 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_39.png
+  artifactKey: Guid(75c44071acce79748afdf09e43dc7cf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_39.png using Guid(75c44071acce79748afdf09e43dc7cf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'c91f870dcba1f9fc8bb2f7eb8565e1a5') in 0.019909 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.035078 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_41.png
+  artifactKey: Guid(caa4cbdce56905545ba3b6fa94b9ae7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_41.png using Guid(caa4cbdce56905545ba3b6fa94b9ae7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '845d37cb1eb79186320bd67962f3f658') in 0.015346 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.141995 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_43.png
+  artifactKey: Guid(559328e17a56f4f4d9a7f602a0c9c12c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_43.png using Guid(559328e17a56f4f4d9a7f602a0c9c12c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'ff7ff3cb8d21e5a51c8cc408a6e85143') in 0.025101 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.381846 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_45.png
+  artifactKey: Guid(6996169a057dac848a71cf21ce072c73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_45.png using Guid(6996169a057dac848a71cf21ce072c73) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '050b99daa137904e25495a1350a63a2e') in 0.021042 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_46.png
+  artifactKey: Guid(dd25a7fe147a5a945b1b29c4f9ddfaf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_46.png using Guid(dd25a7fe147a5a945b1b29c4f9ddfaf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '6a438a7cdc55ba9c5eddad66412b2ee9') in 0.024802 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.013298 seconds.
+  path: Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_49.png
+  artifactKey: Guid(9f39bedbc179aed4088082040308e213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fisktak Assets/Free Fantasy Items/Icons/Free-Fantasy-Items_49.png using Guid(9f39bedbc179aed4088082040308e213) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '3784cada117b4611c2b16e38ac41b1a3') in 0.019472 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 10.168267 seconds.
+  path: Assets/2D Icons Minipack - Potions/64x64/HealthPotions/GreatHealthPotion_1.png
+  artifactKey: Guid(5384f4980e9756347a723c6633134feb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Icons Minipack - Potions/64x64/HealthPotions/GreatHealthPotion_1.png using Guid(5384f4980e9756347a723c6633134feb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '63fb9a957026df0e57e73f353e277c15') in 0.021616 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/2D Icons Minipack - Potions/64x64/HealthPotions/LesserHealthPotion.png
+  artifactKey: Guid(4c67d81c443d26d4280a5b684c755bad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Icons Minipack - Potions/64x64/HealthPotions/LesserHealthPotion.png using Guid(4c67d81c443d26d4280a5b684c755bad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '7565c13a4f7668462dd7e204ef47764c') in 0.152123 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/2D Icons Minipack - Potions/64x64/HealthPotions/MinorHealthPotion_1.png
+  artifactKey: Guid(97b2533c9fdd6134a930c66a254e6b17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Icons Minipack - Potions/64x64/HealthPotions/MinorHealthPotion_1.png using Guid(97b2533c9fdd6134a930c66a254e6b17) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '9b9fd8f6368092301a912bc30bd77aa5') in 0.018177 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: ½º·¹µå Á¾·á ¶Ç´Â ÀÀ¿ë ÇÁ·Î±×·¥ ¿äÃ» ¶§¹®¿¡ I/O ÀÛ¾÷ÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

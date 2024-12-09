@@ -20,3 +20,11 @@ public enum BUFF_TYPE
     DEF,
     ENUM_END
 }
+
+public enum ITEM_TYPE
+{
+    NONE,
+    EQUIPMENT,
+    USE,
+    ENUM_END
+}
