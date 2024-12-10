@@ -14,7 +14,19 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
     List<Item> items = new List<Item>();
     List<InvenSlot> slots = new List<InvenSlot>();
 
-    private void Awake()
+    void Awake()
+    {
+        if (items.Count == 0)
+        {
+            for (int i = 0; i < NUM_MAX_ITEM; ++i)
+            {
+                InvenSlot instSlot = Instantiate(ITEMSLOT, PARENTGRID.transform).GetComponent<InvenSlot>();
+                slots.Add(instSlot);
+            }
+        }
+        Refresh();
+    }
+    void Init()
     {
         if (items.Count == 0)
         {

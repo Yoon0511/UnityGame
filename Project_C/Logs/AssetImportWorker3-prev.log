@@ -1,0 +1,812 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.44f1 (c3ae09b9f03c) revision 12824073'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'ko' Physical Memory: 32656 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.44f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+C:/Users/kmwkm/OneDrive/ë°”íƒ• í™”ë©´/UnityGame/Project_C
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+63892
+Successfully changed project path to: C:/Users/kmwkm/OneDrive/ë°”íƒ• í™”ë©´/UnityGame/Project_C
+C:/Users/kmwkm/OneDrive/ë°”íƒ• í™”ë©´/UnityGame/Project_C
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [19996]  Target information:
+
+Player connection [19996]  * "[IP] 125.180.29.63 [Port] 0 [Flags] 2 [Guid] 3338377293 [EditorId] 3338377293 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-3PP078T) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [19996] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [19996] Host joined alternative multi-casting on [225.0.0.222:34997]...
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+Refreshing native plugins compatible for Editor in 16.96 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.44f1 (c3ae09b9f03c)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/kmwkm/OneDrive/ë°”íƒ• í™”ë©´/UnityGame/Project_C/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2484)
+    Vendor:   NVIDIA
+    VRAM:     8018 MB
+    Driver:   32.0.15.6590
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56496
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.021608 seconds.
+- Loaded All Assemblies, in  0.375 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 339 ms
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.606 seconds
+Domain Reload Profiling: 978ms
+	BeginReloadAssembly (113ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (82ms)
+	LoadAllAssembliesAndSetupDomain (138ms)
+		LoadAssemblies (111ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (135ms)
+			TypeCache.Refresh (134ms)
+				TypeCache.ScanAssembly (120ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (606ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (570ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (410ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (109ms)
+			ProcessInitializeOnLoadMethodAttributes (45ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.591 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.563 seconds
+Domain Reload Profiling: 1150ms
+	BeginReloadAssembly (142ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (21ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (41ms)
+	LoadAllAssembliesAndSetupDomain (365ms)
+		LoadAssemblies (275ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (176ms)
+			TypeCache.Refresh (158ms)
+				TypeCache.ScanAssembly (143ms)
+			ScanForSourceGeneratedMonoScriptInfo (14ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (563ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (439ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (61ms)
+			ProcessInitializeOnLoadAttributes (328ms)
+			ProcessInitializeOnLoadMethodAttributes (18ms)
+			AfterProcessingInitializeOnLoad (11ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 4.38 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3102 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 19 unused Assets / (54.5 KB). Loaded Objects now: 3571.
+Memory consumption went from 123.3 MB to 123.3 MB.
+Total: 3.257300 ms (FindLiveObjects: 0.256100 ms CreateObjectMapping: 0.196000 ms MarkObjects: 2.706100 ms  DeleteObjects: 0.098200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 16037.516349 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities
+  artifactKey: Guid(143ea8753aa54cc40a101f3ced362d97) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities using Guid(143ea8753aa54cc40a101f3ced362d97) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'a98bdaed588a051c1360cff51a3b98a1') in 0.076359 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Bow4.png
+  artifactKey: Guid(0a6429b41434485489197e1164631f6d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Bow4.png using Guid(0a6429b41434485489197e1164631f6d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '92ab788cffe89352e1db224dd8810422') in 0.132913 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Icon Elements/Warhammer_Icon.png
+  artifactKey: Guid(197901951f8254646a58ea530c149598) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Icon Elements/Warhammer_Icon.png using Guid(197901951f8254646a58ea530c149598) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '44d976fb0f9609ee961883a42f9f87f2') in 0.025612 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/OneHandedAxe2.png
+  artifactKey: Guid(aea6bd3ea12c0914b803303461c0c840) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/OneHandedAxe2.png using Guid(aea6bd3ea12c0914b803303461c0c840) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'd0959c47008751344360fde9b149529e') in 0.024427 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Flat RPG Icon Pack Instructions of Use.txt
+  artifactKey: Guid(b260e7ab1133aa24c98d8b9cf44a4611) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Flat RPG Icon Pack Instructions of Use.txt using Guid(b260e7ab1133aa24c98d8b9cf44a4611) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '4bb5af0251d166831c0ee30dd2894e52') in 0.012231 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Wand1.png
+  artifactKey: Guid(b2b2cac2e07af854ea102134c22cb6cc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Wand1.png using Guid(b2b2cac2e07af854ea102134c22cb6cc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'b9297dfee90003e26e8c52db1dd353c0') in 0.028275 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Daggers4.png
+  artifactKey: Guid(00ec7b20fd1575348b4aec81c58c1eed) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Daggers4.png using Guid(00ec7b20fd1575348b4aec81c58c1eed) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'b6fbf3cc25ef39d76e069550c2f35dcf') in 0.024533 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/OneHandedAxe1.png
+  artifactKey: Guid(c70ec92cdb9971d43bcc9dadd84e6ee2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/OneHandedAxe1.png using Guid(c70ec92cdb9971d43bcc9dadd84e6ee2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '722ef00f57af2e67758721c2bd16e572') in 0.026042 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Wand3.png
+  artifactKey: Guid(2f20c3385207c8c42890df81cfc934f1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Wand3.png using Guid(2f20c3385207c8c42890df81cfc934f1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '953eb6cabaac233002fec9fc05f782bb') in 0.027176 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Icon Elements/Staff_Icon.png
+  artifactKey: Guid(a9144e53696a46841986056814790d8f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Icon Elements/Staff_Icon.png using Guid(a9144e53696a46841986056814790d8f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'bd4503ccd77d22b39b61e2c67c11ff66') in 0.032149 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.001486 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Customizable Rarity Icons (Prefabs)/Wand Customizable Rarity.prefab
+  artifactKey: Guid(5416266cba4fba144aa9a9a34950615a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Customizable Rarity Icons (Prefabs)/Wand Customizable Rarity.prefab using Guid(5416266cba4fba144aa9a9a34950615a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'fbf2a258caf5daeca430f6ea2d19793c') in 0.037405 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 19
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Icon Elements/Shield_Icon.png
+  artifactKey: Guid(32d8a16b7c73f824089f281a7bf17880) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Icon Elements/Shield_Icon.png using Guid(32d8a16b7c73f824089f281a7bf17880) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '2fcfd53c2e995c9fc712ef5985bb4358') in 0.023943 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000101 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Bow3.png
+  artifactKey: Guid(85ebd3cafae0be24f8aaf780045d14b2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Bow3.png using Guid(85ebd3cafae0be24f8aaf780045d14b2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '2af3c059a7e5ad6c9a23263f635b016b') in 0.022880 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Icon Elements/Wand_Icon.png
+  artifactKey: Guid(61333a6d373369149a840d719001a59b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Icon Elements/Wand_Icon.png using Guid(61333a6d373369149a840d719001a59b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '45dcacc8b55a8a115bb8e696606d326e') in 0.023027 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Sword1.png
+  artifactKey: Guid(bd9c74b285862ad43b62f5e62d40d57b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Flat RPG Icon Pack 1 Weapons/Pre-Made Rarities/Sword1.png using Guid(bd9c74b285862ad43b62f5e62d40d57b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '5e0e532fee9a9c08f8d7e967a3b8464b') in 0.023683 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 13.205600 seconds.
+  path: Assets/2D Icons Minipack - Potions/512x512/HealthPotions/LesserHealthPotion_1.png
+  artifactKey: Guid(8f35cb18ab5b10e499b96ed81c0c2f43) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/512x512/HealthPotions/LesserHealthPotion_1.png using Guid(8f35cb18ab5b10e499b96ed81c0c2f43) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '44091c2b69a384dab6ae1f913f9ebfb1') in 0.026016 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/2D Icons Minipack - Potions/64x64/NewPotrions/DefencePotion.png
+  artifactKey: Guid(c9935119d441bc047acba030946e9c8e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/64x64/NewPotrions/DefencePotion.png using Guid(c9935119d441bc047acba030946e9c8e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '424d9df78cd60c245d62533d504d1bb9') in 0.029850 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/2D Icons Minipack - Potions/DemoScene.unity
+  artifactKey: Guid(6ff4b50910e9ea448affd68c87948ad0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/DemoScene.unity using Guid(6ff4b50910e9ea448affd68c87948ad0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '2053bc41c7bf9b2e7eb34a213db52656') in 0.020210 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/2D Icons Minipack - Potions/1024x1024/HealthPotions/MediumHealthPotion_1.png
+  artifactKey: Guid(578144459002f1348bae6ce6e79e777b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/1024x1024/HealthPotions/MediumHealthPotion_1.png using Guid(578144459002f1348bae6ce6e79e777b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'eaed8855fd0847748a5856b735b7a342') in 0.066283 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.005699 seconds.
+  path: Assets/2D Icons Minipack - Potions/512x512/NewPotrions/RessurectionPotion.png
+  artifactKey: Guid(1712d2d37339c6c48ab134f91c1f391f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/512x512/NewPotrions/RessurectionPotion.png using Guid(1712d2d37339c6c48ab134f91c1f391f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'b6ffdaf446f0a12a31b8e535fdca84d8') in 0.032122 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/2D Icons Minipack - Potions/PSD/HealthPotions.psd
+  artifactKey: Guid(a7a3a05837e038a4eb7918a51568796a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/PSD/HealthPotions.psd using Guid(a7a3a05837e038a4eb7918a51568796a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'fed0200b201da37406907db81e10722e') in 0.027549 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/2D Icons Minipack - Potions/1024x1024/NewPotrions/DefencePotion_1.png
+  artifactKey: Guid(9afdecbc031c81a47a8474f179222f76) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/1024x1024/NewPotrions/DefencePotion_1.png using Guid(9afdecbc031c81a47a8474f179222f76) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '04c0ccb784b6d23653419e76a42115e0') in 0.027194 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/2D Icons Minipack - Potions/1024x1024/HealthPotions/HugeHealthPotion_1.png
+  artifactKey: Guid(7e2d873eb5912ac4dbc414c6f963e113) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/1024x1024/HealthPotions/HugeHealthPotion_1.png using Guid(7e2d873eb5912ac4dbc414c6f963e113) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '181d869227724ecc26e0e819f2fa3cf3') in 0.028578 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/2D Icons Minipack - Potions/128x128/NewPotrions/SpeedPotion.png
+  artifactKey: Guid(fa29aba921d588a42aa61cdb8f301184) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/128x128/NewPotrions/SpeedPotion.png using Guid(fa29aba921d588a42aa61cdb8f301184) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '16d04e5376a2c7343d97e61835cd5a1d') in 0.024510 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/2D Icons Minipack - Potions/64x64/ManaPotions/HugeManaPotion_1.png
+  artifactKey: Guid(903db73d147ece14da8e4aa72d4c196d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/64x64/ManaPotions/HugeManaPotion_1.png using Guid(903db73d147ece14da8e4aa72d4c196d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '2c288c411fab1ec5378ba431afbe76ed') in 0.027644 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/2D Icons Minipack - Potions/1024x1024/NewPotrions/SpeedPotion_1.png
+  artifactKey: Guid(f6f8fe6887f31db4fbdf8209bfe89cc9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/1024x1024/NewPotrions/SpeedPotion_1.png using Guid(f6f8fe6887f31db4fbdf8209bfe89cc9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '2b7153596ee28a7ce8e6611959ca86b8') in 0.026177 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/2D Icons Minipack - Potions/1024x1024/ManaPotions/MediumManaPotion.png
+  artifactKey: Guid(4d0699bb80095764f8bb8a1c252050fc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/1024x1024/ManaPotions/MediumManaPotion.png using Guid(4d0699bb80095764f8bb8a1c252050fc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'eb8225b5e8b2412d1dcee7342edb3b36') in 0.021961 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/2D Icons Minipack - Potions/1024x1024/NewPotrions/RessurectionPotion.png
+  artifactKey: Guid(0a2fb032b5d5de44aa11a93095122a2b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/1024x1024/NewPotrions/RessurectionPotion.png using Guid(0a2fb032b5d5de44aa11a93095122a2b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'c4592f795874503787d462f4441de021') in 0.025740 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/2D Icons Minipack - Potions/256x256/ManaPotions/MinorManaPotion.png
+  artifactKey: Guid(abcadf7fffccb834a9a1d6391ff1bf72) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/256x256/ManaPotions/MinorManaPotion.png using Guid(abcadf7fffccb834a9a1d6391ff1bf72) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '298b3e49371d1ac4a756b7d014bbf736') in 0.023047 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/2D Icons Minipack - Potions/512x512/NewPotrions/DefencePotion_1.png
+  artifactKey: Guid(d3ee793de55d5924e83ebd3bff4ddf3b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/512x512/NewPotrions/DefencePotion_1.png using Guid(d3ee793de55d5924e83ebd3bff4ddf3b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '4c1b4a780ad2af7aaecd78e54d35bae9') in 0.027085 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/2D Icons Minipack - Potions/64x64/ManaPotions
+  artifactKey: Guid(9651395354f711b45856a91d67c3ba4f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/64x64/ManaPotions using Guid(9651395354f711b45856a91d67c3ba4f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '82152865f572821c4aa13de662d246ed') in 0.015577 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/2D Icons Minipack - Potions/128x128/HealthPotions/HugeHealthPotion_1.png
+  artifactKey: Guid(90845341310fb534aa379ebf59ecf102) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/128x128/HealthPotions/HugeHealthPotion_1.png using Guid(90845341310fb534aa379ebf59ecf102) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '32b0df16c990bf4dc1f7ab7651ad6cad') in 0.022429 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/2D Icons Minipack - Potions/64x64/HealthPotions/MediumHealthPotion_1.png
+  artifactKey: Guid(f9c51f80a31e3f242821cf6c2e324f94) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/64x64/HealthPotions/MediumHealthPotion_1.png using Guid(f9c51f80a31e3f242821cf6c2e324f94) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '9a2ac16adbb6ab82e75c3326dfd0b3b4') in 0.020691 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/2D Icons Minipack - Potions/64x64/ManaPotions/MinorManaPotion.png
+  artifactKey: Guid(5fda346a59893bd45a5023f396fd845a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/64x64/ManaPotions/MinorManaPotion.png using Guid(5fda346a59893bd45a5023f396fd845a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '0fbe9848b838a7fd13cca6c08464ccae') in 0.022751 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/2D Icons Minipack - Potions/64x64/ManaPotions/MediumManaPotion_1.png
+  artifactKey: Guid(ae3aeb6282e2b1b46a7d8d8bd569a050) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/64x64/ManaPotions/MediumManaPotion_1.png using Guid(ae3aeb6282e2b1b46a7d8d8bd569a050) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '801b1321c847f946c2ef131a4558e5e6') in 0.023771 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/2D Icons Minipack - Potions/512x512/HealthPotions
+  artifactKey: Guid(3215d93e91c4dba42a119adf8e623b45) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/512x512/HealthPotions using Guid(3215d93e91c4dba42a119adf8e623b45) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '689a3f609354320b8195de1d3ad1af65') in 0.016361 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/2D Icons Minipack - Potions/512x512/ManaPotions/MediumManaPotion.png
+  artifactKey: Guid(20a1726746f58694693810ce6f28f1a2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/512x512/ManaPotions/MediumManaPotion.png using Guid(20a1726746f58694693810ce6f28f1a2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '56a93728b4ef437f6abe79e45a64dd8d') in 0.024674 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/2D Icons Minipack - Potions/512x512/ManaPotions/HugeManaPotion_1.png
+  artifactKey: Guid(914a0a926f7300042b9d704e445a9bf0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/512x512/ManaPotions/HugeManaPotion_1.png using Guid(914a0a926f7300042b9d704e445a9bf0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '62eac0289ed6fa16bc3defddaf945e11') in 0.026335 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/2D Icons Minipack - Potions/256x256/ManaPotions/LesserManaPotion_1.png
+  artifactKey: Guid(d1e9d87d8d6c4054f821c20494c629ca) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/256x256/ManaPotions/LesserManaPotion_1.png using Guid(d1e9d87d8d6c4054f821c20494c629ca) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '12e486b14528cfe1636ec5f72cfc5128') in 0.023908 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/2D Icons Minipack - Potions/256x256/ManaPotions
+  artifactKey: Guid(0251586980dfece4aa76da3ef86576f3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/256x256/ManaPotions using Guid(0251586980dfece4aa76da3ef86576f3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'a3d1601692dbd98f6bbc7cd19df1d32e') in 0.015228 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/2D Icons Minipack - Potions/64x64/ManaPotions/LesserManaPotion.png
+  artifactKey: Guid(234c412ecf620ed49a99dabce3f4a6fc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/64x64/ManaPotions/LesserManaPotion.png using Guid(234c412ecf620ed49a99dabce3f4a6fc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'cf05573aa49ccb69e7904fb96c85ce09') in 0.028332 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/2D Icons Minipack - Potions/64x64/HealthPotions/GreatHealthPotion.png
+  artifactKey: Guid(711628354aef53646ae45c351b471469) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/64x64/HealthPotions/GreatHealthPotion.png using Guid(711628354aef53646ae45c351b471469) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '0efb6e17c3a9021a28f5c61473524d4f') in 0.022948 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/2D Icons Minipack - Potions/128x128/NewPotrions/AttackPotion.png
+  artifactKey: Guid(4e8dd54368436ad4a8cb391a2a48bea5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/128x128/NewPotrions/AttackPotion.png using Guid(4e8dd54368436ad4a8cb391a2a48bea5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '3b681ddfd0989d49bd10274a2a2b14d6') in 0.021558 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/2D Icons Minipack - Potions/512x512/HealthPotions/GreatHealthPotion.png
+  artifactKey: Guid(308ab520aa58b4b48a2505d6fda73634) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/512x512/HealthPotions/GreatHealthPotion.png using Guid(308ab520aa58b4b48a2505d6fda73634) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '39df32c2fc02523b6cb0f62531707e9d') in 0.022203 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/2D Icons Minipack - Potions/512x512/NewPotrions
+  artifactKey: Guid(cf2334006c9233a478ba2f60301e94c5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/512x512/NewPotrions using Guid(cf2334006c9233a478ba2f60301e94c5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '2801e76c39d2c320e5a48c4bc8b6c0c8') in 0.014642 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/2D Icons Minipack - Potions/128x128/HealthPotions/GreatHealthPotion_1.png
+  artifactKey: Guid(9b3f3a3ca76d1c54b98ad73a2feb8b84) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/128x128/HealthPotions/GreatHealthPotion_1.png using Guid(9b3f3a3ca76d1c54b98ad73a2feb8b84) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '889c0879dfe81b84d7e7698302e2a87c') in 0.023240 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/2D Icons Minipack - Potions/128x128/HealthPotions/MinorHealthPotion.png
+  artifactKey: Guid(b0f3d709b5ef35049bd4880b30e0b53d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/128x128/HealthPotions/MinorHealthPotion.png using Guid(b0f3d709b5ef35049bd4880b30e0b53d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'fb8c3e984fa842c480a30f055fb08d24') in 0.024385 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/2D Icons Minipack - Potions/64x64/NewPotrions/AttackPotion.png
+  artifactKey: Guid(aad902fc7bf4fcc48abbb06f5bbe24c9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/64x64/NewPotrions/AttackPotion.png using Guid(aad902fc7bf4fcc48abbb06f5bbe24c9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'c6dbdf09d8aae0fb0a0a9df225cb373d') in 0.027425 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/2D Icons Minipack - Potions/1024x1024/ManaPotions/MinorManaPotion_1.png
+  artifactKey: Guid(9877e80fed62a7e4e9b3185335f7dde4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/1024x1024/ManaPotions/MinorManaPotion_1.png using Guid(9877e80fed62a7e4e9b3185335f7dde4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '4c41843e57e9ef12a9bf639bf13cbc3f') in 0.023938 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/2D Icons Minipack - Potions/256x256/HealthPotions/MediumHealthPotion_1.png
+  artifactKey: Guid(743bdacffa4d28347a3686ab66c5cc04) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/256x256/HealthPotions/MediumHealthPotion_1.png using Guid(743bdacffa4d28347a3686ab66c5cc04) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'b0c791a86c68c36621a3650c2c507b5f') in 0.025599 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/2D Icons Minipack - Potions/64x64/HealthPotions/MinorHealthPotion_1.png
+  artifactKey: Guid(97b2533c9fdd6134a930c66a254e6b17) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/64x64/HealthPotions/MinorHealthPotion_1.png using Guid(97b2533c9fdd6134a930c66a254e6b17) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '7d7adfb1fd5cb6b7806a8fdfdb14888a') in 0.021236 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/2D Icons Minipack - Potions/64x64/NewPotrions
+  artifactKey: Guid(5daea22b6fade13479c576cea9ba692e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/64x64/NewPotrions using Guid(5daea22b6fade13479c576cea9ba692e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '2c49f3f67f96f32c12b5adca712803a0') in 0.013929 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/2D Icons Minipack - Potions/128x128/HealthPotions/MediumHealthPotion.png
+  artifactKey: Guid(7c1b696d842790341b1fb87249dffe15) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/128x128/HealthPotions/MediumHealthPotion.png using Guid(7c1b696d842790341b1fb87249dffe15) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '8a4b39c45bd7517171195f65ec8b367f') in 0.028012 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/2D Icons Minipack - Potions/256x256/NewPotrions/SpeedPotion.png
+  artifactKey: Guid(c002f8c8269421c4a9df134af00b27d3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/256x256/NewPotrions/SpeedPotion.png using Guid(c002f8c8269421c4a9df134af00b27d3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'f7f741aca532ac5fbe27a26743006075') in 0.027321 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/2D Icons Minipack - Potions/64x64/NewPotrions/AttackPotion_1.png
+  artifactKey: Guid(3b5eb931fb0e5ea488f3aef4b59c9d6f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/64x64/NewPotrions/AttackPotion_1.png using Guid(3b5eb931fb0e5ea488f3aef4b59c9d6f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '6d46f4963374d437e955c9ff61ceb988') in 0.028185 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/2D Icons Minipack - Potions/128x128/ManaPotions/GreatManaPotion.png
+  artifactKey: Guid(9ce3066a7fae5d943951550f7d75345a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/128x128/ManaPotions/GreatManaPotion.png using Guid(9ce3066a7fae5d943951550f7d75345a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '922c1b18dad9205cef3b4e947099f08f') in 0.027978 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/2D Icons Minipack - Potions/512x512/ManaPotions/MediumManaPotion_1.png
+  artifactKey: Guid(45c192c8422b97e478038241808d27ad) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/512x512/ManaPotions/MediumManaPotion_1.png using Guid(45c192c8422b97e478038241808d27ad) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '82624ff2d22ef61e6c1677c910c6b3bd') in 0.025123 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/2D Icons Minipack - Potions/1024x1024/ManaPotions/GreatManaPotion.png
+  artifactKey: Guid(cb2b672101037524fb7a0b57ed0c95ae) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/1024x1024/ManaPotions/GreatManaPotion.png using Guid(cb2b672101037524fb7a0b57ed0c95ae) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '15ac96cc8900632e8189ce94702ba825') in 0.024834 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/2D Icons Minipack - Potions/512x512/NewPotrions/SpeedPotion.png
+  artifactKey: Guid(f00d9f0674d4c6144836b0440d5aa39e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/512x512/NewPotrions/SpeedPotion.png using Guid(f00d9f0674d4c6144836b0440d5aa39e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '348523fdaaee9221b7de66c5ccc5ca54') in 0.022823 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/2D Icons Minipack - Potions/256x256/NewPotrions/DefencePotion.png
+  artifactKey: Guid(7c9c024b54b2e5947a0397c044f13781) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/256x256/NewPotrions/DefencePotion.png using Guid(7c9c024b54b2e5947a0397c044f13781) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '9f17cfe51e5a4f0d31eaeaca8ebb6d44') in 0.023605 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/2D Icons Minipack - Potions/512x512/ManaPotions/HugeManaPotion.png
+  artifactKey: Guid(15559676b8b211444ac2d47f1f510148) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/512x512/ManaPotions/HugeManaPotion.png using Guid(15559676b8b211444ac2d47f1f510148) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'a0a5669187761ddca614ed197dac1ca2') in 0.023849 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/2D Icons Minipack - Potions/512x512/HealthPotions/LesserHealthPotion.png
+  artifactKey: Guid(6bce5891a3a706045b5d1604f2224cc1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/512x512/HealthPotions/LesserHealthPotion.png using Guid(6bce5891a3a706045b5d1604f2224cc1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'ffebbb2e4741ba0e4514c9a0cb096aea') in 0.023378 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/2D Icons Minipack - Potions/128x128/ManaPotions/MediumManaPotion_1.png
+  artifactKey: Guid(468b0d425d7112f49a1aac5f6988f49d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/128x128/ManaPotions/MediumManaPotion_1.png using Guid(468b0d425d7112f49a1aac5f6988f49d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'aabc9f4044befe47db87bb8be65ffdbc') in 0.022609 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/2D Icons Minipack - Potions/1024x1024/NewPotrions/AttackPotion.png
+  artifactKey: Guid(d1caf17d7dfe48648bc1bbb650da56bf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/1024x1024/NewPotrions/AttackPotion.png using Guid(d1caf17d7dfe48648bc1bbb650da56bf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '5941ed65d4a466ab28706b9ad563f3da') in 0.022967 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/2D Icons Minipack - Potions/1024x1024/ManaPotions/HugeManaPotion_1.png
+  artifactKey: Guid(ed871df2033f3f044ae7fe63c4ded508) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/1024x1024/ManaPotions/HugeManaPotion_1.png using Guid(ed871df2033f3f044ae7fe63c4ded508) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'fd0787b717d1d0d6a3c5489e977e74c4') in 0.023611 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/2D Icons Minipack - Potions/128x128/NewPotrions/DefencePotion.png
+  artifactKey: Guid(c5b4532235defe041a736aba00b445f2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/128x128/NewPotrions/DefencePotion.png using Guid(c5b4532235defe041a736aba00b445f2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'a79709c53fb301d65cdb43e2e1f7d43e') in 0.028354 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/2D Icons Minipack - Potions/64x64/HealthPotions/LesserHealthPotion.png
+  artifactKey: Guid(4c67d81c443d26d4280a5b684c755bad) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/64x64/HealthPotions/LesserHealthPotion.png using Guid(4c67d81c443d26d4280a5b684c755bad) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'fe77cc163613699f307205c1f58af46d') in 0.021860 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/2D Icons Minipack - Potions/512x512/NewPotrions/DefencePotion.png
+  artifactKey: Guid(3d89eb81a2c293d40b239f0b689567a6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/512x512/NewPotrions/DefencePotion.png using Guid(3d89eb81a2c293d40b239f0b689567a6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '490b800e6fd32e01cca754b5962ee49f') in 0.025631 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/2D Icons Minipack - Potions/256x256/NewPotrions/AttackPotion.png
+  artifactKey: Guid(bf0ffaf0c260fb14196f43d395bb88f9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/2D Icons Minipack - Potions/256x256/NewPotrions/AttackPotion.png using Guid(bf0ffaf0c260fb14196f43d395bb88f9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'a6f372a64c5692256c7f729f6304e614') in 0.024425 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: ½º·¹µå Á¾·á ¶Ç´Â ÀÀ¿ë ÇÁ·Î±×·¥ ¿äÃ» ¶§¹®¿¡ I/O ÀÛ¾÷ÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

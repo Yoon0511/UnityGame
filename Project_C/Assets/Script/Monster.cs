@@ -2,30 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
-public class Monster : Object
+public class Monster : Character
 {
-    [SerializeField]
-    float MaxHp;
-    float Hp;
-    float MaxMp;
-    float Mp;
-    float Atk;
-    float Def;
-    float Speed;
-
-    STATE Curr_State;
-    STATE Prev_State;
-
     [SerializeField]
     Player Target;
 
     [SerializeField]
     GameObject Item;
-    //아이템드랍
-    void Start()
-    {
-        Init();
-    }
 
     private void FixedUpdate()
     {
@@ -40,13 +23,7 @@ public class Monster : Object
         //    DoAttack(Target);
         //}
     }
-    public override void UpdateData()
-    {
-        Debug.Log("Monster_UpdateData");
-        Init();
-    }
-
-    void Init()
+    public override void Init()
     {
         MaxHp = 100.0f;
         MaxMp = 100.0f;
@@ -64,16 +41,13 @@ public class Monster : Object
         player.Hit(Atk);
     }
     void Move() { }
-    void ChangeState(STATE newstate)
-    {
-        Prev_State = Curr_State;
-        Curr_State = newstate;
-    }
-    public void Hit(float damage)
+    public override void Hit(float damage)
     {
         float value = Hp + (Def - damage);
         Hp = value;
-        
+
+        Debug.Log("MONSTER HP - " + Hp);
+
         if(CheckHP())
         {
             DropItem();

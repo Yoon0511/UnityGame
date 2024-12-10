@@ -6,6 +6,6 @@ public class Item123 : Item
 {
     public override void ItemUse()
     {
-        Debug.Log("hp");
+        Debug.Log("HP_POTION - " + ItemId);
     }
 }
