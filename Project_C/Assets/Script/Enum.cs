@@ -28,3 +28,12 @@ public enum ITEM_TYPE
     USE,
     ENUM_END
 }
+
+public enum MONSTER_STATE
+{
+    NONE,
+    IDLE,
+    MOVE,
+    ATTACK,
+    ENUM_END
+}
