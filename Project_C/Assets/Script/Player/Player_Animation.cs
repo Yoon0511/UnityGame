@@ -15,4 +15,9 @@ public partial class Player
     {
         animator.SetFloat(_trigger, _value);
     }
+
+    public void AniATKEnd()
+    {
+        ChangeState(Prev_State);
+    }
 }

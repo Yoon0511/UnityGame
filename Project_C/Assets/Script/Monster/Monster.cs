@@ -3,37 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class Monster : Character
+public partial class Monster : Character
 {
     [SerializeField]
-    Player Target;
+    GameObject Target;
 
     [SerializeField]
-    GameObject Item;
-
-    StateMachine fsm;
-
-    MONSTER_STATE state;
-    Dictionary<MONSTER_STATE, StateBase> dicState = new Dictionary<MONSTER_STATE, StateBase>();
-
+    float detectionRange;
+    [SerializeField]
+    float attackRange;
     private void FixedUpdate()
     {
-        fsm.UpdateState();
+        StateUpdate();
     }
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            fsm.ChangeState(dicState[MONSTER_STATE.IDLE]);
+            ChageState(MONSTER_STATE.IDLE);
         }
         if (Input.GetKeyDown(KeyCode.U))
         {
-            fsm.ChangeState(dicState[MONSTER_STATE.MOVE]);
+            ChageState(MONSTER_STATE.MOVE);
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
-            fsm.ChangeState(dicState[MONSTER_STATE.ATTACK]);
+            ChageState(MONSTER_STATE.ATTACK);
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            ChageState(MONSTER_STATE.DIE);
         }
     }
     public override void Init()
@@ -44,25 +44,13 @@ public class Monster : Character
         Mp = MaxMp;
         Atk = 10.0f;
         Def = 2.0f;
-        Speed = 5.5f;
+        Speed = 2.0f;
         Curr_State = STATE.NONE;
         Prev_State = STATE.NONE;
 
-        fsm = new StateMachine(new MonsterIdle());
-        state = MONSTER_STATE.IDLE;
-
-        dicState.Add(MONSTER_STATE.IDLE, new MonsterIdle());
-        dicState.Add(MONSTER_STATE.MOVE, new MonsterMove());
-        dicState.Add(MONSTER_STATE.ATTACK, new MonsterAttack());
-
-        fsm.ChangeState(dicState[MONSTER_STATE.IDLE]);
+        Fsm_Init();
     }
 
-    void DoAttack(Player player)
-    {
-        player.Hit(Atk);
-    }
-    void Move() { }
     public override void Hit(float damage)
     {
         float value = Hp + (Def - damage);
@@ -87,6 +75,6 @@ public class Monster : Character
     }
     void DropItem()
     {
-        Instantiate(Item,transform.position,transform.rotation);
+        
     }
 }

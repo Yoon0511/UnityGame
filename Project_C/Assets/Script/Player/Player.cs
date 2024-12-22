@@ -102,10 +102,6 @@ public partial class Player : Character
             ChangeState(STATE.WALK);
         }
     }
-    public void AniATKEnd()
-    {
-        ChangeState(Prev_State);
-    }
 
     void DoAttack(Monster monster)
     {
@@ -126,36 +122,4 @@ public partial class Player : Character
         // 필드 아이템 리스트 -> 검색 -> 습득
     }
 
-    void Buff(int buff_stat,BUFF_TYPE type)
-    {
-        switch(type)
-        {
-            case BUFF_TYPE.HP:
-                break;
-            case BUFF_TYPE.MP:
-                break;
-            case BUFF_TYPE.ATK:
-                break;
-            case BUFF_TYPE.DEF:
-                break;
-            case BUFF_TYPE.SPEED:
-                break;
-        }
-    }
-    void DeBuff(int debuff_stat,BUFF_TYPE type)
-    {
-        switch (type)
-        {
-            case BUFF_TYPE.HP:
-                break;
-            case BUFF_TYPE.MP:
-                break;
-            case BUFF_TYPE.ATK:
-                break;
-            case BUFF_TYPE.DEF:
-                break;
-            case BUFF_TYPE.SPEED:
-                break;
-        }
-    }
 }
