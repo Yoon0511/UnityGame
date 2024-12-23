@@ -34,6 +34,8 @@ public enum MONSTER_STATE
     NONE,
     IDLE,
     MOVE,
+    PATROL,
+    CHASE,
     ATTACK,
     DIE,
     ENUM_END

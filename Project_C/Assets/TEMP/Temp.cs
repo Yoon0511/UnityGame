@@ -17,9 +17,9 @@ public class Temp : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        string curr_state = player.GetCurrState().ToString();
-        string prev_state = player.GetPrevState().ToString();
+        //string curr_state = player.GetCurrState().ToString();
+        //string prev_state = player.GetPrevState().ToString();
 
-        text.text = "Curr :" + curr_state + "\n" +"Prev : " + prev_state;
+        //text.text = "Curr :" + curr_state + "\n" +"Prev : " + prev_state;
     }
 }

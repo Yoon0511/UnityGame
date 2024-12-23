@@ -61,36 +61,46 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Skill.cs" />
-    <Compile Include="Assets\Script\Monster\MonsterState\MoveState.cs" />
+    <Compile Include="Assets\Script\Player\PlayerState\Player_AttackState.cs" />
+    <Compile Include="Assets\Script\Monster\MonsterState\Monster_DieState.cs" />
+    <Compile Include="Assets\Script\Player\PlayerState\Player_IdleState.cs" />
     <Compile Include="Assets\Script\Item123.cs" />
-    <Compile Include="Assets\Script\Monster\MonsterState\IdleState.cs" />
+    <Compile Include="Assets\Script\Player\PlayerState\Player_RunState.cs" />
+    <Compile Include="Assets\Script\Player\PlayerState\Player_WalkState.cs" />
+    <Compile Include="Assets\Script\Player\PlayerState\Player_DieState.cs" />
     <Compile Include="Assets\Script\Character.cs" />
     <Compile Include="Assets\Script\Player\Player_Ui.cs" />
     <Compile Include="Assets\Script\ExitBtn.cs" />
+    <Compile Include="Assets\Script\Monster\MonsterState\Monster_MoveState.cs" />
     <Compile Include="Assets\Script\Player\Player_Attack.cs" />
+    <Compile Include="Assets\Script\GameMgr.cs" />
     <Compile Include="Assets\TEMP\Temp.cs" />
     <Compile Include="Assets\Script\Monster\Monster_Animation.cs" />
     <Compile Include="Assets\Script\FSM\StateBase.cs" />
+    <Compile Include="Assets\Script\Monster\MonsterState\Monster_IdleState.cs" />
+    <Compile Include="Assets\Script\Monster\MonsterState\Monster_ChaseState.cs" />
+    <Compile Include="Assets\Script\Monster\PunchAttack.cs" />
     <Compile Include="Assets\Script\FSM\StateMachine.cs" />
     <Compile Include="Assets\Script\Item.cs" />
     <Compile Include="Assets\Script\Player\Player_Move.cs" />
     <Compile Include="Assets\Script\UiScript\Inventory.cs" />
     <Compile Include="Assets\Script\UiScript\OnBtnEvent.cs" />
+    <Compile Include="Assets\Script\Shared.cs" />
     <Compile Include="Assets\Script\Monster\Monster_Fsm.cs" />
-    <Compile Include="Assets\Script\Monster\MonsterState\DieState.cs" />
     <Compile Include="Assets\Script\UiScript\InvenSlot.cs" />
     <Compile Include="Assets\Script\Monster\Monster.cs" />
     <Compile Include="Assets\Script\Player\Player_AniEvent.cs" />
     <Compile Include="Assets\Script\UiScript\OpenShowUi.cs" />
+    <Compile Include="Assets\Script\Player\Player_Fsm.cs" />
     <Compile Include="Assets\Scenes\TogleScript.cs" />
     <Compile Include="Assets\Script\Player\Player_Animation.cs" />
     <Compile Include="Assets\Script\Enum.cs" />
-    <Compile Include="Assets\Script\Monster\MonsterState\AttackState.cs" />
+    <Compile Include="Assets\Script\Monster\MonsterState\Monster_AttackState.cs" />
     <Compile Include="Assets\Script\UiScript\Joystick.cs" />
     <Compile Include="Assets\Script\Monster\Monster_Move.cs" />
     <Compile Include="Assets\Script\FollowingCamera.cs" />
     <Compile Include="Assets\Script\Player\Player.cs" />
-    <Compile Include="Assets\Script\Monster\MonsterState\PatrolState.cs" />
+    <Compile Include="Assets\Script\Monster\MonsterState\Monster_PatrolState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\MyAssets\Polygonal Creatures Pack\Polygonal Creatures Pack\Polygonal Golem\www.meshtint.com.txt" />

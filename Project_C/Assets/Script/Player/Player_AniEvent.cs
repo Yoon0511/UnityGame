@@ -1,21 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class Player_AniEvent : MonoBehaviour
+public partial class Player
 {
     [SerializeField]
-    Player PLAYER;
-
-    [SerializeField]
     GameObject HITBOX;
-
-    public void Start()
-    {
-        if(PLAYER == null)
-        {
-            PLAYER = this.GetComponentInParent<Player>();
-        }
-    }
 
     public void OnHitBoxActive()
     {
@@ -29,6 +18,6 @@ public class Player_AniEvent : MonoBehaviour
 
     public void OnAttackAniEnd()
     {
-        PLAYER.AniATKEnd();
+        ChangeState(prev_state);
     }
 }

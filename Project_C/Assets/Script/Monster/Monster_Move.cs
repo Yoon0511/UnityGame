@@ -6,9 +6,9 @@ public partial class Monster
 {
     public void Move(float _x,float _y,float _z)
     {
-        float fx = _x * Speed * Time.deltaTime;
-        float fy = _y * Speed * Time.deltaTime;
-        float fz = _z * Speed * Time.deltaTime;
+        float fx = _x * speed * Time.deltaTime;
+        float fy = _y * speed * Time.deltaTime;
+        float fz = _z * speed * Time.deltaTime;
 
         transform.Translate(fx, fy, fz, Space.World);
 
@@ -24,7 +24,7 @@ public partial class Monster
     public void MoveToTarget(GameObject _target)
     {
         Vector3 dir = _target.transform.position - transform.position;
-        Vector3 MovePos = dir.normalized * Speed * Time.deltaTime;
+        Vector3 MovePos = dir.normalized * speed * Time.deltaTime;
 
         transform.Translate(MovePos, Space.World);
         transform.LookAt(transform.position + dir, Vector3.up);
@@ -33,7 +33,7 @@ public partial class Monster
     public void MoveToTarget()
     {
         Vector3 dir = Target.transform.position - transform.position;
-        Vector3 MovePos = dir.normalized * Speed * Time.deltaTime;
+        Vector3 MovePos = dir.normalized * speed * Time.deltaTime;
 
         transform.Translate(MovePos, Space.World);
         transform.LookAt(transform.position + dir, Vector3.up);

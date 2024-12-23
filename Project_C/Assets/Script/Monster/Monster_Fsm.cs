@@ -10,21 +10,23 @@ public partial class Monster
     MONSTER_STATE prev_state;
     Dictionary<MONSTER_STATE, StateBase> dicState = new Dictionary<MONSTER_STATE, StateBase>();
 
+    public List<GameObject> patrolPoint = new List<GameObject>();
     void Fsm_Init()
     {
-        fsm = new StateMachine(new IdleState(this));
+        fsm = new StateMachine(new Monster_IdleState(this));
         curr_state = MONSTER_STATE.IDLE;
         prev_state = curr_state;
 
-        dicState.Add(MONSTER_STATE.IDLE, new IdleState(this));
-        dicState.Add(MONSTER_STATE.MOVE, new MoveState(this));
-        dicState.Add(MONSTER_STATE.ATTACK, new AttackState(this));
-        dicState.Add(MONSTER_STATE.DIE, new DieState(this));
+        dicState.Add(MONSTER_STATE.IDLE, new Monster_IdleState(this));
+        dicState.Add(MONSTER_STATE.MOVE, new Monster_MoveState(this));
+        dicState.Add(MONSTER_STATE.CHASE, new Monster_ChaseState(this));
+        dicState.Add(MONSTER_STATE.ATTACK, new Monster_AttackState(this));
+        dicState.Add(MONSTER_STATE.DIE, new Monster_DieState(this));
 
         fsm.ChangeState(dicState[MONSTER_STATE.IDLE]);
     }
 
-    public void ChageState(MONSTER_STATE _state)
+    public void ChangeState(MONSTER_STATE _state)
     {
         if (curr_state == _state)
             return;
@@ -32,20 +34,12 @@ public partial class Monster
         prev_state = curr_state;
         curr_state = _state;
 
-        ChageFsm();
+        ChangeState();
     }
 
-    public void ChageFsm()
+    public void ChangeState()
     {
         fsm.ChangeState(dicState[curr_state]);
-    }
-
-    public void ChageFsm(MONSTER_STATE _state)
-    {
-        if (_state == MONSTER_STATE.NONE || _state == MONSTER_STATE.ENUM_END)
-            return;
-
-        fsm.ChangeState(dicState[_state]);
     }
 
     public void StateUpdate()
@@ -55,7 +49,7 @@ public partial class Monster
 
     public bool IsPlayerInDetectionRange()
     {
-        float dist = Vector3.Distance(Target.transform.position, transform.position);
+        float dist = Vector3.Distance(player.transform.position, transform.position);
         if (dist <= detectionRange)
         {
             return true;
@@ -76,11 +70,25 @@ public partial class Monster
 
     public bool IsPlayerInAttackRange()
     {
-        float dist = Vector3.Distance(Target.transform.position, transform.position);
+        float dist = Vector3.Distance(player.transform.position, transform.position);
         if (dist <= attackRange)
         {
             return true;
         }
         return false;
+    }
+
+    public void PatrolMode()
+    {
+        MoveToTarget();
+
+        for(int i = 0;i<patrolPoint.Count;++i)
+        {
+            float dist = Vector3.Distance(transform.position, patrolPoint[i].transform.position);
+            if(dist <= 0.5f)
+            {
+                ChageTarget(patrolPoint[i + 1]);
+            }
+        }
     }
 }

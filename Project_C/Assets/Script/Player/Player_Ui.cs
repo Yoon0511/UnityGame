@@ -11,12 +11,12 @@ public partial class Player
     Image MP_BAR;
     void UpdateHpbar()
     {
-        float value = Hp / MaxHp;
+        float value = hp / maxhp;
         HP_BAR.fillAmount = value;
     }
     void UpdateMpbar()
     {
-        float value = Mp / MaxMp;
+        float value = mp / maxmp;
         MP_BAR.fillAmount = value;
     }
 }

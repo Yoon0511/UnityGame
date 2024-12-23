@@ -6,37 +6,42 @@ using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
-    protected float MaxHp;
-    protected float Hp;
-    protected float MaxMp;
-    protected float Mp;
-    protected float Atk;
-    protected float Def;
-    protected float Speed;
+    protected float maxhp;
+    protected float hp;
+    protected float maxmp;
+    protected float mp;
+    protected float atk;
+    protected float def;
+    protected float speed;
 
-    protected STATE Curr_State;
-    protected STATE Prev_State;
+    //protected STATE curr_state;
+    //protected STATE prev_state;
     private void Start()
     {
         Init();
     }
     public abstract void Init();
     public abstract void Hit(float damage);
+
+    /*
     public void ChangeState(STATE _newstate)
     {
-        if (Curr_State == _newstate)
+        if (curr_state == _newstate)
             return;
 
-        Prev_State = Curr_State;
-        Curr_State = _newstate;
+        prev_state = curr_state;
+        curr_state = _newstate;
     }
     public STATE GetCurrState()
     {
-        return Curr_State;
+        return curr_state;
     }
 
     public STATE GetPrevState()
     {
-        return Prev_State;
+        return prev_state;
     }
+    */
+
+    public float GetAtk() { return atk; }
 }

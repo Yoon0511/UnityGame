@@ -43,7 +43,7 @@ public class Joystick : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHan
         IsDrag = false;
 
         stick.anchoredPosition = Vector2.zero;
-        player.JoystickMove(InputPos.normalized, 0.0f);
+        player.JoystickMove(InputPos.normalized, 0.0f,IsDrag);
     }
 
     void Start()
@@ -63,6 +63,6 @@ public class Joystick : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHan
 
     void MoveToPlayer()
     {
-        player.JoystickMove(InputPos.normalized, Dist);
+        player.JoystickMove(InputPos.normalized, Dist, IsDrag);
     }
 }

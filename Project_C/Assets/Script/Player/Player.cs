@@ -5,10 +5,10 @@ using UnityEngine;
 using UnityEngine.UI;
 public partial class Player : Character
 {
-    float WalkSpeed;
-    float RunSpeed;
+    float walkspeed;
+    float runspeed;
 
-    Monster Target;
+    Monster target;
     [SerializeField]
     Inventory inventory;
     
@@ -19,6 +19,7 @@ public partial class Player : Character
 
     private void FixedUpdate()
     {
+        fsm.UpdateState();
         //KeyboardMove();
     }
     // Update is called once per frame
@@ -31,23 +32,22 @@ public partial class Player : Character
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Mp -= 5.5f;
+            mp -= 5.5f;
             UpdateMpbar();
         }
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            Hp += 5.0f;
+            mp += 5.0f;
             UpdateHpbar();
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
-            Mp += 5.5f;
+            mp += 5.5f;
             UpdateMpbar();
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) // 공격
         {
-            PlayAni_Trigger("Ani_ATK");
             ChangeState(STATE.ATTACK);
         }
 
@@ -61,56 +61,48 @@ public partial class Player : Character
 
     public override void Init()
     {
-        MaxHp = 100.0f;
-        MaxMp = 100.0f;
-        Hp = MaxHp;
-        Mp = MaxMp;
-        Atk = 50.0f;
-        Def = 2.0f;
-        Speed = 8.0f;
-        WalkSpeed = 5.5f;
-        RunSpeed = 10.0f;
-        Curr_State = STATE.IDLE;
-        Prev_State = STATE.NONE;
+        maxhp = 100.0f;
+        maxmp = 100.0f;
+        hp = maxhp;
+        mp = maxmp;
+        atk = 50.0f;
+        def = 2.0f;
+        speed = 8.0f;
+        walkspeed = 5.5f;
+        runspeed = 10.0f;
 
-        animator = GetComponentInChildren<Animator>();
+        Fsm_Init();
     }
 
     //키보드 조작
     void UpdateAnimation()
     {
-        if (Curr_State == STATE.ATTACK)
+        if (curr_state == STATE.ATTACK)
         {
             return;
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) // 공격
         {
-            animator.SetTrigger("Ani_ATK");
             ChangeState(STATE.ATTACK);
         }
         else if (Input.GetKey(KeyCode.LeftShift)) // 달리기
         {
-            Speed = RunSpeed;
+            speed = runspeed;
             animator.SetInteger("Ani_State", (int)STATE.RUN);
             ChangeState(STATE.RUN);
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift)) // 걷기
         {
-            Speed = WalkSpeed;
+            speed = walkspeed;
             animator.SetInteger("Ani_State", (int)STATE.WALK);
             ChangeState(STATE.WALK);
         }
     }
 
-    void DoAttack(Monster monster)
-    {
-        monster.Hit(Atk);
-    }
-
     void CheckHP()
     {
-        if(Hp <= 0)
+        if(hp <= 0)
         {
             ChangeState(STATE.DIE);
         }

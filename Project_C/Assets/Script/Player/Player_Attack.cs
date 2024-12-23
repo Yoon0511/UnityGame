@@ -6,18 +6,16 @@ public partial class Player
 {
     public void OnAttack()
     {
-        if (Curr_State == STATE.ATTACK)
+        if (curr_state == STATE.ATTACK)
         {
             return;
         }
-
-        PlayAni_Trigger("Ani_ATK");
         ChangeState(STATE.ATTACK);
     }
     public override void Hit(float damage)
     {
-        float value = Hp + (Def - damage);
-        Hp = value;
+        float value = hp + (def - damage);
+        hp = value;
         UpdateHpbar();
     }
 
@@ -25,7 +23,7 @@ public partial class Player
     {
         if (other.CompareTag("TAG_MONSTER"))
         {
-            other.GetComponent<Monster>().Hit(Atk);
+            other.GetComponent<Monster>().Hit(atk);
         }
     }
 }

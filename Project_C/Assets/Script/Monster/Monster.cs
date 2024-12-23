@@ -8,6 +8,8 @@ public partial class Monster : Character
     [SerializeField]
     GameObject Target;
 
+    GameObject player;
+
     [SerializeField]
     float detectionRange;
     [SerializeField]
@@ -21,42 +23,41 @@ public partial class Monster : Character
     {
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            ChageState(MONSTER_STATE.IDLE);
+            ChangeState(MONSTER_STATE.IDLE);
         }
         if (Input.GetKeyDown(KeyCode.U))
         {
-            ChageState(MONSTER_STATE.MOVE);
+            ChangeState(MONSTER_STATE.MOVE);
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
-            ChageState(MONSTER_STATE.ATTACK);
+            ChangeState(MONSTER_STATE.ATTACK);
         }
         if (Input.GetKeyDown(KeyCode.O))
         {
-            ChageState(MONSTER_STATE.DIE);
+            ChangeState(MONSTER_STATE.DIE);
         }
     }
     public override void Init()
     {
-        MaxHp = 100.0f;
-        MaxMp = 100.0f;
-        Hp = MaxHp;
-        Mp = MaxMp;
-        Atk = 10.0f;
-        Def = 2.0f;
-        Speed = 2.0f;
-        Curr_State = STATE.NONE;
-        Prev_State = STATE.NONE;
+        maxhp = 100.0f;
+        maxmp = 100.0f;
+        hp = maxhp;
+        mp = maxmp;
+        atk = 10.0f;
+        def = 2.0f;
+        speed = 2.0f;
 
+        player = Shared.GameMgr.PLAYER;
         Fsm_Init();
     }
 
     public override void Hit(float damage)
     {
-        float value = Hp + (Def - damage);
-        Hp = value;
+        float value = hp + (def - damage);
+        hp = value;
 
-        Debug.Log("MONSTER HP - " + Hp);
+        Debug.Log("MONSTER HP - " + hp);
 
         if(CheckHP())
         {
@@ -67,7 +68,7 @@ public partial class Monster : Character
 
     bool CheckHP() 
     {
-        if(Hp <= 0)
+        if(hp <= 0)
         {
             return true;
         }
@@ -76,5 +77,9 @@ public partial class Monster : Character
     void DropItem()
     {
         
+    }
+    public void ChageTarget(GameObject _target)
+    {
+        Target = _target;
     }
 }
