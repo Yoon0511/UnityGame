@@ -10,7 +10,7 @@ public class PunchAttack : MonoBehaviour
     {
         if(other.CompareTag("TAG_PLAYER"))
         {
-            other.GetComponent<Player>().Hit(monster.GetAtk());
+            other.GetComponent<Player>().Hit(monster.GetStatData(STAT_TYPE.ATK));
         }
     }
 }

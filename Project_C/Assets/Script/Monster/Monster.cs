@@ -40,24 +40,13 @@ public partial class Monster : Character
     }
     public override void Init()
     {
-        maxhp = 100.0f;
-        maxmp = 100.0f;
-        hp = maxhp;
-        mp = maxmp;
-        atk = 10.0f;
-        def = 2.0f;
-        speed = 2.0f;
-
         player = Shared.GameMgr.PLAYER;
         Fsm_Init();
     }
 
-    public override void Hit(float damage)
+    public override void Hit(float _damage)
     {
-        float value = hp + (def - damage);
-        hp = value;
-
-        Debug.Log("MONSTER HP - " + hp);
+        statdata.TakeDamage(_damage);
 
         if(CheckHP())
         {
@@ -68,7 +57,7 @@ public partial class Monster : Character
 
     bool CheckHP() 
     {
-        if(hp <= 0)
+        if(statdata.GetData(STAT_TYPE.HP) <= 0)
         {
             return true;
         }

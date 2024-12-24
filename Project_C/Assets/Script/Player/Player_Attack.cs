@@ -12,10 +12,9 @@ public partial class Player
         }
         ChangeState(STATE.ATTACK);
     }
-    public override void Hit(float damage)
+    public override void Hit(float _damage)
     {
-        float value = hp + (def - damage);
-        hp = value;
+        statdata.TakeDamage(_damage);
         UpdateHpbar();
     }
 
@@ -23,7 +22,7 @@ public partial class Player
     {
         if (other.CompareTag("TAG_MONSTER"))
         {
-            other.GetComponent<Monster>().Hit(atk);
+            other.GetComponent<Monster>().Hit(statdata.GetData(STAT_TYPE.ATK));
         }
     }
 }

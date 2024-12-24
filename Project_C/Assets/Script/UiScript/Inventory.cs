@@ -68,6 +68,5 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
         {
             slot.GetSlotItem().ItemUse();
         }
-
     }
 }

@@ -12,6 +12,7 @@ public partial class Player
             return;
         }
 
+        float speed = statdata.GetData(STAT_TYPE.SPEED);
         float fx = Input.GetAxis("Horizontal");
         float fz = Input.GetAxis("Vertical");
 
@@ -36,6 +37,7 @@ public partial class Player
             return;
         }
         isjoystick_drag = _isdrag;
+        float speed = statdata.GetData(STAT_TYPE.SPEED);
         float DistSpeed = speed * _dist;
         float fx = _dir.x * DistSpeed * Time.deltaTime;
         float fz = _dir.y * DistSpeed * Time.deltaTime;

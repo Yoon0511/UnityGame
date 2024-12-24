@@ -11,12 +11,12 @@ public partial class Player
     Image MP_BAR;
     void UpdateHpbar()
     {
-        float value = hp / maxhp;
+        float value = statdata.GetData(STAT_TYPE.HP) / statdata.GetData(STAT_TYPE.MAXHP);
         HP_BAR.fillAmount = value;
     }
     void UpdateMpbar()
     {
-        float value = mp / maxmp;
+        float value = statdata.GetData(STAT_TYPE.MP) / statdata.GetData(STAT_TYPE.MAXMP);
         MP_BAR.fillAmount = value;
     }
 }

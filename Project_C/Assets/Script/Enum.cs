@@ -40,3 +40,18 @@ public enum MONSTER_STATE
     DIE,
     ENUM_END
 }
+
+public enum STAT_TYPE
+{
+    NONE,
+    HP,
+    MP,
+    SPEED,
+    ATK,
+    DEF,
+    MAXHP,
+    MAXMP,
+    EXP,
+    LEVEL,
+    ENUM_END
+}
