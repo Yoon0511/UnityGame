@@ -6,8 +6,7 @@ using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
-    [SerializeField]
-    protected StatData statdata;
+    public StatData statdata;
     protected string character_name;
 
     //protected STATE curr_state;
@@ -39,8 +38,18 @@ public abstract class Character : MonoBehaviour
     }
     */
     public string GetCharacterName() { return character_name; }
-    public float GetStatData(STAT_TYPE _type)
+    public float GetInStatData(STAT_TYPE _type)
     { 
         return statdata.GetData(_type); 
+    }
+
+    public StatData GetStatData()
+    {
+        return statdata;
+    }
+
+    public void EhanceStat()
+    {
+
     }
 }

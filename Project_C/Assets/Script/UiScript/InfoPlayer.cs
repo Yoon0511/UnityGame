@@ -16,13 +16,13 @@ public class InfoPlayer : MonoBehaviour
     {
         Refresh();
     }
-    void Refresh()
+    public void Refresh()
     {
         player = Shared.GameMgr.PLAYER.GetComponent<Player>();
 
         NAME.text = "<color=#C0C0C0>" + player.GetCharacterName() + "</color>";
-        ATK.text = "ATK : " + player.GetStatData(STAT_TYPE.ATK);
-        DEF.text = "DEF : " + player.GetStatData(STAT_TYPE.DEF);
-        SPEED.text = "SPEED : " + player.GetStatData(STAT_TYPE.SPEED);
+        ATK.text = "ATK : " + player.GetInStatData(STAT_TYPE.ATK);
+        DEF.text = "DEF : " + player.GetInStatData(STAT_TYPE.DEF);
+        SPEED.text = "SPEED : " + player.GetInStatData(STAT_TYPE.SPEED);
     }
 }

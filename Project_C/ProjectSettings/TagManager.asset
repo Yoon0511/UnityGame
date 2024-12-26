@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TAG_MONSTER
   - TAG_PLAYER
+  - TAG_ITEM
   layers:
   - Default
   - TransparentFX

@@ -5,7 +5,7 @@ using AYellowpaper.SerializedCollections;
 
 public class StatData : MonoBehaviour
 {
-    [field: SerializeField]
+    [SerializeField]
     private SerializedDictionary<STAT_TYPE, float> dicstat;
 
     public void TakeDamage(float _damage)
@@ -15,6 +15,7 @@ public class StatData : MonoBehaviour
 
     public void EnhanceStat(STAT_TYPE _type,float _num)
     {
+        Debug.Log(_num);
         dicstat[_type] += _num;
     }
 

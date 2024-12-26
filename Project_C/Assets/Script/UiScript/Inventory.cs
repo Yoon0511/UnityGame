@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
 
     [SerializeField]
     List<Item> items = new List<Item>();
+    [SerializeField]
     List<InvenSlot> slots = new List<InvenSlot>();
 
     void Awake()
@@ -38,7 +39,7 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
         }
         Refresh();
     }
-    void Refresh()
+    public void Refresh()
     {
         int i = 0;
         for (; i < items.Count; ++i)
@@ -60,13 +61,19 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
         }
     }
 
+    public void DeleteItem(Item _item)
+    {
+        items.Remove(_item);
+        Refresh();
+    }
     public void OnPointerClick(PointerEventData eventData)
     {
         GameObject obj = eventData.pointerCurrentRaycast.gameObject;
         InvenSlot slot = obj.transform.GetComponent<InvenSlot>();
-        if (slot != null && slot.GetSlotItem() != null)
+
+        if (slot != null && slot.IsSlotItem() != null)
         {
-            slot.GetSlotItem().ItemUse();
+            slot.OnClickSlot();
         }
     }
 }

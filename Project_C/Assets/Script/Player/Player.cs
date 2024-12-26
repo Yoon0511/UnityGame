@@ -12,10 +12,17 @@ public partial class Player : Character
     Monster target;
     [SerializeField]
     Inventory inventory;
+    [SerializeField]
+    EquipmentWindow equiment;
+
 
     //아이템, 인벤토리 테스트
     public GameObject item;
     int itemcount = 0;
+
+    public EquipmentItem weapon;
+    public EquipmentItem amor;
+    public EquipmentItem ring;
     //테스트
 
     private void Awake()
@@ -35,11 +42,26 @@ public partial class Player : Character
             ChangeState(STATE.ATTACK);
         }
 
-        if (Input.GetKeyDown(KeyCode.F3))
+        //테스트
+        if (Input.GetKeyDown(KeyCode.F3)) //포션
         {
             Item obj = Instantiate(item).GetComponent<Item>();
-            obj.ItemId = itemcount++;
+            obj.id = itemcount++;
             inventory.AddItem(obj);
+        }
+
+        if (Input.GetKeyDown(KeyCode.F5)) //무기
+        {
+            inventory.AddItem(weapon);
+            //equiment.EquippedItem(weapon);
+        }
+        if (Input.GetKeyDown(KeyCode.F6)) //갑옷
+        {
+            inventory.AddItem(amor);
+        }
+        if (Input.GetKeyDown(KeyCode.F7)) //악세서리
+        {
+            inventory.AddItem(ring);
         }
     }
 
@@ -87,4 +109,24 @@ public partial class Player : Character
         // 필드 아이템 리스트 -> 검색 -> 습득
     }
 
+    public Inventory GetInventory() { return inventory; }
+    public EquipmentWindow GetEquipmentWindow() { return equiment; }
+
+    public void ApplyEquipItem(EquipmentItem _equipmentItem,bool UnEquip = false)
+    {
+        for(int i = 1;i<(int)STAT_TYPE.ENUM_END;++i)
+        {
+            float statValue = 0.0f;
+            bool IsInStat = _equipmentItem.dic_EquipmentItemStat.TryGetValue((STAT_TYPE)i, out statValue);
+
+            if(IsInStat && UnEquip == false) //장비 스탯 추가
+            {
+                statdata.EnhanceStat((STAT_TYPE)i, statValue);
+            }
+            else if(IsInStat && UnEquip) //장비 스탯 해제
+            {
+                statdata.EnhanceStat((STAT_TYPE)i, -statValue);
+            }
+        }
+    }
 }
