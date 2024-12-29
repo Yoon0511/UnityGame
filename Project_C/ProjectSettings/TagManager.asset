@@ -7,6 +7,8 @@ TagManager:
   - TAG_MONSTER
   - TAG_PLAYER
   - TAG_ITEM
+  - TAG_SKILLBTN
+  - TAG_CANVAS
   layers:
   - Default
   - TransparentFX

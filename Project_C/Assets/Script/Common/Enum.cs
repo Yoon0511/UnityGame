@@ -63,3 +63,11 @@ public enum STAT_TYPE
     LEVEL,
     ENUM_END
 }
+
+public enum SKILL_TYPE
+{
+    NONE,
+    ACTIVE,
+    PASSIVE,
+    ENUM_NED
+}

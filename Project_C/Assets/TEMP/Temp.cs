@@ -5,21 +5,18 @@ using UnityEngine.UI;
 
 public class Temp : MonoBehaviour
 {
-    public Player player;
+    public SkillFireBall FireBall;
 
-    public Text text;
+    public SkillBtn ui;
+
+    public SkillSlot skillslot;
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        //FireBall.UseSkill();
 
-    // Update is called once per frame
-    private void FixedUpdate()
-    {
-        //string curr_state = player.GetCurrState().ToString();
-        //string prev_state = player.GetPrevState().ToString();
+        ui.InputSkill(FireBall);
 
-        //text.text = "Curr :" + curr_state + "\n" +"Prev : " + prev_state;
+        skillslot.InputSkill(FireBall);
     }
 }

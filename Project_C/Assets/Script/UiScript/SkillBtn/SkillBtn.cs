@@ -1,0 +1,65 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class SkillBtn: MonoBehaviour
+{
+    [SerializeField]
+    Image image;
+    [SerializeField]
+    Text cooltext;
+    Color originalcolor = new Color(255, 255, 255);
+
+    float skillCooltime;
+    Skill skill;
+    bool isUseSkill = true;
+
+    public void InputSkill(Skill _skill)
+    {
+        skill = _skill;
+        image.sprite = skill.SPRITE;
+        image.color = new Color(255, 255, 255, 255);
+        skillCooltime = skill.COOLTIME;
+    }
+
+    public void UseSkill()
+    {
+        if (isUseSkill == false || skill == null) 
+            return;
+
+        isUseSkill = false;
+        skill.UseSkill();
+        cooltext.gameObject.SetActive(true);
+        image.color = new Color(0, 0, 0);
+        StartCoroutine(ICoolTime());
+    }
+
+    IEnumerator ICoolTime()
+    {
+        float time = 0.0f;
+
+        while(time <= skillCooltime)
+        {
+            time += Time.deltaTime;
+            
+            yield return null;
+
+            float T = time / skillCooltime;
+            image.fillAmount = T;
+            float textT = skillCooltime - time;
+            cooltext.text = textT.ToString("F1");
+            
+            float tcolor = T * 255f;
+            image.color = new Color(tcolor, tcolor, tcolor);
+
+            if (time >= skillCooltime)
+            {
+                isUseSkill = true;
+                image.color = originalcolor;
+                cooltext.gameObject.SetActive(false);
+                StopCoroutine(ICoolTime());
+            }
+        }
+    }
+}
