@@ -11,8 +11,7 @@ public class Monster_ChaseState : StateBase
     }
     public override void OnStateEnter()
     {
-        monster.PlayAnimation(MONSTER_STATE.MOVE);
-        //Debug.Log("OnIdleEnter");
+        monster.PlayAnimation(MONSTER_ANI_STATE.MOVE);
     }
 
     public override void OnStateExit()
@@ -22,7 +21,7 @@ public class Monster_ChaseState : StateBase
 
     public override void OnStateUpdate()
     {
-        monster.MoveToTarget(Shared.GameMgr.PLAYER);
+        monster.MoveToTarget();
 
         if (monster.IsPlayerInAttackRange())
             monster.ChangeState(MONSTER_STATE.ATTACK);

@@ -11,8 +11,7 @@ public class Monster_AttackState : StateBase
     }
     public override void OnStateEnter()
     {
-        monster.PlayAnimation(MONSTER_STATE.ATTACK);
-        //Debug.Log("OnAttackEnter");
+        monster.PlayAnimation(MONSTER_ANI_STATE.ATTACK);
     }
 
     public override void OnStateExit()
@@ -23,7 +22,6 @@ public class Monster_AttackState : StateBase
     public override void OnStateUpdate()
     {
         if (monster.IsPlayerInAttackRange() == false)
-            monster.ChangeState(MONSTER_STATE.MOVE);
-       // Debug.Log("OnAttackUpdate");
+            monster.ChangeState(MONSTER_STATE.PATROL);
     }
 }

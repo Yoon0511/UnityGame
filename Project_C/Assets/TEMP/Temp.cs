@@ -5,18 +5,15 @@ using UnityEngine.UI;
 
 public class Temp : MonoBehaviour
 {
-    public SkillFireBall FireBall;
-
-    public SkillBtn ui;
-
-    public SkillSlot skillslot;
+    public List<Skill> skillList = new List<Skill>();
+    public SkillBook skillbook;
     // Start is called before the first frame update
     void Start()
     {
-        //FireBall.UseSkill();
-
-        ui.InputSkill(FireBall);
-
-        skillslot.InputSkill(FireBall);
+        //skillslot.InputSkill();
+        foreach (Skill skill in skillList)
+        {
+            skillbook.AddSkill(skill);
+        }
     }
 }

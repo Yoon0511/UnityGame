@@ -49,6 +49,16 @@ public enum MONSTER_STATE
     DIE,
     ENUM_END
 }
+
+public enum MONSTER_ANI_STATE
+{
+    NONE,
+    IDLE,
+    MOVE,
+    ATTACK,
+    DIE,
+    ENUM_END
+}
 public enum STAT_TYPE
 {
     NONE,

@@ -11,7 +11,7 @@ public class Monster_MoveState : StateBase
     }
     public override void OnStateEnter()
     {
-        monster.PlayAnimation(MONSTER_STATE.MOVE);
+        monster.PlayAnimation(MONSTER_ANI_STATE.MOVE);
         //Debug.Log("OnMoveEnter");
     }
 

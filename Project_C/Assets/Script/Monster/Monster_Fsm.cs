@@ -6,11 +6,13 @@ public partial class Monster
 {
     StateMachine fsm;
 
+    [SerializeField]
     MONSTER_STATE curr_state;
     MONSTER_STATE prev_state;
     Dictionary<MONSTER_STATE, StateBase> dicState = new Dictionary<MONSTER_STATE, StateBase>();
 
     public List<GameObject> patrolPoint = new List<GameObject>();
+    int patrolIndex = 0;
     void Fsm_Init()
     {
         fsm = new StateMachine(new Monster_IdleState(this));
@@ -19,6 +21,7 @@ public partial class Monster
 
         dicState.Add(MONSTER_STATE.IDLE, new Monster_IdleState(this));
         dicState.Add(MONSTER_STATE.MOVE, new Monster_MoveState(this));
+        dicState.Add(MONSTER_STATE.PATROL, new Monster_PatrolState(this));
         dicState.Add(MONSTER_STATE.CHASE, new Monster_ChaseState(this));
         dicState.Add(MONSTER_STATE.ATTACK, new Monster_AttackState(this));
         dicState.Add(MONSTER_STATE.DIE, new Monster_DieState(this));
@@ -34,11 +37,6 @@ public partial class Monster
         prev_state = curr_state;
         curr_state = _state;
 
-        ChangeState();
-    }
-
-    public void ChangeState()
-    {
         fsm.ChangeState(dicState[curr_state]);
     }
 
@@ -78,17 +76,38 @@ public partial class Monster
         return false;
     }
 
+    public void PatrolModeInit()
+    {
+        patrolIndex = 0;
+        ChageTarget(patrolPoint[patrolIndex]);
+    }
     public void PatrolMode()
     {
         MoveToTarget();
 
-        for(int i = 0;i<patrolPoint.Count;++i)
+        float dist = Vector3.Distance(transform.position, patrolPoint[patrolIndex].transform.position);
+        if (dist <= 0.5f)
         {
-            float dist = Vector3.Distance(transform.position, patrolPoint[i].transform.position);
-            if(dist <= 0.5f)
+            patrolIndex++;
+            if (patrolIndex >= patrolPoint.Count)
             {
-                ChageTarget(patrolPoint[i + 1]);
+                patrolIndex = 0;
             }
+            ChageTarget(patrolPoint[patrolIndex]);
         }
+    }
+    public void SetPatrolIndex(int _index)
+    {
+        patrolIndex = _index;
+    }
+
+    public void StartChageToPatrol(float _time)
+    {
+        StartCoroutine(IChageToPatrol(_time));
+    }
+    private IEnumerator IChageToPatrol(float _time)
+    {
+        yield return new WaitForSeconds(_time);
+        ChangeState(MONSTER_STATE.PATROL);
     }
 }

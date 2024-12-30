@@ -15,7 +15,7 @@ public partial class Monster
         animator.SetInteger("Ani_State", _state);
     }
 
-    public void PlayAnimation(MONSTER_STATE _state)
+    public void PlayAnimation(MONSTER_ANI_STATE _state)
     {
         animator.SetInteger("Ani_State", (int)_state);
     }

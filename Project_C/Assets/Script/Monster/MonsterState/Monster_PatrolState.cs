@@ -11,13 +11,13 @@ public class Monster_PatrolState : StateBase
     }
     public override void OnStateEnter()
     {
-        monster.ChageTarget(monster.patrolPoint[0]);
-        monster.PlayAnimation(MONSTER_STATE.MOVE);
-        //Debug.Log("OnIdleEnter");
+        monster.PatrolModeInit();
+        monster.PlayAnimation(MONSTER_ANI_STATE.MOVE);
     }
 
     public override void OnStateExit()
     {
+        monster.SetPatrolIndex(0);
         //Debug.Log("OnIdleExit");
     }
 
@@ -27,6 +27,7 @@ public class Monster_PatrolState : StateBase
 
         if (monster.IsPlayerInDetectionRange())
         {
+            monster.ChageTarget(Shared.GameMgr.PLAYER);
             monster.ChangeState(MONSTER_STATE.CHASE);
         }
         //Debug.Log("OnIdleUpdate");

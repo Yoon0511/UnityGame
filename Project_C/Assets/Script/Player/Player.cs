@@ -10,11 +10,6 @@ public partial class Player : Character
     float runspeed;
 
     Monster target;
-    [SerializeField]
-    Inventory inventory;
-    [SerializeField]
-    EquipmentWindow equiment;
-
 
     //아이템, 인벤토리 테스트
     public GameObject item;
@@ -107,26 +102,5 @@ public partial class Player : Character
         // 가장 가까운 아이템 탐색 후 습득 - 인벤토리 적립
         
         // 필드 아이템 리스트 -> 검색 -> 습득
-    }
-
-    public Inventory GetInventory() { return inventory; }
-    public EquipmentWindow GetEquipmentWindow() { return equiment; }
-
-    public void ApplyEquipItem(EquipmentItem _equipmentItem,bool UnEquip = false)
-    {
-        for(int i = 1;i<(int)STAT_TYPE.ENUM_END;++i)
-        {
-            float statValue = 0.0f;
-            bool IsInStat = _equipmentItem.dic_EquipmentItemStat.TryGetValue((STAT_TYPE)i, out statValue);
-
-            if(IsInStat && UnEquip == false) //장비 스탯 추가
-            {
-                statdata.EnhanceStat((STAT_TYPE)i, statValue);
-            }
-            else if(IsInStat && UnEquip) //장비 스탯 해제
-            {
-                statdata.EnhanceStat((STAT_TYPE)i, -statValue);
-            }
-        }
     }
 }

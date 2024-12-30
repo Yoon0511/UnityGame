@@ -11,7 +11,7 @@ public class Monster_DieState : StateBase
     }
     public override void OnStateEnter()
     {
-        monster.PlayAnimation(MONSTER_STATE.DIE);
+        monster.PlayAnimation(MONSTER_ANI_STATE.DIE);
         //Debug.Log("OnMoveEnter");
     }
 

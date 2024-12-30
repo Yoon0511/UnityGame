@@ -55,23 +55,25 @@
     <UnityVersion>2022.3.44f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Player\PlayerState\Player_AttackState.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_DieState.cs" />
+    <Compile Include="Assets\Script\UiScript\SkillBook\SkillBook.cs" />
     <Compile Include="Assets\Script\Player\PlayerState\Player_IdleState.cs" />
     <Compile Include="Assets\Script\Player\PlayerState\Player_RunState.cs" />
     <Compile Include="Assets\Script\Player\PlayerState\Player_WalkState.cs" />
+    <Compile Include="Assets\Script\Skill\SkillSlash.cs" />
     <Compile Include="Assets\Script\Player\PlayerState\Player_DieState.cs" />
     <Compile Include="Assets\Script\UiScript\SkillBtn\SkillBtn.cs" />
     <Compile Include="Assets\Script\UiScript\EquipmentWindow.cs" />
     <Compile Include="Assets\Script\Player\Player_Ui.cs" />
+    <Compile Include="Assets\Script\DamageTaxt\DamageText.cs" />
     <Compile Include="Assets\Script\Item\Item123.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_MoveState.cs" />
-    <Compile Include="Assets\Script\Skill\SkillFireBall.cs" />
     <Compile Include="Assets\Script\Player\Player_Attack.cs" />
     <Compile Include="Assets\Script\UiScript\ExitBtn.cs" />
     <Compile Include="Assets\Script\GameMgr.cs" />
@@ -79,6 +81,7 @@
     <Compile Include="Assets\Script\Monster\Monster_Animation.cs" />
     <Compile Include="Assets\Script\Skill\Skill.cs" />
     <Compile Include="Assets\Script\FSM\StateBase.cs" />
+    <Compile Include="Assets\Script\Player\Player_Equipment.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_IdleState.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_ChaseState.cs" />
     <Compile Include="Assets\Script\Monster\PunchAttack.cs" />
@@ -95,11 +98,13 @@
     <Compile Include="Assets\Script\Item\EquipmentItem.cs" />
     <Compile Include="Assets\Script\UiScript\ItemSlot\InvenSlot.cs" />
     <Compile Include="Assets\Script\Monster\Monster.cs" />
+    <Compile Include="Assets\Script\DamageTaxt\CreateDamageText.cs" />
     <Compile Include="Assets\Script\Player\Player_AniEvent.cs" />
     <Compile Include="Assets\Script\UiScript\OpenShowUi.cs" />
     <Compile Include="Assets\Script\Player\Player_Fsm.cs" />
     <Compile Include="Assets\Script\UiScript\ItemSlot\EquipmentSlot.cs" />
     <Compile Include="Assets\Script\UiScript\SkillBook\DragAndDropSkill.cs" />
+    <Compile Include="Assets\Script\Player\Player_Inventory.cs" />
     <Compile Include="Assets\Script\UiScript\InfoPlayer.cs" />
     <Compile Include="Assets\Scenes\TogleScript.cs" />
     <Compile Include="Assets\Script\Player\Player_Animation.cs" />
@@ -107,7 +112,9 @@
     <Compile Include="Assets\Script\UiScript\Joystick.cs" />
     <Compile Include="Assets\Script\Monster\Monster_Move.cs" />
     <Compile Include="Assets\Script\UiScript\SkillBook\SkillSlot.cs" />
+    <Compile Include="Assets\Script\Skill\SkillPowerUp.cs" />
     <Compile Include="Assets\Script\Common\Enum.cs" />
+    <Compile Include="Assets\Script\Skill\SkillPoison.cs" />
     <Compile Include="Assets\Script\Item\Item.cs" />
     <Compile Include="Assets\Script\FollowingCamera.cs" />
     <Compile Include="Assets\Script\Player\Player.cs" />
