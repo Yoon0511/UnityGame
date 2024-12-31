@@ -12,7 +12,7 @@ public class Monster_PatrolState : StateBase
     public override void OnStateEnter()
     {
         monster.PatrolModeInit();
-        monster.PlayAnimation(MONSTER_ANI_STATE.MOVE);
+        monster.PlayAnimation("Ani_State",(int)MONSTER_ANI_STATE.MOVE);
     }
 
     public override void OnStateExit()

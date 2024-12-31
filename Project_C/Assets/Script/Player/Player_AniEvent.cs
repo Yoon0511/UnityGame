@@ -18,6 +18,6 @@ public partial class Player
 
     public void OnAttackAniEnd()
     {
-        ChangeState(prev_state);
+        ChangeState(PrevState);
     }
 }

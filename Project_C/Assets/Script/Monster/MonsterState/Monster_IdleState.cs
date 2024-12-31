@@ -12,7 +12,7 @@ public class Monster_IdleState : StateBase
 
     public override void OnStateEnter()
     {
-        monster.PlayAnimation(MONSTER_ANI_STATE.IDLE);
+        monster.PlayAnimation("Ani_State", (int)MONSTER_ANI_STATE.IDLE);
         monster.StartChageToPatrol(2.0f);
     }
 

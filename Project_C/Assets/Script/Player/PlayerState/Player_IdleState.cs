@@ -13,7 +13,7 @@ public class Player_IdleState : StateBase
 
     public override void OnStateEnter()
     {
-        player.PlayAnimation(STATE.IDLE);
+        player.PlayAnimation("Ani_State", (int)STATE.IDLE);
     }
 
     public override void OnStateExit()

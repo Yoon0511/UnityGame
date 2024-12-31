@@ -1,48 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public partial class Monster
 {
-    StateMachine fsm;
-
-    [SerializeField]
-    MONSTER_STATE curr_state;
-    MONSTER_STATE prev_state;
-    Dictionary<MONSTER_STATE, StateBase> dicState = new Dictionary<MONSTER_STATE, StateBase>();
-
     public List<GameObject> patrolPoint = new List<GameObject>();
     int patrolIndex = 0;
-    void Fsm_Init()
+    public override void Fsm_Init()
     {
-        fsm = new StateMachine(new Monster_IdleState(this));
-        curr_state = MONSTER_STATE.IDLE;
-        prev_state = curr_state;
+        Fsm = new StateMachine(new Monster_IdleState(this));
+        CurrState = MONSTER_STATE.IDLE;
+        PrevState = CurrState;
 
-        dicState.Add(MONSTER_STATE.IDLE, new Monster_IdleState(this));
-        dicState.Add(MONSTER_STATE.MOVE, new Monster_MoveState(this));
-        dicState.Add(MONSTER_STATE.PATROL, new Monster_PatrolState(this));
-        dicState.Add(MONSTER_STATE.CHASE, new Monster_ChaseState(this));
-        dicState.Add(MONSTER_STATE.ATTACK, new Monster_AttackState(this));
-        dicState.Add(MONSTER_STATE.DIE, new Monster_DieState(this));
+        DicState.Add(MONSTER_STATE.IDLE, new Monster_IdleState(this));
+        DicState.Add(MONSTER_STATE.MOVE, new Monster_MoveState(this));
+        DicState.Add(MONSTER_STATE.PATROL, new Monster_PatrolState(this));
+        DicState.Add(MONSTER_STATE.CHASE, new Monster_ChaseState(this));
+        DicState.Add(MONSTER_STATE.ATTACK, new Monster_AttackState(this));
+        DicState.Add(MONSTER_STATE.DIE, new Monster_DieState(this));
 
-        fsm.ChangeState(dicState[MONSTER_STATE.IDLE]);
-    }
-
-    public void ChangeState(MONSTER_STATE _state)
-    {
-        if (curr_state == _state)
-            return;
-
-        prev_state = curr_state;
-        curr_state = _state;
-
-        fsm.ChangeState(dicState[curr_state]);
-    }
-
-    public void StateUpdate()
-    {
-        fsm.UpdateState();
+        Fsm.ChangeState(DicState[MONSTER_STATE.IDLE]);
     }
 
     public bool IsPlayerInDetectionRange()

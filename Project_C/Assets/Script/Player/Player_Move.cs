@@ -7,7 +7,7 @@ public partial class Player
     bool isjoystick_drag;
     private void KeyboardMove()
     {
-        if (curr_state == STATE.ATTACK)
+        if (CurrState == STATE.ATTACK)
         {
             return;
         }
@@ -23,16 +23,16 @@ public partial class Player
 
         if (fx == 0.0f && fz == 0.0f)
         {
-            animator.SetInteger("Ani_State", (int)STATE.IDLE);
+            PlayAnimation("Ani_State", (int)STATE.IDLE);
         }
         else
         {
-            animator.SetInteger("Ani_State", (int)STATE.WALK);
+            PlayAnimation("Ani_State", (int)STATE.WALK);
         }
     }
     public void JoystickMove(Vector3 _dir, float _dist,bool _isdrag)
     {
-        if (curr_state == STATE.ATTACK)
+        if (CurrState == STATE.ATTACK)
         {
             return;
         }

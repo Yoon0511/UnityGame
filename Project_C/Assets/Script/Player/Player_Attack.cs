@@ -6,7 +6,7 @@ public partial class Player
 {
     public void OnAttack()
     {
-        if (curr_state == STATE.ATTACK)
+        if (CurrState == STATE.ATTACK)
         {
             return;
         }

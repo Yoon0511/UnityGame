@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public partial class Player : Character
+public partial class Player : Character<STATE>
 {
     float walkspeed;
     float runspeed;
@@ -26,7 +26,7 @@ public partial class Player : Character
     }
     private void FixedUpdate()
     {
-        fsm.UpdateState();
+        Fsm.UpdateState();
         //KeyboardMove();
     }
     // Update is called once per frame
@@ -69,7 +69,7 @@ public partial class Player : Character
     //키보드 조작
     void UpdateAnimation()
     {
-        if (curr_state == STATE.ATTACK)
+        if (CurrState == STATE.ATTACK)
         {
             return;
         }
@@ -80,12 +80,12 @@ public partial class Player : Character
         }
         else if (Input.GetKey(KeyCode.LeftShift)) // 달리기
         {
-            animator.SetInteger("Ani_State", (int)STATE.RUN);
+            //animator.SetInteger("Ani_State", (int)STATE.RUN);
             ChangeState(STATE.RUN);
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift)) // 걷기
         {
-            animator.SetInteger("Ani_State", (int)STATE.WALK);
+            //animator.SetInteger("Ani_State", (int)STATE.WALK);
             ChangeState(STATE.WALK);
         }
     }

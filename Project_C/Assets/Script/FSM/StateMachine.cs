@@ -3,6 +3,11 @@ using UnityEngine;
 public class StateMachine
 {
     private StateBase cur_state;
+
+    public StateMachine()
+    {
+        cur_state = null;
+    }
     public StateMachine(StateBase _state)
     {
         cur_state = _state;

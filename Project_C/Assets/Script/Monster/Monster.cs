@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public partial class Monster : Character
+public partial class Monster : Character<MONSTER_STATE>
 {
     [SerializeField]
     GameObject Target;

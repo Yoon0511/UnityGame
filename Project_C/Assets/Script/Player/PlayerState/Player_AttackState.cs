@@ -13,7 +13,7 @@ public class Player_AttackState : StateBase
 
     public override void OnStateEnter()
     {
-        player.PlayAnimation(STATE.ATTACK);
+        player.PlayAnimation("Ani_State", (int)STATE.ATTACK);
     }
 
     public override void OnStateExit()

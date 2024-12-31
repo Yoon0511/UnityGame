@@ -13,7 +13,7 @@ public class Player_WalkState : StateBase
 
     public override void OnStateEnter()
     {
-        player.PlayAnimation(STATE.WALK);
+        player.PlayAnimation("Ani_State",(int)STATE.WALK);
     }
 
     public override void OnStateExit()

@@ -11,7 +11,7 @@ public class Monster_AttackState : StateBase
     }
     public override void OnStateEnter()
     {
-        monster.PlayAnimation(MONSTER_ANI_STATE.ATTACK);
+        monster.PlayAnimation("Ani_State", (int)MONSTER_ANI_STATE.ATTACK);
     }
 
     public override void OnStateExit()
