@@ -12,18 +12,20 @@ public class CoolTimeUi : MonoBehaviour
     Color originalcolor = new Color(255, 255, 255);
 
     float skillCooltime;
+    
     Skill skill;
-
+   
+    
     public void InputSkill(Skill _skill)
     {
         skill = _skill;
-        image.sprite = skill.SPRITE;
-        skillCooltime = skill.COOLTIME;
+        image.sprite = skill.Sprite;
+        skillCooltime = skill.CoolTime;
     }
 
     public void UseSkill()
     {
-        skill.UseSkill();
+        //skill.UseSkill();
         cooltext.gameObject.SetActive(true);
         image.color = new Color(0, 0, 0);
         StartCoroutine(ICoolTime());

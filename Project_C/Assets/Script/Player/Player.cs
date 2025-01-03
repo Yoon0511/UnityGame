@@ -19,7 +19,7 @@ public partial class Player : Character<STATE>
     public EquipmentItem amor;
     public EquipmentItem ring;
     //테스트
-
+    
     private void Awake()
     {
         Shared.GameMgr.PLAYER = this.gameObject;
@@ -104,3 +104,9 @@ public partial class Player : Character<STATE>
         // 필드 아이템 리스트 -> 검색 -> 습득
     }
 }
+
+
+//플레이어
+//스킬리스트 - 스킬매니저 <- 스킬UI
+//장비리스트 <- 장비창
+//인벤토리

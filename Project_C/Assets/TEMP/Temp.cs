@@ -13,7 +13,9 @@ public class Temp : MonoBehaviour
         //skillslot.InputSkill();
         foreach (Skill skill in skillList)
         {
-            skillbook.AddSkill(skill);
+            ISkill iskill = skill as ISkill;
+            //iskill.UseSkill();
+            skillbook.AddSkill(skill,iskill);
         }
     }
 }

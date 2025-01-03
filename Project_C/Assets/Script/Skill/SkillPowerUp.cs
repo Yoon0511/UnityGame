@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillPowerUp : Skill
+public class SkillPowerUp : Skill, ISkill
 {
-    public override void UseSkill()
+    public void UseSkill()
     {
         Debug.Log("Use PowerUp Skill");
     }

@@ -9,9 +9,9 @@ public class SkillBook : MonoBehaviour
     [SerializeField]
     GameObject ParentContent;
 
-    public void AddSkill(Skill skill)
+    public void AddSkill(Skill _skill,ISkill _iskill)
     {
         GameObject skillSlot = Instantiate(PREFAB_SKILLSLOT, ParentContent.transform);
-        skillSlot.GetComponent<SkillSlot>().InputSkill(skill);
+        skillSlot.GetComponent<SkillSlot>().InputSkill(_skill, _iskill);
     }
 }

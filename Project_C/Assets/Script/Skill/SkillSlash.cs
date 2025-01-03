@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillSlash : Skill
+public class SkillSlash : Skill, ISkill
 {
-    public override void UseSkill()
+    public void UseSkill()
     {
         Debug.Log("Use Slash Skill");
     }

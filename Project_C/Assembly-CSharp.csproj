@@ -68,6 +68,7 @@
     <Compile Include="Assets\Script\Player\PlayerState\Player_WalkState.cs" />
     <Compile Include="Assets\Script\Skill\SkillSlash.cs" />
     <Compile Include="Assets\Script\Player\PlayerState\Player_DieState.cs" />
+    <Compile Include="Assets\Script\Skill\ISkill.cs" />
     <Compile Include="Assets\Script\UiScript\SkillBtn\SkillBtn.cs" />
     <Compile Include="Assets\Script\UiScript\EquipmentWindow.cs" />
     <Compile Include="Assets\Script\Player\Player_Ui.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Assets\Script\Common\StatData.cs" />
     <Compile Include="Assets\Script\Common\Character.cs" />
     <Compile Include="Assets\Script\UiScript\Inventory.cs" />
+    <Compile Include="Assets\Script\Common\Character\Character_Fsm.cs" />
     <Compile Include="Assets\Script\UiScript\CoolTime\CoolTimeUi.cs" />
     <Compile Include="Assets\Script\UiScript\OnBtnEvent.cs" />
     <Compile Include="Assets\Script\UiScript\ItemSlot\ItemSlot.cs" />
@@ -98,6 +100,7 @@
     <Compile Include="Assets\Script\Item\EquipmentItem.cs" />
     <Compile Include="Assets\Script\UiScript\ItemSlot\InvenSlot.cs" />
     <Compile Include="Assets\Script\Monster\Monster.cs" />
+    <Compile Include="Assets\Script\Common\Character\Character.cs" />
     <Compile Include="Assets\Script\DamageTaxt\CreateDamageText.cs" />
     <Compile Include="Assets\Script\Player\Player_AniEvent.cs" />
     <Compile Include="Assets\Script\UiScript\OpenShowUi.cs" />
@@ -110,12 +113,13 @@
     <Compile Include="Assets\Script\Player\Player_Animation.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_AttackState.cs" />
     <Compile Include="Assets\Script\UiScript\Joystick.cs" />
+    <Compile Include="Assets\Script\Skill\SkillPowerUp.cs" />
     <Compile Include="Assets\Script\Monster\Monster_Move.cs" />
     <Compile Include="Assets\Script\UiScript\SkillBook\SkillSlot.cs" />
-    <Compile Include="Assets\Script\Skill\SkillPowerUp.cs" />
     <Compile Include="Assets\Script\Common\Enum.cs" />
     <Compile Include="Assets\Script\Skill\SkillPoison.cs" />
     <Compile Include="Assets\Script\Item\Item.cs" />
+    <Compile Include="Assets\Script\Common\Character\Character_Animation.cs" />
     <Compile Include="Assets\Script\FollowingCamera.cs" />
     <Compile Include="Assets\Script\Player\Player.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_PatrolState.cs" />

@@ -1937,9 +1937,9 @@ GameObject:
   m_Component:
   - component: {fileID: 691886194}
   - component: {fileID: 691886195}
-  - component: {fileID: 691886196}
   - component: {fileID: 691886198}
   - component: {fileID: 691886197}
+  - component: {fileID: 691886199}
   m_Layer: 5
   m_Name: TEMP
   m_TagString: Untagged
@@ -1979,30 +1979,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillList:
-  - {fileID: 691886196}
+  - {fileID: 691886199}
   - {fileID: 691886198}
   - {fileID: 691886197}
   skillbook: {fileID: 1369508877}
---- !u!114 &691886196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 691886193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af13228a61e84a946ba55b48ac376360, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SPRITE: {fileID: 21300000, guid: cf6478ef684ce7f4c830edba147c7607, type: 3}
-  COOLTIME: 7
-  SKILLNAME: "\uC911\uB3C5"
-  ATK: 5
-  USE_MP: 3
-  EXPLANATION: "\uC801\uC744 \uC911\uB3C5\uC2DC\uD0A8\uB2E4"
-  ANIMATION_MOTION: 0
-  SKILLTYPE: 1
 --- !u!114 &691886197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2015,14 +1995,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c224f10a9a57a142aa5ac88f9fd9bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SPRITE: {fileID: 21300000, guid: 9895f5f95566ceb47bb239149d90cb44, type: 3}
-  COOLTIME: 15
-  SKILLNAME: "\uC2AC\uB798\uC26C"
-  ATK: 15
-  USE_MP: 10
-  EXPLANATION: "\uC804\uBC29\uC744 \uBCA4\uB2E4"
-  ANIMATION_MOTION: 0
-  SKILLTYPE: 1
+  Sprite: {fileID: 21300000, guid: c51afa706b02a044694b30f33f81d239, type: 3}
+  CoolTime: 15
+  SkillName: "\uAC80\uAE30"
+  Atk: 15
+  UseMp: 15
+  Explanation: "\uAC80\uAE30"
+  SkillMotion: 0
+  SkillType: 1
 --- !u!114 &691886198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2035,14 +2015,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bfc37caccc9ece49acb2e8c574c2507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SPRITE: {fileID: 21300000, guid: 4dc051a0301cecb4aa1a85036ace2a58, type: 3}
-  COOLTIME: 20
-  SKILLNAME: "\uD30C\uC6CC\uC5C5"
-  ATK: 0
-  USE_MP: 20
-  EXPLANATION: "\uC77C\uC815\uC2DC\uAC04\uB3D9\uC548 \uACF5\uACA9\uB825 \uC0C1\uC2B9"
-  ANIMATION_MOTION: 0
-  SKILLTYPE: 1
+  Sprite: {fileID: 21300000, guid: 4dc051a0301cecb4aa1a85036ace2a58, type: 3}
+  CoolTime: 10
+  SkillName: "\uC911\uB3C5"
+  Atk: 10
+  UseMp: 5
+  Explanation: "\uC801\uC744 \uC911\uB3C5"
+  SkillMotion: 0
+  SkillType: 1
+--- !u!114 &691886199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691886193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af13228a61e84a946ba55b48ac376360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sprite: {fileID: 21300000, guid: 9895f5f95566ceb47bb239149d90cb44, type: 3}
+  CoolTime: 20
+  SkillName: "\uC544\uC544\uC544"
+  Atk: 2
+  UseMp: 5
+  Explanation: "\u3134\uC73C\u314F\u3134\uC5B4\u314F\u3163"
+  SkillMotion: 0
+  SkillType: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2333,12 +2333,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statdata: {fileID: 0}
+  Animator: {fileID: 0}
   Target: {fileID: 0}
   detectionRange: 0
   attackRange: 0
-  animator: {fileID: 0}
   punchAttackCollider: {fileID: 0}
-  curr_state: 0
   patrolPoint: []
 --- !u!1 &730150968
 GameObject:
@@ -4461,12 +4460,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statdata: {fileID: 1525673007}
+  Animator: {fileID: 1525673006}
   Target: {fileID: 1942591409}
   detectionRange: 6
   attackRange: 2
-  animator: {fileID: 1525673006}
   punchAttackCollider: {fileID: 1463263}
-  curr_state: 0
   patrolPoint:
   - {fileID: 2094899656}
   - {fileID: 262017652}
@@ -5624,12 +5622,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statdata: {fileID: 1942591416}
+  Animator: {fileID: 1942591415}
   item: {fileID: 3288734687280227402, guid: c056d6e6aba53b74aa9c623157c9b595, type: 3}
   weapon: {fileID: 168764736227324860, guid: 2fd659d3f97d7ee4abca5e7b85e10e88, type: 3}
   amor: {fileID: 1650913060803658287, guid: 782d8aed6342e9748a421ef38f301700, type: 3}
   ring: {fileID: 6851662882637961033, guid: dd61008d9388d8a498151906bac6c7cc, type: 3}
   HITBOX: {fileID: 1522410809}
-  animator: {fileID: 1942591415}
   equiment: {fileID: 285888320}
   inventory: {fileID: 495617211}
   HP_BAR: {fileID: 1494373172}

@@ -6,58 +6,63 @@ using UnityEngine.UI;
 public class SkillBtn: MonoBehaviour
 {
     [SerializeField]
-    Image image;
+    Image Image;
     [SerializeField]
-    Text cooltext;
-    Color originalcolor = new Color(255, 255, 255);
+    Text CoolTimeText;
+    Color Originalcolor = new Color(255, 255, 255,255);
 
-    float skillCooltime;
-    Skill skill;
-    bool isUseSkill = true;
+    float SkillCooltime;
+    bool IsUseSkill = true;
 
-    public void InputSkill(Skill _skill)
+    Skill Skill;
+    ISkill Iskill;
+
+    public void InputSkill(Skill _Skill,ISkill _iskill)
     {
-        skill = _skill;
-        image.sprite = skill.SPRITE;
-        image.color = new Color(255, 255, 255, 255);
-        skillCooltime = skill.COOLTIME;
+        Iskill = _iskill;
+        Skill = _Skill;
+
+        Image.sprite = Skill.Sprite;
+        Image.color = Originalcolor;
+        SkillCooltime = Skill.CoolTime;
     }
 
     public void UseSkill()
     {
-        if (isUseSkill == false || skill == null) 
+        if (IsUseSkill == false || Skill == null) 
             return;
 
-        isUseSkill = false;
-        skill.UseSkill();
-        cooltext.gameObject.SetActive(true);
-        image.color = new Color(0, 0, 0);
+        Iskill.UseSkill();
+
+        IsUseSkill = false;
+        CoolTimeText.gameObject.SetActive(true);
+        Image.color = new Color(0, 0, 0);
         StartCoroutine(ICoolTime());
     }
-
+   
     IEnumerator ICoolTime()
     {
         float time = 0.0f;
 
-        while(time <= skillCooltime)
+        while(time <= SkillCooltime)
         {
             time += Time.deltaTime;
             
             yield return null;
 
-            float T = time / skillCooltime;
-            image.fillAmount = T;
-            float textT = skillCooltime - time;
-            cooltext.text = textT.ToString("F1");
+            float T = time / SkillCooltime;
+            Image.fillAmount = T;
+            float textT = SkillCooltime - time;
+            CoolTimeText.text = textT.ToString("F1");
             
             float tcolor = T * 255f;
-            image.color = new Color(tcolor, tcolor, tcolor);
+            Image.color = new Color(tcolor, tcolor, tcolor);
 
-            if (time >= skillCooltime)
+            if (time >= SkillCooltime)
             {
-                isUseSkill = true;
-                image.color = originalcolor;
-                cooltext.gameObject.SetActive(false);
+                IsUseSkill = true;
+                Image.color = Originalcolor;
+                CoolTimeText.gameObject.SetActive(false);
                 StopCoroutine(ICoolTime());
             }
         }

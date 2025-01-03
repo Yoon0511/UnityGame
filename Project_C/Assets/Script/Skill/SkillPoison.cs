@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillPoison : Skill
+public class SkillPoison : Skill, ISkill
 {
-    public override void UseSkill()
+    public void UseSkill()
     {
-        Debug.Log("Use Poison Skill");
+        Debug.Log("Use Skill Poison");
     }
 }

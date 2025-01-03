@@ -5,13 +5,24 @@ using UnityEngine.UI;
 
 public abstract class Skill : MonoBehaviour
 {
-    public Sprite SPRITE;
-    public float COOLTIME;
-    public string SKILLNAME;
-    public float ATK;
-    public float USE_MP;
-    public string EXPLANATION;
-    public int ANIMATION_MOTION;
-    public SKILL_TYPE SKILLTYPE;
-    public abstract void UseSkill();
+    public Sprite Sprite;
+    public float CoolTime;
+    public string SkillName;
+    public float Atk;
+    public float UseMp;
+    public string Explanation;
+    public int SkillMotion;
+    public SKILL_TYPE SkillType;
 }
+
+
+/* interface ISkillAttack - UseSkill
+ * SkillXXX :  ISkillAttack - UseSkill
+ * Skillbtn 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
