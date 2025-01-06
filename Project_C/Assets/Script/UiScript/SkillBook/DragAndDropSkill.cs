@@ -9,14 +9,11 @@ public class DragAndDropSkill : MonoBehaviour
     [SerializeField]
     Image image;
     SkillBtn skillBtn;
-
     Skill skill;
-    ISkill Iskill;
-    public void Init(Skill _skill, ISkill _iskill)
+    public void Init(Skill _skill)
     {
         skill = _skill;
-        Iskill = _iskill;
-        image.sprite = skill.Sprite;
+        image.sprite = _skill.Sprite;
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -44,7 +41,6 @@ public class DragAndDropSkill : MonoBehaviour
     {
         if (skillBtn == null) return;
 
-        //skillBtn.InputSkill(skill);
-        skillBtn.InputSkill(skill, Iskill);
+        skillBtn.InputSkill(skill);
     }
 }

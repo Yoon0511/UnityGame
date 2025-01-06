@@ -1,3 +1,4 @@
+using AYellowpaper.SerializedCollections;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,14 @@ public partial class Player
 {
     [SerializeField]
     EquipmentWindow equiment;
+
+    public SerializedDictionary<EQUITMENT_TYPE, EquipmentItem> DicEquitmentItems = new SerializedDictionary<EQUITMENT_TYPE, EquipmentItem>();
+    
+    public SerializedDictionary<EQUITMENT_TYPE, EquipmentItem> GetDicEquitmentItem()
+    { 
+        return DicEquitmentItems;
+    }
+
     public EquipmentWindow GetEquipmentWindow() { return equiment; }
     public void ApplyEquipItem(EquipmentItem _equipmentItem, bool UnEquip = false)
     {

@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 
 public class SkillSlot : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
 {
-    ISkill Iskill;
     Skill skill;
     [SerializeField]
     Text skillText;
@@ -22,10 +21,9 @@ public class SkillSlot : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHa
         canvas = FindObjectOfType<Canvas>();
     }
 
-    public void InputSkill(Skill _skill, ISkill _iskill)
+    public void InputSkill(Skill _skill)
     {
         skill = _skill;
-        Iskill =  _iskill;
 
         string text_name = "<color=white>" + skill.SkillName.ToString() + "</color>";
         string text_cooltime = "<color=orange>" + " (ÄðÅ¸ÀÓ:" + skill.CoolTime.ToString() + ")" + "</color>";
@@ -40,7 +38,7 @@ public class SkillSlot : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHa
     public void OnBeginDrag(PointerEventData eventData)
     {
         dragobj = Instantiate(DragAndDropSkill);
-        dragobj.GetComponent<DragAndDropSkill>().Init(skill, Iskill);
+        dragobj.GetComponent<DragAndDropSkill>().Init(skill);
         dragobj.transform.SetParent(canvas.transform);
     }
 

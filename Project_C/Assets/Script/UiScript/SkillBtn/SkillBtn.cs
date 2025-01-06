@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class SkillBtn: MonoBehaviour
 {
+    public int SkillIndex;
     [SerializeField]
     Image Image;
     [SerializeField]
@@ -14,25 +15,27 @@ public class SkillBtn: MonoBehaviour
     float SkillCooltime;
     bool IsUseSkill = true;
 
-    Skill Skill;
-    ISkill Iskill;
-
-    public void InputSkill(Skill _Skill,ISkill _iskill)
+    Player player;
+    private void Start()
     {
-        Iskill = _iskill;
-        Skill = _Skill;
+        player = Shared.GameMgr.PLAYER.GetComponent<Player>();
+    }
 
-        Image.sprite = Skill.Sprite;
+    public void InputSkill(Skill _Skill)
+    {
+        player.SetCurrentSkill(SkillIndex, _Skill);
+
+        Image.sprite = _Skill.Sprite;
         Image.color = Originalcolor;
-        SkillCooltime = Skill.CoolTime;
+        SkillCooltime = _Skill.CoolTime;
     }
 
     public void UseSkill()
     {
-        if (IsUseSkill == false || Skill == null) 
+        if (IsUseSkill == false) 
             return;
 
-        Iskill.UseSkill();
+        player.UseSkill(SkillIndex);
 
         IsUseSkill = false;
         CoolTimeText.gameObject.SetActive(true);

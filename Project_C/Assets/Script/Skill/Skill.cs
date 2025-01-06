@@ -13,16 +13,9 @@ public abstract class Skill : MonoBehaviour
     public string Explanation;
     public int SkillMotion;
     public SKILL_TYPE SkillType;
+
+    public virtual void UseSkill()
+    {
+
+    }
 }
-
-
-/* interface ISkillAttack - UseSkill
- * SkillXXX :  ISkillAttack - UseSkill
- * Skillbtn 
- * 
- * 
- * 
- * 
- * 
- * 
- */

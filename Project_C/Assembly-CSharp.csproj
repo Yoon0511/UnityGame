@@ -72,6 +72,7 @@
     <Compile Include="Assets\Script\UiScript\SkillBtn\SkillBtn.cs" />
     <Compile Include="Assets\Script\UiScript\EquipmentWindow.cs" />
     <Compile Include="Assets\Script\Player\Player_Ui.cs" />
+    <Compile Include="Assets\Script\Player\Player_Skill.cs" />
     <Compile Include="Assets\Script\DamageTaxt\DamageText.cs" />
     <Compile Include="Assets\Script\Item\Item123.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_MoveState.cs" />

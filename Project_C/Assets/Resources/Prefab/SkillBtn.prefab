@@ -302,8 +302,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdbf76f2811cad47a945d12458fc5fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 8659079704154843028}
-  cooltext: {fileID: 3366071354596755673}
+  SkillIndex: 0
+  Image: {fileID: 8659079704154843028}
+  CoolTimeText: {fileID: 3366071354596755673}
 --- !u!58 &6668727634378574562
 CircleCollider2D:
   m_ObjectHideFlags: 0
