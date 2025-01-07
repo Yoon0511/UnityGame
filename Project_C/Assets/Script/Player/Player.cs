@@ -41,7 +41,7 @@ public partial class Player : Character<STATE>
         if (Input.GetKeyDown(KeyCode.F3)) //Æ÷¼Ç
         {
             Item obj = Instantiate(item).GetComponent<Item>();
-            obj.id = itemcount++;
+            obj.Id = itemcount++;
             inventory.AddItem(obj);
         }
 

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public abstract class Skill : MonoBehaviour
 {
-    public Sprite Sprite;
+    public string SpriteName;
     public float CoolTime;
     public string SkillName;
     public float Atk;

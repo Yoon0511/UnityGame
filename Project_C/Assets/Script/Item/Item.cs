@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public abstract class Item : MonoBehaviour
 {
-    public ITEM_TYPE itemtype;
-    public string itemname;
-    public int id;
-    public Sprite img;
+    public ITEM_TYPE ItemType;
+    public string ItemName;
+    public int Id;
+    public string SpriteName;
 
     public abstract void ItemUse();
 }

@@ -1056,8 +1056,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eebf99df0270bf44a9ac19e5f92d40c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dicEquitmentItem:
-    _serializedList: []
   dicEquitmentSlot:
     _serializedList:
     - Key: 1
@@ -1739,6 +1737,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589092659}
   m_CullTransparentMesh: 1
+--- !u!114 &610077722 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4210175606274221557, guid: 360e98a9dcd5b6a4b9b7a92825ff0b4b, type: 3}
+  m_PrefabInstance: {fileID: 1964711932}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &647562159 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6126578882457730855, guid: 1398b1ece1b48494796b0fcd7fed7305, type: 3}
@@ -1990,7 +1999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c224f10a9a57a142aa5ac88f9fd9bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sprite: {fileID: 21300000, guid: c51afa706b02a044694b30f33f81d239, type: 3}
+  SpriteName: 
   CoolTime: 15
   SkillName: "\uAC80\uAE30"
   Atk: 15
@@ -2010,7 +2019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bfc37caccc9ece49acb2e8c574c2507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sprite: {fileID: 21300000, guid: 4dc051a0301cecb4aa1a85036ace2a58, type: 3}
+  SpriteName: 
   CoolTime: 10
   SkillName: "\uC911\uB3C5"
   Atk: 10
@@ -2030,7 +2039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af13228a61e84a946ba55b48ac376360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sprite: {fileID: 21300000, guid: 9895f5f95566ceb47bb239149d90cb44, type: 3}
+  SpriteName: 
   CoolTime: 20
   SkillName: "\uC544\uC544\uC544"
   Atk: 2
@@ -4160,8 +4169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eebf99df0270bf44a9ac19e5f92d40c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dicEquitmentItem:
-    _serializedList: []
   dicEquitmentSlot:
     _serializedList:
     - Key: 1
@@ -5623,7 +5630,7 @@ MonoBehaviour:
   statdata: {fileID: 1942591416}
   Animator: {fileID: 1942591415}
   item: {fileID: 3288734687280227402, guid: c056d6e6aba53b74aa9c623157c9b595, type: 3}
-  weapon: {fileID: 168764736227324860, guid: 2fd659d3f97d7ee4abca5e7b85e10e88, type: 3}
+  weapon: {fileID: 1650913060803658287, guid: 7a2d4e9b0c4e2c04fae21eb10022ba16, type: 3}
   amor: {fileID: 1650913060803658287, guid: 782d8aed6342e9748a421ef38f301700, type: 3}
   ring: {fileID: 6851662882637961033, guid: dd61008d9388d8a498151906bac6c7cc, type: 3}
   HITBOX: {fileID: 1522410809}
@@ -5768,6 +5775,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1081679357}
     m_Modifications:
+    - target: {fileID: 1004069439028653806, guid: 360e98a9dcd5b6a4b9b7a92825ff0b4b, type: 3}
+      propertyPath: Image
+      value: 
+      objectReference: {fileID: 610077722}
     - target: {fileID: 1004069439028653806, guid: 360e98a9dcd5b6a4b9b7a92825ff0b4b, type: 3}
       propertyPath: equipmentWindow
       value: 

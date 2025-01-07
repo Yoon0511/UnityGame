@@ -6,6 +6,6 @@ public class InvenSlot : ItemSlot
 {
     public override void OnClickSlot()
     {
-        item.ItemUse();
+        Item.ItemUse();
     }
 }

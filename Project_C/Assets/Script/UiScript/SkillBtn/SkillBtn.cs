@@ -12,9 +12,6 @@ public class SkillBtn: MonoBehaviour
     Text CoolTimeText;
     Color Originalcolor = new Color(255, 255, 255,255);
 
-    float SkillCooltime;
-    bool IsUseSkill = true;
-
     Player player;
     private void Start()
     {
@@ -25,49 +22,45 @@ public class SkillBtn: MonoBehaviour
     {
         player.SetCurrentSkill(SkillIndex, _Skill);
 
-        Image.sprite = _Skill.Sprite;
+        Image.sprite = Shared.GameMgr.GetSpriteAtlas("Common", _Skill.SpriteName);
         Image.color = Originalcolor;
-        SkillCooltime = _Skill.CoolTime;
     }
 
     public void UseSkill()
     {
-        if (IsUseSkill == false) 
-            return;
-
         player.UseSkill(SkillIndex);
 
-        IsUseSkill = false;
-        CoolTimeText.gameObject.SetActive(true);
-        Image.color = new Color(0, 0, 0);
-        StartCoroutine(ICoolTime());
+        if (player.IsCurrentSkillNull(SkillIndex) == false)
+        {
+            CoolTimeText.gameObject.SetActive(true);
+            Image.color = new Color(0, 0, 0);
+            StartCoroutine(ICoolTime());
+        }
     }
    
     IEnumerator ICoolTime()
     {
-        float time = 0.0f;
-
-        while(time <= SkillCooltime)
+        float Cooltime = player.GetSkillCoolTime(SkillIndex);
+        float SkillCooltime = player.GetCurrentSkillCoolTime(SkillIndex);
+        while (Cooltime > 0f)
         {
-            time += Time.deltaTime;
-            
-            yield return null;
+            Cooltime = player.GetSkillCoolTime(SkillIndex);
 
-            float T = time / SkillCooltime;
+            float T = (SkillCooltime - Cooltime) / SkillCooltime;
             Image.fillAmount = T;
-            float textT = SkillCooltime - time;
+            float textT = Cooltime;
             CoolTimeText.text = textT.ToString("F1");
             
             float tcolor = T * 255f;
             Image.color = new Color(tcolor, tcolor, tcolor);
 
-            if (time >= SkillCooltime)
+            if (Cooltime <= 0f)
             {
-                IsUseSkill = true;
                 Image.color = Originalcolor;
                 CoolTimeText.gameObject.SetActive(false);
                 StopCoroutine(ICoolTime());
             }
+            yield return null;
         }
     }
 }

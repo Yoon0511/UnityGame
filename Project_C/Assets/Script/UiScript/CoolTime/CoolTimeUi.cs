@@ -19,7 +19,7 @@ public class CoolTimeUi : MonoBehaviour
     public void InputSkill(Skill _skill)
     {
         skill = _skill;
-        image.sprite = skill.Sprite;
+        image.sprite = Shared.GameMgr.GetSpriteAtlas("Common", _skill.SpriteName);
         skillCooltime = skill.CoolTime;
     }
 

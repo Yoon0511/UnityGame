@@ -6,40 +6,40 @@ using UnityEngine.EventSystems;
 
 public abstract class ItemSlot : MonoBehaviour
 {
-    protected Item item;
-    public Image image;
+    protected Item Item;
+    public Image Image;
 
-    public void InputItem(Item _item)
+    public void InputItem(Item _Item)
     {
-        if (_item == null)
+        if (_Item == null)
         {
-            item = null;
-            image.sprite = null;
+            Item = null;
+            Image.sprite = null;
             SetImageAlpha(0f);
         }
         else
         {
-            item = _item;
-            image.sprite = item.img;
+            Item = _Item;
+            Image.sprite = Shared.GameMgr.GetSpriteAtlas("Items", Item.SpriteName);
             SetImageAlpha(255f);
         }
     }
 
     public void DeleteItem()
     {
-        item = null;
-        image.sprite = null;
+        Item = null;
+        Image.sprite = null;
         SetImageAlpha(0f);
     }
 
     public Item IsSlotItem()
     {
-        return item;
+        return Item;
     }
 
     void SetImageAlpha(float _value)
     {
-        image.color = new Color(image.color.r, image.color.g, image.color.b, _value);
+        Image.color = new Color(Image.color.r, Image.color.g, Image.color.b, _value);
     }
 
     public abstract void OnClickSlot();

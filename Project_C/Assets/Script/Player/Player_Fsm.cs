@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-public partial class Player
+public partial class Player : Character<STATE>
 {
     public override void Fsm_Init()
     {

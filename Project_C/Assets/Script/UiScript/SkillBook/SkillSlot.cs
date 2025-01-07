@@ -21,9 +21,9 @@ public class SkillSlot : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHa
         canvas = FindObjectOfType<Canvas>();
     }
 
-    public void InputSkill(Skill _skill)
+    public void InputSkill(Skill _Skill)
     {
-        skill = _skill;
+        skill = _Skill;
 
         string text_name = "<color=white>" + skill.SkillName.ToString() + "</color>";
         string text_cooltime = "<color=orange>" + " (ÄðÅ¸ÀÓ:" + skill.CoolTime.ToString() + ")" + "</color>";
@@ -32,7 +32,7 @@ public class SkillSlot : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHa
         string text_explanation = "<color=grey>" + "MP : " + skill.Explanation.ToString() + "</color>";
         skillText.text = text_name + text_cooltime + "\n" + text_atk + "\n" + text_usemp + "\n" + text_explanation;
 
-        skillImg.sprite = skill.Sprite;
+        skillImg.sprite = Shared.GameMgr.GetSpriteAtlas("Common", skill.SpriteName);
     }
 
     public void OnBeginDrag(PointerEventData eventData)

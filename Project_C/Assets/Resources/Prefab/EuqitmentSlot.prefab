@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205564187e8c77240907924d35e38a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 4210175606274221557}
+  Image: {fileID: 4210175606274221557}
   equipmentWindow: {fileID: 0}
 --- !u!114 &8985632701866644049
 MonoBehaviour:
