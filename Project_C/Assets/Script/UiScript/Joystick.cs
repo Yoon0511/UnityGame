@@ -61,6 +61,18 @@ public class Joystick : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHan
         MoveToPlayer();
     }
 
+    bool GetIsDrag()
+    {
+        if (stick.anchoredPosition.Equals(Vector2.zero))
+        {
+            IsDrag = false;
+        }
+        else
+        {
+            IsDrag = true;
+        }
+        return IsDrag;
+    }
     void MoveToPlayer()
     {
         player.JoystickMove(InputPos.normalized, Dist, IsDrag);

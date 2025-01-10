@@ -66,7 +66,6 @@
     <Compile Include="Assets\Script\Player\PlayerState\Player_IdleState.cs" />
     <Compile Include="Assets\Script\Player\PlayerState\Player_RunState.cs" />
     <Compile Include="Assets\Script\Player\PlayerState\Player_WalkState.cs" />
-    <Compile Include="Assets\Script\Skill\SkillSlash.cs" />
     <Compile Include="Assets\Script\Player\PlayerState\Player_DieState.cs" />
     <Compile Include="Assets\Script\Skill\ISkill.cs" />
     <Compile Include="Assets\Script\UiScript\SkillBtn\SkillBtn.cs" />
@@ -75,6 +74,7 @@
     <Compile Include="Assets\Script\Player\Player_Skill.cs" />
     <Compile Include="Assets\Script\DamageTaxt\DamageText.cs" />
     <Compile Include="Assets\Script\Item\Item123.cs" />
+    <Compile Include="Assets\Script\Skill\Skill_Slash\SkillSlash.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_MoveState.cs" />
     <Compile Include="Assets\Script\Player\Player_Attack.cs" />
     <Compile Include="Assets\Script\UiScript\ExitBtn.cs" />
@@ -94,6 +94,7 @@
     <Compile Include="Assets\Script\UiScript\Inventory.cs" />
     <Compile Include="Assets\Script\Common\Character\Character_Fsm.cs" />
     <Compile Include="Assets\Script\UiScript\CoolTime\CoolTimeUi.cs" />
+    <Compile Include="Assets\Script\Skill\Skill_Slash\Slash.cs" />
     <Compile Include="Assets\Script\UiScript\OnBtnEvent.cs" />
     <Compile Include="Assets\Script\UiScript\ItemSlot\ItemSlot.cs" />
     <Compile Include="Assets\Script\Shared.cs" />

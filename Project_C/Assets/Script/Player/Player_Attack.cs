@@ -10,7 +10,7 @@ public partial class Player
         {
             return;
         }
-        ChangeState(STATE.ATTACK);
+        ChangeState(STATE.ATTACK, (int)PLAYER_ANI_STATE.ATTACK);
     }
     public override void Hit(float _damage)
     {

@@ -10,7 +10,19 @@ public enum STATE
     DIE,
     ENUM_END
 }
-
+public enum PLAYER_ANI_STATE
+{
+    NONE,
+    IDLE,
+    WALK,
+    RUN,
+    ATTACK,
+    DIE,
+    SKILL_SLASH,
+    SKILL_SPELLCAST,
+    SKILL_BUFF,
+    ENUM_END
+}
 public enum BUFF_TYPE
 {
     HP,

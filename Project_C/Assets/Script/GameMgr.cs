@@ -5,7 +5,8 @@ using UnityEngine.U2D;
 
 public class GameMgr : MonoBehaviour
 {
-    public GameObject PLAYER;
+    public GameObject PLAYEROBJ;
+    public Player PLAYER;
     public CreateDamageText CREATE_DAMAGE_TEXT;
 
     [NonReorderable]

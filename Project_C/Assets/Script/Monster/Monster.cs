@@ -40,7 +40,7 @@ public partial class Monster : Character<MONSTER_STATE>
     }
     public override void Init()
     {
-        player = Shared.GameMgr.PLAYER;
+        player = Shared.GameMgr.PLAYEROBJ;
         Fsm_Init();
     }
 

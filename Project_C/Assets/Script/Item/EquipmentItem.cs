@@ -6,16 +6,12 @@ public class EquipmentItem : Item
 {
     public EQUITMENT_TYPE equimentType;
     public SerializedDictionary<STAT_TYPE, float> dic_EquipmentItemStat;
-    Player player;
-    private void Start()
-    {
-        player = Shared.GameMgr.PLAYER.GetComponent<Player>();
-    }
+
     public override void ItemUse()
     {
         //¿Â∫ÒΩΩ∑‘ø° ¿Â¬¯
-        Shared.GameMgr.PLAYER.GetComponent<Player>().GetEquipmentWindow().EquippedItem(this);
-        Shared.GameMgr.PLAYER.GetComponent<Player>().GetInventory().DeleteItem(this);
+        Shared.GameMgr.PLAYER.GetEquipmentWindow().EquippedItem(this);
+        Shared.GameMgr.PLAYER.GetInventory().DeleteItem(this);
     }
 
     public void SetRandomStat()

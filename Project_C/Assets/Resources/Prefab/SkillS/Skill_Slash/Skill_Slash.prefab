@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &335935283705307441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8832613509875388357}
+  - component: {fileID: 7623665958227580973}
+  m_Layer: 0
+  m_Name: Skill_Slash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8832613509875388357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335935283705307441}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.20803273, y: 2.5341682, z: -7.5555143}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7623665958227580973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335935283705307441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c224f10a9a57a142aa5ac88f9fd9bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpriteName: skill_icon_04_nobg
+  CoolTime: 15
+  SkillName: "\uAC80\uAE30"
+  Atk: 15
+  UseMp: 15
+  Explanation: "\uAC80\uAE30"
+  SkillMotion: 6
+  SkillType: 1
+  Player: {fileID: 0}
+  SLASH_PREFAP: {fileID: 1286683050383161832, guid: bb2e73fc233beda4d809e23dd1f94fac, type: 3}

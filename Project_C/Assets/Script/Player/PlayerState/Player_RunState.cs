@@ -13,7 +13,7 @@ public class Player_RunState : StateBase
 
     public override void OnStateEnter()
     {
-        player.PlayAnimation("Ani_State", (int)STATE.RUN);
+        player.PlayAnimation("Ani_State", (int)PLAYER_ANI_STATE.RUN);
     }
 
     public override void OnStateExit()

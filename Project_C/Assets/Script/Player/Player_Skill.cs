@@ -8,7 +8,10 @@ public partial class Player
     List<Skill> SkillList = new List<Skill>();
     [SerializeField]
     SkillBook SkillBook;
+    [SerializeField]
+    Transform ProjectilePoint;
 
+    int CurrUseSkillIndex;
     Skill[] CurrentSkill = new Skill[3];
     Dictionary<Skill,float> DicSkillCoolTime = new Dictionary<Skill,float>();
 
@@ -25,7 +28,10 @@ public partial class Player
         {
             if (DicSkillCoolTime[CurrentSkill[_index]] <= 0f)
             {
-                CurrentSkill[_index].UseSkill();
+                CurrUseSkillIndex = _index;
+                int PlayerSkillAnimation = (int)CurrentSkill[CurrUseSkillIndex].SkillMotion;
+                //CurrentSkill[CurrUseSkillIndex].UseSkill();
+                ChangeState(STATE.ATTACK, PlayerSkillAnimation);
 
                 DicSkillCoolTime[CurrentSkill[_index]] = CurrentSkill[_index].CoolTime;
                 if(IsCoolTimeRunning == false)
@@ -36,6 +42,14 @@ public partial class Player
         }
     }
 
+    public Transform GetProjectilePoint()
+    {
+        return ProjectilePoint;
+    }
+    public void CurrentUseSkill()
+    {
+        CurrentSkill[CurrUseSkillIndex].UseSkill();
+    }
     public List<Skill> GetSkillList()
     {
         return SkillList;
@@ -43,7 +57,7 @@ public partial class Player
 
     public bool IsCurrentSkillNull(int _index)
     {
-        return CurrentSkill[_index] == null ? true : false;
+        return CurrentSkill[_index] == null;
     }
     public float GetSkillCoolTime(int _index)
     {
@@ -67,7 +81,7 @@ public partial class Player
 
             CurrentSkill[_index] = _skill;
 
-            //다른 스킬 칸에 같은 스킬이 있을 경우
+            //다른 스킬 칸에 같은 스킬이 있을 경우 처리해야함
             DicSkillCoolTime.Add(CurrentSkill[_index], 0f);
         }
     }
@@ -99,6 +113,3 @@ public partial class Player
         }
     }
 }
-
-//빈 슬롯
-//스킬이 있는 슬롯

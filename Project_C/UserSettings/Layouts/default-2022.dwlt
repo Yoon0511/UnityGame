@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 25
+  controlID: 169
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 26
+  controlID: 19
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -166,10 +166,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 904
     y: 0
-    width: 283
+    width: 352
     height: 947
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -190,9 +190,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1187
+    x: 1256
     y: 0
-    width: 338
+    width: 269
     height: 947
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
@@ -220,8 +220,8 @@ MonoBehaviour:
     y: 0
     width: 395
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -246,8 +246,8 @@ MonoBehaviour:
     y: 0
     width: 904
     height: 430
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -273,8 +273,8 @@ MonoBehaviour:
     y: 430
     width: 904
     height: 517
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -326,14 +326,14 @@ MonoBehaviour:
     - {fileID: 1107293705090644976, guid: 15a8e17f39d47e34faf886948e0c5f44, type: 2}
     - {fileID: -5230499655658973726, guid: b736192ad6554c84888829de9f534baf, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.60714287
+    - e00: 0.43295318
       e01: 0
       e02: 0
-      e03: 17.178558
+      e03: -3.6679993
       e10: 0
-      e11: 0.60714287
+      e11: 0.43295318
       e12: 0
-      e13: 106.07143
+      e13: 111.48711
       e20: 0
       e21: 0
       e22: 1
@@ -508,7 +508,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 904
     y: 73
-    width: 281
+    width: 350
     height: 926
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -525,21 +525,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8acefcffaed7fcffd4dffcff5ef8feffcc660100da660100cc670100d8670100ea6701001a68010092680100
+      m_ExpandedIDs: 509bffff2cfbffffec5d0000585e0000725e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: SkillBtn_2
-        m_OriginalName: SkillBtn_2
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -67498
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 7}
       m_SearchString: 
@@ -586,7 +586,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 353
+    m_CachedPref: 340
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
@@ -616,9 +616,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1187
+    x: 1256
     y: 73
-    width: 336
+    width: 267
     height: 926
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -641,7 +641,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Prefab
+    - Assets/Resources/Prefab/SkillS/Skill_Slash
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -650,14 +650,14 @@ MonoBehaviour:
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\TEMP\UnityGame\Project_C
+  m_LastProjectPath: "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 1e620000
     m_LastClickedID: 25118
-    m_ExpandedIDs: 000000007c5a0000805a0000845a00008c5a0000905a0000b45a0000c85a0000d85a0000dc5a0000e85a0000f05a00000c5b0000405b000022960000589a0000406b0100426b0100446b0100466b0100486b01004a6b01004c6b01004e6b0100506b0100
+    m_ExpandedIDs: 00000000a45b000086650000886500008a6500008c6500008e65000090650000926500009465000096650000986500009a6500009c6500009e650000a0650000a2650000a4650000a6650000a8650000aa650000ac650000ae650000b0650000b2650000b4650000b6650000b8650000ba650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -682,24 +682,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 1144}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000007c5a0000805a0000845a00008c5a0000905a0000a45a0000b45a0000c45a0000c85a0000dc5a0000e85a0000fc5a00000c5b0000405b0000805b0000589a0000406b0100426b0100446b0100466b0100486b01004a6b01004c6b01004e6b0100506b0100786b01007e6b0100e426020006420200
+    m_ExpandedIDs: ffffffff00000000a45b0000886500008a6500008c6500008e65000090650000926500009465000096650000986500009a6500009c6500009e650000a0650000a2650000a4650000a6650000a8650000aa650000ac650000ae650000b0650000b2650000b4650000b6650000b8650000ba650000fe65000054740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Slash
+      m_OriginalName: Slash
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 29114
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
@@ -1164,14 +1164,14 @@ MonoBehaviour:
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 957.93994, y: 541.8267, z: 223.63936}
+    m_Target: {x: 4.8553047, y: 3.243898, z: -6.814714}
     speed: 2
-    m_Value: {x: 957.93994, y: 541.8267, z: 223.63936}
+    m_Value: {x: 4.8553047, y: 3.243898, z: -6.814714}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1199,17 +1199,17 @@ MonoBehaviour:
       m_Size: {x: 0, y: 0}
     yGrid:
       m_Fade:
-        m_Target: 0
+        m_Target: 1
         speed: 2
-        m_Value: 0
+        m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
-        m_Target: 1
+        m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -1217,17 +1217,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: -0.08644902, y: 0.46273673, z: -0.04541345, w: -0.88108534}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: -0.08645021, y: 0.4627431, z: -0.045414075, w: -0.8810975}
   m_Size:
-    m_Target: 2.7199078
+    m_Target: 0.86602545
     speed: 2
-    m_Value: 2.7199078
+    m_Value: 0.86602545
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5

@@ -11,7 +11,7 @@ public class SkillBook : MonoBehaviour
 
     private void Start()
     {
-        Player player = Shared.GameMgr.PLAYER.GetComponent<Player>();
+        Player player = Shared.GameMgr.PLAYER;
         List<Skill> skillList = player.GetSkillList();
         foreach (Skill skill in skillList)
         {

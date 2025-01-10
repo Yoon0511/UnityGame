@@ -18,6 +18,12 @@ public partial class Player
 
     public void OnAttackAniEnd()
     {
-        ChangeState(PrevState);
+        //ChangeState(PrevState);
+        ChangeState(STATE.IDLE);
+    }
+
+    public void OnCurrentUseSkill()
+    {
+        CurrentUseSkill();
     }
 }

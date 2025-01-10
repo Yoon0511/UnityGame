@@ -10,7 +10,7 @@ public class EquipmentSlot : ItemSlot
     EquipmentItem quipmentItem;
     public override void OnClickSlot() //장비 해제
     {
-        Shared.GameMgr.PLAYER.GetComponent<Player>().GetInventory().AddItem(quipmentItem);
+        Shared.GameMgr.PLAYER.GetInventory().AddItem(quipmentItem);
         equipmentWindow.Unequip(quipmentItem.equimentType);
         UnEquipmentItem();
     }

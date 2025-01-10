@@ -15,7 +15,7 @@ public class SkillBtn: MonoBehaviour
     Player player;
     private void Start()
     {
-        player = Shared.GameMgr.PLAYER.GetComponent<Player>();
+        player = Shared.GameMgr.PLAYER;
     }
 
     public void InputSkill(Skill _Skill)

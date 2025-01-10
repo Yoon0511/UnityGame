@@ -22,7 +22,8 @@ public partial class Player : Character<STATE>
     
     private void Awake()
     {
-        Shared.GameMgr.PLAYER = this.gameObject;
+        Shared.GameMgr.PLAYER = this;
+        Shared.GameMgr.PLAYEROBJ = this.gameObject;
     }
     private void FixedUpdate()
     {
@@ -34,7 +35,7 @@ public partial class Player : Character<STATE>
     {
         if (Input.GetKeyDown(KeyCode.Space)) // 공격
         {
-            ChangeState(STATE.ATTACK);
+            ChangeState(STATE.ATTACK,(int)PLAYER_ANI_STATE.ATTACK);
         }
 
         //테스트

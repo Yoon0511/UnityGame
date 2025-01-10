@@ -8,4 +8,9 @@ public class SkillPowerUp : Skill
     {
         Debug.Log("Use PowerUp Skill");
     }
+
+    IEnumerator PowerUp()
+    {
+        yield return new WaitForSeconds(5.0f);
+    }
 }

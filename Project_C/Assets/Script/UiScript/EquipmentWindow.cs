@@ -15,7 +15,7 @@ public class EquipmentWindow : MonoBehaviour, IPointerClickHandler
 
     private void Start()
     {
-        player = Shared.GameMgr.PLAYER.GetComponent<Player>();
+        player = Shared.GameMgr.PLAYER;
     }
 
     public void EquippedItem(EquipmentItem _equipmentItem)

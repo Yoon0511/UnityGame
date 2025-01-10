@@ -14,12 +14,23 @@ public abstract partial class Character<T>
 
     public void ChangeState(T _state)
     {
-        // Generic T 끼리 연산 해결해야함
-       //if (CurrState == _state)
-       //    return;
+        if (CurrState.Equals(_state))
+            return;
 
         PrevState = CurrState;
         CurrState = _state;
+
+        ChangeFsm();
+    }
+
+    public void ChangeState(T _state,int _anistate)
+    {
+        if (CurrState.Equals(_state))
+            return;
+        PrevState = CurrState;
+        CurrState = _state;
+
+        PlayAnimation("Ani_State", _anistate);
 
         ChangeFsm();
     }
