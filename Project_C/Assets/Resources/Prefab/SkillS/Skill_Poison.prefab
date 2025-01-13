@@ -44,11 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af13228a61e84a946ba55b48ac376360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteName: skill_icon_01_nobg
-  CoolTime: 20
-  SkillName: "\uC544\uC544\uC544"
+  SpriteName: UI_Skill_Icon_PsycicAttack
+  CoolTime: 12
+  SkillName: "\uC911\uB3C5"
   Atk: 2
   UseMp: 5
-  Explanation: "\u3134\uC73C\u314F\u3134\uC5B4\u314F\u3163"
-  SkillMotion: 7
+  Explanation: "\uC801\uC744 \uC911\uB3C5\uC2DC\uD0A8\uB2E4"
+  SkillMotion: 8
   SkillType: 1

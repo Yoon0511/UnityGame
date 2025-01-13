@@ -22,7 +22,7 @@ public class SkillBtn: MonoBehaviour
     {
         player.SetCurrentSkill(SkillIndex, _Skill);
 
-        Image.sprite = Shared.GameMgr.GetSpriteAtlas("Common", _Skill.SpriteName);
+        Image.sprite = Shared.GameMgr.GetSpriteAtlas("Skill_Icons", _Skill.SpriteName);
         Image.color = Originalcolor;
     }
 

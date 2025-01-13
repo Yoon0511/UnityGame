@@ -13,7 +13,7 @@ public class DragAndDropSkill : MonoBehaviour
     public void Init(Skill _Skill)
     {
         Skill = _Skill;
-        image.sprite = Shared.GameMgr.GetSpriteAtlas("Common", _Skill.SpriteName);
+        image.sprite = Shared.GameMgr.GetSpriteAtlas("Skill_Icons", _Skill.SpriteName);
     }
     private void OnTriggerStay2D(Collider2D collision)
     {

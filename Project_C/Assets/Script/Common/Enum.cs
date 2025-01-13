@@ -19,8 +19,8 @@ public enum PLAYER_ANI_STATE
     ATTACK,
     DIE,
     SKILL_SLASH,
-    SKILL_SPELLCAST,
     SKILL_BUFF,
+    SKILL_SPELLCAST,
     ENUM_END
 }
 public enum BUFF_TYPE

@@ -6,17 +6,13 @@ using UnityEngine.UI;
 public partial class Player
 {
     [SerializeField]
-    Image HP_BAR;
-    [SerializeField]
-    Image MP_BAR;
+    UnitFrame UnitFrame;
     void UpdateHpbar()
     {
-        float value = Statdata.GetData(STAT_TYPE.HP) / Statdata.GetData(STAT_TYPE.MAXHP);
-        HP_BAR.fillAmount = value;
+        UnitFrame.UpdateHpbar(Statdata.GetData(STAT_TYPE.HP), Statdata.GetData(STAT_TYPE.MAXHP));
     }
     void UpdateMpbar()
     {
-        float value = Statdata.GetData(STAT_TYPE.MP) / Statdata.GetData(STAT_TYPE.MAXMP);
-        MP_BAR.fillAmount = value;
+        UnitFrame.UpdateMpbar(Statdata.GetData(STAT_TYPE.MP), Statdata.GetData(STAT_TYPE.MAXMP));
     }
 }

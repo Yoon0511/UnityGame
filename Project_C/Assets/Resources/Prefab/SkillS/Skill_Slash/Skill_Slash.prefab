@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c224f10a9a57a142aa5ac88f9fd9bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteName: skill_icon_04_nobg
+  SpriteName: UI_Skill_Icon_Slash
   CoolTime: 15
   SkillName: "\uAC80\uAE30"
   Atk: 15
@@ -52,5 +52,4 @@ MonoBehaviour:
   Explanation: "\uAC80\uAE30"
   SkillMotion: 6
   SkillType: 1
-  Player: {fileID: 0}
   SLASH_PREFAP: {fileID: 1286683050383161832, guid: bb2e73fc233beda4d809e23dd1f94fac, type: 3}

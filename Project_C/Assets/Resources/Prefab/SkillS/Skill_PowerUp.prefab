@@ -44,11 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bfc37caccc9ece49acb2e8c574c2507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteName: skill_icon_03_nobg
+  SpriteName: UI_Skill_Icon_Buff
   CoolTime: 10
-  SkillName: "\uC911\uB3C5"
+  SkillName: "\uAC15\uD654"
   Atk: 10
   UseMp: 5
-  Explanation: "\uC801\uC744 \uC911\uB3C5"
-  SkillMotion: 8
+  Explanation: "\uC77C\uC815\uC2DC\uAC04 \uACF5\uACA9\uB825\uC99D\uAC00"
+  SkillMotion: 7
   SkillType: 1

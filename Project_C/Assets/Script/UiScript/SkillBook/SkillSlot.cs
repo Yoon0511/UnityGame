@@ -29,10 +29,10 @@ public class SkillSlot : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHa
         string text_cooltime = "<color=orange>" + " (ÄðÅ¸ÀÓ:" + skill.CoolTime.ToString() + ")" + "</color>";
         string text_atk = "<color=red>" + "ATK : " + skill.Atk.ToString() + "</color>"; 
         string text_usemp = "<color=blue>" + "MP : " + skill.UseMp.ToString() + "</color>";
-        string text_explanation = "<color=grey>" + "MP : " + skill.Explanation.ToString() + "</color>";
+        string text_explanation = "<color=grey>" + skill.Explanation.ToString() + "</color>";
         skillText.text = text_name + text_cooltime + "\n" + text_atk + "\n" + text_usemp + "\n" + text_explanation;
 
-        skillImg.sprite = Shared.GameMgr.GetSpriteAtlas("Common", skill.SpriteName);
+        skillImg.sprite = Shared.GameMgr.GetSpriteAtlas("Skill_Icons", skill.SpriteName);
     }
 
     public void OnBeginDrag(PointerEventData eventData)

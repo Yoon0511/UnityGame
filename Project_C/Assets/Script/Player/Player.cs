@@ -59,6 +59,18 @@ public partial class Player : Character<STATE>
         {
             inventory.AddItem(ring);
         }
+
+        if (Input.GetKeyDown(KeyCode.F8)) //HP
+        {
+            Statdata.EnhanceStat(STAT_TYPE.HP, -10);
+            UpdateHpbar();
+        }
+
+        if (Input.GetKeyDown(KeyCode.F9)) //MP
+        {
+            Statdata.EnhanceStat(STAT_TYPE.MP, -10);
+            UpdateMpbar();
+        }
     }
 
     public override void Init()
@@ -105,9 +117,3 @@ public partial class Player : Character<STATE>
         // 필드 아이템 리스트 -> 검색 -> 습득
     }
 }
-
-
-//플레이어
-//스킬리스트 - 스킬매니저 <- 스킬UI
-//장비리스트 <- 장비창
-//인벤토리

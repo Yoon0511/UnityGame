@@ -48,6 +48,8 @@ public partial class Player
     }
     public void CurrentUseSkill()
     {
+        Statdata.EnhanceStat(STAT_TYPE.MP, -CurrentSkill[CurrUseSkillIndex].UseMp);
+        UpdateMpbar();
         CurrentSkill[CurrUseSkillIndex].UseSkill();
     }
     public List<Skill> GetSkillList()
@@ -73,15 +75,12 @@ public partial class Player
     {
         if (_index < CurrentSkill.Length)
         {
-            if(CurrentSkill[_index] != null && 
+            if (CurrentSkill[_index] != null &&
                 DicSkillCoolTime.ContainsKey(CurrentSkill[_index]))
             {
                 DicSkillCoolTime.Remove(CurrentSkill[_index]);
             }
-
             CurrentSkill[_index] = _skill;
-
-            //다른 스킬 칸에 같은 스킬이 있을 경우 처리해야함
             DicSkillCoolTime.Add(CurrentSkill[_index], 0f);
         }
     }
