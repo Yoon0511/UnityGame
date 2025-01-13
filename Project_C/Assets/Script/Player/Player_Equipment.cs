@@ -25,11 +25,11 @@ public partial class Player
 
             if (IsInStat && UnEquip == false) //장비 스탯 추가
             {
-                statdata.EnhanceStat((STAT_TYPE)i, statValue);
+                Statdata.EnhanceStat((STAT_TYPE)i, statValue);
             }
             else if (IsInStat && UnEquip) //장비 스탯 해제
             {
-                statdata.EnhanceStat((STAT_TYPE)i, -statValue);
+                Statdata.EnhanceStat((STAT_TYPE)i, -statValue);
             }
         }
     }

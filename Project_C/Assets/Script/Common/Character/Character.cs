@@ -4,9 +4,9 @@ using UnityEngine;
 
 public abstract partial class Character<T> : MonoBehaviour
 {
-    public StatData statdata;
-    protected string character_name;
-    float test;
+    public StatData Statdata;
+    protected string Character_name;
+    public BuffMgr BuffMgr;
 
     private void Start()
     {
@@ -14,13 +14,13 @@ public abstract partial class Character<T> : MonoBehaviour
     }
     public abstract void Init();
     public abstract void Hit(float _damage);
-    public string GetCharacterName() { return character_name; }
+    public string GetCharacterName() { return Character_name; }
     public float GetInStatData(STAT_TYPE _type)
     { 
-        return statdata.GetData(_type); 
+        return Statdata.GetData(_type); 
     }
     public StatData GetStatData()
     {
-        return statdata;
+        return Statdata;
     }
 }

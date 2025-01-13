@@ -22,7 +22,7 @@ public partial class Player : Character<STATE>
 
     void StateChageJoystick(float _speed)
     {
-        float speed = statdata.GetData(STAT_TYPE.SPEED);
+        float speed = Statdata.GetData(STAT_TYPE.SPEED);
         if (_speed >= speed * 0.6f)
         {
             ChangeState(STATE.RUN);

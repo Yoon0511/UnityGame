@@ -14,7 +14,7 @@ public partial class Player
     }
     public override void Hit(float _damage)
     {
-        statdata.TakeDamage(_damage);
+        Statdata.TakeDamage(_damage);
         UpdateHpbar();
     }
 
@@ -22,7 +22,7 @@ public partial class Player
     {
         if (other.CompareTag("TAG_MONSTER"))
         {
-            other.GetComponent<Monster>().Hit(statdata.GetData(STAT_TYPE.ATK));
+            other.GetComponent<Monster>().Hit(Statdata.GetData(STAT_TYPE.ATK));
         }
     }
 }

@@ -6,7 +6,7 @@ public partial class Monster
 {
     public void Move(float _x,float _y,float _z)
     {
-        float speed = statdata.GetData(STAT_TYPE.SPEED);
+        float speed = Statdata.GetData(STAT_TYPE.SPEED);
         float fx = _x * speed * Time.deltaTime;
         float fy = _y * speed * Time.deltaTime;
         float fz = _z * speed * Time.deltaTime;
@@ -24,7 +24,7 @@ public partial class Monster
 
     public void MoveToTarget(GameObject _target)
     {
-        float speed = statdata.GetData(STAT_TYPE.SPEED);
+        float speed = Statdata.GetData(STAT_TYPE.SPEED);
         Vector3 dir = _target.transform.position - transform.position;
         Vector3 MovePos = dir.normalized * speed * Time.deltaTime;
 
@@ -34,7 +34,7 @@ public partial class Monster
 
     public void MoveToTarget()
     {
-        float speed = statdata.GetData(STAT_TYPE.SPEED);
+        float speed = Statdata.GetData(STAT_TYPE.SPEED);
         Vector3 dir = Target.transform.position - transform.position;
         Vector3 MovePos = dir.normalized * speed * Time.deltaTime;
 

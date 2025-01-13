@@ -46,7 +46,7 @@ public partial class Monster : Character<MONSTER_STATE>
 
     public override void Hit(float _damage)
     {
-        statdata.TakeDamage(_damage);
+        Statdata.TakeDamage(_damage);
 
         if(CheckHP())
         {
@@ -57,7 +57,7 @@ public partial class Monster : Character<MONSTER_STATE>
 
     bool CheckHP() 
     {
-        if(statdata.GetData(STAT_TYPE.HP) <= 0)
+        if(Statdata.GetData(STAT_TYPE.HP) <= 0)
         {
             return true;
         }

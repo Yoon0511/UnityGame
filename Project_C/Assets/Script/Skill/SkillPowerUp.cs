@@ -7,10 +7,7 @@ public class SkillPowerUp : Skill
     public override void UseSkill()
     {
         Debug.Log("Use PowerUp Skill");
-    }
-
-    IEnumerator PowerUp()
-    {
-        yield return new WaitForSeconds(5.0f);
+        StatBuff statBuff = new StatBuff(STAT_TYPE.ATK,5.0f,5.0f,Shared.GameMgr.PLAYEROBJ);
+        Shared.GameMgr.PLAYER.BuffMgr.AddBuff(statBuff);
     }
 }

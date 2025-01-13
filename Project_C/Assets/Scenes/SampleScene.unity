@@ -495,8 +495,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 495617211}
-        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+      - m_Target: {fileID: 285888321}
+        m_TargetAssemblyTypeName: InfoPlayer, Assembly-CSharp
         m_MethodName: Refresh
         m_Mode: 1
         m_Arguments:
@@ -2338,7 +2338,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67cdb72f1930d464f98d084487ecada3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statdata: {fileID: 0}
+  Statdata: {fileID: 0}
+  BuffMgr: {fileID: 0}
   Animator: {fileID: 0}
   Target: {fileID: 0}
   detectionRange: 0
@@ -4459,6 +4460,7 @@ GameObject:
   - component: {fileID: 1525673006}
   - component: {fileID: 1525673007}
   - component: {fileID: 1525673008}
+  - component: {fileID: 1525673009}
   m_Layer: 0
   m_Name: Golem_Blue
   m_TagString: TAG_MONSTER
@@ -4495,7 +4497,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67cdb72f1930d464f98d084487ecada3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statdata: {fileID: 1525673007}
+  Statdata: {fileID: 1525673007}
+  BuffMgr: {fileID: 1525673009}
   Animator: {fileID: 1525673006}
   Target: {fileID: 1942591409}
   detectionRange: 6
@@ -4606,6 +4609,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1525673009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525673002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ee13c021d88a8348b4a8dd31247a900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1539978695
 GameObject:
   m_ObjectHideFlags: 0
@@ -5669,6 +5684,7 @@ GameObject:
   - component: {fileID: 1942591413}
   - component: {fileID: 1942591415}
   - component: {fileID: 1942591416}
+  - component: {fileID: 1942591417}
   m_Layer: 0
   m_Name: Player
   m_TagString: TAG_PLAYER
@@ -5688,7 +5704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 748b1a130a9523949be1ec46c43eaeae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statdata: {fileID: 1942591416}
+  Statdata: {fileID: 1942591416}
+  BuffMgr: {fileID: 1942591417}
   Animator: {fileID: 1942591415}
   item: {fileID: 3288734687280227402, guid: c056d6e6aba53b74aa9c623157c9b595, type: 3}
   weapon: {fileID: 1650913060803658287, guid: 7a2d4e9b0c4e2c04fae21eb10022ba16, type: 3}
@@ -5830,6 +5847,18 @@ MonoBehaviour:
     - Key: 9
       Value: 1
   uihead: {fileID: 1587889996}
+--- !u!114 &1942591417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942591409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ee13c021d88a8348b4a8dd31247a900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1964711932
 PrefabInstance:
   m_ObjectHideFlags: 0

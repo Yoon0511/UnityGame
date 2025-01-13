@@ -19,6 +19,7 @@ public class InfoPlayer : MonoBehaviour
     private void OnEnable()
     {
         if (player == null) return;
+        Debug.Log("InfoPlayer OnEnable");
         Refresh();
     }
     public void Refresh()

@@ -63,7 +63,7 @@ public partial class Player : Character<STATE>
 
     public override void Init()
     {
-        character_name = "Player_1";
+        Character_name = "Player_1";
         Fsm_Init();
     }
 
@@ -93,7 +93,7 @@ public partial class Player : Character<STATE>
 
     void CheckHP()
     {
-        if(statdata.GetData(STAT_TYPE.HP) <= 0)
+        if(Statdata.GetData(STAT_TYPE.HP) <= 0)
         {
             ChangeState(STATE.DIE);
         }
