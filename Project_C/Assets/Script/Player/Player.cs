@@ -75,7 +75,7 @@ public partial class Player : Character<STATE>
 
     public override void Init()
     {
-        Character_name = "Player_1";
+        CharacterName = "Player_1";
         Fsm_Init();
     }
 

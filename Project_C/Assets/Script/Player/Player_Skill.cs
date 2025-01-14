@@ -10,6 +10,8 @@ public partial class Player
     SkillBook SkillBook;
     [SerializeField]
     Transform ProjectilePoint;
+    [SerializeField]
+    BuffUi BuffUi;
 
     int CurrUseSkillIndex;
     Skill[] CurrentSkill = new Skill[3];
@@ -50,6 +52,7 @@ public partial class Player
     {
         Statdata.EnhanceStat(STAT_TYPE.MP, -CurrentSkill[CurrUseSkillIndex].UseMp);
         UpdateMpbar();
+
         CurrentSkill[CurrUseSkillIndex].UseSkill();
     }
     public List<Skill> GetSkillList()

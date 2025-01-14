@@ -274,8 +274,6 @@ namespace UnityEditor.U2D.Sprites
             }
         }
 
-        internal SpriteOutlineList selectedOutline => m_Outline[m_Selected.spriteID];
-
         protected virtual List<SpriteOutline> selectedShapeOutline
         {
             get
@@ -337,12 +335,6 @@ namespace UnityEditor.U2D.Sprites
         private void ClearSelection()
         {
             m_RequestRepaint = true;
-        }
-
-        internal void OnOutlineDetailChanged(float value)
-        {
-            if(m_Selected != null)
-                m_Outline[m_Selected.spriteID].tessellationDetail = value;
         }
 
         protected virtual void LoadOutline()
@@ -887,10 +879,7 @@ namespace UnityEditor.U2D.Sprites
                 return;
 
             RecordUndo();
-            var oldOutline = m_Outline[m_Selected.spriteID];
             m_Outline[m_Selected.spriteID] = new SpriteOutlineList(m_Selected.spriteID, m_CopyOutline.ToListVectorCapped(m_Selected.rect));
-            if (oldOutline != null)
-                m_Outline[m_Selected.spriteID].tessellationDetail = oldOutline.tessellationDetail;
             spriteEditorWindow.SetDataModified();
             shapeEditorDirty = true;
         }
@@ -907,10 +896,7 @@ namespace UnityEditor.U2D.Sprites
                 foreach (var spriteRect in rectCache)
                 {
                     var outlines = m_CopyOutline.ToListVectorCapped(spriteRect.rect);
-                    var oldOutline = m_Outline[m_Selected.spriteID];
                     m_Outline[spriteRect.spriteID] = new SpriteOutlineList(spriteRect.spriteID, outlines);
-                    if (oldOutline != null)
-                        m_Outline[m_Selected.spriteID].tessellationDetail = oldOutline.tessellationDetail;
                 }
             }
             spriteEditorWindow.SetDataModified();
