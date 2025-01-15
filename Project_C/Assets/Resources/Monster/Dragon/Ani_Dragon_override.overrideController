@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ani_Dragon_override
+  m_Controller: {fileID: 9100000, guid: b736192ad6554c84888829de9f534baf, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 9519a39f655758343ab3069558cd4033, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 611312b82fbc57146b8000f2ea33e470, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 884813311e9f536499060fc05b5c0b0b, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: bb9383b8c0535004eb382964145280fe, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 47b8b1aaffce54144a53b79440efc15a, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 0bd75c5b9c149d448baa272b08891ebb, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 548f64ac325e94d4eacad2990585e3a7, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 8aa901cbdd591cd408bfe5322a272587, type: 3}

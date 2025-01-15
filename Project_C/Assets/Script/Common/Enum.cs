@@ -95,13 +95,24 @@ public enum SKILL_TYPE
     ENUM_NED
 }
 
-
-public enum eAI
+public enum DRAGON_STATE
 {
-    eAI_NONE,
-    eAI_CREATE,
-    eAI_SEARCH,
-    eAI_MOVE,
-    eAI_RESET,
-    eAI_END
+    NONE,
+    IDLE,
+    MOVE,
+    ATTACK,
+    DIE,
+    ENUM_END
+}
+
+public enum DRAGON_ANI_STATE
+{
+    NONE,
+    IDLE,
+    FORWARD_MOVE,
+    BITE_ATTACK,
+    PROJECTILE_ATTACK,
+    CAST_SPELL,
+    DIE,
+    ENUM_END
 }

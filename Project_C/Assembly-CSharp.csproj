@@ -84,6 +84,7 @@
     <Compile Include="Assets\Script\UiScript\ExitBtn.cs" />
     <Compile Include="Assets\Script\GameMgr.cs" />
     <Compile Include="Assets\TEMP\Temp.cs" />
+    <Compile Include="Assets\Script\Monster\Dragon\DragonState\Dragon_DieState.cs" />
     <Compile Include="Assets\Script\Monster\Monster_Animation.cs" />
     <Compile Include="Assets\Script\Skill\Skill.cs" />
     <Compile Include="Assets\Script\FSM\StateBase.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_ChaseState.cs" />
     <Compile Include="Assets\Script\Monster\PunchAttack.cs" />
     <Compile Include="Assets\Script\FSM\StateMachine.cs" />
+    <Compile Include="Assets\Script\Monster\Dragon\DragonState\Dragon_MoveState.cs" />
     <Compile Include="Assets\Script\Player\Player_Move.cs" />
     <Compile Include="Assets\Script\Common\StatData.cs" />
     <Compile Include="Assets\Script\Common\Character.cs" />
@@ -113,11 +115,13 @@
     <Compile Include="Assets\Script\UiScript\ItemSlot\EquipmentSlot.cs" />
     <Compile Include="Assets\Script\UiScript\SkillBook\DragAndDropSkill.cs" />
     <Compile Include="Assets\Script\Player\Player_Inventory.cs" />
+    <Compile Include="Assets\Script\Monster\Dragon\DragonState\Dragon_AttackState.cs" />
     <Compile Include="Assets\Script\UiScript\Inventory\Inventory.cs" />
     <Compile Include="Assets\Scenes\TogleScript.cs" />
+    <Compile Include="Assets\Script\Monster\Dragon\Dragon.cs" />
     <Compile Include="Assets\Script\Player\Player_Animation.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_AttackState.cs" />
-    <Compile Include="Assets\Script\Ai\AiBase.cs" />
+    <Compile Include="Assets\Script\Monster\Dragon\DragonState\Dragon_IdleState.cs" />
     <Compile Include="Assets\Script\Skill\SkillPowerUp.cs" />
     <Compile Include="Assets\Script\Monster\Monster_Move.cs" />
     <Compile Include="Assets\Script\UiScript\SkillBook\SkillSlot.cs" />
