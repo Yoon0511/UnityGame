@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract partial class Character<T>
+public abstract partial class Character
 {
     [SerializeField]
     Animator Animator;
@@ -11,7 +11,6 @@ public abstract partial class Character<T>
     {
         Animator.SetInteger(_parametername, _state);
     }
-    //public void PlayAnimation(T _state) //사용하려면 형변환 T -> value
     public void PlayAnimation(STATE _state) //사용하려면 형변환 T -> value
     {
         Animator.SetInteger("Ani_State", (int)_state);

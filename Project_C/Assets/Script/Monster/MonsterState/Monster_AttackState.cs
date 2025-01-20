@@ -22,6 +22,6 @@ public class Monster_AttackState : StateBase
     public override void OnStateUpdate()
     {
         if (monster.IsPlayerInAttackRange() == false)
-            monster.ChangeState(MONSTER_STATE.PATROL);
+            monster.ChangeState((int)MONSTER_STATE.PATROL);
     }
 }

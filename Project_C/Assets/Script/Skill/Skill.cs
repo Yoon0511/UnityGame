@@ -11,10 +11,16 @@ public abstract class Skill : MonoBehaviour
     public float Atk;
     public float UseMp;
     public string Explanation;
-    public PLAYER_ANI_STATE SkillMotion;
+    public int SkillMotion;
+    public int SkillUseState;
     public SKILL_TYPE SkillType;
 
     public virtual void UseSkill()
+    {
+
+    }
+
+    public virtual void SkillEnd()
     {
 
     }

@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public abstract partial class Character<T>
+public abstract partial class Character
 {
     protected StateMachine Fsm = new StateMachine();
-    protected T CurrState;
-    protected T PrevState;
-    protected Dictionary<T, StateBase> DicState = new Dictionary<T, StateBase>();
+    protected int CurrState;
+    protected int PrevState;
+    protected Dictionary<int, StateBase> DicState = new Dictionary<int, StateBase>();
 
     public abstract void Fsm_Init();
 
-    public void ChangeState(T _state)
+    public void ChangeState(int _state)
     {
-        if (CurrState.Equals(_state))
+        if (CurrState == _state)
             return;
 
         PrevState = CurrState;
@@ -23,9 +23,9 @@ public abstract partial class Character<T>
         ChangeFsm();
     }
 
-    public void ChangeState(T _state,int _anistate)
+    public void ChangeState(int _state,int _anistate)
     {
-        if (CurrState.Equals(_state))
+        if (CurrState == _state)
             return;
         PrevState = CurrState;
         CurrState = _state;

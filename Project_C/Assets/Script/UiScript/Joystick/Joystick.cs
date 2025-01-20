@@ -15,7 +15,7 @@ public class Joystick : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHan
     Vector2 InputPos;
     Vector3 Pos;
     float Dist = 0.0f;
-    bool IsDrag = false;
+    public bool IsDrag = false;
 
     private RectTransform stick;
     private RectTransform bg;

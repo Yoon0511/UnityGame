@@ -7,7 +7,7 @@ public partial class Player
     bool isjoystick_drag;
     private void KeyboardMove()
     {
-        if (CurrState == STATE.ATTACK)
+        if (CurrState == (int)STATE.ATTACK)
         {
             return;
         }
@@ -32,7 +32,7 @@ public partial class Player
     }
     public void JoystickMove(Vector3 _dir, float _dist,bool _isdrag)
     {
-        if (CurrState == STATE.ATTACK)
+        if (CurrState == (int)STATE.ATTACK)
         {
             return;
         }

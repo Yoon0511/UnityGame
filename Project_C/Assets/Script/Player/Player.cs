@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public partial class Player : Character<STATE>
+public partial class Player : Character
 {
     float walkspeed;
     float runspeed;
@@ -35,7 +35,7 @@ public partial class Player : Character<STATE>
     {
         if (Input.GetKeyDown(KeyCode.Space)) // 공격
         {
-            ChangeState(STATE.ATTACK,(int)PLAYER_ANI_STATE.ATTACK);
+            ChangeState((int)STATE.ATTACK,(int)PLAYER_ANI_STATE.ATTACK);
         }
 
         //테스트
@@ -76,30 +76,34 @@ public partial class Player : Character<STATE>
     public override void Init()
     {
         CharacterName = "Player_1";
+        for(int i = 0; i < MaxSkillCount; i++)
+        {
+            CurrentSkill.Add(null);
+        }
         Fsm_Init();
     }
 
     //키보드 조작
     void UpdateAnimation()
     {
-        if (CurrState == STATE.ATTACK)
+        if (CurrState == (int)STATE.ATTACK)
         {
             return;
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) // 공격
         {
-            ChangeState(STATE.ATTACK);
+            ChangeState((int)STATE.ATTACK);
         }
         else if (Input.GetKey(KeyCode.LeftShift)) // 달리기
         {
             //animator.SetInteger("Ani_State", (int)STATE.RUN);
-            ChangeState(STATE.RUN);
+            ChangeState((int)STATE.RUN);
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift)) // 걷기
         {
             //animator.SetInteger("Ani_State", (int)STATE.WALK);
-            ChangeState(STATE.WALK);
+            ChangeState((int)STATE.WALK);
         }
     }
 
@@ -107,7 +111,7 @@ public partial class Player : Character<STATE>
     {
         if(Statdata.GetData(STAT_TYPE.HP) <= 0)
         {
-            ChangeState(STATE.DIE);
+            ChangeState((int)STATE.DIE);
         }
     }
     void GetItem()

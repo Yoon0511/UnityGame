@@ -11,24 +11,20 @@ public partial class Dragon : Monster
             Debug.Log("1");
         }
     }
-    //private void FixedUpdate()
-    //{
-    //    Fsm.UpdateState();
-    //}
-    
-    public override void Fsm_Init()
+
+    private void FixedUpdate()
     {
-        Debug.Log("Dragon_fsm_init");
+        Fsm.UpdateState();
     }
-
-    //public override void Hit(float _damage)
-    //{
-
-    //}
+    
+    public override void Hit(float _damage)
+    {
+        Statdata.TakeDamage(_damage);
+    }
 
     public override void Init()
     {
-        Debug.Log("Dragon_init");
+        SkillInit();
         Fsm_Init();
     }
 }

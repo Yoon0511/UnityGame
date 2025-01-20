@@ -6,11 +6,11 @@ public partial class Player
 {
     public void OnAttack()
     {
-        if (CurrState == STATE.ATTACK)
+        if (CurrState == (int)STATE.ATTACK)
         {
             return;
         }
-        ChangeState(STATE.ATTACK, (int)PLAYER_ANI_STATE.ATTACK);
+        ChangeState((int)STATE.ATTACK, (int)PLAYER_ANI_STATE.ATTACK);
     }
     public override void Hit(float _damage)
     {

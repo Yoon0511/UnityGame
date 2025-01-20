@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Dragon_AttackState : StateBase
 {
+    Dragon Dragon;
+    public Dragon_AttackState(Dragon _dragon)
+    {
+        Dragon = _dragon;
+    }
     public override void OnStateEnter()
     {
 

@@ -25,7 +25,7 @@ public class Monster_MoveState : StateBase
         monster.MoveToTarget();
 
         if (monster.IsPlayerInAttackRange())
-            monster.ChangeState(MONSTER_STATE.ATTACK);
+            monster.ChangeState((int)MONSTER_STATE.ATTACK);
 
         //Debug.Log("OnMoveUpdate");
     }

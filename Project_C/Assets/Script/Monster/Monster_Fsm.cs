@@ -9,19 +9,19 @@ public partial class Monster
     int patrolIndex = 0;
     public override void Fsm_Init()
     {
-        Debug.Log("monster_fsm_init");
+        Debug.Log("Monster Fsm Init");
         Fsm = new StateMachine(new Monster_IdleState(this));
-        CurrState = MONSTER_STATE.IDLE;
+        CurrState = (int)MONSTER_STATE.IDLE;
         PrevState = CurrState;
 
-        DicState.Add(MONSTER_STATE.IDLE, new Monster_IdleState(this));
-        DicState.Add(MONSTER_STATE.MOVE, new Monster_MoveState(this));
-        DicState.Add(MONSTER_STATE.PATROL, new Monster_PatrolState(this));
-        DicState.Add(MONSTER_STATE.CHASE, new Monster_ChaseState(this));
-        DicState.Add(MONSTER_STATE.ATTACK, new Monster_AttackState(this));
-        DicState.Add(MONSTER_STATE.DIE, new Monster_DieState(this));
+        DicState.Add((int)MONSTER_STATE.IDLE, new Monster_IdleState(this));
+        DicState.Add((int)MONSTER_STATE.MOVE, new Monster_MoveState(this));
+        DicState.Add((int)MONSTER_STATE.PATROL, new Monster_PatrolState(this));
+        DicState.Add((int)MONSTER_STATE.CHASE, new Monster_ChaseState(this));
+        DicState.Add((int)MONSTER_STATE.ATTACK, new Monster_AttackState(this));
+        DicState.Add((int)MONSTER_STATE.DIE, new Monster_DieState(this));
 
-        Fsm.ChangeState(DicState[MONSTER_STATE.IDLE]);
+        Fsm.ChangeState(DicState[(int)MONSTER_STATE.IDLE]);
     }
 
     public bool IsPlayerInDetectionRange()
@@ -87,6 +87,6 @@ public partial class Monster
     private IEnumerator IChageToPatrol(float _time)
     {
         yield return new WaitForSeconds(_time);
-        ChangeState(MONSTER_STATE.PATROL);
+        ChangeState((int)MONSTER_STATE.PATROL);
     }
 }

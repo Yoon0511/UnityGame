@@ -51,5 +51,6 @@ MonoBehaviour:
   UseMp: 15
   Explanation: "\uAC80\uAE30"
   SkillMotion: 6
+  SkillUseState: 4
   SkillType: 1
   SLASH_PREFAP: {fileID: 1286683050383161832, guid: bb2e73fc233beda4d809e23dd1f94fac, type: 3}

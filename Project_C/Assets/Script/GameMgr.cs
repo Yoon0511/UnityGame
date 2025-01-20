@@ -8,6 +8,7 @@ public class GameMgr : MonoBehaviour
     public GameObject PLAYEROBJ;
     public Player PLAYER;
     public CreateDamageText CREATE_DAMAGE_TEXT;
+    public Joystick JOYSTICK;
 
     [NonReorderable]
     Dictionary<string, SpriteAtlas> DicSpriteAtlas = new Dictionary<string, SpriteAtlas>();
@@ -37,5 +38,10 @@ public class GameMgr : MonoBehaviour
             return sa.GetSprite(_Name);
         }
         return null;
+    }
+
+    public bool IsJoystickDrag()
+    {
+        return JOYSTICK.IsDrag;
     }
 }

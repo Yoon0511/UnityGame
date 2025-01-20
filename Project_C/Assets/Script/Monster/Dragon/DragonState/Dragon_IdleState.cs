@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class Dragon_IdleState : StateBase
 {
+    Dragon Dragon;
+    public Dragon_IdleState(Dragon _dragon)
+    {
+        Dragon = _dragon;
+    }
     public override void OnStateEnter()
     {
-        
+        Dragon.UseBreath();
+
+        Dragon.PlayAnimation("Ani_State", (int)DRAGON_STATE.IDLE);
     }
 
     public override void OnStateExit()

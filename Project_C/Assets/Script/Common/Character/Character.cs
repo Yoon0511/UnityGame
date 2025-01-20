@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract partial class Character<T> : MonoBehaviour
+public abstract partial class Character : MonoBehaviour
 {
     public StatData Statdata;
     public BuffSystem BuffSystem;

@@ -24,7 +24,7 @@ public class Monster_ChaseState : StateBase
         monster.MoveToTarget();
 
         if (monster.IsPlayerInAttackRange())
-            monster.ChangeState(MONSTER_STATE.ATTACK);
+            monster.ChangeState((int)MONSTER_STATE.ATTACK);
         //Debug.Log("OnIdleUpdate");
     }
 }

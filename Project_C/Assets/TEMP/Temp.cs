@@ -5,8 +5,12 @@ using UnityEngine.UI;
 
 public class Temp : MonoBehaviour
 {
-    void Start()
+    public Skill_Breath breath;
+    private void Update()
     {
-       
+        if(Input.GetKeyDown(KeyCode.F1))
+        {
+            breath.UseSkill();
+        }
     }
 }

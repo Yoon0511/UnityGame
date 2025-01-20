@@ -113,6 +113,7 @@ public enum DRAGON_ANI_STATE
     BITE_ATTACK,
     PROJECTILE_ATTACK,
     CAST_SPELL,
+    BREATH,
     DIE,
     ENUM_END
 }

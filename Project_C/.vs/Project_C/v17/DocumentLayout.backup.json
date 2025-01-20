@@ -3,32 +3,184 @@
   "WorkspaceRootPath": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\uiscript\\cooltime\\cooltimeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\uiscript\\cooltime\\cooltimeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|c:\\users\\kmwkm\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\unitygame\\project_c\\assets\\script\\monster\\dragon\\dragon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\dragon\\dragon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\player_ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\atkrange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\atkrange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|c:\\users\\kmwkm\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\unitygame\\project_c\\assets\\script\\player\\player_skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|c:\\users\\kmwkm\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\unitygame\\project_c\\assets\\script\\monster\\dragon\\dragonstate\\dragon_attackstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\dragon\\dragonstate\\dragon_attackstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\player_skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\common\\character\\character_skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\common\\character\\character_skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\playerstate\\player_idlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\playerstate\\player_idlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\uiscript\\skillbtn\\skillbtn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\uiscript\\skillbtn\\skillbtn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\skill\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\skill\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\common\\enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\common\\enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\common\\character\\character_fsm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\common\\character\\character_fsm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\player_anievent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_anievent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\player_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\common\\character\\character_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\common\\character\\character_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\common\\character\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\common\\character\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|c:\\users\\kmwkm\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\unitygame\\project_c\\assets\\script\\monster\\punchattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\punchattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monster_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monster_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monster_fsm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monster_fsm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monster_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monster_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monsterstate\\monster_patrolstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monsterstate\\monster_patrolstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monsterstate\\monster_movestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monsterstate\\monster_movestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monsterstate\\monster_idlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monsterstate\\monster_idlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monsterstate\\monster_diestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monsterstate\\monster_diestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monsterstate\\monster_chasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monsterstate\\monster_chasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monsterstate\\monster_attackstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monsterstate\\monster_attackstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\player_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\player_attack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_attack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\player_equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\player_inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\player_ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\player_fsm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_fsm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|c:\\users\\kmwkm\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\unitygame\\project_c\\assets\\script\\common\\character_temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\common\\character_temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\common\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\script\\common\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|c:\\users\\kmwkm\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\unitygame\\project_c\\assets\\script\\skill\\skill_breath\\skill_breath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\skill\\skill_breath\\skill_breath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\temp\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\temp\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\buff\\buff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\buff\\buff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\skill\\skill_slash\\skillslash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\skill\\skill_slash\\skillslash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\skill\\skill_slash\\slash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\skill\\skill_slash\\slash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Library\\PackageCache\\com.unity.visualscripting@1.9.4\\Runtime\\VisualScripting.Core\\Variables\\SceneVariables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.visualscripting@1.9.4\\Runtime\\VisualScripting.Core\\Variables\\SceneVariables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\common\\statdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\common\\statdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\uiscript\\unitframe\\unitframe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\uiscript\\unitframe\\unitframe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\CoolTime\\CoolTimeUi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\UiScript\\CoolTime\\CoolTimeUi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\uiscript\\skillbook\\draganddropskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\uiscript\\skillbook\\draganddropskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|c:\\users\\kmwkm\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\unitygame\\project_c\\assets\\script\\uiscript\\itemslot\\itemslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\uiscript\\itemslot\\itemslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\uiscript\\itemslot\\itemslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\uiscript\\skillbtn\\skillbtn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\uiscript\\skillbtn\\skillbtn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\uiscript\\skillbook\\skillslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,28 +191,8 @@
       "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|c:\\users\\kmwkm\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\unitygame\\project_c\\assets\\script\\uiscript\\infoplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\uiscript\\infoplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\skill\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\skill\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\uiscript\\skillbook\\skillbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\uiscript\\skillbook\\skillbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\common\\enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\common\\enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\common\\character\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\common\\character\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\buff\\buffmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\buff\\buffmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\skill\\skillpowerup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,38 +203,6 @@
       "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\buff\\statbuff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\player_anievent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_anievent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\buff\\buff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\buff\\buff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monster_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monster_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\player_equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\player_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\player_fsm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_fsm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\player_attack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_attack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\skill\\iskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\skill\\iskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -111,16 +211,8 @@
       "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\skill\\skillpoison.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\common\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\common\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\playerstate\\player_attackstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\playerstate\\player_attackstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\playerstate\\player_idlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\playerstate\\player_idlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\playerstate\\player_runstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -131,18 +223,6 @@
       "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\playerstate\\player_walkstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\skill\\skill_slash\\slash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\skill\\skill_slash\\slash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\skill\\skill_slash\\skillslash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\skill\\skill_slash\\skillslash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\common\\statdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\common\\statdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\damagetaxt\\createdamagetext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\damagetaxt\\createdamagetext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -151,28 +231,12 @@
       "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\damagetaxt\\damagetext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\player_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\uiscript\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\uiscript\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\uiscript\\itemslot\\equipmentslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\uiscript\\itemslot\\equipmentslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monsterstate\\monster_patrolstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monsterstate\\monster_patrolstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\item\\equipmentitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\item\\equipmentitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\uiscript\\equipmentwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\uiscript\\equipmentwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\shared.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -183,56 +247,12 @@
       "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\followingcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\temp\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\temp\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\uiscript\\joystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\uiscript\\joystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\common\\character\\character_fsm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\common\\character\\character_fsm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\playerstate\\player_diestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\playerstate\\player_diestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\common\\character\\character_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\common\\character\\character_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monsterstate\\monster_attackstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monsterstate\\monster_attackstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monsterstate\\monster_chasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monsterstate\\monster_chasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\DamageText.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\DamageText.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monster_fsm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monster_fsm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monsterstate\\monster_idlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monsterstate\\monster_idlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monster_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monster_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monsterstate\\monster_diestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monsterstate\\monster_diestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\monster\\monsterstate\\monster_movestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster\\monsterstate\\monster_movestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\fsm\\statebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -241,10 +261,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\uiscript\\onbtnevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\uiscript\\onbtnevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\player\\player_inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{81AB8DCA-7726-A80C-55E8-36C06CD97565}|Assembly-CSharp.csproj|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\assets\\script\\uiscript\\openshowui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -274,6 +290,26 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Temp\\UnityGame\\Project_C\\Assets\\Script\\Monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\InfoPlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\UiScript\\InfoPlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\Inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\UiScript\\Inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\EquipmentWindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\UiScript\\EquipmentWindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\Joystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\UiScript\\Joystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Buff\\BuffMgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\Buff\\BuffMgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -283,23 +319,320 @@
       "DocumentGroups": [
         {
           "DockedWidth": 220,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dragon.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Dragon\\Dragon.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Dragon\\Dragon.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Dragon\\Dragon.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\Dragon\\Dragon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T15:12:46.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dragon_AttackState.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Dragon\\DragonState\\Dragon_AttackState.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Dragon\\DragonState\\Dragon_AttackState.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Dragon\\DragonState\\Dragon_AttackState.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\Dragon\\DragonState\\Dragon_AttackState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T15:11:59.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Player_Skill.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Skill.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Skill.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Skill.cs",
+              "RelativeToolTip": "Assets\\Script\\Player\\Player_Skill.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T18:22:50.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PunchAttack.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\PunchAttack.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\PunchAttack.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\PunchAttack.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\PunchAttack.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T14:02:22.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Monster.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Monster.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Monster.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Monster.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\Monster.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAUwEsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T13:06:14.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AtkRange.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\AtkRange.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\AtkRange.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\AtkRange.cs",
+              "RelativeToolTip": "Assets\\Script\\AtkRange.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T14:27:05.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Monster_Animation.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Monster_Animation.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Monster_Animation.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Monster_Animation.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\Monster_Animation.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAiwBEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T13:46:35.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 18,
+              "Title": "Monster_Fsm.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Monster_Fsm.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Monster_Fsm.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Monster_Fsm.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\Monster_Fsm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T12:10:09.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player.cs",
+              "RelativeToolTip": "Assets\\Script\\Player\\Player.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAQwFAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T10:16:01.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Player_IdleState.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\PlayerState\\Player_IdleState.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Player\\PlayerState\\Player_IdleState.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\PlayerState\\Player_IdleState.cs",
+              "RelativeToolTip": "Assets\\Script\\Player\\PlayerState\\Player_IdleState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T07:59:00.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Monster_PatrolState.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_PatrolState.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\MonsterState\\Monster_PatrolState.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_PatrolState.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\MonsterState\\Monster_PatrolState.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAswB4AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T12:16:11.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Monster_Move.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Monster_Move.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Monster_Move.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Monster_Move.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\Monster_Move.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwCQAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T13:33:47.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Monster_MoveState.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_MoveState.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\MonsterState\\Monster_MoveState.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_MoveState.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\MonsterState\\Monster_MoveState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T13:00:29.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Monster_IdleState.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_IdleState.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\MonsterState\\Monster_IdleState.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_IdleState.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\MonsterState\\Monster_IdleState.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T12:27:40.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Monster_DieState.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_DieState.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\MonsterState\\Monster_DieState.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_DieState.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\MonsterState\\Monster_DieState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T13:00:31.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Monster_ChaseState.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_ChaseState.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\MonsterState\\Monster_ChaseState.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_ChaseState.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\MonsterState\\Monster_ChaseState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T12:16:22.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Monster_AttackState.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_AttackState.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\MonsterState\\Monster_AttackState.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_AttackState.cs",
+              "RelativeToolTip": "Assets\\Script\\Monster\\MonsterState\\Monster_AttackState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T12:25:20.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Player_Equipment.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Equipment.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Equipment.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Equipment.cs",
+              "RelativeToolTip": "Assets\\Script\\Player\\Player_Equipment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T10:20:37.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Player_Inventory.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Inventory.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Inventory.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Inventory.cs",
+              "RelativeToolTip": "Assets\\Script\\Player\\Player_Inventory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T10:28:00.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Player_Fsm.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Fsm.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Fsm.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Fsm.cs",
+              "RelativeToolTip": "Assets\\Script\\Player\\Player_Fsm.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T10:27:57.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Skill_Breath.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Skill\\Skill_Breath\\Skill_Breath.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Skill\\Skill_Breath\\Skill_Breath.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Skill\\Skill_Breath\\Skill_Breath.cs",
+              "RelativeToolTip": "Assets\\Script\\Skill\\Skill_Breath\\Skill_Breath.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAIwB8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T09:41:19.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
               "Title": "Buff.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Buff\\Buff.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Buff\\Buff.cs",
               "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Buff\\Buff.cs",
               "RelativeToolTip": "Assets\\Script\\Buff\\Buff.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-13T08:49:03.719Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 37,
+              "Title": "SkillSlash.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Skill\\Skill_Slash\\SkillSlash.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Skill\\Skill_Slash\\SkillSlash.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Skill\\Skill_Slash\\SkillSlash.cs",
+              "RelativeToolTip": "Assets\\Script\\Skill\\Skill_Slash\\SkillSlash.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T15:13:12.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "InfoPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\InfoPlayer.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\InfoPlayer.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\InfoPlayer.cs",
+              "RelativeToolTip": "Assets\\Script\\UiScript\\InfoPlayer.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAswBQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T10:47:03.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
               "Title": "StatBuff.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Buff\\StatBuff.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Buff\\StatBuff.cs",
@@ -311,20 +644,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "InfoPlayer.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\InfoPlayer.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\InfoPlayer.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\InfoPlayer.cs",
-              "RelativeToolTip": "Assets\\Script\\UiScript\\InfoPlayer.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAswBQAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 41,
+              "Title": "UnitFrame.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\UnitFrame\\UnitFrame.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\UnitFrame\\UnitFrame.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\UnitFrame\\UnitFrame.cs",
+              "RelativeToolTip": "Assets\\Script\\UiScript\\UnitFrame\\UnitFrame.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwCgAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T10:47:03.165Z",
+              "WhenOpened": "2025-01-13T17:29:04.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "SceneVariables.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Library\\PackageCache\\com.unity.visualscripting@1.9.4\\Runtime\\VisualScripting.Core\\Variables\\SceneVariables.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.visualscripting@1.9.4\\Runtime\\VisualScripting.Core\\Variables\\SceneVariables.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Library\\PackageCache\\com.unity.visualscripting@1.9.4\\Runtime\\VisualScripting.Core\\Variables\\SceneVariables.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.visualscripting@1.9.4\\Runtime\\VisualScripting.Core\\Variables\\SceneVariables.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T19:02:43.802Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 46,
               "Title": "GameMgr.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\GameMgr.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\GameMgr.cs",
@@ -332,38 +677,22 @@
               "RelativeToolTip": "Assets\\Script\\GameMgr.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAADwvxIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T14:35:36.548Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-30T14:35:36.548Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 42,
               "Title": "CoolTimeUi.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\CoolTime\\CoolTimeUi.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\CoolTime\\CoolTimeUi.cs",
               "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\CoolTime\\CoolTimeUi.cs",
               "RelativeToolTip": "Assets\\Script\\UiScript\\CoolTime\\CoolTimeUi.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAADwvxUAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T12:34:51.644Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-30T12:34:51.644Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player.cs",
-              "RelativeToolTip": "Assets\\Script\\Player\\Player.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAIA4wDUAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T10:16:01.69Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 78,
               "Title": "BuffMgr.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Buff\\BuffMgr.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Buff\\BuffMgr.cs",
@@ -375,7 +704,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 48,
               "Title": "SkillPowerUp.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Skill\\SkillPowerUp.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\SkillPowerUp.cs",
@@ -387,55 +716,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Monster_Move.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Monster_Move.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Monster_Move.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Monster_Move.cs",
-              "RelativeToolTip": "Assets\\Script\\Monster\\Monster_Move.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T13:33:47.147Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Player_Equipment.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Equipment.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Equipment.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Equipment.cs",
-              "RelativeToolTip": "Assets\\Script\\Player\\Player_Equipment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T10:20:37.915Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Player_Fsm.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Fsm.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Fsm.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Fsm.cs",
-              "RelativeToolTip": "Assets\\Script\\Player\\Player_Fsm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T10:27:57.49Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Monster.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Monster.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Monster.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Monster.cs",
-              "RelativeToolTip": "Assets\\Script\\Monster\\Monster.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAD4vzgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T13:06:14.463Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 52,
               "Title": "Player_AttackState.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\PlayerState\\Player_AttackState.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\PlayerState\\Player_AttackState.cs",
@@ -447,19 +728,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Player_IdleState.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\PlayerState\\Player_IdleState.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Player\\PlayerState\\Player_IdleState.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\PlayerState\\Player_IdleState.cs",
-              "RelativeToolTip": "Assets\\Script\\Player\\PlayerState\\Player_IdleState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T07:59:00.774Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 53,
               "Title": "Player_RunState.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\PlayerState\\Player_RunState.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\PlayerState\\Player_RunState.cs",
@@ -471,7 +740,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 54,
               "Title": "Player_WalkState.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\PlayerState\\Player_WalkState.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\PlayerState\\Player_WalkState.cs",
@@ -483,19 +752,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "SkillSlash.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Skill\\Skill_Slash\\SkillSlash.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Skill\\Skill_Slash\\SkillSlash.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Skill\\Skill_Slash\\SkillSlash.cs",
-              "RelativeToolTip": "Assets\\Script\\Skill\\Skill_Slash\\SkillSlash.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T15:13:12.444Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 55,
               "Title": "CreateDamageText.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\DamageTaxt\\CreateDamageText.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\DamageTaxt\\CreateDamageText.cs",
@@ -507,7 +764,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 56,
               "Title": "DamageText.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\DamageTaxt\\DamageText.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\DamageTaxt\\DamageText.cs",
@@ -519,7 +776,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 75,
               "Title": "Inventory.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\Inventory.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\Inventory.cs",
@@ -531,7 +788,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 57,
               "Title": "EquipmentSlot.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\ItemSlot\\EquipmentSlot.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\ItemSlot\\EquipmentSlot.cs",
@@ -543,7 +800,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 58,
               "Title": "EquipmentItem.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Item\\EquipmentItem.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Item\\EquipmentItem.cs",
@@ -555,7 +812,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 76,
               "Title": "EquipmentWindow.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\EquipmentWindow.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\EquipmentWindow.cs",
@@ -567,19 +824,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "Monster_PatrolState.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_PatrolState.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\MonsterState\\Monster_PatrolState.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_PatrolState.cs",
-              "RelativeToolTip": "Assets\\Script\\Monster\\MonsterState\\Monster_PatrolState.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAswB0AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T12:16:11.934Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 59,
               "Title": "Shared.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Shared.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Shared.cs",
@@ -591,7 +836,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 60,
               "Title": "FollowingCamera.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\FollowingCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\FollowingCamera.cs",
@@ -603,7 +848,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 77,
               "Title": "Joystick.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\Joystick.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\Joystick.cs",
@@ -615,31 +860,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "Monster_AttackState.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_AttackState.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\MonsterState\\Monster_AttackState.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_AttackState.cs",
-              "RelativeToolTip": "Assets\\Script\\Monster\\MonsterState\\Monster_AttackState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T12:25:20.933Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "Monster_ChaseState.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_ChaseState.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\MonsterState\\Monster_ChaseState.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_ChaseState.cs",
-              "RelativeToolTip": "Assets\\Script\\Monster\\MonsterState\\Monster_ChaseState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T12:16:22.577Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 62,
               "Title": "DamageText.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\DamageText.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\DamageText.cs",
@@ -651,67 +872,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "Monster_Fsm.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Monster_Fsm.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Monster_Fsm.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Monster_Fsm.cs",
-              "RelativeToolTip": "Assets\\Script\\Monster\\Monster_Fsm.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAiwFEAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T12:10:09.746Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "Monster_IdleState.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_IdleState.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\MonsterState\\Monster_IdleState.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_IdleState.cs",
-              "RelativeToolTip": "Assets\\Script\\Monster\\MonsterState\\Monster_IdleState.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T12:27:40.347Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "Monster_Animation.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Monster_Animation.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\Monster_Animation.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\Monster_Animation.cs",
-              "RelativeToolTip": "Assets\\Script\\Monster\\Monster_Animation.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAiwBEAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T13:46:35.849Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "Monster_DieState.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_DieState.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\MonsterState\\Monster_DieState.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_DieState.cs",
-              "RelativeToolTip": "Assets\\Script\\Monster\\MonsterState\\Monster_DieState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T13:00:31.51Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "Monster_MoveState.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_MoveState.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Monster\\MonsterState\\Monster_MoveState.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Monster\\MonsterState\\Monster_MoveState.cs",
-              "RelativeToolTip": "Assets\\Script\\Monster\\MonsterState\\Monster_MoveState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T13:00:29.994Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 63,
               "Title": "StateBase.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\FSM\\StateBase.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\FSM\\StateBase.cs",
@@ -723,19 +884,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "Player_Inventory.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Inventory.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Inventory.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Inventory.cs",
-              "RelativeToolTip": "Assets\\Script\\Player\\Player_Inventory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T10:28:00.092Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 65,
               "Title": "OpenShowUi.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\OpenShowUi.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\OpenShowUi.cs",
@@ -747,7 +896,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 64,
               "Title": "OnBtnEvent.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\OnBtnEvent.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\OnBtnEvent.cs",
@@ -759,7 +908,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 67,
               "Title": "ExitBtn.cs",
               "DocumentMoniker": "D:\\Temp\\UnityGame\\Project_C\\Assets\\Script\\ExitBtn.cs",
               "ToolTip": "D:\\Temp\\UnityGame\\Project_C\\Assets\\Script\\ExitBtn.cs",
@@ -769,7 +918,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 68,
               "Title": "Item.cs",
               "DocumentMoniker": "D:\\Temp\\UnityGame\\Project_C\\Assets\\Script\\Item.cs",
               "ToolTip": "D:\\Temp\\UnityGame\\Project_C\\Assets\\Script\\Item.cs",
@@ -779,7 +928,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 66,
               "Title": "TogleScript.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Scenes\\TogleScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\TogleScript.cs",
@@ -791,7 +940,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 69,
               "Title": "Item123.cs",
               "DocumentMoniker": "D:\\Temp\\UnityGame\\Project_C\\Assets\\Script\\Item123.cs",
               "ToolTip": "D:\\Temp\\UnityGame\\Project_C\\Assets\\Script\\Item123.cs",
@@ -801,7 +950,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 70,
               "Title": "AniEvent.cs",
               "DocumentMoniker": "D:\\Temp\\UnityGame\\Project_C\\Assets\\Script\\AniEvent.cs",
               "ToolTip": "D:\\Temp\\UnityGame\\Project_C\\Assets\\Script\\AniEvent.cs",
@@ -811,7 +960,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 71,
               "Title": "InvenSlot.cs",
               "DocumentMoniker": "D:\\Temp\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\InvenSlot.cs",
               "ToolTip": "D:\\Temp\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\InvenSlot.cs",
@@ -821,7 +970,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 72,
               "Title": "Character.cs",
               "DocumentMoniker": "D:\\Temp\\UnityGame\\Project_C\\Assets\\Script\\Character.cs",
               "ToolTip": "D:\\Temp\\UnityGame\\Project_C\\Assets\\Script\\Character.cs",
@@ -831,7 +980,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 73,
               "Title": "Monster.cs",
               "DocumentMoniker": "D:\\Temp\\UnityGame\\Project_C\\Assets\\Script\\Monster.cs",
               "ToolTip": "D:\\Temp\\UnityGame\\Project_C\\Assets\\Script\\Monster.cs",
@@ -843,221 +992,205 @@
         },
         {
           "DockedWidth": 180,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ItemSlot.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\ItemSlot\\ItemSlot.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\ItemSlot\\ItemSlot.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\ItemSlot\\ItemSlot.cs",
-              "RelativeToolTip": "Assets\\Script\\UiScript\\ItemSlot\\ItemSlot.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAswBYAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T15:47:49.967Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "DragAndDropSkill.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\SkillBook\\DragAndDropSkill.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\SkillBook\\DragAndDropSkill.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\SkillBook\\DragAndDropSkill.cs",
-              "RelativeToolTip": "Assets\\Script\\UiScript\\SkillBook\\DragAndDropSkill.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
+              "Title": "Character_Skill.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Character\\Character_Skill.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Common\\Character\\Character_Skill.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Character\\Character_Skill.cs",
+              "RelativeToolTip": "Assets\\Script\\Common\\Character\\Character_Skill.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwvx0AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T18:36:53.066Z",
+              "WhenOpened": "2025-01-20T13:48:39.758Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Player_Skill.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Skill.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Skill.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Skill.cs",
-              "RelativeToolTip": "Assets\\Script\\Player\\Player_Skill.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAApwFEAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T18:22:50.333Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Player_Ui.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Ui.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Ui.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Ui.cs",
-              "RelativeToolTip": "Assets\\Script\\Player\\Player_Ui.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T10:16:01.73Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "SkillBtn.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\SkillBtn\\SkillBtn.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\SkillBtn\\SkillBtn.cs",
               "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\SkillBtn\\SkillBtn.cs",
               "RelativeToolTip": "Assets\\Script\\UiScript\\SkillBtn\\SkillBtn.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAqwBgAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-06T18:37:16.474Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SkillSlot.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\SkillBook\\SkillSlot.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\SkillBook\\SkillSlot.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\SkillBook\\SkillSlot.cs",
-              "RelativeToolTip": "Assets\\Script\\UiScript\\SkillBook\\SkillSlot.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAswCIAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T17:12:27.85Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Enum.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Enum.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Common\\Enum.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Enum.cs",
-              "RelativeToolTip": "Assets\\Script\\Common\\Enum.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T13:44:31.91Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "Skill.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Skill\\Skill.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\Skill.cs",
               "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Skill\\Skill.cs",
               "RelativeToolTip": "Assets\\Script\\Skill\\Skill.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T17:15:32.5Z"
+              "WhenOpened": "2024-12-30T17:15:32.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Enum.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Enum.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Common\\Enum.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Enum.cs",
+              "RelativeToolTip": "Assets\\Script\\Common\\Enum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T13:44:31.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Character_Fsm.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Character\\Character_Fsm.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Common\\Character\\Character_Fsm.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Character\\Character_Fsm.cs",
+              "RelativeToolTip": "Assets\\Script\\Common\\Character\\Character_Fsm.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBEAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T09:10:04.095Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "SkillBook.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\SkillBook\\SkillBook.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\SkillBook\\SkillBook.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\SkillBook\\SkillBook.cs",
-              "RelativeToolTip": "Assets\\Script\\UiScript\\SkillBook\\SkillBook.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T18:35:43.161Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Player_Attack.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Attack.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Attack.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Attack.cs",
-              "RelativeToolTip": "Assets\\Script\\Player\\Player_Attack.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T10:16:01.723Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Player_Move.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Move.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Move.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Move.cs",
-              "RelativeToolTip": "Assets\\Script\\Player\\Player_Move.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T10:16:01.728Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Character.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Character\\Character.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Common\\Character\\Character.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Character\\Character.cs",
-              "RelativeToolTip": "Assets\\Script\\Common\\Character\\Character.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:03:10.391Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
               "Title": "Player_AniEvent.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_AniEvent.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_AniEvent.cs",
               "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_AniEvent.cs",
               "RelativeToolTip": "Assets\\Script\\Player\\Player_AniEvent.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBoAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T10:27:52.874Z"
+              "WhenOpened": "2024-12-30T10:27:52.874Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ISkill.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Skill\\ISkill.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Skill\\ISkill.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Skill\\ISkill.cs",
-              "RelativeToolTip": "Assets\\Script\\Skill\\ISkill.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "Player_Animation.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Animation.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Animation.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Animation.cs",
+              "RelativeToolTip": "Assets\\Script\\Player\\Player_Animation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T18:29:27.239Z"
+              "WhenOpened": "2024-12-30T10:16:01.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Character_Animation.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Character\\Character_Animation.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Common\\Character\\Character_Animation.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Character\\Character_Animation.cs",
+              "RelativeToolTip": "Assets\\Script\\Common\\Character\\Character_Animation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T08:02:44.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Character.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Character\\Character.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Common\\Character\\Character.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Character\\Character.cs",
+              "RelativeToolTip": "Assets\\Script\\Common\\Character\\Character.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T08:03:10.391Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
-              "Title": "SkillPoison.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Skill\\SkillPoison.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Skill\\SkillPoison.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Skill\\SkillPoison.cs",
-              "RelativeToolTip": "Assets\\Script\\Skill\\SkillPoison.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Title": "Player_Move.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Move.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Move.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Move.cs",
+              "RelativeToolTip": "Assets\\Script\\Player\\Player_Move.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T17:15:15.665Z"
+              "WhenOpened": "2024-12-30T10:16:01.728Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 27,
+              "Title": "Player_Attack.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Attack.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Attack.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Attack.cs",
+              "RelativeToolTip": "Assets\\Script\\Player\\Player_Attack.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T10:16:01.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Player_Ui.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Ui.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Ui.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Ui.cs",
+              "RelativeToolTip": "Assets\\Script\\Player\\Player_Ui.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T10:16:01.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Character_temp.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Character_temp.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Common\\Character_temp.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Character_temp.cs",
+              "RelativeToolTip": "Assets\\Script\\Common\\Character_temp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T13:51:26.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
               "Title": "Character.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Character.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Common\\Character.cs",
               "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Character.cs",
               "RelativeToolTip": "Assets\\Script\\Common\\Character.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T15:01:09.355Z"
+              "WhenOpened": "2025-01-10T15:01:09.355Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "StatData.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\StatData.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Common\\StatData.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\StatData.cs",
-              "RelativeToolTip": "Assets\\Script\\Common\\StatData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
+              "DocumentIndex": 35,
+              "Title": "Temp.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\TEMP\\Temp.cs",
+              "RelativeDocumentMoniker": "Assets\\TEMP\\Temp.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\TEMP\\Temp.cs",
+              "RelativeToolTip": "Assets\\TEMP\\Temp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T16:20:33.906Z"
+              "WhenOpened": "2024-12-30T17:12:34.912Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 38,
               "Title": "Slash.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Skill\\Skill_Slash\\Slash.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\Skill_Slash\\Slash.cs",
@@ -1069,43 +1202,91 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Player_Animation.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Animation.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Animation.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\Player_Animation.cs",
-              "RelativeToolTip": "Assets\\Script\\Player\\Player_Animation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "DocumentIndex": 40,
+              "Title": "StatData.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\StatData.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Common\\StatData.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\StatData.cs",
+              "RelativeToolTip": "Assets\\Script\\Common\\StatData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T10:16:01.715Z"
+              "WhenOpened": "2024-12-30T16:20:33.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "DragAndDropSkill.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\SkillBook\\DragAndDropSkill.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\SkillBook\\DragAndDropSkill.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\SkillBook\\DragAndDropSkill.cs",
+              "RelativeToolTip": "Assets\\Script\\UiScript\\SkillBook\\DragAndDropSkill.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T18:36:53.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ItemSlot.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\ItemSlot\\ItemSlot.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\ItemSlot\\ItemSlot.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\ItemSlot\\ItemSlot.cs",
+              "RelativeToolTip": "Assets\\Script\\UiScript\\ItemSlot\\ItemSlot.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAswBYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T15:47:49.967Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 45,
-              "Title": "Temp.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\TEMP\\Temp.cs",
-              "RelativeDocumentMoniker": "Assets\\TEMP\\Temp.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\TEMP\\Temp.cs",
-              "RelativeToolTip": "Assets\\TEMP\\Temp.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAHAAAAAAAAAA==",
+              "Title": "SkillSlot.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\SkillBook\\SkillSlot.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\SkillBook\\SkillSlot.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\SkillBook\\SkillSlot.cs",
+              "RelativeToolTip": "Assets\\Script\\UiScript\\SkillBook\\SkillSlot.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAswCIAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T17:12:34.912Z"
+              "WhenOpened": "2024-12-30T17:12:27.85Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 47,
-              "Title": "Character_Fsm.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Character\\Character_Fsm.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Common\\Character\\Character_Fsm.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Character\\Character_Fsm.cs",
-              "RelativeToolTip": "Assets\\Script\\Common\\Character\\Character_Fsm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBcAAAAFAAAAAAAAAA==",
+              "Title": "SkillBook.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\SkillBook\\SkillBook.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\UiScript\\SkillBook\\SkillBook.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\UiScript\\SkillBook\\SkillBook.cs",
+              "RelativeToolTip": "Assets\\Script\\UiScript\\SkillBook\\SkillBook.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T09:10:04.095Z"
+              "WhenOpened": "2025-01-06T18:35:43.161Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 50,
+              "Title": "ISkill.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Skill\\ISkill.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Skill\\ISkill.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Skill\\ISkill.cs",
+              "RelativeToolTip": "Assets\\Script\\Skill\\ISkill.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T18:29:27.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "SkillPoison.cs",
+              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Skill\\SkillPoison.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Skill\\SkillPoison.cs",
+              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Skill\\SkillPoison.cs",
+              "RelativeToolTip": "Assets\\Script\\Skill\\SkillPoison.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T17:15:15.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
               "Title": "Player_DieState.cs",
               "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Player\\PlayerState\\Player_DieState.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\PlayerState\\Player_DieState.cs",
@@ -1114,18 +1295,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-10T08:04:55.581Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "Character_Animation.cs",
-              "DocumentMoniker": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Character\\Character_Animation.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Common\\Character\\Character_Animation.cs",
-              "ToolTip": "C:\\Users\\kmwkm\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\UnityGame\\Project_C\\Assets\\Script\\Common\\Character\\Character_Animation.cs",
-              "RelativeToolTip": "Assets\\Script\\Common\\Character\\Character_Animation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:02:44.197Z"
             }
           ]
         }
