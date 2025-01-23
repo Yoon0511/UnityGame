@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class Temp : MonoBehaviour
 {
-    public Skill_Breath breath;
+    public Skill testSkill;
+    public Character Character;
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.F1))
         {
-            breath.UseSkill();
+            testSkill.SetOwner(Character.gameObject);
+            testSkill.UseSkill();
         }
     }
 }

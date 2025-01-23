@@ -11,7 +11,7 @@ public class Dragon_IdleState : StateBase
     }
     public override void OnStateEnter()
     {
-        Dragon.UseBreath();
+        Dragon.FsmUseDragonSkill((int)DRAGON_SKILL.RUSH);
 
         Dragon.PlayAnimation("Ani_State", (int)DRAGON_STATE.IDLE);
     }

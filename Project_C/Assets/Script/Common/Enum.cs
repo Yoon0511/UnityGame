@@ -117,3 +117,10 @@ public enum DRAGON_ANI_STATE
     DIE,
     ENUM_END
 }
+
+public enum DRAGON_SKILL
+{
+    BREATH,
+    RUSH,
+    ENUM_END
+}

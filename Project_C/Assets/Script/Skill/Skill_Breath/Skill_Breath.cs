@@ -15,8 +15,11 @@ public class Skill_Breath : Skill
     Player Target;
 
     Coroutine IBreathCorutine;
+    [SerializeField]
+    BoxCollider BoxCollider;
     private void Start()
     {
+        BoxCollider.enabled = false;
         BREATH_EFFECT.Stop();
     }
     public override void UseSkill()
@@ -26,6 +29,7 @@ public class Skill_Breath : Skill
 
     IEnumerator IBreath()
     {
+        BoxCollider.enabled = true;
         BREATH_EFFECT.Play();
 
         float elapsedTime = 0;
@@ -41,6 +45,7 @@ public class Skill_Breath : Skill
             yield return new WaitForSeconds(DamageInterval);
         }
 
+        BoxCollider.enabled = false;
         BREATH_EFFECT.Stop();
         yield return new WaitForSeconds(BREATH_EFFECT.main.duration);
     }
@@ -94,5 +99,6 @@ public class Skill_Breath : Skill
     public override void SkillEnd()
     {
         BreathEnd();
+        BoxCollider.enabled = false;
     }
 }

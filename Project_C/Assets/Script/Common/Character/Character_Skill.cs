@@ -16,7 +16,7 @@ public abstract partial class Character
     Dictionary<Skill, float> DicSkillCoolTime = new();
 
     bool IsCoolTimeRunning = false;
-
+    int NoneSkillMotion = 0;
     public void AddSkill(Skill _skill)
     {
         SkillList.Add(_skill);
@@ -31,6 +31,11 @@ public abstract partial class Character
             {
                 CurrUseSkillIndex = _index;
                 ChangeState(_state, _skillmotion);
+
+                if(_skillmotion == NoneSkillMotion)
+                {
+                    CurrentUseSkill();
+                }
 
                 DicSkillCoolTime[CurrentSkill[_index]] = CurrentSkill[_index].CoolTime;
                 if (IsCoolTimeRunning == false)
@@ -79,6 +84,7 @@ public abstract partial class Character
             {
                 DicSkillCoolTime.Remove(CurrentSkill[_index]);
             }
+            _skill.SetOwner(gameObject);
             CurrentSkill[_index] = _skill;
             DicSkillCoolTime.Add(CurrentSkill[_index], 0f);
         }

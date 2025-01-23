@@ -5,7 +5,7 @@ using UnityEngine;
 public partial class Dragon
 {
     [SerializeField]
-    AtkRange AttackRange_Cone;
+    AtkRange[] AttackRange;
 
     void SkillInit()
     {
@@ -20,20 +20,30 @@ public partial class Dragon
             i++;
         }
     }
-    public IEnumerator Dragon_Braeth()
+    public IEnumerator UseDragonSkill(int _skillindex)
     {
-        AttackRange_Cone.gameObject.SetActive(true);
+        AttackRange[_skillindex].gameObject.SetActive(true);
         while (true)
         {
-            AttackRange_Cone.StartSizeUp();
-            if (AttackRange_Cone.IsStretchEnd())
+            AttackRange[_skillindex].StartSizeUp();
+            if (AttackRange[_skillindex].IsStretchEnd())
             {
-                AttackRange_Cone.gameObject.SetActive(false);
+                AttackRange[_skillindex].gameObject.SetActive(false);
                 break;
             }
             yield return null;
         }
 
-        UseSkill(0, (int)DRAGON_STATE.ATTACK, (int)DRAGON_ANI_STATE.BREATH);
+
+        switch(_skillindex)
+        {
+            case (int)DRAGON_SKILL.BREATH:
+                UseSkill(_skillindex, (int)DRAGON_STATE.ATTACK, (int)DRAGON_ANI_STATE.BREATH);
+                break;
+            case (int)DRAGON_SKILL.RUSH:
+                UseSkill(_skillindex, (int)DRAGON_STATE.ATTACK, (int)DRAGON_ANI_STATE.NONE);
+                break;
+        }
+        
     }
 }

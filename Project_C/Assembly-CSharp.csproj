@@ -99,6 +99,7 @@
     <Compile Include="Assets\Script\Player\Player_Equipment.cs" />
     <Compile Include="Assets\Script\AtkRange.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_IdleState.cs" />
+    <Compile Include="Assets\Script\Skill\Skill_Rush\Skill_Rush.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_ChaseState.cs" />
     <Compile Include="Assets\Script\Monster\PunchAttack.cs" />
     <Compile Include="Assets\Script\FSM\StateMachine.cs" />

@@ -18,14 +18,14 @@ public partial class Dragon
         Fsm.ChangeState(DicState[(int)DRAGON_STATE.IDLE]);
     }
 
-    public void UseBreath()
+    public void FsmUseDragonSkill(int _skillindex)
     {
-        StartCoroutine(IUseBreath(2f));
+        StartCoroutine(IUseDragonSkill(2f, _skillindex));
     }
 
-    IEnumerator IUseBreath(float _time)
+    IEnumerator IUseDragonSkill(float _time, int _skillindex)
     {
         yield return new WaitForSeconds(_time);
-        StartCoroutine(Dragon_Braeth());
+        StartCoroutine(UseDragonSkill(_skillindex));
     }
 }

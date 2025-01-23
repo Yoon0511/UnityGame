@@ -8,6 +8,8 @@ public class AtkRange : MonoBehaviour
     public float DesiredTime = 2f;
     private float StretchSpeed = 1f;
     private float StretchProgress = 0f;
+    public bool ScaleX;
+    public bool ScaleZ;
 
     private void Start()
     {
@@ -22,8 +24,8 @@ public class AtkRange : MonoBehaviour
         if (StretchProgress < 1.0f)
         {
             Vector3 scale = DAMAGE_RANGE.transform.localScale;
-            scale.x = StretchProgress;
-            scale.z = StretchProgress;
+            scale.x = ScaleX ? StretchProgress : scale.x;
+            scale.z = ScaleZ ? StretchProgress : scale.z;
             DAMAGE_RANGE.transform.localScale = scale;
         }
     }
@@ -37,8 +39,8 @@ public class AtkRange : MonoBehaviour
     {
         StretchProgress = 0f;
         Vector3 scale = DAMAGE_RANGE.transform.localScale;
-        scale.x = StretchProgress;
-        scale.z = StretchProgress;
+        scale.x = ScaleX ? StretchProgress : scale.x;
+        scale.z = ScaleZ ? StretchProgress : scale.z;
         DAMAGE_RANGE.transform.localScale = scale;
     }
 }
