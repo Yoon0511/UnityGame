@@ -6,20 +6,21 @@ public class AtkRange : MonoBehaviour
 {
     public GameObject DAMAGE_RANGE;
     public float DesiredTime = 2f;
-    private float StretchSpeed = 1f;
     private float StretchProgress = 0f;
     public bool ScaleX;
     public bool ScaleZ;
 
+    private float StartTime;
+
     private void Start()
     {
-        StretchSpeed = 1f / DesiredTime;
+        StartTime = Time.time;
     }
 
     public void StartSizeUp()
     {
-        StretchProgress += Time.deltaTime * StretchSpeed;
-        StretchProgress = Mathf.Clamp01(StretchProgress);
+        float elapsedTime = Time.time - StartTime;
+        StretchProgress = Mathf.Clamp01(elapsedTime / DesiredTime);
 
         if (StretchProgress < 1.0f)
         {
@@ -30,6 +31,10 @@ public class AtkRange : MonoBehaviour
         }
     }
 
+    public void SetDesiredTime(float _time)
+    {
+        DesiredTime = _time;
+    }
     public bool IsStretchEnd()
     {
         return StretchProgress >= 1.0f;

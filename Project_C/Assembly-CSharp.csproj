@@ -96,6 +96,7 @@
     <Compile Include="Assets\Script\Monster\Monster_Animation.cs" />
     <Compile Include="Assets\Script\Skill\Skill.cs" />
     <Compile Include="Assets\Script\FSM\StateBase.cs" />
+    <Compile Include="Assets\Script\Skill\Skill_FallingRock\Skill_FallingRock.cs" />
     <Compile Include="Assets\Script\Player\Player_Equipment.cs" />
     <Compile Include="Assets\Script\AtkRange.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_IdleState.cs" />
@@ -131,6 +132,7 @@
     <Compile Include="Assets\Script\Player\Player_Animation.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_AttackState.cs" />
     <Compile Include="Assets\Script\Monster\Dragon\DragonState\Dragon_IdleState.cs" />
+    <Compile Include="Assets\Script\Skill\Skill_FallingRock\Rock\Rock.cs" />
     <Compile Include="Assets\Script\Skill\SkillPowerUp.cs" />
     <Compile Include="Assets\Script\Monster\Monster_Move.cs" />
     <Compile Include="Assets\Script\UiScript\SkillBook\SkillSlot.cs" />
