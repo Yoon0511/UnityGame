@@ -17,6 +17,11 @@ public class AtkRange : MonoBehaviour
         StartTime = Time.time;
     }
 
+    private void OnEnable()
+    {
+        StartTime = Time.time;
+    }
+
     public void StartSizeUp()
     {
         float elapsedTime = Time.time - StartTime;

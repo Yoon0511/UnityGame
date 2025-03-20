@@ -16,7 +16,7 @@ public class Skill_Rush : Skill
     {
         float dist = 0;
         Vector3 orgPos = Owner.transform.position;
-        Debug.Log("Rush");
+
         while (dist < Distance)
         {
             dist = Vector3.Distance(orgPos, Owner.transform.position);
