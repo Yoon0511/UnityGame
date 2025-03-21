@@ -8,6 +8,7 @@ public abstract partial class Character : MonoBehaviour
     public StatData Statdata;
     public BuffSystem BuffSystem;
     protected string CharacterName;
+    protected int CharacterType = (int)CHARACTER_TYPE.NONE;
 
     private void Start()
     {
@@ -24,4 +25,13 @@ public abstract partial class Character : MonoBehaviour
     {
         return Statdata;
     }
+
+    public int GetCharacterType() { return CharacterType; }
+
+    public abstract void RayTargetEvent();
+    // RayCast로 선택되었을때 호출
+
+    // Character를 상속받는 모든 클래스에 RayTargetEvent 선언
+    // 상속받는 클래스에서 RayTargetEvent 정의
+    // 각각의 CharacterType에 맞는 행동 구현
 }

@@ -71,10 +71,28 @@ public partial class Player : Character
             Statdata.EnhanceStat(STAT_TYPE.MP, -10);
             UpdateMpbar();
         }
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            ClickToRay();
+        }
+    }
+
+    public void ClickToRay()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if(Physics.Raycast(ray, out hit))
+        {
+            if(hit.transform.gameObject.GetComponent<Character>() != null)
+                Debug.Log(hit.transform.gameObject.GetComponent<Character>());
+        }
     }
 
     public override void Init()
     {
+        CharacterType = (int)CHARACTER_TYPE.PLAYER;
         CharacterName = "Player_1";
         for(int i = 0; i < MaxSkillCount; i++)
         {

@@ -9,6 +9,7 @@ TagManager:
   - TAG_ITEM
   - TAG_SKILLBTN
   - TAG_CANVAS
+  - TAG_NPC
   layers:
   - Default
   - TransparentFX

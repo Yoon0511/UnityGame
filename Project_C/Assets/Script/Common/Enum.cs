@@ -124,3 +124,12 @@ public enum DRAGON_SKILL
     RUSH,
     ENUM_END
 }
+
+public enum CHARACTER_TYPE
+{
+    NONE,
+    PLAYER,
+    MONSTER,
+    NPC,
+    ENUM_END
+}
