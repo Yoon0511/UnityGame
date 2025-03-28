@@ -27,4 +27,9 @@ public partial class Dragon : Monster
         SkillInit();
         Fsm_Init();
     }
+
+    public override void RayTargetEvent()
+    {
+        Debug.Log("Dragon RayTargetEvent");
+    }
 }

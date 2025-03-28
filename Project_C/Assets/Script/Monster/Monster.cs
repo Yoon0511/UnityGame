@@ -76,4 +76,9 @@ public partial class Monster : Character
     {
         
     }
+
+    public override void RayTargetEvent()
+    {
+        Debug.Log("Monster RayTargetEvent");
+    }
 }

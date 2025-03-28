@@ -10,6 +10,9 @@ public class GameMgr : MonoBehaviour
     public CreateDamageText CREATE_DAMAGE_TEXT;
     public Joystick JOYSTICK;
 
+    public GameObject NPC_DIALOGUEWINDOW;
+    NPC_DialogueWindow NPC_DialogueWindow;
+
     [NonReorderable]
     Dictionary<string, SpriteAtlas> DicSpriteAtlas = new Dictionary<string, SpriteAtlas>();
     private void Awake()
@@ -43,5 +46,14 @@ public class GameMgr : MonoBehaviour
     public bool IsJoystickDrag()
     {
         return JOYSTICK.IsDrag;
+    }
+
+    public void OnNPCDialogueWindow(NPC _npc)
+    {
+        if (NPC_DialogueWindow == null)
+            NPC_DialogueWindow = NPC_DIALOGUEWINDOW.GetComponent<NPC_DialogueWindow>();
+
+        NPC_DIALOGUEWINDOW.SetActive(true);
+        NPC_DialogueWindow.Init(_npc);
     }
 }

@@ -85,8 +85,18 @@ public partial class Player : Character
 
         if(Physics.Raycast(ray, out hit))
         {
-            if(hit.transform.gameObject.GetComponent<Character>() != null)
-                Debug.Log(hit.transform.gameObject.GetComponent<Character>());
+            Character hitcharacter = hit.transform.GetComponent<Character>();
+
+            if (hitcharacter != null)
+            {
+                hitcharacter.RayTargetEvent();
+            }
+
+            //if (hit.transform.gameObject.GetComponent<Character>() != null)
+            //{
+            //    Debug.Log(hit.transform.gameObject.GetComponent<Character>());
+            //    hit.transform.gameObject.GetComponent<Character>().RayTargetEvent();
+            //}
         }
     }
 
@@ -99,6 +109,10 @@ public partial class Player : Character
             CurrentSkill.Add(null);
         }
         Fsm_Init();
+    }
+    public override void RayTargetEvent()
+    {
+        Debug.Log("Player RayTargetEvent");
     }
 
     //키보드 조작
