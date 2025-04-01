@@ -133,3 +133,12 @@ public enum CHARACTER_TYPE
     NPC,
     ENUM_END
 }
+
+public enum QUEST_TYPE
+{
+    NONE,
+    HUNTING,
+    COMMON,
+    STORE,
+    ENUM_END
+}

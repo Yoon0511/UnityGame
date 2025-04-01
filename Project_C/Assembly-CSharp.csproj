@@ -115,13 +115,16 @@
     <Compile Include="Assets\Script\Skill\Skill_Rush\Skill_Rush.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_ChaseState.cs" />
     <Compile Include="Assets\Script\Monster\PunchAttack.cs" />
+    <Compile Include="Assets\Script\UiScript\QuestListUi\QuestList.cs" />
     <Compile Include="Assets\Script\FSM\StateMachine.cs" />
     <Compile Include="Assets\Photon_Lib\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Script\Monster\Dragon\DragonState\Dragon_MoveState.cs" />
     <Compile Include="Assets\Script\Player\Player_Move.cs" />
     <Compile Include="Assets\Script\Common\StatData.cs" />
     <Compile Include="Assets\Script\Common\Character\Character_Fsm.cs" />
+    <Compile Include="Assets\Script\Quest\QuestMsg\HuntingMsg.cs" />
     <Compile Include="Assets\Script\Skill\Skill_Slash\Slash.cs" />
+    <Compile Include="Assets\Script\Quest\QuestBase.cs" />
     <Compile Include="Assets\Script\UiScript\OnBtnEvent.cs" />
     <Compile Include="Assets\Script\UiScript\ItemSlot\ItemSlot.cs" />
     <Compile Include="Assets\Script\Shared.cs" />
@@ -129,12 +132,14 @@
     <Compile Include="Assets\Script\Item\EquipmentItem.cs" />
     <Compile Include="Assets\Script\UiScript\ItemSlot\InvenSlot.cs" />
     <Compile Include="Assets\Script\Monster\Monster.cs" />
+    <Compile Include="Assets\Script\Quest\QuestMsg\ConverstationMsg.cs" />
     <Compile Include="Assets\Script\Common\Character\Character.cs" />
     <Compile Include="Assets\Photon_Lib\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
     <Compile Include="Assets\Script\DamageTaxt\CreateDamageText.cs" />
     <Compile Include="Assets\Script\Player\Player_AniEvent.cs" />
     <Compile Include="Assets\Script\Buff\BuffSystem.cs" />
     <Compile Include="Assets\Photon_Lib\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
+    <Compile Include="Assets\Script\Quest\HuntingQuset.cs" />
     <Compile Include="Assets\Script\UiScript\OpenShowUi.cs" />
     <Compile Include="Assets\Script\Player\Player_Fsm.cs" />
     <Compile Include="Assets\Script\UiScript\ItemSlot\EquipmentSlot.cs" />
@@ -151,6 +156,7 @@
     <Compile Include="Assets\Script\Player\Player_Animation.cs" />
     <Compile Include="Assets\Photon_Lib\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\Photon_Lib\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
+    <Compile Include="Assets\Script\Player\Player_Quest.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_AttackState.cs" />
     <Compile Include="Assets\Script\Monster\Dragon\DragonState\Dragon_IdleState.cs" />
     <Compile Include="Assets\TEMP\Table\Table\TableCharacter.cs" />
@@ -167,6 +173,7 @@
     <Compile Include="Assets\Script\FollowingCamera.cs" />
     <Compile Include="Assets\Script\Player\Player.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_PatrolState.cs" />
+    <Compile Include="Assets\Script\Quest\QuestMsg\QuestMsgBase.cs" />
     <Compile Include="Assets\TEMP\Table\Table\TableBase.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1076,16 +1083,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
@@ -1098,6 +1101,10 @@
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
@@ -1194,13 +1201,13 @@
       <Project>{89A3416C-8486-B9AC-3E7A-CE4912AFBCBC}</Project>
       <Name>AYellowpaper.SerializedCollections.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="PhotonChat.csproj">
-      <Project>{2FDAED60-5F11-F33B-739B-79500FD3771A}</Project>
-      <Name>PhotonChat</Name>
-    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
       <Project>{E1BB3318-0818-9491-4198-B3E6E41E2D8D}</Project>
       <Name>PhotonUnityNetworking.Demos</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonChat.csproj">
+      <Project>{2FDAED60-5F11-F33B-739B-79500FD3771A}</Project>
+      <Name>PhotonChat</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
       <Project>{280124F5-F803-7415-27E3-E89B145972DB}</Project>

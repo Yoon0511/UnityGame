@@ -10,8 +10,10 @@ public class GameMgr : MonoBehaviour
     public CreateDamageText CREATE_DAMAGE_TEXT;
     public Joystick JOYSTICK;
 
+    //UI
     public GameObject NPC_DIALOGUEWINDOW;
     NPC_DialogueWindow NPC_DialogueWindow;
+    //UI
 
     [NonReorderable]
     Dictionary<string, SpriteAtlas> DicSpriteAtlas = new Dictionary<string, SpriteAtlas>();
@@ -56,4 +58,5 @@ public class GameMgr : MonoBehaviour
         NPC_DIALOGUEWINDOW.SetActive(true);
         NPC_DialogueWindow.Init(_npc);
     }
+
 }

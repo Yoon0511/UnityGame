@@ -4,14 +4,10 @@ using UnityEngine;
 
 public partial class NPC : Character
 {
-    // PLAYER ray -> monster,player,npc 구분
-    // NPC,PLAYER,MONSTER - Characher
-    // NPC -> PartyPlayNPC,StoreNPC
-
-    // Character => Type 추가(Player,Monster,NPC) ==> Type으로 구분?
-    // Character를 상속받는 클래스로 구분?
     protected int Job;
     List<string> List_ConverstationTexts = new List<string>();
+    QuestBase Quest;
+
     public override void Fsm_Init()
     {
         throw new System.NotImplementedException();
@@ -20,6 +16,15 @@ public partial class NPC : Character
     public override void Hit(float _damage)
     {
         throw new System.NotImplementedException();
+    }
+    public override void RayTargetEvent()
+    {
+        Shared.GameMgr.OnNPCDialogueWindow(this);
+    }
+
+    public override void UseSkill(int _index)
+    {
+
     }
 
     public override void Init()
@@ -31,21 +36,25 @@ public partial class NPC : Character
         List_ConverstationTexts.Add("2.goner until just a few minutes ago.");
         List_ConverstationTexts.Add("3.We are messengers from Vindale. Our journey ends");
         List_ConverstationTexts.Add("(end)4.haven't heard anything from him in some number of weeks.");
+
+        //퀘스트 생성 - 변경예정
+        Quest = new HuntingQuset();
+        ((HuntingQuset)Quest).Init("HuntingQuest_123", "huntting monster - 5",5,10,10);
     }
 
     public List<string> GetConverstationTexts()
     {
         return List_ConverstationTexts;
     }
-    public override void RayTargetEvent()
+
+
+    public void QuestAccpect()
     {
-        Debug.Log("NPC RayTargetEvent");
-        Shared.GameMgr.OnNPCDialogueWindow(this);
+        Shared.GameMgr.PLAYER.AddQuest(Quest);
     }
 
-    public override void UseSkill(int _index)
+    public void QuestRefusal()
     {
-        throw new System.NotImplementedException();
+        Quest.Refusal();
     }
-
 }

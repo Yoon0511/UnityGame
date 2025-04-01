@@ -18,8 +18,8 @@ public partial class Player : Character
     public EquipmentItem weapon;
     public EquipmentItem amor;
     public EquipmentItem ring;
-    //테스트
-    
+    //아이템, 인벤토리 테스트
+
     private void Awake()
     {
         Shared.GameMgr.PLAYER = this;
@@ -75,6 +75,14 @@ public partial class Player : Character
         if(Input.GetMouseButtonDown(0))
         {
             ClickToRay();
+        }
+
+        if (Input.GetKeyDown(KeyCode.F10)) //퀘스트 테스트
+        {
+            Debug.Log("hunting");
+            HuntingMsg huntingMsg = new HuntingMsg();
+            huntingMsg.SetMsg(10, 10, (int)QUEST_TYPE.HUNTING, 10, 3);
+            QusetProgress(huntingMsg);
         }
     }
 
