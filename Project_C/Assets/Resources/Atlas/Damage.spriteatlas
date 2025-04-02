@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Damage
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 256
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: a996a30f629c4da48aea3101b196db54, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 4a0fdfe0cd61e9c4b91a17ebcb21fa89: 21300000
+    - 06f885626976bb4408e2d6f11489bd13: 21300000
+    - d9d8c7c3e7596b14bb8c1cf33ff59211: 21300000
+    - 269aefb4e3a3c8b45939be40aef1d5f4: 21300000
+    - 39621a694321df04aa71a31284395baa: 21300000
+    - f718dd995cdf54249af5f9820810b044: 21300000
+    - f4f17a2a9387c8b4787198b8042465fa: 21300000
+    - 88d70c6aebae12d45a0e7e0dd8e462dc: 21300000
+    - 932a5eac558b3594d8f89f8f9e21069b: 21300000
+    - 667451ad81d14614894eada874c2f6ce: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 4a0fdfe0cd61e9c4b91a17ebcb21fa89, type: 3}
+  - {fileID: 21300000, guid: 06f885626976bb4408e2d6f11489bd13, type: 3}
+  - {fileID: 21300000, guid: d9d8c7c3e7596b14bb8c1cf33ff59211, type: 3}
+  - {fileID: 21300000, guid: 269aefb4e3a3c8b45939be40aef1d5f4, type: 3}
+  - {fileID: 21300000, guid: 39621a694321df04aa71a31284395baa, type: 3}
+  - {fileID: 21300000, guid: f718dd995cdf54249af5f9820810b044, type: 3}
+  - {fileID: 21300000, guid: f4f17a2a9387c8b4787198b8042465fa, type: 3}
+  - {fileID: 21300000, guid: 88d70c6aebae12d45a0e7e0dd8e462dc, type: 3}
+  - {fileID: 21300000, guid: 932a5eac558b3594d8f89f8f9e21069b, type: 3}
+  - {fileID: 21300000, guid: 667451ad81d14614894eada874c2f6ce, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - 5
+  - 6
+  - 8
+  - 0
+  - 3
+  - 4
+  - 2
+  - 7
+  - 1
+  - 9
+  m_RenderDataMap: {}
+  m_Tag: Damage
+  m_IsVariant: 0

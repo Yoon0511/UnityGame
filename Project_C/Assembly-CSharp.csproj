@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Script\UiScript\UnitFrame\UnitFrame.cs" />
     <Compile Include="Assets\Script\Buff\Buff.cs" />
+    <Compile Include="Assets\Script\DamageText\DamageImg.cs" />
     <Compile Include="Assets\Script\Player\PlayerState\Player_AttackState.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_DieState.cs" />
     <Compile Include="Assets\Script\UiScript\SkillBook\SkillBook.cs" />
@@ -83,7 +84,6 @@
     <Compile Include="Assets\TEMP\SimpleJson\SimpleJSONUnity.cs" />
     <Compile Include="Assets\Script\Player\Player_Ui.cs" />
     <Compile Include="Assets\Script\Player\Player_Skill.cs" />
-    <Compile Include="Assets\Script\DamageTaxt\DamageText.cs" />
     <Compile Include="Assets\Script\Monster\Dragon\Dragon_Fsm.cs" />
     <Compile Include="Assets\Script\UiScript\Joystick\Joystick.cs" />
     <Compile Include="Assets\Photon_Lib\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
@@ -107,6 +107,7 @@
     <Compile Include="Assets\Script\Skill\Skill.cs" />
     <Compile Include="Assets\Script\FSM\StateBase.cs" />
     <Compile Include="Assets\Photon_Lib\PhotonChat\Demos\DemoChat\FriendItem.cs" />
+    <Compile Include="Assets\Script\DamageText\DamageImageText.cs" />
     <Compile Include="Assets\Script\Skill\Skill_FallingRock\Skill_FallingRock.cs" />
     <Compile Include="Assets\Script\UiScript\NPC_DialogueWindow\NPC_DialogueWindow.cs" />
     <Compile Include="Assets\Script\Player\Player_Equipment.cs" />
@@ -123,19 +124,21 @@
     <Compile Include="Assets\Script\Common\StatData.cs" />
     <Compile Include="Assets\Script\Common\Character\Character_Fsm.cs" />
     <Compile Include="Assets\Script\Quest\QuestMsg\HuntingMsg.cs" />
+    <Compile Include="Assets\Script\DamageText\old\DamageText.cs" />
     <Compile Include="Assets\Script\Skill\Skill_Slash\Slash.cs" />
     <Compile Include="Assets\Script\Quest\QuestBase.cs" />
     <Compile Include="Assets\Script\UiScript\OnBtnEvent.cs" />
     <Compile Include="Assets\Script\UiScript\ItemSlot\ItemSlot.cs" />
     <Compile Include="Assets\Script\Shared.cs" />
     <Compile Include="Assets\Script\Monster\Monster_Fsm.cs" />
+    <Compile Include="Assets\TEMP\MainCamera.cs" />
     <Compile Include="Assets\Script\Item\EquipmentItem.cs" />
     <Compile Include="Assets\Script\UiScript\ItemSlot\InvenSlot.cs" />
+    <Compile Include="Assets\Script\DamageText\old\CreateDamageText.cs" />
     <Compile Include="Assets\Script\Monster\Monster.cs" />
     <Compile Include="Assets\Script\Quest\QuestMsg\ConverstationMsg.cs" />
     <Compile Include="Assets\Script\Common\Character\Character.cs" />
     <Compile Include="Assets\Photon_Lib\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
-    <Compile Include="Assets\Script\DamageTaxt\CreateDamageText.cs" />
     <Compile Include="Assets\Script\Player\Player_AniEvent.cs" />
     <Compile Include="Assets\Script\Buff\BuffSystem.cs" />
     <Compile Include="Assets\Photon_Lib\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />

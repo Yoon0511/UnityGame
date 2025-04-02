@@ -9,6 +9,7 @@ public class Skill_Rush : Skill
     public float Distance;
     public override void UseSkill()
     {
+        base.UseSkill();
         StartCoroutine(IRush());
     }
 
@@ -21,6 +22,12 @@ public class Skill_Rush : Skill
         {
             dist = Vector3.Distance(orgPos, Owner.transform.position);
             Owner.transform.Translate(Owner.transform.forward * Speed * Time.deltaTime);
+
+            if (dist >= Distance)
+            {
+                base.SkillEnd();
+                yield break;
+            }
             yield return null;
         }
     }

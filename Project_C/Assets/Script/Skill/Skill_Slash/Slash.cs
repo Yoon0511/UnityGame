@@ -6,10 +6,11 @@ public class Slash : MonoBehaviour
 {
     float Atk;
     float Speed = 5.0f;
-    public void Init(Vector3 _pos,float _atk,float _speed)
+    public void Init(Quaternion _rotate,Vector3 _pos,float _atk,float _speed)
     {
         Atk = _atk;
         Speed = _speed;
+        transform.rotation = _rotate;
         transform.position = _pos;
     }
 
@@ -17,7 +18,7 @@ public class Slash : MonoBehaviour
     {
         transform.Translate(Vector3.forward * Time.deltaTime * Speed);
     }
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("TAG_MONSTER"))
         {

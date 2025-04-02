@@ -142,3 +142,12 @@ public enum QUEST_TYPE
     STORE,
     ENUM_END
 }
+
+public enum SKILL_STATE
+{
+    NONE,
+    READY,
+    RUNNING,
+    END,
+    ENUM_END
+}

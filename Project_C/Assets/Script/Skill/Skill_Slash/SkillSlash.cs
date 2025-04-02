@@ -8,6 +8,7 @@ public class SkillSlash : Skill
     public override void UseSkill()
     {
         GameObject slash = Instantiate(SLASH_PREFAP);
-        slash.GetComponent<Slash>().Init(Shared.GameMgr.PLAYER.GetProjectilePoint().position, Atk, 10.0f);
+        slash.GetComponent<Slash>().Init(Shared.GameMgr.PLAYER.transform.rotation,Shared.GameMgr.PLAYER.GetProjectilePoint().position, 
+            Atk, 10.0f);
     }
 }

@@ -57,4 +57,9 @@ public class FollowingCamera : MonoBehaviour
         transform.position = desiredPosition;
         transform.LookAt(Target);
     }
+
+    IEnumerator ShakeCoroutine()
+    {
+        yield return null;
+    }
 }

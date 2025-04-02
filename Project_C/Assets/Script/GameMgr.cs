@@ -7,8 +7,10 @@ public class GameMgr : MonoBehaviour
 {
     public GameObject PLAYEROBJ;
     public Player PLAYER;
-    public CreateDamageText CREATE_DAMAGE_TEXT;
+    //public CreateDamageText CREATE_DAMAGE_TEXT;
+    public DamageImageText DAMAGEIMAGETEXT;
     public Joystick JOYSTICK;
+    public Canvas CANVAS;
 
     //UI
     public GameObject NPC_DIALOGUEWINDOW;

@@ -13,20 +13,23 @@ public abstract class Skill : MonoBehaviour
     public float UseMp;
     public string Explanation;
     public int SkillMotion;
-    public int SkillUseState;
+    public int CurrentState;
     public SKILL_TYPE SkillType;
 
     public void SetOwner(GameObject _owner)
     {
         Owner = _owner;
+        CurrentState = (int)SKILL_STATE.READY;
     }
     public virtual void UseSkill()
     {
-
+        CurrentState = (int)SKILL_STATE.RUNNING;
     }
 
     public virtual void SkillEnd()
     {
-
+        CurrentState = (int)SKILL_STATE.READY;
     }
+
+    public int GetCurrentState() { return CurrentState; }
 }
