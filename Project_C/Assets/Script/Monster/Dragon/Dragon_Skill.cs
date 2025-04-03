@@ -35,15 +35,18 @@ public partial class Dragon
             yield return null;
         }
 
-        switch(_skillindex)
-        {
-            case (int)DRAGON_SKILL.BREATH:
-                UseSkill(_skillindex, (int)DRAGON_STATE.ATTACK, (int)DRAGON_ANI_STATE.BREATH);
-                break;
-            case (int)DRAGON_SKILL.RUSH:
-                UseSkill(_skillindex, (int)DRAGON_STATE.ATTACK, (int)DRAGON_ANI_STATE.NONE);
-                break;
-        }
-        
+        //switch(_skillindex)
+        //{
+        //    case (int)DRAGON_SKILL.BREATH:
+        //        //UseSkill(_skillindex, (int)DRAGON_STATE.ATTACK, (int)DRAGON_ANI_STATE.BREATH);
+        //        UseSkill(_skillindex, CurrentSkill[_skillindex].SkillMotion);
+        //        break;
+        //    case (int)DRAGON_SKILL.RUSH:
+        //        //UseSkill(_skillindex, (int)DRAGON_STATE.ATTACK, (int)DRAGON_ANI_STATE.FORWARD_MOVE);
+        //        UseSkill(_skillindex, (int)DRAGON_ANI_STATE.FORWARD_MOVE);
+        //        break;
+        //}
+
+        UseSkill(_skillindex, CurrentSkill[_skillindex].SkillMotion);
     }
 }

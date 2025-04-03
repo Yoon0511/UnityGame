@@ -4,10 +4,14 @@ using UnityEngine;
 
 public partial class Dragon
 {
-    public void OnAniEnd()
-    {
-        ChangeState((int)DRAGON_STATE.IDLE);
-    }
+    //public void OnAniStart()
+    //{
+    //
+    //}
+    //public void OnAniEnd()
+    //{
+    //    //ChangeState((int)DRAGON_STATE.IDLE);
+    //}
 
     public void OnCurrentUseSkill()
     {

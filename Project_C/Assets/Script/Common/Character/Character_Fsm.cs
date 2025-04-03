@@ -9,7 +9,6 @@ public abstract partial class Character
     protected int CurrState;
     protected int PrevState;
     protected Dictionary<int, StateBase> DicState = new Dictionary<int, StateBase>();
-
     public abstract void Fsm_Init();
 
     public void ChangeState(int _state)
@@ -44,4 +43,7 @@ public abstract partial class Character
     {
         Fsm.UpdateState();
     }
+
+    public int GetCurrState() { return CurrState; }
+    public int GetPrevState() { return PrevState; }
 }

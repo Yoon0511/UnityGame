@@ -21,7 +21,8 @@ public class Skill_Rush : Skill
         while (dist < Distance)
         {
             dist = Vector3.Distance(orgPos, Owner.transform.position);
-            Owner.transform.Translate(Owner.transform.forward * Speed * Time.deltaTime);
+            //Owner.transform.Translate(Owner.transform.forward * Speed * Time.deltaTime);
+            Owner.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
 
             if (dist >= Distance)
             {

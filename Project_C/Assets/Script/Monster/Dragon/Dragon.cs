@@ -4,14 +4,6 @@ using UnityEngine;
 
 public partial class Dragon : Monster
 {
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            Debug.Log("1");
-        }
-    }
-
     private void FixedUpdate()
     {
         Fsm.UpdateState();
@@ -30,6 +22,6 @@ public partial class Dragon : Monster
 
     public override void RayTargetEvent()
     {
-        Debug.Log("Dragon RayTargetEvent");
+        
     }
 }

@@ -1075,6 +1075,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 13700002, guid: 9195f3d08ce46bb438971e028648291c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e2b948b6b5107e6459b6f4ed2042e156, type: 2}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 9195f3d08ce46bb438971e028648291c, type: 3}
     m_RemovedGameObjects: []
@@ -1600,12 +1604,13 @@ MonoBehaviour:
   SkillList:
   - {fileID: 575344214}
   - {fileID: 1546427679}
+  - {fileID: 2065303545}
   ProjectilePoint: {fileID: 736541133}
   MaxSkillCount: 3
   CurrentSkill: []
   Target: {fileID: 0}
-  detectionRange: 5
-  attackRange: 3
+  detectionRange: 12
+  attackRange: 7
   punchAttackCollider: {fileID: 736541132}
   patrolPoint:
   - {fileID: 2094899656}
@@ -1615,6 +1620,7 @@ MonoBehaviour:
   AttackRange:
   - {fileID: 1885972107}
   - {fileID: 818035506}
+  - {fileID: 128614007735148156, guid: e4495a875a38ce746a5379473e2e9409, type: 3}
 --- !u!114 &328412512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1704,9 +1710,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!1 &362635882
 GameObject:
@@ -1859,7 +1865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PARENT: {fileID: 425016440}
-  DAMAGEIMG: {fileID: 3610947566838469490, guid: 6b10fdbe9998cea48a8c61e7717abb92, type: 3}
+  DAMAGEFONT: {fileID: 3610947566838469490, guid: 6b10fdbe9998cea48a8c61e7717abb92, type: 3}
   DAMAGENUMBER: {fileID: 8836824350620674495, guid: 2a4a4fa9042a77f498cef99af5c8b505, type: 3}
   DamageImg:
   - {fileID: 0}
@@ -1872,6 +1878,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  MaxPoolSize: 10
 --- !u!1 &399061706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c6445cd462ef1b4494fbb7d75764ae0, type: 3}
@@ -3766,7 +3773,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4307,6 +4314,7 @@ Transform:
   m_Children:
   - {fileID: 491236962}
   - {fileID: 1019572490}
+  - {fileID: 982332211}
   m_Father: {fileID: 328412509}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &949693689
@@ -4711,6 +4719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1898ac3f2818b94fb60bd8adece27de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsCameraAni: 0
+  ZoomDelta: 0
 --- !u!1 &965477333
 GameObject:
   m_ObjectHideFlags: 0
@@ -4791,6 +4801,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965477333}
   m_CullTransparentMesh: 1
+--- !u!1 &982332210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 982332211}
+  m_Layer: 0
+  m_Name: Falling_Rock_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &982332211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982332210}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2065303544}
+  m_Father: {fileID: 942231188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &989524542
 GameObject:
   m_ObjectHideFlags: 0
@@ -6950,6 +6992,10 @@ PrefabInstance:
     - target: {fileID: 1609950646023320055, guid: ab2a9ce6fca1714459e0604eaff4b931, type: 3}
       propertyPath: Distance
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609950646023320055, guid: ab2a9ce6fca1714459e0604eaff4b931, type: 3}
+      propertyPath: SkillMotion
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8241463736023577698, guid: ab2a9ce6fca1714459e0604eaff4b931, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9194,6 +9240,91 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044414368}
   m_CullTransparentMesh: 1
+--- !u!1001 &2065303543
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 982332211}
+    m_Modifications:
+    - target: {fileID: 4574463351576506514, guid: 0abf78407f054fc4ba49e8049415be2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.287592
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574463351576506514, guid: 0abf78407f054fc4ba49e8049415be2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.79999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574463351576506514, guid: 0abf78407f054fc4ba49e8049415be2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.6603464
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574463351576506514, guid: 0abf78407f054fc4ba49e8049415be2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574463351576506514, guid: 0abf78407f054fc4ba49e8049415be2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574463351576506514, guid: 0abf78407f054fc4ba49e8049415be2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574463351576506514, guid: 0abf78407f054fc4ba49e8049415be2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574463351576506514, guid: 0abf78407f054fc4ba49e8049415be2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574463351576506514, guid: 0abf78407f054fc4ba49e8049415be2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574463351576506514, guid: 0abf78407f054fc4ba49e8049415be2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396862905263500863, guid: 0abf78407f054fc4ba49e8049415be2a, type: 3}
+      propertyPath: m_Name
+      value: Skill_FallingRock
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902341258680328541, guid: 0abf78407f054fc4ba49e8049415be2a, type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 7659556646641050925, guid: cc7d3969de5576a4c885316f14997da6, type: 3}
+    - target: {fileID: 7902341258680328541, guid: 0abf78407f054fc4ba49e8049415be2a, type: 3}
+      propertyPath: SkillMotion
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902341258680328541, guid: 0abf78407f054fc4ba49e8049415be2a, type: 3}
+      propertyPath: AtkRangeCircle
+      value: 
+      objectReference: {fileID: 1031521714186731512, guid: e4495a875a38ce746a5379473e2e9409, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0abf78407f054fc4ba49e8049415be2a, type: 3}
+--- !u!4 &2065303544 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4574463351576506514, guid: 0abf78407f054fc4ba49e8049415be2a, type: 3}
+  m_PrefabInstance: {fileID: 2065303543}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2065303545 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7902341258680328541, guid: 0abf78407f054fc4ba49e8049415be2a, type: 3}
+  m_PrefabInstance: {fileID: 2065303543}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07206cdb52355d249b8c56a02cf0172d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2070522371
 GameObject:
   m_ObjectHideFlags: 0
@@ -9913,6 +10044,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageImg
       objectReference: {fileID: 0}
+    - target: {fileID: 3610947566838469490, guid: 6b10fdbe9998cea48a8c61e7717abb92, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7075503333040427671, guid: 6b10fdbe9998cea48a8c61e7717abb92, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -10195,6 +10330,10 @@ PrefabInstance:
       propertyPath: BoxCollider
       value: 
       objectReference: {fileID: 1676247330}
+    - target: {fileID: 5600241777170692085, guid: 361d7875dcf8b2b4ea841f372a35c3df, type: 3}
+      propertyPath: SkillMotion
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5600241777170692085, guid: 361d7875dcf8b2b4ea841f372a35c3df, type: 3}
       propertyPath: DamageInterval
       value: 0.2

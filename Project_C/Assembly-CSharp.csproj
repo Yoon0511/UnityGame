@@ -76,6 +76,7 @@
     <Compile Include="Assets\TEMP\Table\Table\TableMgr.cs" />
     <Compile Include="Assets\Script\UiScript\BuffUi\BuffUi.cs" />
     <Compile Include="Assets\Script\Player\PlayerState\Player_RunState.cs" />
+    <Compile Include="Assets\TEMP\Camera\CameraFilterPack_Blur_Focus.cs" />
     <Compile Include="Assets\Script\Player\PlayerState\Player_WalkState.cs" />
     <Compile Include="Assets\Script\Player\PlayerState\Player_DieState.cs" />
     <Compile Include="Assets\Photon_Lib\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Assets\Script\Player\Player_Skill.cs" />
     <Compile Include="Assets\Script\Monster\Dragon\Dragon_Fsm.cs" />
     <Compile Include="Assets\Script\UiScript\Joystick\Joystick.cs" />
+    <Compile Include="Assets\TEMP\Camera\MainCamera.cs" />
     <Compile Include="Assets\Photon_Lib\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
     <Compile Include="Assets\TEMP\Photon\PhotonMgr.cs" />
     <Compile Include="Assets\Script\Item\Item123.cs" />
@@ -110,6 +112,7 @@
     <Compile Include="Assets\Script\DamageText\DamageImageText.cs" />
     <Compile Include="Assets\Script\Skill\Skill_FallingRock\Skill_FallingRock.cs" />
     <Compile Include="Assets\Script\UiScript\NPC_DialogueWindow\NPC_DialogueWindow.cs" />
+    <Compile Include="Assets\TEMP\Camera\MainCamera_Zoom.cs" />
     <Compile Include="Assets\Script\Player\Player_Equipment.cs" />
     <Compile Include="Assets\Script\AtkRange.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_IdleState.cs" />
@@ -131,7 +134,6 @@
     <Compile Include="Assets\Script\UiScript\ItemSlot\ItemSlot.cs" />
     <Compile Include="Assets\Script\Shared.cs" />
     <Compile Include="Assets\Script\Monster\Monster_Fsm.cs" />
-    <Compile Include="Assets\TEMP\MainCamera.cs" />
     <Compile Include="Assets\Script\Item\EquipmentItem.cs" />
     <Compile Include="Assets\Script\UiScript\ItemSlot\InvenSlot.cs" />
     <Compile Include="Assets\Script\DamageText\old\CreateDamageText.cs" />
@@ -184,6 +186,8 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\MyAssets\Polygonal Creatures Pack\Polygonal Creatures Pack\Polygonal Treant\www.meshtint.com.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Resources\Shader\ToonPostProcessing.shader" />
+    <None Include="Assets\Resources\Shader\CameraFilterPack_Blur_Focus.shader" />
     <None Include="Assets\Photon_Lib\PhotonUnityNetworking\changelog.txt" />
     <None Include="Assets\Resources\Shader\Refraction.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

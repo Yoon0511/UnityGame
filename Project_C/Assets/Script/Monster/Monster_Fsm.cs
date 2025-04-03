@@ -34,20 +34,21 @@ public partial class Monster
         return false;
     }
 
+    /////////////////// 범위 테스트 ///////////////////
     //private void OnDrawGizmos()
     //{
     //    Gizmos.color = Color.blue;
-    //    float dist = Vector3.Distance(transform.position, Target.transform.position);
-    //    Debug.Log(dist);
-    //    Gizmos.DrawSphere(transform.position, dist);
-
+    //    //float dist = Vector3.Distance(transform.position, Target.transform.position);
+    //    //Debug.Log(dist);
+    //    Gizmos.DrawSphere(transform.position, detectionRange);
+    //
     //    Gizmos.color = Color.red;
-    //    Gizmos.DrawSphere(transform.position, 1f);
+    //    Gizmos.DrawSphere(transform.position, attackRange);
     //}
-
+    /////////////////// 범위 테스트 ///////////////////
     public bool IsPlayerInAttackRange()
     {
-        float dist = Vector3.Distance(player.transform.position, transform.position);
+        float dist = Vector3.Distance(Target.transform.position, transform.position);
         if (dist <= attackRange)
         {
             return true;
@@ -58,7 +59,7 @@ public partial class Monster
     public void PatrolModeInit()
     {
         patrolIndex = 0;
-        ChageTarget(patrolPoint[patrolIndex]);
+        ChangeTarget(patrolPoint[patrolIndex]);
     }
     public void PatrolMode()
     {
@@ -72,7 +73,7 @@ public partial class Monster
             {
                 patrolIndex = 0;
             }
-            ChageTarget(patrolPoint[patrolIndex]);
+            ChangeTarget(patrolPoint[patrolIndex]);
         }
     }
     public void SetPatrolIndex(int _index)
@@ -88,5 +89,7 @@ public partial class Monster
     {
         yield return new WaitForSeconds(_time);
         ChangeState((int)MONSTER_STATE.PATROL);
+
+        
     }
 }

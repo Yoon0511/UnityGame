@@ -67,7 +67,7 @@ public partial class Monster : Character
     {
         
     }
-    public void ChageTarget(GameObject _target)
+    public void ChangeTarget(GameObject _target)
     {
         Target = _target;
     }

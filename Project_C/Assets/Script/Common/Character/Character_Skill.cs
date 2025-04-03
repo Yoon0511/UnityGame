@@ -45,7 +45,29 @@ public abstract partial class Character
             }
         }
     }
+    protected void UseSkill(int _index, int _skillmotion)
+    {
+        if (_index < MaxSkillCount && CurrentSkill[_index] != null)
+        {
+            if (DicSkillCoolTime[CurrentSkill[_index]] <= 0f)
+            {
+                CurrUseSkillIndex = _index;
+                Debug.Log(_skillmotion);
+                PlayAnimation("Ani_State", _skillmotion);
 
+                if (_skillmotion == NoneSkillMotion)
+                {
+                    CurrentUseSkill();
+                }
+
+                DicSkillCoolTime[CurrentSkill[_index]] = CurrentSkill[_index].CoolTime;
+                if (IsCoolTimeRunning == false)
+                {
+                    StartCoroutine((ICoolTime()));
+                }
+            }
+        }
+    }
     public Transform GetProjectilePoint()
     {
         return ProjectilePoint;

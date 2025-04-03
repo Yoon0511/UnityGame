@@ -122,6 +122,7 @@ public enum DRAGON_SKILL
 {
     BREATH,
     RUSH,
+    FALLING_ROCK,
     ENUM_END
 }
 

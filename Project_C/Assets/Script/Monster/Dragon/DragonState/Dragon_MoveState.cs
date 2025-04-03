@@ -12,6 +12,8 @@ public class Dragon_MoveState : StateBase
     public override void OnStateEnter()
     {
         Dragon.PlayAnimation("Ani_State", (int)DRAGON_STATE.MOVE);
+
+        SetTarget();
     }
 
     public override void OnStateExit()
@@ -21,6 +23,16 @@ public class Dragon_MoveState : StateBase
 
     public override void OnStateUpdate()
     {
+        Dragon.MoveToTarget();
 
+        if(Dragon.IsPlayerInAttackRange())
+        {
+            Dragon.ChangeState((int)DRAGON_STATE.ATTACK);
+        }
+    }
+
+    void SetTarget()
+    {
+        Dragon.ChangeTarget(Shared.GameMgr.PLAYEROBJ);
     }
 }

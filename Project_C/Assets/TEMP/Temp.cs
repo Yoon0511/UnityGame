@@ -43,9 +43,16 @@ public class Temp : MonoBehaviour
         //
         //    if (Physics.Raycast(ray, out hit))
         //    {
-        //        Vector3 pos = Camera.main.WorldToScreenPoint(hit.point);
+        //        //Vector3 pos = Camera.main.WorldToScreenPoint(hit.point);
+        //        Vector3 pos = hit.point;
+        //
         //        Shared.GameMgr.DAMAGEIMAGETEXT.CreateDamageImage(Random.Range(10,9999),pos);
         //    }
         //}
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Shared.MainCamera.ZoomEndStage(0.5f, 3.0f, 0.5f, 3.0f, 0.5f,Vector3.zero);
+        }
     }
 }
