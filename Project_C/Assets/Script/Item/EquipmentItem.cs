@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using AYellowpaper.SerializedCollections;
-public class EquipmentItem : Item
+public class EquipmentItem : ItemBase
 {
     public EQUITMENT_TYPE equimentType;
     public SerializedDictionary<STAT_TYPE, float> dic_EquipmentItemStat;

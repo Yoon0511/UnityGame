@@ -21,7 +21,6 @@ public class Skill_Rush : Skill
         while (dist < Distance)
         {
             dist = Vector3.Distance(orgPos, Owner.transform.position);
-            //Owner.transform.Translate(Owner.transform.forward * Speed * Time.deltaTime);
             Owner.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
 
             if (dist >= Distance)
@@ -37,8 +36,8 @@ public class Skill_Rush : Skill
     {
         if (other.gameObject == Owner)
             return;
-
-        if (other.CompareTag("TAG_PLAYER"))
+        
+        if(Shared.GameMgr.IsCheckCharacterType(other,(int)CHARACTER_TYPE.PLAYER))
         {
             other.gameObject.GetComponent<Player>().Hit(Atk);
         }

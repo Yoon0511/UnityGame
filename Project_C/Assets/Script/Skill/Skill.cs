@@ -28,7 +28,7 @@ public abstract class Skill : MonoBehaviour
 
     public virtual void SkillEnd()
     {
-        CurrentState = (int)SKILL_STATE.READY;
+        CurrentState = (int)SKILL_STATE.END;
     }
 
     public int GetCurrentState() { return CurrentState; }

@@ -41,7 +41,7 @@ public partial class Player : Character
         //테스트
         if (Input.GetKeyDown(KeyCode.F3)) //포션
         {
-            Item obj = Instantiate(item).GetComponent<Item>();
+            ItemBase obj = Instantiate(item).GetComponent<ItemBase>();
             obj.Id = itemcount++;
             inventory.AddItem(obj);
         }

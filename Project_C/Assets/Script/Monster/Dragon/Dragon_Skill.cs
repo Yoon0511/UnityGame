@@ -8,12 +8,15 @@ public partial class Dragon
     [SerializeField]
     AtkRange[] AttackRange;
 
+    bool IsOnAttackRange = false;
+
     void SkillInit()
     {
         foreach (var skill in GetSkillList())
         {
             CurrentSkill.Add(null);
         }
+
         int i = 0;
         foreach (var skill in GetSkillList())
         {
@@ -21,20 +24,25 @@ public partial class Dragon
             i++;
         }
     }
-    public IEnumerator UseDragonSkill(int _skillindex)
+    public IEnumerator IUseDragonSkill(int _skillindex)
     {
-        AttackRange[_skillindex].gameObject.SetActive(true);
-        while (true)
+        if(AttackRange[_skillindex].ACTIVE_CONTROL)
         {
-            AttackRange[_skillindex].StartSizeUp();
-            if (AttackRange[_skillindex].IsStretchEnd())
-            {
-                AttackRange[_skillindex].gameObject.SetActive(false);
-                break;
-            }
-            yield return null;
-        }
+            AttackRange[_skillindex].gameObject.SetActive(true);
+            IsOnAttackRange = true;
 
+            while (true)
+            {
+                AttackRange[_skillindex].StartSizeUp();
+                if (AttackRange[_skillindex].IsStretchEnd())
+                {
+                    AttackRange[_skillindex].gameObject.SetActive(false);
+                    IsOnAttackRange = false;
+                    break;
+                }
+                yield return null;
+            }
+        }
         //switch(_skillindex)
         //{
         //    case (int)DRAGON_SKILL.BREATH:
@@ -49,4 +57,6 @@ public partial class Dragon
 
         UseSkill(_skillindex, CurrentSkill[_skillindex].SkillMotion);
     }
+
+    public bool GetIsOnAttackRange() { return  IsOnAttackRange; }
 }

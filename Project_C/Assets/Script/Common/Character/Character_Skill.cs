@@ -52,7 +52,7 @@ public abstract partial class Character
             if (DicSkillCoolTime[CurrentSkill[_index]] <= 0f)
             {
                 CurrUseSkillIndex = _index;
-                Debug.Log(_skillmotion);
+                
                 PlayAnimation("Ani_State", _skillmotion);
 
                 if (_skillmotion == NoneSkillMotion)
@@ -97,6 +97,7 @@ public abstract partial class Character
         return CurrentSkill[_index].CoolTime;
     }
 
+    public Skill GetCurrentSkill() { return CurrentSkill[CurrUseSkillIndex]; }
     public void SetCurrentSkill(int _index, Skill _skill)
     {
         if (_index < MaxSkillCount)

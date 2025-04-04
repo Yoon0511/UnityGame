@@ -11,7 +11,7 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
     public GameObject PARENTGRID;
 
     [SerializeField]
-    List<Item> items = new List<Item>();
+    List<ItemBase> items = new List<ItemBase>();
     [SerializeField]
     List<InvenSlot> slots = new List<InvenSlot>();
 
@@ -52,7 +52,7 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    public void AddItem(Item _item)
+    public void AddItem(ItemBase _item)
     {
         if(items.Count < NUM_MAX_ITEM)
         {
@@ -61,7 +61,7 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    public void DeleteItem(Item _item)
+    public void DeleteItem(ItemBase _item)
     {
         items.Remove(_item);
         Refresh();

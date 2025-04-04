@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
-using static UnityEngine.UI.GridLayoutGroup;
 
 public class Skill_FallingRock : Skill
 {
     public GameObject AtkRangeCircle;
     public GameObject Rock;
     public int RockCount;
+    public float ROCKMINSPEED = 3;
+    public float ROCKMAXSPEED = 10;
 
     List<AtkRange> ListAtkRangeCircle = new List<AtkRange>();
     public override void UseSkill()
@@ -24,6 +24,7 @@ public class Skill_FallingRock : Skill
             ListAtkRangeCircle.Add(AtkCircle.GetComponent<AtkRange>());
         }
 
+        base.UseSkill();
         StartCoroutine(IFallingRock());
     }
 
@@ -37,7 +38,8 @@ public class Skill_FallingRock : Skill
             {
                 //µ¹ »ý¼º
                 GameObject rockobj = Instantiate(Rock);
-                rockobj.GetComponent<Rock>().Init(ListAtkRangeCircle[i].transform.position, Random.Range(3.0f, 5.0f), Atk,Random.Range(4.0f,7.0f));
+                float RockSpeed = Random.Range(ROCKMINSPEED, ROCKMAXSPEED);
+                rockobj.GetComponent<Rock>().Init(ListAtkRangeCircle[i].transform.position, RockSpeed, Atk,Random.Range(4.0f,7.0f));
                 
                 Destroy(ListAtkRangeCircle[i].gameObject);
                 ListAtkRangeCircle.RemoveAt(i);
@@ -51,6 +53,7 @@ public class Skill_FallingRock : Skill
         }
         if(ListAtkRangeCircle.Count == 0)
         {
+            base.SkillEnd();
             StopCoroutine(IFallingRock());
         }
     }

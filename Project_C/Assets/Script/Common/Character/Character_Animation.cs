@@ -30,21 +30,22 @@ public abstract partial class Character
     {
         StartCoroutine(IChangeAnimationWaitForSecond(_parametername,_state,_time));
     }
-
     IEnumerator IChangeAnimationWaitForSecond(string _parametername, int _state, float _time)
     {
         yield return new WaitForSeconds(_time);
-        Animator.SetInteger(_parametername, _state);
+        PlayAnimation(_parametername, _state);
     }
 
-    public void OnAniStart()
+    public virtual void OnAniStart()
     {
         IsAniRunning = true;
     }
-    public void OnAniEnd()
+    public virtual void OnAniEnd()
     {
         IsAniRunning = false;
+        PlayAnimation("Ani_State", (int)PLAYER_ANI_STATE.IDLE);
     }
 
+    public void AnimationStop() { Animator.StopPlayback(); }
     public bool GetIsAniRunning() { return IsAniRunning; }
 }

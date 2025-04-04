@@ -22,4 +22,14 @@ public partial class Dragon
     {
         CurrentSkill[0].SkillEnd();
     }
+
+    public void OnSkillStart()
+    {
+
+    }
+
+    public void OnSkillEnd()
+    {
+
+    }
 }

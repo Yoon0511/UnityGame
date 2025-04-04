@@ -6,10 +6,10 @@ using UnityEngine.EventSystems;
 
 public abstract class ItemSlot : MonoBehaviour
 {
-    protected Item Item;
+    protected ItemBase Item;
     public Image Image;
 
-    public void InputItem(Item _Item)
+    public void InputItem(ItemBase _Item)
     {
         if (_Item == null)
         {
@@ -32,7 +32,7 @@ public abstract class ItemSlot : MonoBehaviour
         SetImageAlpha(0f);
     }
 
-    public Item IsSlotItem()
+    public ItemBase IsSlotItem()
     {
         return Item;
     }

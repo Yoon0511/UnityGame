@@ -14,6 +14,9 @@ public class Dragon_IdleState : StateBase
     public override void OnStateEnter()
     {
         Dragon.PlayAnimation("Ani_State", (int)DRAGON_STATE.IDLE);
+
+        ChangeStateTime = 5.0f;
+        //Dragon.UseDragonSkill((int)DRAGON_SKILL.BREATH);
     }
 
     public override void OnStateExit()
@@ -27,6 +30,7 @@ public class Dragon_IdleState : StateBase
         if (ElapsedTime >= ChangeStateTime)
         {
             Dragon.ChangeState((int)DRAGON_STATE.MOVE);
+            ElapsedTime = 0f;
         }
     }
 }

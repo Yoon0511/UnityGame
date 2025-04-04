@@ -24,6 +24,7 @@ public class Skill_Breath : Skill
     }
     public override void UseSkill()
     {
+        base.UseSkill();
         IBreathCorutine = StartCoroutine(IBreath());
     }
 
@@ -73,10 +74,9 @@ public class Skill_Breath : Skill
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("TAG_PLAYER"))
+        if(Shared.GameMgr.IsCheckCharacterType(other,(int)CHARACTER_TYPE.PLAYER))
         {
             Target = other.GetComponent<Player>();
-            Debug.Log(Target);
         }
     }
 
@@ -98,6 +98,7 @@ public class Skill_Breath : Skill
 
     public override void SkillEnd()
     {
+        base.SkillEnd();
         BreathEnd();
         BoxCollider.enabled = false;
     }

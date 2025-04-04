@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.U2D;
 
 public class GameMgr : MonoBehaviour
 {
     public GameObject PLAYEROBJ;
     public Player PLAYER;
-    //public CreateDamageText CREATE_DAMAGE_TEXT;
-    public DamageImageText DAMAGEIMAGETEXT;
+    public DamageFont DAMAGEIMAGETEXT;
     public Joystick JOYSTICK;
     public Canvas CANVAS;
 
@@ -61,4 +61,17 @@ public class GameMgr : MonoBehaviour
         NPC_DialogueWindow.Init(_npc);
     }
 
+    public bool IsCheckCharacterType(Collider _other,int _type)
+    {
+        Character charcter;
+        if (_other.TryGetComponent<Character>(out charcter))
+        {
+            int Ctype = charcter.GetCharacterType();
+            return Ctype == _type;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

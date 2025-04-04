@@ -20,12 +20,18 @@ public partial class Dragon
 
     public void FsmUseDragonSkill(int _skillindex)
     {
-        StartCoroutine(IUseDragonSkill(2f, _skillindex));
+        //StartCoroutine(IUseDragonSkill(2f, _skillindex));
+        StartCoroutine(IUseDragonSkillWaitForSecond(2f, _skillindex));
     }
 
-    IEnumerator IUseDragonSkill(float _time, int _skillindex)
+    IEnumerator IUseDragonSkillWaitForSecond(float _time, int _skillindex)
     {
         yield return new WaitForSeconds(_time);
-        StartCoroutine(UseDragonSkill(_skillindex));
+        StartCoroutine(IUseDragonSkill(_skillindex));
+    }
+
+    public void UseDragonSkill(int _skillindex)
+    {
+        StartCoroutine(IUseDragonSkill(_skillindex));
     }
 }
