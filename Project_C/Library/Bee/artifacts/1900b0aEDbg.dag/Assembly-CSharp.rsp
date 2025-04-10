@@ -122,6 +122,7 @@
 -define:PUN_2_0_OR_NEWER
 -define:PUN_2_OR_NEWER
 -define:PUN_2_19_OR_NEWER
+-define:UNITY_POST_PROCESSING_STACK_V2
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"Assets/Photon_Lib/PhotonLibs/Photon3Unity3D.dll"
@@ -350,6 +351,8 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.EditorCoroutines.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.PlasticSCM.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Postprocessing.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Postprocessing.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Rider.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.ref.dll"
@@ -372,6 +375,8 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 -analyzer:"C:/Program Files/Unity 2022.3.60f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity 2022.3.60f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+"Assets/MyAssets/Slash Effects FREE/Scripts/CameraRotation.cs"
+"Assets/MyAssets/Slash Effects FREE/Scripts/Prefab Manager.cs"
 "Assets/Photon_Lib/PhotonChat/Demos/Common/EventSystemSpawner.cs"
 "Assets/Photon_Lib/PhotonChat/Demos/Common/OnStartDelete.cs"
 "Assets/Photon_Lib/PhotonChat/Demos/Common/TextButtonTransition.cs"
@@ -397,6 +402,7 @@
 "Assets/Script/Common/Character/Character_Skill.cs"
 "Assets/Script/Common/Character_temp.cs"
 "Assets/Script/Common/Enum.cs"
+"Assets/Script/Common/PoolAble.cs"
 "Assets/Script/Common/StatData.cs"
 "Assets/Script/DamageFont/DamageFont.cs"
 "Assets/Script/DamageFont/DamageNumber.cs"
@@ -404,10 +410,11 @@
 "Assets/Script/DamageFont/old/DamageText.cs"
 "Assets/Script/FSM/StateBase.cs"
 "Assets/Script/FSM/StateMachine.cs"
-"Assets/Script/GameMgr.cs"
 "Assets/Script/Item/EquipmentItem.cs"
 "Assets/Script/Item/HP_Postion.cs"
 "Assets/Script/Item/ItemBase.cs"
+"Assets/Script/Manager/GameMgr/GameMgr.cs"
+"Assets/Script/Manager/ParticleMgr/ParticleMgr.cs"
 "Assets/Script/Monster/Dragon/Dragon.cs"
 "Assets/Script/Monster/Dragon/DragonState/Dragon_AttackState.cs"
 "Assets/Script/Monster/Dragon/DragonState/Dragon_DieState.cs"
@@ -428,6 +435,7 @@
 "Assets/Script/Monster/Monster_Move.cs"
 "Assets/Script/Monster/PunchAttack.cs"
 "Assets/Script/NPC/NPC.cs"
+"Assets/Script/Particle/Particle.cs"
 "Assets/Script/Player/Player.cs"
 "Assets/Script/Player/PlayerState/Player_AttackState.cs"
 "Assets/Script/Player/PlayerState/Player_DieState.cs"
@@ -454,6 +462,7 @@
 "Assets/Script/Skill/Skill_Breath/Skill_Breath.cs"
 "Assets/Script/Skill/Skill_FallingRock/Rock/Rock.cs"
 "Assets/Script/Skill/Skill_FallingRock/Skill_FallingRock.cs"
+"Assets/Script/Skill/Skill_Heal/Skill_SelfHeal.cs"
 "Assets/Script/Skill/Skill_Poison/Skill_Poison.cs"
 "Assets/Script/Skill/Skill_PowerUp/Skill_PowerUp.cs"
 "Assets/Script/Skill/Skill_Rush/Skill_Rush.cs"
@@ -462,6 +471,7 @@
 "Assets/Script/UiScript/BuffUi/BuffUi.cs"
 "Assets/Script/UiScript/EquipmentWindow/EquipmentWindow.cs"
 "Assets/Script/UiScript/ExitBtn.cs"
+"Assets/Script/UiScript/HP_HUD/Hphud.cs"
 "Assets/Script/UiScript/InfoPlayer/InfoPlayer.cs"
 "Assets/Script/UiScript/Inventory/Inventory.cs"
 "Assets/Script/UiScript/ItemSlot/EquipmentSlot.cs"

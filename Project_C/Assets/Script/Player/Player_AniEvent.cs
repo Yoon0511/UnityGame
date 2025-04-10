@@ -6,8 +6,11 @@ public partial class Player
     [SerializeField]
     GameObject HITBOX;
 
+    [SerializeField]
+    GameObject SLASH_PARTICLE;
     public void OnHitBoxActive()
     {
+        Shared.ParticleMgr.CreateParticle("Slash", SLASH_PARTICLE.transform, 0.2f);
         HITBOX.SetActive(true);
     }
 
