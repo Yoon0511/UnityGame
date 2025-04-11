@@ -32,10 +32,13 @@ public partial class MainCamera : MonoBehaviour
         ZoomDelta = 0f;
         IsEndStage = false;
         IsFallowMe = true;
+        IsCameraAni = false;
     }
 
     IEnumerator ZoomEndStageCoroutine()
     {
+        IsCameraAni = true;
+
         CameraFilterPack_Blur_Focus filter = gameObject.AddComponent<CameraFilterPack_Blur_Focus>();
         CameraFilterPack_Blur_Focus.ChangeEyes = 20.0f;
 
@@ -154,6 +157,7 @@ public partial class MainCamera : MonoBehaviour
             yield return null;
         }
 
+        IsCameraAni = false;
         Destroy(filter);
     }
 

@@ -21,6 +21,7 @@ public enum PLAYER_ANI_STATE
     SKILL_SLASH,
     SKILL_BUFF,
     SKILL_SPELLCAST,
+    SKILL_RUSH,
     ENUM_END
 }
 public enum BUFF_TYPE

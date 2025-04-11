@@ -20,6 +20,7 @@ public partial class NPC : Character
     public override void RayTargetEvent()
     {
         Shared.GameMgr.OnNPCDialogueWindow(this);
+        Shared.GameMgr.Hphud.SetTarget(this);
     }
 
     public override void UseSkill(int _index)

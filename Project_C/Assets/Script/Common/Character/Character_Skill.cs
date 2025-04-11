@@ -23,7 +23,7 @@ public abstract partial class Character
     }
 
     public abstract void UseSkill(int _index);
-    protected void UseSkill(int _index,int _state,int _skillmotion)
+    protected void UseSkill(int _index,int _state,int _skillmotion, bool _instant = false)
     {
         if (_index < MaxSkillCount && CurrentSkill[_index] != null)
         {
@@ -32,7 +32,8 @@ public abstract partial class Character
                 CurrUseSkillIndex = _index;
                 ChangeState(_state, _skillmotion);
 
-                if(_skillmotion == NoneSkillMotion)
+                if(_skillmotion == NoneSkillMotion
+                    || _instant == true)
                 {
                     CurrentUseSkill();
                 }
@@ -68,6 +69,32 @@ public abstract partial class Character
             }
         }
     }
+
+    //스킬 모션은 나가지만 스킬타이밍은 즉발
+    protected void UseSkill(int _index, int _skillmotion,bool _instant)
+    {
+        if (_index < MaxSkillCount && CurrentSkill[_index] != null)
+        {
+            if (DicSkillCoolTime[CurrentSkill[_index]] <= 0f)
+            {
+                CurrUseSkillIndex = _index;
+
+                PlayAnimation("Ani_State", _skillmotion);
+
+                if (_instant)
+                {
+                    CurrentUseSkill();
+                }
+
+                DicSkillCoolTime[CurrentSkill[_index]] = CurrentSkill[_index].CoolTime;
+                if (IsCoolTimeRunning == false)
+                {
+                    StartCoroutine((ICoolTime()));
+                }
+            }
+        }
+    }
+
     public Transform GetProjectilePoint()
     {
         return ProjectilePoint;

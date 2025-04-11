@@ -120,7 +120,7 @@ public partial class Player : Character
     }
     public override void RayTargetEvent()
     {
-        Debug.Log("Player RayTargetEvent");
+        Shared.GameMgr.Hphud.SetTarget(this);
     }
 
     //키보드 조작

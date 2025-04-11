@@ -50,26 +50,23 @@ public class Temp : MonoBehaviour
         //    }
         //}
 
-        //if (Input.GetKeyDown(KeyCode.W))
-        //{
-        //    Shared.MainCamera.ZoomEndStage(0.5f, 3.0f, 0.5f, 3.0f, 0.5f,Vector3.zero);
-        //}
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Shared.MainCamera.ZoomEndStage(0.5f, 3.0f, 0.5f, 3.0f, 0.5f,Vector3.zero);
+        }
 
         if(Input.GetKeyDown(KeyCode.Q))
         {
-            Debug.Log("Healing");
             Shared.ParticleMgr.CreateParticle("Healing", Shared.GameMgr.PLAYEROBJ.transform, 1f);
         }
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            Debug.Log("Buff");
             Shared.ParticleMgr.CreateParticle("Buff", Shared.GameMgr.PLAYEROBJ.transform, 2f);
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("Debuff");
             Shared.ParticleMgr.CreateParticle("Debuff", Shared.GameMgr.PLAYEROBJ.transform, 3f);
         }
     }

@@ -21,6 +21,10 @@ public class FollowingCamera : MonoBehaviour
     private float MinPitch = -30f;
     [SerializeField]
     private float MaxPitch = 60f;
+    [SerializeField]
+    private float MinYaw = -30f;
+    [SerializeField]
+    private float MaxYaw = 60f;
 
     private void Start()
     {
@@ -42,6 +46,8 @@ public class FollowingCamera : MonoBehaviour
             float mouseY = Input.GetAxis("Mouse Y");
 
             Yaw += mouseX * MouseSensitivity;
+            Yaw = Mathf.Clamp(Yaw, MinYaw, MaxYaw);
+
             Pitch -= mouseY * MouseSensitivity;
             Pitch = Mathf.Clamp(Pitch, MinPitch, MaxPitch);
         }

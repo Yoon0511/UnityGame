@@ -7,6 +7,7 @@ public class Skill_Rush : Skill
 {
     public float Speed;
     public float Distance;
+
     public override void UseSkill()
     {
         base.UseSkill();
@@ -18,6 +19,13 @@ public class Skill_Rush : Skill
         float dist = 0;
         Vector3 orgPos = Owner.transform.position;
 
+        if(Owner.GetComponent<Character>().GetCharacterType() == 
+            (int)CHARACTER_TYPE.PLAYER)
+        {
+            Shared.MainCamera.ZoomEndStage(0.2f, 1.0f, 0.3f, 0.3f, 0.3f, Vector3.zero);
+        }
+
+
         while (dist < Distance)
         {
             dist = Vector3.Distance(orgPos, Owner.transform.position);
@@ -26,6 +34,7 @@ public class Skill_Rush : Skill
             if (dist >= Distance)
             {
                 base.SkillEnd();
+                Owner.GetComponent<Character>().OnAniEnd();
                 yield break;
             }
             yield return null;

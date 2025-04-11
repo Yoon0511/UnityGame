@@ -5,15 +5,15 @@ using UnityEngine;
 public partial class Monster
 {
     [SerializeField]
-    GameObject punchAttackCollider;
+    GameObject BasicAttackCollider;
 
-    public void OnPunchAttackCollider()
+    public void OnBasicAttackCollider()
     {
-        punchAttackCollider.SetActive(true);
+        BasicAttackCollider.SetActive(true);
     }
 
-    public void OffPunchAttackCollider()
+    public void OffBasicAttackCollider()
     {
-        punchAttackCollider.SetActive(false);
+        BasicAttackCollider.SetActive(false);
     }
 }

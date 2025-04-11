@@ -15,6 +15,7 @@ public abstract class Skill : MonoBehaviour
     public int SkillMotion;
     public int CurrentState;
     public SKILL_TYPE SkillType;
+    public bool Instant;
 
     public void SetOwner(GameObject _owner)
     {

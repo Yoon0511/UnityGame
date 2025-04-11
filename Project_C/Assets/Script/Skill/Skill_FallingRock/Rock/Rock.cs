@@ -20,6 +20,7 @@ public class Rock : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Shared.ParticleMgr.CreateParticle("StoneHit", transform, 0.3f);
         Destroy(gameObject);
     }
 }

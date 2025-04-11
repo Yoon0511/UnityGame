@@ -7,7 +7,7 @@ public abstract partial class Character
     [SerializeField]
     Animator Animator;
 
-    bool IsAniRunning = false;
+    protected bool IsAniRunning = false;
     public void PlayAnimation(string _parametername,int _state)
     {
         Animator.SetInteger(_parametername, _state);

@@ -8,13 +8,15 @@ public class GameMgr : MonoBehaviour
 {
     public GameObject PLAYEROBJ;
     public Player PLAYER;
-    public DamageFont DAMAGEIMAGETEXT;
-    public Joystick JOYSTICK;
-    public Canvas CANVAS;
 
     //UI
+    public DamageFont DAMAGEIMAGETEXT;
+    public Canvas CANVAS;
+    public Joystick JOYSTICK;
     public GameObject NPC_DIALOGUEWINDOW;
     NPC_DialogueWindow NPC_DialogueWindow;
+    public Hphud Hphud;
+    public BuffUi BUFFUI;
     //UI
 
     [NonReorderable]

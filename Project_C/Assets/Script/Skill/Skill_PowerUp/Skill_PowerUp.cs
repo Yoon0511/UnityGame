@@ -9,5 +9,7 @@ public class Skill_PowerUp : Skill
         StatBuff statBuff = new StatBuff(STAT_TYPE.ATK,5.0f,5.0f,Shared.GameMgr.PLAYEROBJ,SpriteName);
 
         Shared.GameMgr.PLAYER.BuffSystem.AddBuff(statBuff);
+
+        Shared.GameMgr.BUFFUI.AddBuff(statBuff);
     }
 }

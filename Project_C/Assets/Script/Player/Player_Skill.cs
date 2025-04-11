@@ -9,6 +9,7 @@ public partial class Player
 
     public override void UseSkill(int _index)
     {
-        UseSkill(_index,(int)STATE.ATTACK, CurrentSkill[_index].SkillMotion);
+        UseSkill(_index,(int)STATE.ATTACK, CurrentSkill[_index].SkillMotion, CurrentSkill[_index].Instant);
+        //UseSkill(_index,CurrentSkill[_index].SkillMotion);
     }
 }

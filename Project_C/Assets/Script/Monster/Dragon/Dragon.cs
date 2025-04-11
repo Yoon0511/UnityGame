@@ -16,12 +16,13 @@ public partial class Dragon : Monster
 
     public override void Init()
     {
+        CharacterName = "Dragon";
         SkillInit();
         Fsm_Init();
     }
 
     public override void RayTargetEvent()
     {
-        
+        Shared.GameMgr.Hphud.SetTarget(this);
     }
 }

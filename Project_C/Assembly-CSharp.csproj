@@ -122,7 +122,6 @@
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_IdleState.cs" />
     <Compile Include="Assets\Script\Skill\Skill_Rush\Skill_Rush.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_ChaseState.cs" />
-    <Compile Include="Assets\Script\Monster\PunchAttack.cs" />
     <Compile Include="Assets\Script\UiScript\QuestListUi\QuestList.cs" />
     <Compile Include="Assets\Script\FSM\StateMachine.cs" />
     <Compile Include="Assets\Photon_Lib\PhotonLibs\WebSocket\SocketWebTcp.cs" />
@@ -165,6 +164,7 @@
     <Compile Include="Assets\Photon_Lib\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Script\Player\Player_Animation.cs" />
     <Compile Include="Assets\Photon_Lib\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
+    <Compile Include="Assets\TEMP\Camera\MainCamera_LookAt.cs" />
     <Compile Include="Assets\Photon_Lib\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
     <Compile Include="Assets\Script\Player\Player_Quest.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_AttackState.cs" />
@@ -182,6 +182,7 @@
     <Compile Include="Assets\Script\Common\Character\Character_Animation.cs" />
     <Compile Include="Assets\TEMP\SimpleJson\SimpleJSONDotNetTypes.cs" />
     <Compile Include="Assets\Script\Player\Player.cs" />
+    <Compile Include="Assets\Script\Monster\BasicAttack.cs" />
     <Compile Include="Assets\TEMP\Bundle\Bundle.cs" />
     <Compile Include="Assets\Script\DamageFont\DamageNumber.cs" />
     <Compile Include="Assets\Script\Monster\MonsterState\Monster_PatrolState.cs" />
@@ -1163,12 +1164,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.State.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.State.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.TextMeshPro">

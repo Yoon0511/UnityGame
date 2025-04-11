@@ -8,6 +8,7 @@ public class Hphud : MonoBehaviour
     public Image CURRHP;
     public Image NEXTHP;
     public Text LINECOUNT;
+    public Text NAMETEXT;
 
     float MaxHp = 100f;
     float hp_1 = 100f;
@@ -23,22 +24,24 @@ public class Hphud : MonoBehaviour
     int Count = 0;
     private void Start()
     {
-        SetTarget(Shared.GameMgr.PLAYER);
+        //테스트
+        //SetTarget(Shared.GameMgr.PLAYER);
+        //테스트
     }
 
     public void SetTarget(Character _target)
     {
         MaxHp = _target.GetInStatData(STAT_TYPE.MAXHP);
         CurrHp = _target.GetInStatData(STAT_TYPE.HP);
+        NAMETEXT.text = _target.GetCharacterName();
 
-        MaxCount = Random.Range(1, 20);
+        MaxCount = 10;
 
         LINECOUNT.text = "x" + MaxCount.ToString();
 
-        DivisionHp = MaxHp / MaxCount;
+        DivisionHp = MaxHp / (float)MaxCount;
         MaxDivisionHp = DivisionHp;
-
-        StartCoroutine(ITest());
+        //StartCoroutine(ITest());
     }
 
     IEnumerator ITest()
@@ -46,7 +49,7 @@ public class Hphud : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(1.0f);
-            DivisionHp -= 20;
+            DivisionHp -= 3;
             StartCoroutine(IHphud());
         }
     }
@@ -63,7 +66,7 @@ public class Hphud : MonoBehaviour
             yield return null;
         }
 
-        if(hp_1 <= 0)
+        if(DivisionHp <= 0)
         {
             DivisionHp = MaxDivisionHp;
             Count++;

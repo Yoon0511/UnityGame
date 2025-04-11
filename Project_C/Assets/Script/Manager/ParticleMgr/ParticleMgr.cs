@@ -79,4 +79,13 @@ public class ParticleMgr : MonoBehaviour
         obj.transform.rotation = _transform.rotation;
         obj.GetComponent<Particle>().Duration = _duration;
     }
+
+    public void CreateParticle(string _name, Transform _transform, float _duration,Transform _parent)
+    {
+        GameObject obj = GetParticle(_name);
+        obj.transform.position = _transform.position;
+        obj.transform.rotation = _transform.rotation;
+        obj.transform.SetParent(_parent);
+        obj.GetComponent<Particle>().Duration = _duration;
+    }
 }

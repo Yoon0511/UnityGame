@@ -19,7 +19,7 @@ public abstract partial class Character : MonoBehaviour
     public string GetCharacterName() { return CharacterName; }
     public float GetInStatData(STAT_TYPE _type)
     { 
-        return Statdata.GetData(_type); 
+        return Statdata.GetData(_type);
     }
     public StatData GetStatData()
     {
