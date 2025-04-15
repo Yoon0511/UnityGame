@@ -35,8 +35,14 @@ public partial class Player : Character
     {
         if (Input.GetKeyDown(KeyCode.Space)) // 공격
         {
-            ChangeState((int)STATE.ATTACK,(int)PLAYER_ANI_STATE.ATTACK);
+            //ChangeState((int)STATE.ATTACK,(int)PLAYER_ANI_STATE.ATTACK);
+            OnAttack();
         }
+        if(IsComboEnable)
+        {
+            OnAttack();
+        }
+
 
         //테스트
         if (Input.GetKeyDown(KeyCode.F3)) //포션

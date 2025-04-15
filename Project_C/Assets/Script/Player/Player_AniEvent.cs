@@ -11,9 +11,12 @@ public partial class Player
 
     [SerializeField]
     GameObject SKILL_PARTICLE_POINT;
+
+    [SerializeField]
+    GameObject SLASH_TRAIL;
     public void OnHitBoxActive()
     {
-        Shared.ParticleMgr.CreateParticle("Slash", SLASH_PARTICLE.transform, 0.2f);
+        //Shared.ParticleMgr.CreateParticle("Slash", SLASH_PARTICLE.transform, 0.2f);
         HITBOX.SetActive(true);
     }
 
@@ -42,5 +45,31 @@ public partial class Player
     {
         IsAniRunning = false;
         OnAttackAniEnd();
+    }
+
+    public void OnComboEnable()
+    {
+        IsComboEnable = true;
+    }
+
+    public void OnComboDisable()
+    {
+        IsComboEnable = false;
+    }
+
+    public void OnComboExit()
+    {
+        SLASH_TRAIL.SetActive(false);
+        ComboIndex = 0;
+        IsComboEnable = false;
+        IsBasicAttack = true;
+        SetAnimatorBool("Ani_IsSlashCombo", false);
+        OnAttackAniEnd();
+    }
+
+    public void OnBasicAttak()
+    {
+        IsBasicAttack = false;
+        SLASH_TRAIL.SetActive(true);
     }
 }

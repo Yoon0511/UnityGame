@@ -26,6 +26,11 @@ public abstract partial class Character
         Animator.SetFloat(_trigger, _value);
     }
 
+    public void SetAnimatorBool(string _paraname,bool _value)
+    {
+        Animator.SetBool(_paraname, _value); 
+    }
+
     public void ChangeAnimationWaitForSecond(string _parametername, int _state,float _time)
     {
         StartCoroutine(IChangeAnimationWaitForSecond(_parametername,_state,_time));

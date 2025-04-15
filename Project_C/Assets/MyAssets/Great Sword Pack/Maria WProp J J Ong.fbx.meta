@@ -127,6 +127,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips:
+  - 68739bac4fb4c4f43b185d37b7757bfd
   - 33e8d66ce1c6fd04299f8eb91c5ab4cc
   importAnimation: 1
   humanDescription:
@@ -559,11 +560,6 @@ ModelImporter:
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-    - name: Maria_sword
-      parentName: Maria WProp J J Ong(Clone)
-      position: {x: 0, y: -0.024554698, z: 0}
-      rotation: {x: -0.000000109814124, y: -0.000000045741892, z: -0.000000039761325, w: 1}
-      scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Hips
       parentName: Maria WProp J J Ong(Clone)
       position: {x: 0.000000114120326, y: 1.0525181, z: 0.01768382}
@@ -888,6 +884,11 @@ ModelImporter:
       parentName: mixamorig:RightHandThumb3
       position: {x: -2.9501735e-13, y: 0.033291377, z: -3.956302e-13}
       rotation: {x: 3.85186e-34, y: -1.3877788e-17, z: 2.7755576e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Maria_sword
+      parentName: mixamorig:RightHand
+      position: {x: -0.044416763, y: -0.6296523, z: 1.4533349}
+      rotation: {x: 0.50003326, y: 0.4999476, z: -0.5000524, w: -0.49996683}
       scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5

@@ -9,7 +9,6 @@ public partial class Monster
     int patrolIndex = 0;
     public override void Fsm_Init()
     {
-        Debug.Log("Monster Fsm Init");
         Fsm = new StateMachine(new Monster_IdleState(this));
         CurrState = (int)MONSTER_STATE.IDLE;
         PrevState = CurrState;

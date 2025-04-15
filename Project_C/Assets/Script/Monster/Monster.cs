@@ -40,6 +40,7 @@ public partial class Monster : Character
     }
     public override void Init()
     {
+        CharacterType = (int)CHARACTER_TYPE.MONSTER;
         player = Shared.GameMgr.PLAYEROBJ;
         Fsm_Init();
     }

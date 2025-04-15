@@ -4,13 +4,29 @@ using UnityEngine;
 
 public partial class Player
 {
+    bool IsComboEnable = false;
+    bool IsBasicAttack = true;
+
+    int ComboIndex = 0;
     public void OnAttack()
     {
-        if (CurrState == (int)STATE.ATTACK)
+        if (CurrState != (int)STATE.ATTACK)
         {
-            return;
+            ChangeState((int)STATE.ATTACK);
         }
-        ChangeState((int)STATE.ATTACK, (int)PLAYER_ANI_STATE.ATTACK);
+        //ChangeState((int)STATE.ATTACK, (int)PLAYER_ANI_STATE.ATTACK);
+
+        if(IsBasicAttack)
+        {
+            PlayAnimation("Ani_State", (int)PLAYER_ANI_STATE.ATTACK);
+        }
+
+        if(IsComboEnable)
+        {
+            ComboIndex++;
+            PlayAni_Trigger("Ani_SlashCombo");
+            IsComboEnable = false;
+        }
     }
     public override void Hit(float _damage)
     {
@@ -20,9 +36,23 @@ public partial class Player
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("TAG_MONSTER"))
+        //if (other.CompareTag("TAG_MONSTER"))
+        //{
+        //    other.GetComponent<Monster>().Hit(Statdata.GetData(STAT_TYPE.ATK));
+        //}
+
+        bool check = Shared.GameMgr.IsCheckCharacterType(other, (int)CHARACTER_TYPE.MONSTER);
+
+        if (check)
         {
-            other.GetComponent<Monster>().Hit(Statdata.GetData(STAT_TYPE.ATK));
+            float ComboAtk = 0.2f;
+            float atk = Statdata.GetData(STAT_TYPE.ATK);
+
+            atk = atk + (ComboAtk * ComboIndex * atk);
+            
+            //atk = Random.Range(1000, 9999);
+
+            other.GetComponent<Character>().Hit(atk);
         }
     }
 }
