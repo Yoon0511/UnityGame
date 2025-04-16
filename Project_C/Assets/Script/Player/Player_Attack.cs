@@ -43,16 +43,17 @@ public partial class Player
 
         bool check = Shared.GameMgr.IsCheckCharacterType(other, (int)CHARACTER_TYPE.MONSTER);
 
-        if (check)
+        //기본공격
+        if (check && HITBOX.activeSelf)
         {
-            float ComboAtk = 0.2f;
+            float ComboAtk = 0.2f; //기본공격계수
             float atk = Statdata.GetData(STAT_TYPE.ATK);
 
             atk = atk + (ComboAtk * ComboIndex * atk);
-            
-            //atk = Random.Range(1000, 9999);
 
             other.GetComponent<Character>().Hit(atk);
+
+            Shared.MainCamera.Shake(0,0f,0.2f,new Vector3(0.0f,5.0f,0.0f),7f,5f,1);
         }
     }
 }

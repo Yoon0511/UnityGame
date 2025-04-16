@@ -4,7 +4,7 @@ using UnityEngine;
 
 public partial class MainCamera : MonoBehaviour
 {
-    bool CameraShake = false;
+    public bool CameraShake = false;
 
     Transform ShakeTr;
 
@@ -36,6 +36,7 @@ public partial class MainCamera : MonoBehaviour
     Vector3 OrgPos;
 
     float FovX = 0.2f;
+    //float FovX = 1.0f;
     float FovY = 0.2f;
 
     private void Awake()
@@ -74,16 +75,17 @@ public partial class MainCamera : MonoBehaviour
             camera.y = OrgPos.y;
     }
 
-    public void Shake( int CameraID )
+    public void Shake( int CameraID, float _startdelay,float _totaltime,Vector3 _shake,
+        float _veclocity, float _damping,int _count)
     {
         //if (false == IsFallowMe)
         //    return;
 
-        ShakeInfo.StartDelay = 0f;
-        ShakeInfo.TotalTime = 3f;
+        ShakeInfo.StartDelay = _startdelay;
+        ShakeInfo.TotalTime = _totaltime;
         ShakeInfo.UseTotalTime = true;
 
-        ShakeInfo.Shake = new Vector3(0.2f, 0.2f, 0f);
+        ShakeInfo.Shake = _shake;
 
         ShakeInfo.Dest = ShakeInfo.Shake;
         ShakeInfo.Dir = ShakeInfo.Shake;
@@ -92,14 +94,14 @@ public partial class MainCamera : MonoBehaviour
         ShakeInfo.RemainDist = ShakeInfo.Shake.magnitude;
         ShakeInfo.RemainCountDis = float.MaxValue;
 
-        ShakeInfo.Veclocity = 8;
+        ShakeInfo.Veclocity = _veclocity;
 
-        ShakeInfo.Damping = 0.5f;
+        ShakeInfo.Damping = _damping;
         ShakeInfo.UseDamping = true;
 
         ShakeInfo.DampingTime = ShakeInfo.RemainDist / ShakeInfo.Veclocity;
 
-        ShakeInfo.Count =4;
+        ShakeInfo.Count = _count;
         ShakeInfo.UseCount = true;
 
         StopCoroutine("ShakeCoroutine");
@@ -125,15 +127,15 @@ public partial class MainCamera : MonoBehaviour
             {
                 ShakeTr.localPosition += ShakeInfo.Dir * dist;
 
-                float rc = transform.position.x - FovX - 1;
-
-                if (rc < 0)
-                    ShakeTr.localPosition += new Vector3(-rc, 0, 0);
-
-                rc = -1 - (transform.position.x + FovX);
-
-                if (rc < 0)
-                    ShakeTr.localPosition += new Vector3(rc, 0, 0);
+                //float rc = transform.position.x - FovX - 1;
+                //
+                //if (rc < 0)
+                //    ShakeTr.localPosition += new Vector3(-rc, 0, 0);
+                //
+                //rc = -1 - (transform.position.x + FovX);
+                //
+                //if (rc < 0)
+                //    ShakeTr.localPosition += new Vector3(rc, 0, 0);
 
                 CameraLimit(true);
 
@@ -166,15 +168,15 @@ public partial class MainCamera : MonoBehaviour
 
                 ShakeTr.localPosition = ShakeInfo.Dest - ShakeInfo.Dir * (-ShakeInfo.RemainDist);
 
-                float rc = transform.position.x - FovX - 1;
-
-                if (rc < 0)
-                    ShakeTr.localPosition += new Vector3(-rc, 0, 0);
-
-                rc = -1 - (transform.position.x + FovX);
-
-                if (rc < 0)
-                    ShakeTr.localPosition += new Vector3(rc, 0, 0);
+                //float rc = transform.position.x - FovX - 1;
+                //
+                //if (rc < 0)
+                //    ShakeTr.localPosition += new Vector3(-rc, 0, 0);
+                //
+                //rc = -1 - (transform.position.x + FovX);
+                //
+                //if (rc < 0)
+                //    ShakeTr.localPosition += new Vector3(rc, 0, 0);
 
                 CameraLimit(true);
 

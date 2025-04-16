@@ -17,6 +17,7 @@ public partial class Dragon : Monster
     public override void Init()
     {
         CharacterName = "Dragon";
+        CharacterType = (int)CHARACTER_TYPE.MONSTER;
         SkillInit();
         Fsm_Init();
     }

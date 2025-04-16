@@ -40,6 +40,8 @@ public class FollowingCamera : MonoBehaviour
 
     private void Update()
     {
+        if (Shared.MainCamera.CameraShake) return;
+        
         if (Input.GetMouseButton(0) && Shared.GameMgr.IsJoystickDrag() == false)
         {
             float mouseX = Input.GetAxis("Mouse X");
@@ -61,6 +63,8 @@ public class FollowingCamera : MonoBehaviour
         Vector3 desiredPosition = Target.position + rotation * Offset;
 
         transform.position = desiredPosition;
+        
+        if (Shared.MainCamera.CameraShake) return;
         transform.LookAt(Target);
     }
 

@@ -45,10 +45,13 @@ public class Skill_Rush : Skill
     {
         if (other.gameObject == Owner)
             return;
-        
-        if(Shared.GameMgr.IsCheckCharacterType(other,(int)CHARACTER_TYPE.PLAYER))
+
+        bool IsPlayer = Shared.GameMgr.IsCheckCharacterType(other, (int)CHARACTER_TYPE.PLAYER);
+        bool IsMonster = Shared.GameMgr.IsCheckCharacterType(other, (int)CHARACTER_TYPE.MONSTER);
+
+        if (IsPlayer || IsMonster)
         {
-            other.gameObject.GetComponent<Player>().Hit(Atk);
+            other.gameObject.GetComponent<Character>().Hit(Atk);
         }
     }
 }

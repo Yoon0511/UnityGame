@@ -13,6 +13,14 @@ public class Skill_FallingRock : Skill
     List<AtkRange> ListAtkRangeCircle = new List<AtkRange>();
     public override void UseSkill()
     {
+        if(Owner.GetComponent<Character>().GetCharacterType() ==
+            (int)CHARACTER_TYPE.MONSTER)
+        {
+            //몬스터가 사용시 카메라 흔들기
+            //Shared.MainCamera.Shake(0);
+        }
+
+
         for(int i = 0;i < RockCount; i++)
         {
             float RandomRange = Random.Range(-15f, 15f);

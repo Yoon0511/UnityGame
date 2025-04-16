@@ -5,6 +5,9 @@ using UnityEngine;
 public partial class MainCamera : MonoBehaviour
 {
     [SerializeField]
+    private GameObject CAMERAMOVE;
+
+    [SerializeField]
     private Transform Target;
 
     [SerializeField]
@@ -27,7 +30,7 @@ public partial class MainCamera : MonoBehaviour
 
     private void Start()
     {
-        Vector3 angles = transform.eulerAngles;
+        Vector3 angles = CAMERAMOVE.transform.eulerAngles;
         Yaw = angles.y;
         Pitch = angles.x;
 
@@ -39,6 +42,8 @@ public partial class MainCamera : MonoBehaviour
 
     private void Update()
     {
+        if (CameraShake) return;
+
         if (Input.GetMouseButton(0) && Shared.GameMgr.IsJoystickDrag() == false)
         {
             float mouseX = Input.GetAxis("Mouse X");
@@ -54,12 +59,13 @@ public partial class MainCamera : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (CameraShake) return;
         if (Target == null) return;
-
+        
         Quaternion rotation = Quaternion.Euler(Pitch, Yaw, 0);
         Vector3 desiredPosition = Target.position + rotation * Offset;
-
-        transform.position = desiredPosition;
-        transform.LookAt(Target);
+        
+        CAMERAMOVE.transform.localPosition = desiredPosition;
+        CAMERAMOVE.transform.LookAt(Target);
     }
 }

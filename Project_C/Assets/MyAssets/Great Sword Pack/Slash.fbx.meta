@@ -64,21 +64,21 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.4916201
+      - time: 0.46295768
         functionName: OnHitBoxActive
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.49261084
+      - time: 0.50853443
         functionName: OnComboEnable
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.56541735
+      - time: 0.5622326
         functionName: OffHitBoxActive
         data: 
         objectReferenceParameter: {instanceID: 0}

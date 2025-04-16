@@ -747,15 +747,8 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.8498024
-        functionName: OnBreathEnd
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 1
-        functionName: OnAniEnd
+      - time: 0
+        functionName: OnAniStart
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -768,8 +761,15 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0
-        functionName: OnAniStart
+      - time: 0.8498024
+        functionName: OnBreathEnd
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 1
+        functionName: OnAniEnd
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
