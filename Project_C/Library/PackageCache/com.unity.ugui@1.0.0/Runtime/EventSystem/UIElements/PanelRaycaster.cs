@@ -81,12 +81,7 @@ namespace UnityEngine.UIElements
             float h = Screen.height;
             if (displayIndex > 0 && displayIndex < Display.displays.Length)
             {
-#if UNITY_ANDROID
-                    // Changed for UITK to be coherent for Android which passes display relative rendering coordinates
-                    h = Display.displays[displayIndex].renderingHeight;
-#else
-                    h = Display.displays[displayIndex].systemHeight;
-#endif
+                h = Display.displays[displayIndex].systemHeight;
             }
 
             position.y = h - position.y;

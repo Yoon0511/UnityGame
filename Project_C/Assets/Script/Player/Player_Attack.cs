@@ -53,7 +53,8 @@ public partial class Player
 
             other.GetComponent<Character>().Hit(atk);
 
-            Shared.MainCamera.Shake(0,0f,0.2f,new Vector3(0.0f,5.0f,0.0f),7f,5f,1);
+            Shared.ParticleMgr.CreateParticle("DarkHit", SLASH_TRAIL.transform, 0.2f);
+            Shared.MainCamera.Shake(0,0f,0.1f,new Vector3(0.0f,2.0f,0.0f),5f,2f,1);
         }
     }
 }
