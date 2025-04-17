@@ -8,12 +8,15 @@ public abstract partial class Character
     Animator Animator;
 
     protected bool IsAniRunning = false;
+    int CurrAnimation;
     public void PlayAnimation(string _parametername,int _state)
     {
+        CurrAnimation = _state;
         Animator.SetInteger(_parametername, _state);
     }
     public void PlayAnimation(STATE _state)
     {
+        CurrAnimation = (int)_state;
         Animator.SetInteger("Ani_State", (int)_state);
     }
     public void PlayAni_Trigger(string _trigger)
@@ -53,4 +56,5 @@ public abstract partial class Character
 
     public void AnimationStop() { Animator.StopPlayback(); }
     public bool GetIsAniRunning() { return IsAniRunning; }
+    public int GetCurrAnimation() { return CurrAnimation; }
 }

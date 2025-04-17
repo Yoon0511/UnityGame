@@ -33,4 +33,5 @@ public abstract class Skill : MonoBehaviour
     }
 
     public int GetCurrentState() { return CurrentState; }
+    public void SetCurrentState(int _state) {  CurrentState = _state; }
 }

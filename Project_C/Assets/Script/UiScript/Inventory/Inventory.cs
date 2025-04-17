@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
 
     [SerializeField]
     List<ItemBase> items = new List<ItemBase>();
+
     [SerializeField]
     List<InvenSlot> slots = new List<InvenSlot>();
 

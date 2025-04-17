@@ -1079,7 +1079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &165890080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1216,6 +1216,7 @@ MonoBehaviour:
   Target: {fileID: 1942591409}
   detectionRange: 6
   attackRange: 2
+  OnPatrol: 0
   BasicAttackCollider: {fileID: 1088150860}
   patrolPoint:
   - {fileID: 2094899656}
@@ -1323,6 +1324,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 682766292}
     m_Modifications:
+    - target: {fileID: 1609950646023320055, guid: ab2a9ce6fca1714459e0604eaff4b931, type: 3}
+      propertyPath: Owner
+      value: 
+      objectReference: {fileID: 1942591409}
     - target: {fileID: 1609950646023320055, guid: ab2a9ce6fca1714459e0604eaff4b931, type: 3}
       propertyPath: Instant
       value: 1
@@ -3787,9 +3792,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &683796214
 MonoBehaviour:
@@ -3888,6 +3893,7 @@ MonoBehaviour:
   Target: {fileID: 1942591409}
   detectionRange: 6
   attackRange: 2
+  OnPatrol: 0
   BasicAttackCollider: {fileID: 309613439}
   patrolPoint:
   - {fileID: 2094899656}
@@ -3903,7 +3909,7 @@ Transform:
   m_GameObject: {fileID: 683796211}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.21, y: 0.5, z: -7.4}
+  m_LocalPosition: {x: 0.27, y: 0.5, z: -7.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4286,6 +4292,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   detectionRange: 0
   attackRange: 0
+  OnPatrol: 0
   BasicAttackCollider: {fileID: 0}
   patrolPoint: []
 --- !u!1 &730150968
@@ -5324,6 +5331,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 730150969}
+  - {fileID: 452602988}
   - {fileID: 1539978696}
   - {fileID: 1917059305}
   - {fileID: 199980913}
@@ -5335,7 +5343,6 @@ RectTransform:
   - {fileID: 776937541}
   - {fileID: 111571908}
   - {fileID: 425016441}
-  - {fileID: 452602988}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7706,7 +7713,7 @@ Transform:
   m_GameObject: {fileID: 1525673002}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.64, y: 0.5, z: -7.4}
+  m_LocalPosition: {x: -0.64, y: 0.5, z: 9.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7737,6 +7744,7 @@ MonoBehaviour:
   Target: {fileID: 1942591409}
   detectionRange: 6
   attackRange: 2
+  OnPatrol: 1
   BasicAttackCollider: {fileID: 1346254303}
   patrolPoint:
   - {fileID: 2094899656}
@@ -7841,9 +7849,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1525673009
 MonoBehaviour:
@@ -7878,7 +7886,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1534029069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7959,7 +7967,7 @@ Transform:
   m_GameObject: {fileID: 1534029068}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.26, y: 2.355202, z: -2.37}
+  m_LocalPosition: {x: -7.13, y: 2.19, z: -6.48}
   m_LocalScale: {x: 1, y: 2.2913, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9822,7 +9830,7 @@ Transform:
   m_GameObject: {fileID: 1942591409}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -8.75}
+  m_LocalPosition: {x: 0, y: 0.5, z: -8.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9921,7 +9929,7 @@ MonoBehaviour:
   dicstat:
     _serializedList:
     - Key: 1
-      Value: 100
+      Value: 9999
     - Key: 2
       Value: 100
     - Key: 3
@@ -9931,7 +9939,7 @@ MonoBehaviour:
     - Key: 5
       Value: 3
     - Key: 6
-      Value: 100
+      Value: 9999
     - Key: 7
       Value: 100
     - Key: 8
@@ -11099,6 +11107,18 @@ PrefabInstance:
       propertyPath: SkillName
       value: Breath
       objectReference: {fileID: 0}
+    - target: {fileID: 2174708344044946963, guid: e29575146e397bd489a394669864c87e, type: 3}
+      propertyPath: DamageInterval
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963023327432654414, guid: e29575146e397bd489a394669864c87e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247587302389986680, guid: e29575146e397bd489a394669864c87e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4491388469693785765, guid: e29575146e397bd489a394669864c87e, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.1
@@ -11107,6 +11127,18 @@ PrefabInstance:
       propertyPath: uihead
       value: 
       objectReference: {fileID: 1461099448}
+    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
+      propertyPath: dicstat._serializedList.Array.data[0].Value
+      value: 9999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
+      propertyPath: dicstat._serializedList.Array.data[3].Value
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
+      propertyPath: dicstat._serializedList.Array.data[5].Value
+      value: 9999
+      objectReference: {fileID: 0}
     - target: {fileID: 5957471196885184906, guid: e29575146e397bd489a394669864c87e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.99

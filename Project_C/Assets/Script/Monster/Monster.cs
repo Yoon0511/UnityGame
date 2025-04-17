@@ -14,6 +14,8 @@ public partial class Monster : Character
     float detectionRange;
     [SerializeField]
     float attackRange;
+
+    public bool OnPatrol = false;
     private void FixedUpdate()
     {
         StateUpdate();
@@ -40,6 +42,7 @@ public partial class Monster : Character
     }
     public override void Init()
     {
+        CharacterName = "Monster";
         CharacterType = (int)CHARACTER_TYPE.MONSTER;
         player = Shared.GameMgr.PLAYEROBJ;
         Fsm_Init();

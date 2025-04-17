@@ -41,8 +41,9 @@ public class Skill_Rush : Skill
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Rush_attak");
         if (other.gameObject == Owner)
             return;
 

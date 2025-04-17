@@ -1,20 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Dragon_AttackState : StateBase
 {
     Dragon Dragon;
-    float ElapsedTime;
+    float SkillElapsedTime;
     float SkillDelayTime;
-    float BasicAttackTime;
-    float BasicAttackDelayTime;
-    float TargetSearchTime;
-    float TargetSearchDelayTime;
-
-    bool IsTargetSearching;
-    Skill UseSkill;
-
+    float BiteAtkElapsedTime;
+    float BiteAtkDelayTime;
+    float SearchElapsedTime;
+    float SearchDelayTime;
+    bool Searching;
     public Dragon_AttackState(Dragon _dragon)
     {
         Dragon = _dragon;
@@ -22,10 +20,9 @@ public class Dragon_AttackState : StateBase
     public override void OnStateEnter()
     {
         SkillDelayTime = 10.0f;
-        BasicAttackDelayTime = 2.0f;
-        TargetSearchTime = 3.0f;
-        IsTargetSearching = false;
-        UseSkill = null;
+        BiteAtkDelayTime = 1.5f;
+        SearchDelayTime = 0.5f;
+        Searching = false;
         //Dragon.PlayAnimation("Ani_State", (int)DRAGON_ANI_STATE.IDLE);
 
         //Dragon.ChangeAnimationWaitForSecond("Ani_State", (int)DRAGON_ANI_STATE.BITE_ATTACK,0.5f);
@@ -33,78 +30,92 @@ public class Dragon_AttackState : StateBase
 
     public override void OnStateExit()
     {
-        ElapsedTime = 0;
-        BasicAttackTime = 0;
-        TargetSearchDelayTime = 0;
+        SkillElapsedTime = 0.0f;
+        BiteAtkElapsedTime = 0.0f;
+        SearchElapsedTime = 0.0f;
     }
 
     public override void OnStateUpdate()
     {
         UseRandomSkill();
-
-        CheckAttackRange();
     }
 
     void UseRandomSkill()
     {
-        if (IsTargetSearching)
-            return;
-
-        ElapsedTime += Time.deltaTime;
-        BasicAttackTime += Time.deltaTime;
-
-        if (ElapsedTime >= SkillDelayTime)
+        if(Searching)
         {
-            if(Dragon.GetIsAniRunning() == false)
+            SearchElapsedTime += Time.deltaTime;
+
+            if (SearchElapsedTime >= SearchDelayTime)
             {
-                int RandomSkil = Random.Range((int)DRAGON_SKILL.BREATH, (int)DRAGON_SKILL.ENUM_END);
+                SearchElapsedTime = 0.0f;
 
-                //Dragon.UseDragonSkill(RandomSkil);
-                Dragon.UseDragonSkill((int)DRAGON_SKILL.BREATH);
-
-                UseSkill = Dragon.GetCurrentSkill();
-                
-                ElapsedTime = 0.0f;
-                TargetSearchDelayTime = 0.0f;
-            }
-        }
-        else
-        {
-            if(BasicAttackTime >= BasicAttackDelayTime && Dragon.GetIsAniRunning() == false 
-                && Dragon.GetIsOnAttackRange() == false)
-            {
-                Dragon.PlayAnimation("Ani_State", (int)DRAGON_ANI_STATE.BITE_ATTACK);
-                BasicAttackTime = 0.0f;
-            }
-        }
-    }
-
-    void CheckAttackRange()
-    {
-        if (UseSkill == null) return;
-
-        if (UseSkill.GetCurrentState() == (int)SKILL_STATE.END)
-        {
-            IsTargetSearching = true;
-            TargetSearchDelayTime += Time.deltaTime;
-            if (TargetSearchDelayTime >= TargetSearchTime)
-            {
-                TargetSearchDelayTime = 0.0f;
-                UseSkill = null;
-
-                if (Dragon.IsPlayerInAttackRange() == false &&
-                    Dragon.GetIsAniRunning() == false)
+                if (Dragon.IsPlayerInAttackRange())
+                {
+                    Searching = false;
+                }
+                else
                 {
                     Dragon.ChangeState((int)DRAGON_STATE.MOVE);
                 }
+            }
+            return;
+        }
 
-                IsTargetSearching = false;
+        SkillElapsedTime += Time.deltaTime;
+
+        if (SkillElapsedTime >= SkillDelayTime)
+        {
+            SkillElapsedTime = 0.0f;
+            int RandomSkil = Random.Range((int)DRAGON_SKILL.BREATH, (int)DRAGON_SKILL.ENUM_END);
+
+            Dragon.UseDragonSkill(RandomSkil);
+            //Dragon.UseDragonSkill((int)DRAGON_SKILL.BREATH); //0
+            //Dragon.UseDragonSkill((int)DRAGON_SKILL.RUSH); //1
+            //Dragon.UseDragonSkill((int)DRAGON_SKILL.FALLING_ROCK); //2
+            //Dragon.UseDragonSkill(2);
+            //Debug.Log(UseSkill.SkillName);
+
+            BiteAtkElapsedTime = 0.0f;
+        }
+        else
+        {
+            BiteAtkElapsedTime += Time.deltaTime;
+
+            if (Dragon.GetIsAniRunning() == false &&
+                Dragon.GetIsOnAttackRange() == false &&
+                Dragon.GetCurrentSkill().GetCurrentState() == (int)SKILL_STATE.READY &&
+                BiteAtkElapsedTime >= BiteAtkDelayTime)
+            {
+                BiteAtkElapsedTime = 0.0f;
+
+                Dragon.PlayAnimation("Ani_State", (int)DRAGON_ANI_STATE.BITE_ATTACK);
+                
+                Searching = true;
+            }
+        }
+  
+        if (Dragon.GetCurrentSkill().GetCurrentState() == (int)SKILL_STATE.END)
+        {
+            Dragon.GetCurrentSkill().SetCurrentState((int)SKILL_STATE.READY);
+            
+            if(Dragon.IsPlayerInAttackRange() == false)
+            {
+                Searching = true;
+                Dragon.ChangeState((int)DRAGON_STATE.MOVE);
             }
         }
     }
 
-    //스킬사용후 탐색시간
-
-    //스킬사용 종료후 -> 일정시간(0.3s) 정지하여 어그로 탐색 -> 평타 및 스킬 시전
-    //                                     or -> 공격범위를 벗어나 있으면 다가감 -> 평타 및 스킬시전
+    void Search()
+    {
+        if (Dragon.IsPlayerInAttackRange())
+        {
+            Searching = false;
+        }
+        else
+        {
+            Dragon.ChangeState((int)DRAGON_STATE.MOVE);
+        }
+    }
 }

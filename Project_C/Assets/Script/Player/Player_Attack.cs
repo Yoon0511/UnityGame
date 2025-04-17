@@ -36,6 +36,7 @@ public partial class Player
 
     public void OnTriggerEnter(Collider other)
     {
+        Debug.Log("attak");
         //if (other.CompareTag("TAG_MONSTER"))
         //{
         //    other.GetComponent<Monster>().Hit(Statdata.GetData(STAT_TYPE.ATK));
@@ -53,7 +54,7 @@ public partial class Player
 
             other.GetComponent<Character>().Hit(atk);
 
-            Shared.ParticleMgr.CreateParticle("DarkHit", SLASH_TRAIL.transform, 0.2f);
+            Shared.ParticleMgr.CreateParticle("DarkHit", SLASH_TRAIL.transform, 0.6f);
             Shared.MainCamera.Shake(0,0f,0.1f,new Vector3(0.0f,2.0f,0.0f),5f,2f,1);
         }
     }

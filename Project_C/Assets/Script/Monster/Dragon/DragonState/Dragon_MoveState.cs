@@ -11,8 +11,8 @@ public class Dragon_MoveState : StateBase
     }
     public override void OnStateEnter()
     {
-        Dragon.PlayAnimation("Ani_State", (int)DRAGON_ANI_STATE.IDLE);
-        Dragon.ChangeAnimationWaitForSecond("Ani_State",(int)DRAGON_ANI_STATE.FORWARD_MOVE,0.3f);
+        Dragon.PlayAnimation("Ani_State", (int)DRAGON_ANI_STATE.FORWARD_MOVE);
+        //Dragon.ChangeAnimationWaitForSecond("Ani_State",(int)DRAGON_ANI_STATE.FORWARD_MOVE,0.3f);
 
         SetTarget();
     }
@@ -29,6 +29,11 @@ public class Dragon_MoveState : StateBase
         if(Dragon.IsPlayerInAttackRange())
         {
             Dragon.ChangeState((int)DRAGON_STATE.ATTACK);
+        }
+
+        if(Dragon.GetCurrAnimation() != (int)DRAGON_ANI_STATE.FORWARD_MOVE)
+        {
+            Dragon.PlayAnimation("Ani_State", (int)DRAGON_ANI_STATE.FORWARD_MOVE);
         }
     }
 

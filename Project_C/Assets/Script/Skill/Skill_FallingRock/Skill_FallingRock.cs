@@ -13,6 +13,7 @@ public class Skill_FallingRock : Skill
     List<AtkRange> ListAtkRangeCircle = new List<AtkRange>();
     public override void UseSkill()
     {
+        base.UseSkill();
         if(Owner.GetComponent<Character>().GetCharacterType() ==
             (int)CHARACTER_TYPE.MONSTER)
         {
@@ -32,8 +33,8 @@ public class Skill_FallingRock : Skill
             ListAtkRangeCircle.Add(AtkCircle.GetComponent<AtkRange>());
         }
 
-        base.UseSkill();
         StartCoroutine(IFallingRock());
+        base.SkillEnd();
     }
 
     IEnumerator IFallingRock()
@@ -61,7 +62,6 @@ public class Skill_FallingRock : Skill
         }
         if(ListAtkRangeCircle.Count == 0)
         {
-            base.SkillEnd();
             StopCoroutine(IFallingRock());
         }
     }
