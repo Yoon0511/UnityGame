@@ -7,6 +7,7 @@ public class Skill_Rush : Skill
 {
     public float Speed;
     public float Distance;
+    public Collider HITBOX;
 
     public override void UseSkill()
     {
@@ -16,6 +17,7 @@ public class Skill_Rush : Skill
 
     IEnumerator IRush()
     {
+        HITBOX.enabled = true;
         float dist = 0;
         Vector3 orgPos = Owner.transform.position;
 
@@ -33,6 +35,7 @@ public class Skill_Rush : Skill
 
             if (dist >= Distance)
             {
+                HITBOX.enabled = false;
                 base.SkillEnd();
                 Owner.GetComponent<Character>().OnAniEnd();
                 yield break;
@@ -43,7 +46,6 @@ public class Skill_Rush : Skill
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Rush_attak");
         if (other.gameObject == Owner)
             return;
 

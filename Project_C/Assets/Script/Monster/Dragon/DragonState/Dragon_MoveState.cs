@@ -19,7 +19,8 @@ public class Dragon_MoveState : StateBase
 
     public override void OnStateExit()
     {
-        
+        Dragon.PlayAnimation("Ani_State", (int)DRAGON_ANI_STATE.IDLE);
+        Dragon.SetIsAniRunning(false);
     }
 
     public override void OnStateUpdate()

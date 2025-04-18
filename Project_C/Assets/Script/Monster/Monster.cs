@@ -83,6 +83,6 @@ public partial class Monster : Character
 
     public override void RayTargetEvent()
     {
-        Debug.Log("Monster RayTargetEvent");
+        Shared.GameMgr.Hphud.SetTarget(this);
     }
 }

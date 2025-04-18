@@ -34,4 +34,9 @@ public abstract partial class Character : MonoBehaviour
     // Character를 상속받는 모든 클래스에 RayTargetEvent 선언
     // 상속받는 클래스에서 RayTargetEvent 정의
     // 각각의 CharacterType에 맞는 행동 구현
+
+    public virtual void EnhanceStat(STAT_TYPE _type, float _num)
+    {
+        Statdata.EnhanceStat(_type, _num);
+    }
 }

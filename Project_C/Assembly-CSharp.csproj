@@ -125,6 +125,7 @@
     <Compile Include="Assets\Script\UiScript\QuestListUi\QuestList.cs" />
     <Compile Include="Assets\Script\FSM\StateMachine.cs" />
     <Compile Include="Assets\Photon_Lib\PhotonLibs\WebSocket\SocketWebTcp.cs" />
+    <Compile Include="Assets\Script\Manager\BattleMgr\BattleMgr.cs" />
     <Compile Include="Assets\Script\Monster\Dragon\DragonState\Dragon_MoveState.cs" />
     <Compile Include="Assets\Script\Player\Player_Move.cs" />
     <Compile Include="Assets\Script\Common\StatData.cs" />
@@ -135,7 +136,6 @@
     <Compile Include="Assets\Script\Quest\QuestBase.cs" />
     <Compile Include="Assets\Script\UiScript\OnBtnEvent.cs" />
     <Compile Include="Assets\Script\UiScript\ItemSlot\ItemSlot.cs" />
-    <Compile Include="Assets\Script\Shared.cs" />
     <Compile Include="Assets\Script\Monster\Monster_Fsm.cs" />
     <Compile Include="Assets\Script\Item\EquipmentItem.cs" />
     <Compile Include="Assets\Script\UiScript\ItemSlot\InvenSlot.cs" />
@@ -162,6 +162,7 @@
     <Compile Include="Assets\Photon_Lib\PhotonChat\Demos\DemoChat\ChatGui.cs" />
     <Compile Include="Assets\Script\Manager\GameMgr\GameMgr.cs" />
     <Compile Include="Assets\Photon_Lib\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
+    <Compile Include="Assets\Script\Manager\Shared.cs" />
     <Compile Include="Assets\Script\Player\Player_Animation.cs" />
     <Compile Include="Assets\Photon_Lib\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\TEMP\Camera\MainCamera_LookAt.cs" />

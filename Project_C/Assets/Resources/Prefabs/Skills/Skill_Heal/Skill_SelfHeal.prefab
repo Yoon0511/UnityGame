@@ -54,3 +54,5 @@ MonoBehaviour:
   SkillMotion: 8
   CurrentState: 1
   SkillType: 1
+  Instant: 0
+  HealAmount: 100

@@ -22,10 +22,8 @@ public class Dragon_AttackState : StateBase
         SkillDelayTime = 10.0f;
         BiteAtkDelayTime = 1.5f;
         SearchDelayTime = 0.5f;
+        BiteAtkElapsedTime = 1.2f;
         Searching = false;
-        //Dragon.PlayAnimation("Ani_State", (int)DRAGON_ANI_STATE.IDLE);
-
-        //Dragon.ChangeAnimationWaitForSecond("Ani_State", (int)DRAGON_ANI_STATE.BITE_ATTACK,0.5f);
     }
 
     public override void OnStateExit()
@@ -73,7 +71,6 @@ public class Dragon_AttackState : StateBase
             //Dragon.UseDragonSkill((int)DRAGON_SKILL.BREATH); //0
             //Dragon.UseDragonSkill((int)DRAGON_SKILL.RUSH); //1
             //Dragon.UseDragonSkill((int)DRAGON_SKILL.FALLING_ROCK); //2
-            //Dragon.UseDragonSkill(2);
             //Debug.Log(UseSkill.SkillName);
 
             BiteAtkElapsedTime = 0.0f;

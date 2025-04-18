@@ -56,5 +56,6 @@ public abstract partial class Character
 
     public void AnimationStop() { Animator.StopPlayback(); }
     public bool GetIsAniRunning() { return IsAniRunning; }
+    public void SetIsAniRunning(bool _value) { IsAniRunning = _value; }
     public int GetCurrAnimation() { return CurrAnimation; }
 }

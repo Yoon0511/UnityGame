@@ -8,24 +8,32 @@ public class UnitFrame : MonoBehaviour
     public Image HP_BAR;
     public Image MP_BAR;
     public float UpdateSpeed = 5.0f;
-    public void UpdateHpbar(float currentHp, float maxHp)
+
+    public Text HPTEXT;
+    public Text MPTEXT;
+
+    public void UpdateHpbar(float _currentHp, float _maxHp)
     {
-        if(currentHp <= 0)
+        if(_currentHp <= 0)
         {
             HP_BAR.fillAmount = 0;
             return;
         }
-        StartCoroutine(UpdateBar(HP_BAR,currentHp, maxHp));
+
+        HPTEXT.text = _currentHp.ToString() + "/" + _maxHp.ToString();
+        StartCoroutine(IUpdateBar(HP_BAR, _currentHp, _maxHp));
     }
 
-    public void UpdateMpbar(float currentMp, float maxMp)
+    public void UpdateMpbar(float _currentHp, float _maxHp)
     {
-        if (currentMp <= 0)
+        if (_currentHp <= 0)
         {
             MP_BAR.fillAmount = 0;
             return;
         }
-        StartCoroutine(UpdateBar(MP_BAR, currentMp, maxMp));
+
+        MPTEXT.text = _currentHp.ToString() + "/" + _maxHp.ToString();
+        StartCoroutine(IUpdateBar(MP_BAR, _currentHp, _maxHp));
     }
 
     public void UpdateUnitFrame(float currentHp, float maxHp, float currentMp, float maxMp)
@@ -34,7 +42,7 @@ public class UnitFrame : MonoBehaviour
         UpdateMpbar(currentMp, maxMp);
     }
 
-    IEnumerator UpdateBar(Image bar, float currentValue, float maxValue)
+    IEnumerator IUpdateBar(Image bar, float currentValue, float maxValue)
     {
         float value = currentValue / maxValue;
         float currentFill = bar.fillAmount;

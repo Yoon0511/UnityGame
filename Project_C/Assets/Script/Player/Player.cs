@@ -68,7 +68,7 @@ public partial class Player : Character
 
         if (Input.GetKeyDown(KeyCode.F8)) //HP
         {
-            Statdata.EnhanceStat(STAT_TYPE.HP, -10);
+            Statdata.EnhanceStat(STAT_TYPE.HP, -Random.Range(100,1000));
             UpdateHpbar();
         }
 
@@ -118,15 +118,25 @@ public partial class Player : Character
     {
         CharacterType = (int)CHARACTER_TYPE.PLAYER;
         CharacterName = "Player_1";
+
         for(int i = 0; i < MaxSkillCount; i++)
         {
             CurrentSkill.Add(null);
         }
+
         Fsm_Init();
+        UpdateUnitFrame();
     }
     public override void RayTargetEvent()
     {
         Shared.GameMgr.Hphud.SetTarget(this);
+    }
+
+    public override void EnhanceStat(STAT_TYPE _type, float _num)
+    {
+        base.EnhanceStat(_type, _num);
+
+        UpdateUnitFrame();
     }
 
     //키보드 조작

@@ -36,12 +36,6 @@ public partial class Player
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("attak");
-        //if (other.CompareTag("TAG_MONSTER"))
-        //{
-        //    other.GetComponent<Monster>().Hit(Statdata.GetData(STAT_TYPE.ATK));
-        //}
-
         bool check = Shared.GameMgr.IsCheckCharacterType(other, (int)CHARACTER_TYPE.MONSTER);
 
         //기본공격

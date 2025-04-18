@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8241463736023577698}
   - component: {fileID: 1609950646023320055}
+  - component: {fileID: 4634200373796353147}
   m_Layer: 0
   m_Name: Skill_Rush
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8644080148411291824}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.58, y: 3.65, z: 12.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -44,16 +45,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 918d6c519ce3b8b4594cec656e5d414c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Onwer: {fileID: 8644080148411291824}
+  Owner: {fileID: 0}
   SpriteName: UI_Skill_Icon_Dash
-  CoolTime: 5
+  CoolTime: 7
   SkillName: "\uB3CC\uC9C4"
   Atk: 20
   UseMp: 1
   Explanation: "\uC804\uBC29\uC73C\uB85C \uB3CC\uC9C4\uD55C\uB2E4."
-  SkillMotion: 0
-  SkillUseState: 0
+  SkillMotion: 9
+  CurrentState: 0
   SkillType: 1
+  Instant: 1
   Speed: 15
   Distance: 15
-  HitBox: {fileID: 0}
+  HITBOX: {fileID: 4634200373796353147}
+--- !u!65 &4634200373796353147
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8644080148411291824}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

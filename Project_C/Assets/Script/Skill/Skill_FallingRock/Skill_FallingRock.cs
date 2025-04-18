@@ -5,12 +5,13 @@ using UnityEngine;
 public class Skill_FallingRock : Skill
 {
     public GameObject AtkRangeCircle;
-    public GameObject Rock;
+    public GameObject[] Rock;
     public int RockCount;
     public float ROCKMINSPEED = 3;
     public float ROCKMAXSPEED = 10;
 
     List<AtkRange> ListAtkRangeCircle = new List<AtkRange>();
+
     public override void UseSkill()
     {
         base.UseSkill();
@@ -20,7 +21,6 @@ public class Skill_FallingRock : Skill
             //몬스터가 사용시 카메라 흔들기
             //Shared.MainCamera.Shake(0);
         }
-
 
         for(int i = 0;i < RockCount; i++)
         {
@@ -46,7 +46,8 @@ public class Skill_FallingRock : Skill
             if (ListAtkRangeCircle[i].IsStretchEnd())
             {
                 //돌 생성
-                GameObject rockobj = Instantiate(Rock);
+                int random = Random.Range(0, Rock.Length);
+                GameObject rockobj = Instantiate(Rock[random]);
                 float RockSpeed = Random.Range(ROCKMINSPEED, ROCKMAXSPEED);
                 rockobj.GetComponent<Rock>().Init(ListAtkRangeCircle[i].transform.position, RockSpeed, Atk,Random.Range(4.0f,7.0f));
                 

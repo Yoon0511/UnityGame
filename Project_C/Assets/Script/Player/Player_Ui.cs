@@ -7,6 +7,13 @@ public partial class Player
 {
     [SerializeField]
     UnitFrame UnitFrame;
+
+    void UpdateUnitFrame()
+    {
+        UpdateHpbar();
+        UpdateMpbar();
+    }
+
     void UpdateHpbar()
     {
         UnitFrame.UpdateHpbar(Statdata.GetData(STAT_TYPE.HP), Statdata.GetData(STAT_TYPE.MAXHP));
