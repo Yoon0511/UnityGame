@@ -9,6 +9,7 @@ public abstract partial class Character : MonoBehaviour
     public BuffSystem BuffSystem;
     protected string CharacterName;
     protected int CharacterType = (int)CHARACTER_TYPE.NONE;
+    protected bool IsStun = false;
 
     private void Start()
     {
@@ -39,4 +40,16 @@ public abstract partial class Character : MonoBehaviour
     {
         Statdata.EnhanceStat(_type, _num);
     }
+    public virtual void AddBuff(Buff _buff)
+    {
+        BuffSystem.AddBuff(_buff);
+    }
+
+    public virtual void AddDeBuff(DeBuff _debuff)
+    {
+        BuffSystem.AddBuff(_debuff);
+    }
+
+    public void SetIsStun(bool _stun) { IsStun = _stun; }
+    public bool GetIsStun() { return IsStun; }
 }

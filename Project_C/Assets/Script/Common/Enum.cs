@@ -153,3 +153,11 @@ public enum SKILL_STATE
     END,
     ENUM_END
 }
+
+public enum DEBUFF_TYPE
+{
+    NONE,
+    STUN,
+    BLEED,
+    ENUM_END
+}

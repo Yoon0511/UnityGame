@@ -6,10 +6,9 @@ public class Skill_PowerUp : Skill
 {
     public override void UseSkill()
     {
-        StatBuff statBuff = new StatBuff(STAT_TYPE.ATK,5.0f,5.0f,Shared.GameMgr.PLAYEROBJ,SpriteName);
+        StatBuff statBuff = new StatBuff(STAT_TYPE.ATK,5.0f,5.0f,
+            Owner,SpriteName);
 
-        Shared.GameMgr.PLAYER.BuffSystem.AddBuff(statBuff);
-
-        Shared.GameMgr.BUFFUI.AddBuff(statBuff);
+        Owner.GetComponent<Character>().AddBuff(statBuff);
     }
 }

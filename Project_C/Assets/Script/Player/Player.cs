@@ -68,14 +68,16 @@ public partial class Player : Character
 
         if (Input.GetKeyDown(KeyCode.F8)) //HP
         {
-            Statdata.EnhanceStat(STAT_TYPE.HP, -Random.Range(100,1000));
+            Statdata.EnhanceStat(STAT_TYPE.HP, -100f);
             UpdateHpbar();
         }
 
         if (Input.GetKeyDown(KeyCode.F9)) //MP
         {
-            Statdata.EnhanceStat(STAT_TYPE.MP, -10);
+            Statdata.EnhanceStat(STAT_TYPE.HP, 100f);
+            //Statdata.EnhanceStat(STAT_TYPE.MP, -10);
             UpdateMpbar();
+            UpdateHpbar();
         }
 
         if(Input.GetMouseButtonDown(0))
@@ -85,10 +87,13 @@ public partial class Player : Character
 
         if (Input.GetKeyDown(KeyCode.F10)) //퀘스트 테스트
         {
-            Debug.Log("hunting");
-            HuntingMsg huntingMsg = new HuntingMsg();
-            huntingMsg.SetMsg(10, 10, (int)QUEST_TYPE.HUNTING, 10, 3);
-            QusetProgress(huntingMsg);
+            //Debug.Log("hunting");
+            //HuntingMsg huntingMsg = new HuntingMsg();
+            //huntingMsg.SetMsg(10, 10, (int)QUEST_TYPE.HUNTING, 10, 3);
+            //QusetProgress(huntingMsg);
+
+            DeBuff deBuff = new DeBuff_Stun(0.5f, gameObject, "UI_Skill_Icon_Blackhole");
+            AddDeBuff(deBuff);
         }
     }
 
@@ -137,6 +142,30 @@ public partial class Player : Character
         base.EnhanceStat(_type, _num);
 
         UpdateUnitFrame();
+    }
+
+    public override void AddBuff(Buff buff)
+    {
+        base.AddBuff(buff);
+
+        Shared.GameMgr.BUFFUI.AddBuff(buff);
+        Shared.ParticleMgr.CreateParticle("Buff", SKILL_PARTICLE_POINT.transform, 0.5f);
+    }
+
+    public override void AddDeBuff(DeBuff _debuff)
+    {
+        base.AddDeBuff(_debuff);
+        Shared.GameMgr.BUFFUI.AddBuff(_debuff);
+
+        switch (_debuff.GetDebuffType())
+        {
+            case DEBUFF_TYPE.STUN:
+                {
+                    PlayAnimation("Ani_State", (int)PLAYER_ANI_STATE.IDLE);
+                    Shared.ParticleMgr.CreateParticle("Stun", SKILL_PARTICLE_POINT.transform, _debuff.Duration);
+                    break;
+                }
+        }
     }
 
     //키보드 조작

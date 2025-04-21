@@ -39,7 +39,7 @@ public class BuffUi : MonoBehaviour
         IsRunningCoroutine = true;
         while (true)
         {
-            for (int i = 0; i < BuffKvpList.Count; ++i)
+            for (int i = BuffKvpList.Count - 1; i >= 0; i--)
             {
                 float time = 0.0f;
                 bool IsGetBuff = Player.BuffSystem.GetDicBuff().TryGetValue(BuffKvpList[i].Key, out time);
@@ -50,7 +50,7 @@ public class BuffUi : MonoBehaviour
 
                     if (time <= 0.1f)
                     {
-                        Destroy(BuffKvpList[i].Value);
+                        Destroy(BuffKvpList[i].Value.gameObject);
                         BuffKvpList.Remove(BuffKvpList[i]);
                     }
                 }
@@ -74,9 +74,10 @@ public class BuffUi : MonoBehaviour
             //}
             if (BuffKvpList.Count <= 0)
             {
+                IsRunningCoroutine = false;
                 yield break;
             }
-            yield return null;
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }
