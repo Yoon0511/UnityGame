@@ -13,7 +13,7 @@ public abstract partial class Character
     public int MaxSkillCount = 3;
     [SerializeField]
     protected List<Skill> CurrentSkill = new();
-    Dictionary<Skill, float> DicSkillCoolTime = new();
+    Dictionary<string, float> DicSkillCoolTime = new();
 
     bool IsCoolTimeRunning = false;
     int NoneSkillMotion = 0;
@@ -27,7 +27,7 @@ public abstract partial class Character
     {
         if (_index < MaxSkillCount && CurrentSkill[_index] != null)
         {
-            if (DicSkillCoolTime[CurrentSkill[_index]] <= 0f)
+            if (DicSkillCoolTime[CurrentSkill[_index].SkillName] <= 0f)
             {
                 CurrUseSkillIndex = _index;
                 ChangeState(_state, _skillmotion);
@@ -38,7 +38,7 @@ public abstract partial class Character
                     CurrentUseSkill();
                 }
 
-                DicSkillCoolTime[CurrentSkill[_index]] = CurrentSkill[_index].CoolTime;
+                DicSkillCoolTime[CurrentSkill[_index].SkillName] = CurrentSkill[_index].CoolTime;
                 if (IsCoolTimeRunning == false)
                 {
                     StartCoroutine((ICoolTime()));
@@ -50,7 +50,7 @@ public abstract partial class Character
     {
         if (_index < MaxSkillCount && CurrentSkill[_index] != null)
         {
-            if (DicSkillCoolTime[CurrentSkill[_index]] <= 0f)
+            if (DicSkillCoolTime[CurrentSkill[_index].SkillName] <= 0f)
             {
                 CurrUseSkillIndex = _index;
                 
@@ -61,7 +61,7 @@ public abstract partial class Character
                     CurrentUseSkill();
                 }
 
-                DicSkillCoolTime[CurrentSkill[_index]] = CurrentSkill[_index].CoolTime;
+                DicSkillCoolTime[CurrentSkill[_index].SkillName] = CurrentSkill[_index].CoolTime;
                 if (IsCoolTimeRunning == false)
                 {
                     StartCoroutine((ICoolTime()));
@@ -75,7 +75,7 @@ public abstract partial class Character
     {
         if (_index < MaxSkillCount && CurrentSkill[_index] != null)
         {
-            if (DicSkillCoolTime[CurrentSkill[_index]] <= 0f)
+            if (DicSkillCoolTime[CurrentSkill[_index].SkillName] <= 0f)
             {
                 CurrUseSkillIndex = _index;
 
@@ -86,7 +86,7 @@ public abstract partial class Character
                     CurrentUseSkill();
                 }
 
-                DicSkillCoolTime[CurrentSkill[_index]] = CurrentSkill[_index].CoolTime;
+                DicSkillCoolTime[CurrentSkill[_index].SkillName] = CurrentSkill[_index].CoolTime;
                 if (IsCoolTimeRunning == false)
                 {
                     StartCoroutine((ICoolTime()));
@@ -116,7 +116,7 @@ public abstract partial class Character
     }
     public float GetSkillCoolTime(int _index)
     {
-        return DicSkillCoolTime[CurrentSkill[_index]];
+        return DicSkillCoolTime[CurrentSkill[_index].SkillName];
     }
 
     public float GetCurrentSkillCoolTime(int _index)
@@ -143,26 +143,16 @@ public abstract partial class Character
         if (_index < 0 || _index >= MaxSkillCount || _skill == null)
             return;
         
-        Skill previousSkill = CurrentSkill[_index];
-        
-        if (previousSkill != null && DicSkillCoolTime.ContainsKey(previousSkill))
-        {
-            DicSkillCoolTime.Remove(previousSkill);
-        }
-        
         _skill.SetOwner(gameObject);
         CurrentSkill[_index] = _skill;
         
-        if (!DicSkillCoolTime.ContainsKey(_skill))
+        if (!DicSkillCoolTime.ContainsKey(_skill.SkillName))
         {
-            DicSkillCoolTime.Add(_skill, 0f);
+            DicSkillCoolTime.Add(_skill.SkillName, 0f);
         }
         else
         {
-            foreach (var key in DicSkillCoolTime.Keys)
-            {
-                Debug.Log("Registered skill: " + key);
-            }
+            DicSkillCoolTime[CurrentSkill[_index].SkillName] = 0f;
         }
     }
 
@@ -184,9 +174,9 @@ public abstract partial class Character
                 if (skill == null)
                     continue;
 
-                if (DicSkillCoolTime[skill] > 0f)
+                if (DicSkillCoolTime[skill.SkillName] > 0f)
                 {
-                    DicSkillCoolTime[skill] -= Time.deltaTime;
+                    DicSkillCoolTime[skill.SkillName] -= Time.deltaTime;
                     IsCoolTimeSkill = true;
                 }
             }

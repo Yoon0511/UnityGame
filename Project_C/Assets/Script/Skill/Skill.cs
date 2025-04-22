@@ -36,18 +36,4 @@ public abstract class Skill : MonoBehaviour
 
     public int GetCurrentState() { return CurrentState; }
     public void SetCurrentState(int _state) {  CurrentState = _state; }
-
-    public override bool Equals(object obj)
-    {
-        if(obj is Skill other)
-        {
-            return SkillName == other.SkillName;
-        }
-        return false;
-    }
-
-    public override int GetHashCode()
-    {
-        return SkillName?.GetHashCode() ?? 0;
-    }
 }

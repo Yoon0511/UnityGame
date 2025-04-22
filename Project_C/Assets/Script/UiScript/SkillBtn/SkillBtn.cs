@@ -74,9 +74,9 @@ public class SkillBtn: MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
     public void SkillSwap(SkillBtn _other)
     {
         Debug.Log("swap");
-        Skill temp = _other.GetSkill();
-        _other.InputSkill(GetSkill());
-        InputSkill(temp);
+        Skill temp = GetSkill();
+        InputSkill(_other.GetSkill());
+        _other.InputSkill(temp);
     }
 
     public bool IsSkillNull()
