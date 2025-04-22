@@ -125,19 +125,52 @@ public abstract partial class Character
     }
 
     public Skill GetCurrentSkill() { return CurrentSkill[CurrUseSkillIndex]; }
+    public Skill GetCurrentSkill(int _index) { return CurrentSkill[_index]; }
     public void SetCurrentSkill(int _index, Skill _skill)
     {
-        if (_index < MaxSkillCount)
+        //if (_index < MaxSkillCount)
+        //{
+        //    if (CurrentSkill[_index] != null &&
+        //        DicSkillCoolTime.ContainsKey(CurrentSkill[_index]))
+        //    {
+        //        DicSkillCoolTime.Remove(CurrentSkill[_index]);
+        //    }
+        //    _skill.SetOwner(gameObject);
+        //    CurrentSkill[_index] = _skill;
+        //    DicSkillCoolTime.Add(CurrentSkill[_index], 0f);
+        //}
+
+        if (_index < 0 || _index >= MaxSkillCount || _skill == null)
+            return;
+        
+        Skill previousSkill = CurrentSkill[_index];
+        
+        if (previousSkill != null && DicSkillCoolTime.ContainsKey(previousSkill))
         {
-            if (CurrentSkill[_index] != null &&
-                DicSkillCoolTime.ContainsKey(CurrentSkill[_index]))
-            {
-                DicSkillCoolTime.Remove(CurrentSkill[_index]);
-            }
-            _skill.SetOwner(gameObject);
-            CurrentSkill[_index] = _skill;
-            DicSkillCoolTime.Add(CurrentSkill[_index], 0f);
+            DicSkillCoolTime.Remove(previousSkill);
         }
+        
+        _skill.SetOwner(gameObject);
+        CurrentSkill[_index] = _skill;
+        
+        if (!DicSkillCoolTime.ContainsKey(_skill))
+        {
+            DicSkillCoolTime.Add(_skill, 0f);
+        }
+        else
+        {
+            foreach (var key in DicSkillCoolTime.Keys)
+            {
+                Debug.Log("Registered skill: " + key);
+            }
+        }
+    }
+
+    public void SwapSkill(int _skillindex1, int _skillindex2)
+    {
+        Skill temp = CurrentSkill[_skillindex1];
+        CurrentSkill[_skillindex1] = CurrentSkill[_skillindex2];
+        CurrentSkill[_skillindex2] = temp;
     }
 
     IEnumerator ICoolTime()

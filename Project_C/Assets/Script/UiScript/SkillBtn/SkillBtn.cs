@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class SkillBtn: MonoBehaviour
+public class SkillBtn: MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public int SkillIndex;
     [SerializeField]
@@ -12,25 +14,31 @@ public class SkillBtn: MonoBehaviour
     Text CoolTimeText;
     Color Originalcolor = new Color(255, 255, 255,255);
 
-    Player player;
+    Player Player;
+    Canvas Canvas;
+    public GameObject DragAndDropSkill;
+    GameObject Dragobj;
+    Skill Skill;
     private void Start()
     {
-        player = Shared.GameMgr.PLAYER;
+        Player = Shared.GameMgr.PLAYER;
+        Canvas = Shared.GameMgr.CANVAS;
     }
 
-    public void InputSkill(Skill _Skill)
+    public void InputSkill(Skill _skill)
     {
-        player.SetCurrentSkill(SkillIndex, _Skill);
+        Skill = _skill;
+        Player.SetCurrentSkill(SkillIndex, Skill);
 
-        Image.sprite = Shared.GameMgr.GetSpriteAtlas("Skill_Icons", _Skill.SpriteName);
+        Image.sprite = Shared.GameMgr.GetSpriteAtlas("Skill_Icons", Skill.SpriteName);
         Image.color = Originalcolor;
     }
 
     public void UseSkill()
     {
-        player.UseSkill(SkillIndex);
+        Player.UseSkill(SkillIndex);
 
-        if (player.IsCurrentSkillNull(SkillIndex) == false)
+        if (Player.IsCurrentSkillNull(SkillIndex) == false)
         {
             CoolTimeText.gameObject.SetActive(true);
             Image.color = new Color(0, 0, 0);
@@ -40,11 +48,11 @@ public class SkillBtn: MonoBehaviour
    
     IEnumerator ICoolTime()
     {
-        float Cooltime = player.GetSkillCoolTime(SkillIndex);
-        float SkillCooltime = player.GetCurrentSkillCoolTime(SkillIndex);
+        float Cooltime = Player.GetSkillCoolTime(SkillIndex);
+        float SkillCooltime = Player.GetCurrentSkillCoolTime(SkillIndex);
         while (Cooltime > 0f)
         {
-            Cooltime = player.GetSkillCoolTime(SkillIndex);
+            Cooltime = Player.GetSkillCoolTime(SkillIndex);
 
             float T = (SkillCooltime - Cooltime) / SkillCooltime;
             Image.fillAmount = T;
@@ -62,5 +70,36 @@ public class SkillBtn: MonoBehaviour
             }
             yield return null;
         }
+    }
+    public void SkillSwap(SkillBtn _other)
+    {
+        Debug.Log("swap");
+        Skill temp = _other.GetSkill();
+        _other.InputSkill(GetSkill());
+        InputSkill(temp);
+    }
+
+    public bool IsSkillNull()
+    {
+        return Skill == null;
+    }
+
+    public Skill GetSkill() { return Skill; }
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        Dragobj = Instantiate(DragAndDropSkill);
+        Dragobj.GetComponent<DragAndDropSkill>().Init(Skill,this);
+        Dragobj.transform.SetParent(Canvas.transform);
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        Dragobj.transform.position = eventData.position;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        Dragobj.GetComponent<DragAndDropSkill>().DropSkill();
+        Destroy(Dragobj);
     }
 }

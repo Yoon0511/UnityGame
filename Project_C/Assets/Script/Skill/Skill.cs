@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.UI;
 
 public abstract class Skill : MonoBehaviour
 {
-    public GameObject Owner;
+    public GameObject Owner; //스킬 사용자
     public string SpriteName;
     public float CoolTime;
     public string SkillName;
@@ -15,7 +16,8 @@ public abstract class Skill : MonoBehaviour
     public int SkillMotion;
     public int CurrentState;
     public SKILL_TYPE SkillType;
-    public bool Instant;
+    public bool Instant; //true = 스킬모션 없이 즉시사용
+    public bool IsAtkRange; //공격사거리표시를 사용 여부
 
     public void SetOwner(GameObject _owner)
     {
@@ -34,4 +36,18 @@ public abstract class Skill : MonoBehaviour
 
     public int GetCurrentState() { return CurrentState; }
     public void SetCurrentState(int _state) {  CurrentState = _state; }
+
+    public override bool Equals(object obj)
+    {
+        if(obj is Skill other)
+        {
+            return SkillName == other.SkillName;
+        }
+        return false;
+    }
+
+    public override int GetHashCode()
+    {
+        return SkillName?.GetHashCode() ?? 0;
+    }
 }

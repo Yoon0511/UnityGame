@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class BuffUi : MonoBehaviour
 {
     Player Player;
-    List<Buff> BuffList = new List<Buff>();
     List<KeyValuePair<Buff,Image>> BuffKvpList = new List<KeyValuePair<Buff, Image>>();
     bool IsRunningCoroutine = false;
     public GameObject BUFFICON_PREFAP;

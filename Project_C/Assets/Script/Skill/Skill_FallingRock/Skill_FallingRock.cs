@@ -6,9 +6,11 @@ public class Skill_FallingRock : Skill
 {
     public GameObject AtkRangeCircle;
     public GameObject[] Rock;
-    public int RockCount;
-    public float ROCKMINSPEED = 3;
-    public float ROCKMAXSPEED = 10;
+    public int ROCKCOUNT;
+    public float ROCK_MIN_SPEED = 3;
+    public float ROCK_MAX_SPEED = 10;
+    public float MIN_STUN_DURATION = 0.2f;
+    public float MAX_STUN_DURATION = 0.5f;
 
     List<AtkRange> ListAtkRangeCircle = new List<AtkRange>();
 
@@ -22,7 +24,8 @@ public class Skill_FallingRock : Skill
             //Shared.MainCamera.Shake(0);
         }
 
-        for(int i = 0;i < RockCount; i++)
+        for(int i = 0;i < ROCKCOUNT; i++)
+
         {
             float RandomRange = Random.Range(-15f, 15f);
             Vector3 randpos = new Vector3(RandomRange, 0, RandomRange);
@@ -47,9 +50,11 @@ public class Skill_FallingRock : Skill
             {
                 //µ¹ »ý¼º
                 int random = Random.Range(0, Rock.Length);
+                random = 0;
                 GameObject rockobj = Instantiate(Rock[random]);
-                float RockSpeed = Random.Range(ROCKMINSPEED, ROCKMAXSPEED);
-                rockobj.GetComponent<Rock>().Init(ListAtkRangeCircle[i].transform.position, RockSpeed, Atk,Random.Range(4.0f,7.0f));
+                float RockSpeed = Random.Range(ROCK_MIN_SPEED, ROCK_MAX_SPEED);
+                rockobj.GetComponent<Rock>().Init(ListAtkRangeCircle[i].transform.position, 
+                    RockSpeed, Atk,Random.Range(4.0f,7.0f), Random.Range(MIN_STUN_DURATION, MAX_STUN_DURATION));
                 
                 Destroy(ListAtkRangeCircle[i].gameObject);
                 ListAtkRangeCircle.RemoveAt(i);

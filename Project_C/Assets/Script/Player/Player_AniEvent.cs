@@ -38,7 +38,7 @@ public partial class Player
 
     public void OnSlashParticle()
     {
-        Shared.ParticleMgr.CreateParticle("ChargeSlashRed", SKILL_PARTICLE_POINT.transform, 1.0f, gameObject.transform);
+        Shared.ParticleMgr.CreateParticle("ChargeSlashBlack", SKILL_PARTICLE_POINT.transform, 1.0f, gameObject.transform);
     }
 
     public override void OnAniEnd()

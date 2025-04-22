@@ -7,21 +7,30 @@ using UnityEngine.EventSystems;
 public class DragAndDropSkill : MonoBehaviour
 {
     [SerializeField]
-    Image image;
-    SkillBtn skillBtn;
+    Image Image;
     Skill Skill;
+    SkillBtn SkillBtn;
+    SkillBtn OrgSkillBtn;
     public void Init(Skill _Skill)
     {
         Skill = _Skill;
-        image.sprite = Shared.GameMgr.GetSpriteAtlas("Skill_Icons", _Skill.SpriteName);
+        OrgSkillBtn = null;
+        Image.sprite = Shared.GameMgr.GetSpriteAtlas("Skill_Icons", Skill.SpriteName);
     }
+    public void Init(Skill _Skill, SkillBtn _orgSkillbtn)
+    {
+        Skill = _Skill;
+        OrgSkillBtn = _orgSkillbtn;
+        Image.sprite = Shared.GameMgr.GetSpriteAtlas("Skill_Icons", Skill.SpriteName);
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.CompareTag("TAG_SKILLBTN"))
         {
-            if(skillBtn == null)
+            if(SkillBtn == null)
             {
-                skillBtn = collision.GetComponent<SkillBtn>();
+                SkillBtn = collision.GetComponent<SkillBtn>();
             }
         }
     }
@@ -30,17 +39,27 @@ public class DragAndDropSkill : MonoBehaviour
     {
         if (collision.CompareTag("TAG_SKILLBTN"))
         {
-            if (skillBtn != null)
+            if (SkillBtn != null)
             {
-                skillBtn = null;
+                SkillBtn = null;
             }
         }
     }
 
     public void DropSkill()
     {
-        if (skillBtn == null) return;
+        if (SkillBtn == null) return;
 
-        skillBtn.InputSkill(Skill);
+        //SkillBtn.InputSkill(Skill);
+
+        if (OrgSkillBtn == null) //스킬칸에 스킬이 없을때
+        {
+            SkillBtn.InputSkill(Skill);
+        }
+        else if(SkillBtn.IsSkillNull() == false &&
+            OrgSkillBtn != null) //스킬칸에 다른 스킬이 있을때
+        {
+            SkillBtn.SkillSwap(OrgSkillBtn);
+        }
     }
 }

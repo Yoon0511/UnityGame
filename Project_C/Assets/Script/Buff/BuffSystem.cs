@@ -39,7 +39,6 @@ public class BuffSystem : MonoBehaviour
 
             if (DicBuffs.Count == 0)
             {
-                Debug.Log("End Buff Coroutine");
                 IsRunningCoroutine = false;
                 yield break;
             }

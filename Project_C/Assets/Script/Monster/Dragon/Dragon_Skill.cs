@@ -26,23 +26,27 @@ public partial class Dragon
     }
     public IEnumerator IUseDragonSkill(int _skillindex)
     {
-        if(AttackRange[_skillindex].ACTIVE_CONTROL)
+        if(CurrentSkill[_skillindex].IsAtkRange) //스킬에 공격사거리표시가 있을 경우 실행
         {
-            AttackRange[_skillindex].gameObject.SetActive(true);
-            IsOnAttackRange = true;
-
-            while (true)
+            if (AttackRange[_skillindex].ACTIVE_CONTROL) //공격사거리표시가 끝나야 발동되는 스킬
             {
-                AttackRange[_skillindex].StartSizeUp();
-                if (AttackRange[_skillindex].IsStretchEnd())
+                AttackRange[_skillindex].gameObject.SetActive(true);
+                IsOnAttackRange = true;
+
+                while (true)
                 {
-                    AttackRange[_skillindex].gameObject.SetActive(false);
-                    IsOnAttackRange = false;
-                    break;
+                    AttackRange[_skillindex].StartSizeUp();
+                    if (AttackRange[_skillindex].IsStretchEnd())
+                    {
+                        AttackRange[_skillindex].gameObject.SetActive(false);
+                        IsOnAttackRange = false;
+                        break;
+                    }
+                    yield return null;
                 }
-                yield return null;
             }
         }
+       
         //switch(_skillindex)
         //{
         //    case (int)DRAGON_SKILL.BREATH:

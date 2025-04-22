@@ -2385,6 +2385,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!4 &441688724 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3910126214806695825, guid: e29575146e397bd489a394669864c87e, type: 3}
+  m_PrefabInstance: {fileID: 7377026186205305777}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &452602987
 GameObject:
   m_ObjectHideFlags: 0
@@ -8756,6 +8761,10 @@ PrefabInstance:
       propertyPath: SkillIndex
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 672617489350089282, guid: 8b3238f3f829dd24790954683a6d3ec9, type: 3}
+      propertyPath: DragAndDropSkill
+      value: 
+      objectReference: {fileID: 4869632550273035508, guid: 6028769c6ba39014780abb8919aa94da, type: 3}
     - target: {fileID: 2404619271159499100, guid: 8b3238f3f829dd24790954683a6d3ec9, type: 3}
       propertyPath: m_ShowMaskGraphic
       value: 0
@@ -9553,6 +9562,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205564187e8c77240907924d35e38a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1815160314 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 359275012742068170, guid: efbeb5785a66558408e9dbedfabf9851, type: 3}
+  m_PrefabInstance: {fileID: 5777283975051313075}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8763336081188b41ae5a59bc8e98e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1815160315 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7104721030220443941, guid: efbeb5785a66558408e9dbedfabf9851, type: 3}
+  m_PrefabInstance: {fileID: 5777283975051313075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1853733574
 GameObject:
   m_ObjectHideFlags: 0
@@ -10110,6 +10135,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee13c021d88a8348b4a8dd31247a900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1948607067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1948607068}
+  m_Layer: 0
+  m_Name: Roar_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1948607068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948607067}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1815160315}
+  m_Father: {fileID: 441688724}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1964711932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10381,6 +10438,10 @@ PrefabInstance:
       propertyPath: SkillIndex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 672617489350089282, guid: 8b3238f3f829dd24790954683a6d3ec9, type: 3}
+      propertyPath: DragAndDropSkill
+      value: 
+      objectReference: {fileID: 4869632550273035508, guid: 6028769c6ba39014780abb8919aa94da, type: 3}
     - target: {fileID: 2404619271159499100, guid: 8b3238f3f829dd24790954683a6d3ec9, type: 3}
       propertyPath: m_ShowMaskGraphic
       value: 0
@@ -11290,6 +11351,79 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0abf78407f054fc4ba49e8049415be2a, type: 3}
+--- !u!1001 &5777283975051313075
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1948607068}
+    m_Modifications:
+    - target: {fileID: 359275012742068170, guid: efbeb5785a66558408e9dbedfabf9851, type: 3}
+      propertyPath: Range
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 359275012742068170, guid: efbeb5785a66558408e9dbedfabf9851, type: 3}
+      propertyPath: Instant
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 359275012742068170, guid: efbeb5785a66558408e9dbedfabf9851, type: 3}
+      propertyPath: AtferDelay
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 359275012742068170, guid: efbeb5785a66558408e9dbedfabf9851, type: 3}
+      propertyPath: SkillMotion
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581354268086058009, guid: efbeb5785a66558408e9dbedfabf9851, type: 3}
+      propertyPath: m_Name
+      value: Skill_Roar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104721030220443941, guid: efbeb5785a66558408e9dbedfabf9851, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104721030220443941, guid: efbeb5785a66558408e9dbedfabf9851, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104721030220443941, guid: efbeb5785a66558408e9dbedfabf9851, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104721030220443941, guid: efbeb5785a66558408e9dbedfabf9851, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104721030220443941, guid: efbeb5785a66558408e9dbedfabf9851, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104721030220443941, guid: efbeb5785a66558408e9dbedfabf9851, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104721030220443941, guid: efbeb5785a66558408e9dbedfabf9851, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104721030220443941, guid: efbeb5785a66558408e9dbedfabf9851, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104721030220443941, guid: efbeb5785a66558408e9dbedfabf9851, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104721030220443941, guid: efbeb5785a66558408e9dbedfabf9851, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efbeb5785a66558408e9dbedfabf9851, type: 3}
 --- !u!1001 &7377026186205305777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11304,6 +11438,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 485567446969305355, guid: e29575146e397bd489a394669864c87e, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 672973827694617614, guid: e29575146e397bd489a394669864c87e, type: 3}
+      propertyPath: ROCKCOUNT
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 672973827694617614, guid: e29575146e397bd489a394669864c87e, type: 3}
+      propertyPath: IsAtkRange
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1004174789375224187, guid: e29575146e397bd489a394669864c87e, type: 3}
@@ -11333,6 +11475,10 @@ PrefabInstance:
     - target: {fileID: 2174708344044946963, guid: e29575146e397bd489a394669864c87e, type: 3}
       propertyPath: SkillName
       value: Breath
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174708344044946963, guid: e29575146e397bd489a394669864c87e, type: 3}
+      propertyPath: IsAtkRange
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2174708344044946963, guid: e29575146e397bd489a394669864c87e, type: 3}
       propertyPath: DamageInterval
@@ -11495,9 +11641,21 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8769909830433156635, guid: e29575146e397bd489a394669864c87e, type: 3}
+      propertyPath: MaxSkillCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8769909830433156635, guid: e29575146e397bd489a394669864c87e, type: 3}
       propertyPath: BasicAttackCollider
       value: 
       objectReference: {fileID: 1767960060}
+    - target: {fileID: 8769909830433156635, guid: e29575146e397bd489a394669864c87e, type: 3}
+      propertyPath: SkillList.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8769909830433156635, guid: e29575146e397bd489a394669864c87e, type: 3}
+      propertyPath: SkillList.Array.data[3]
+      value: 
+      objectReference: {fileID: 1815160314}
     - target: {fileID: 8769909830433156635, guid: e29575146e397bd489a394669864c87e, type: 3}
       propertyPath: patrolPoint.Array.data[0]
       value: 
@@ -11518,10 +11676,17 @@ PrefabInstance:
       propertyPath: SkillName
       value: Rush
       objectReference: {fileID: 0}
+    - target: {fileID: 9201172919139831484, guid: e29575146e397bd489a394669864c87e, type: 3}
+      propertyPath: IsAtkRange
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7646306433768596485, guid: e29575146e397bd489a394669864c87e, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3910126214806695825, guid: e29575146e397bd489a394669864c87e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1948607068}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8417154215137542368, guid: e29575146e397bd489a394669864c87e, type: 3}
       insertIndex: -1
@@ -11535,6 +11700,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 58277753}
     m_Modifications:
+    - target: {fileID: 672617489350089282, guid: 8b3238f3f829dd24790954683a6d3ec9, type: 3}
+      propertyPath: DragAndDropSkill
+      value: 
+      objectReference: {fileID: 4869632550273035508, guid: 6028769c6ba39014780abb8919aa94da, type: 3}
     - target: {fileID: 7657863699269248348, guid: 8b3238f3f829dd24790954683a6d3ec9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
