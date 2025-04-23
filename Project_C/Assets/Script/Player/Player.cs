@@ -6,11 +6,6 @@ using UnityEngine.UI;
 
 public partial class Player : Character
 {
-    float walkspeed;
-    float runspeed;
-
-    Monster target;
-
     //아이템, 인벤토리 테스트
     public GameObject item;
     int itemcount = 0;
@@ -92,8 +87,10 @@ public partial class Player : Character
             //huntingMsg.SetMsg(10, 10, (int)QUEST_TYPE.HUNTING, 10, 3);
             //QusetProgress(huntingMsg);
 
-            DeBuff deBuff = new DeBuff_Stun(0.5f, gameObject, "UI_Skill_Icon_Blackhole");
-            AddDeBuff(deBuff);
+            //DeBuff deBuff = new DeBuff_Stun(0.5f, gameObject, "UI_Skill_Icon_Blackhole");
+            DotDamage dot = new DotDamage(0.5f,STAT_TYPE.HP,30f,5f,gameObject, "UI_Skill_Icon_PsycicAttack");
+            
+            AddBuff(dot);
         }
     }
 
@@ -109,6 +106,7 @@ public partial class Player : Character
             if (hitcharacter != null)
             {
                 hitcharacter.RayTargetEvent();
+                SetTargetCharacter(hitcharacter);
             }
 
             //if (hit.transform.gameObject.GetComponent<Character>() != null)
@@ -134,7 +132,7 @@ public partial class Player : Character
     }
     public override void RayTargetEvent()
     {
-        Shared.GameMgr.Hphud.SetTarget(this);
+        //Shared.GameMgr.Hphud.SetTarget(this);
     }
 
     public override void EnhanceStat(STAT_TYPE _type, float _num)
@@ -148,14 +146,14 @@ public partial class Player : Character
     {
         base.AddBuff(buff);
 
-        Shared.GameMgr.BUFFUI.AddBuff(buff);
-        Shared.ParticleMgr.CreateParticle("Buff", SKILL_PARTICLE_POINT.transform, 0.5f);
+        Shared.GameMgr.BUFFUI.AddBuff(buff,this);
+        Shared.ParticleMgr.CreateParticle("Buff", transform, 1.0f);
     }
 
     public override void AddDeBuff(DeBuff _debuff)
     {
         base.AddDeBuff(_debuff);
-        Shared.GameMgr.BUFFUI.AddBuff(_debuff);
+        Shared.GameMgr.BUFFUI.AddBuff(_debuff,this);
 
         switch (_debuff.GetDebuffType())
         {

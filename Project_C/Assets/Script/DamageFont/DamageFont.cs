@@ -64,18 +64,19 @@ public class DamageFont : MonoBehaviour
         Vector3 pos = Camera.main.WorldToScreenPoint(_pos);
 
         GameObject PoolObj = DamageFontPool.Get();
+        PoolObj.transform.SetParent(Canvas.transform,false);
         PoolObj.GetComponent<DamageNumber>().Pool = DamageFontPool;
         PoolObj.GetComponent<DamageNumber>().DamageNumberPool = DamageNumberPool;
         PoolObj.GetComponent<RectTransform>().anchoredPosition = pos;
-        PoolObj.transform.SetParent(Canvas.transform);
         
         for (int i = 0; i < damage.Length; ++i)
         {
             GameObject PoolNumber = DamageNumberPool.Get();
-            PoolObj.GetComponent<DamageNumber>().AddDamageNumber(PoolNumber);
-            PoolNumber.GetComponent<Image>().transform.SetParent(PoolObj.transform);
+            PoolNumber.transform.SetParent(PoolObj.transform,false);
+            PoolNumber.transform.SetAsLastSibling();
             int SpriteIndex = damage[i] - '0';
             PoolNumber.GetComponent<Image>().sprite = DamageImg[SpriteIndex];
+            PoolObj.GetComponent<DamageNumber>().AddDamageNumber(PoolNumber);
         }
     }
 

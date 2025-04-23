@@ -10,14 +10,20 @@ public class BuffUi : MonoBehaviour
     List<KeyValuePair<Buff,Image>> BuffKvpList = new List<KeyValuePair<Buff, Image>>();
     bool IsRunningCoroutine = false;
     public GameObject BUFFICON_PREFAP;
+    Character Target = null;
 
     private void Start()
     {
         Player = Shared.GameMgr.PLAYER;
     }
 
-    public void AddBuff(Buff _buff)
+    public void AddBuff(Buff _buff, Character _Target)
     {
+        if(Target == null)
+        {
+            Target = _Target;
+        }
+
         GameObject obj = Instantiate(BUFFICON_PREFAP);
         obj.transform.SetParent(transform);
         obj.GetComponent<Image>().sprite = Shared.GameMgr.GetSpriteAtlas("Skill_Icons", _buff.BuffIconName);
@@ -41,7 +47,8 @@ public class BuffUi : MonoBehaviour
             for (int i = BuffKvpList.Count - 1; i >= 0; i--)
             {
                 float time = 0.0f;
-                bool IsGetBuff = Player.BuffSystem.GetDicBuff().TryGetValue(BuffKvpList[i].Key, out time);
+                //bool IsGetBuff = Player.BuffSystem.GetDicBuff().TryGetValue(BuffKvpList[i].Key, out time);
+                bool IsGetBuff = Target.BuffSystem.GetDicBuff().TryGetValue(BuffKvpList[i].Key, out time);
 
                 if (IsGetBuff)
                 {
@@ -76,7 +83,36 @@ public class BuffUi : MonoBehaviour
                 IsRunningCoroutine = false;
                 yield break;
             }
-            yield return new WaitForSeconds(0.1f);
+            yield return null;
         }
     }
+
+    public void UiReset()
+    {
+        if(IsRunningCoroutine)
+        {
+            StopCoroutine(IBuffUiCoroutine());
+        }
+        
+        for (int i = BuffKvpList.Count - 1; i >= 0; i--)
+        {
+            Destroy(BuffKvpList[i].Value.gameObject);
+            BuffKvpList.Remove(BuffKvpList[i]);
+        }
+
+        BuffKvpList.Clear();
+    }
+
+    public void SetTarget(Character _target)
+    {
+        UiReset();
+
+        Target = _target;
+        foreach(Buff buff in Target.BuffSystem.GetDicBuff().Keys)
+        {
+            AddBuff(buff, Target);
+        }
+    }
+
+    public int GetTargetBuffCount() { return BuffKvpList.Count; }
 }

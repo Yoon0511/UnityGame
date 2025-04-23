@@ -10,6 +10,7 @@ public abstract partial class Character : MonoBehaviour
     protected string CharacterName;
     protected int CharacterType = (int)CHARACTER_TYPE.NONE;
     protected bool IsStun = false;
+    protected Character TargetCharacter;
 
     private void Start()
     {
@@ -52,4 +53,7 @@ public abstract partial class Character : MonoBehaviour
 
     public void SetIsStun(bool _stun) { IsStun = _stun; }
     public bool GetIsStun() { return IsStun; }
+
+    public void SetTargetCharacter(Character _target) { TargetCharacter = _target; }
+    public Character GetTargetCharacter() { return TargetCharacter; }
 }

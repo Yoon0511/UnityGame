@@ -19,18 +19,19 @@ public class Hphud : MonoBehaviour
     int Count = 0;
     float previousHp = 0.0f;
 
-    Color CurrColor = Color.blue;
-    Color NextColor = Color.blue;
+    Color CurrColor = Color.red;
+    Color NextColor = Color.red;
 
     List<Color> UsedColors = new List<Color>(); // 이전 색상 기록용
 
     Character Target;
     Coroutine testCoroutine;
 
+    [SerializeField]
+    BuffUi BuffUi;
     private void Start()
     {
-        // 테스트용
-        // SetTarget(Shared.GameMgr.PLAYER);
+        ChangeColor();
     }
 
     public void SetTarget(Character _target)
@@ -46,29 +47,52 @@ public class Hphud : MonoBehaviour
 
         NAMETEXT.text = Target.GetCharacterName();
         MaxCount = 10;
-        LINECOUNT.text = "x" + MaxCount.ToString();
-        HPTEXT.text = CurrHp.ToString() + "/" + MaxHp.ToString();
+        HPTEXT.text = CurrHp.ToString("F0") + "/" + MaxHp.ToString("F0");
 
-        DivisionHp = MaxHp / (float)MaxCount;
-        MaxDivisionHp = DivisionHp;
+        MaxDivisionHp = MaxHp / MaxCount;
 
-        Count = 0;
-        UsedColors.Clear();
+        // 현재 체력 상태에 맞게 Count, DivisionHp 계산
+        Count = Mathf.FloorToInt((MaxHp - CurrHp) / MaxDivisionHp);
+        DivisionHp = MaxDivisionHp - ((MaxHp - CurrHp) % MaxDivisionHp);
+        DivisionHp = Mathf.Clamp(DivisionHp, 0, MaxDivisionHp);
 
-        CURRHP.color = CurrColor;
-        NEXTHP.color = NextColor;
+        int leftCount = MaxCount - Count;
+        LINECOUNT.text = "x" + leftCount.ToString();
+
+        // 색상 설정 및 초기화
+        if(DivisionHp == MaxDivisionHp) // 풀피일 경우 색상 초기화
+        {
+            UsedColors.Clear();
+            ChangeColor();
+            for (int i = 0; i < Count; i++)
+            {
+                UsedColors.Add(CurrColor);
+            }
+            CURRHP.color = CurrColor;
+            NEXTHP.color = NextColor;
+        }
+       
+        // 현재 체력에 맞게 설정
+        CURRHP.fillAmount = DivisionHp / MaxDivisionHp;
+
+        // 현재 체력 반영
+        StartCoroutine(IHphud());
 
         if (testCoroutine != null)
             StopCoroutine(testCoroutine);
 
-        testCoroutine = StartCoroutine(ITest());
+        // 현재 타겟이 보유한 버프 정보 갱신
+        BuffUi.SetTarget(Target);
+
+        testCoroutine = StartCoroutine(IUpdateHpHud());
     }
 
-    IEnumerator ITest()
+    IEnumerator IUpdateHpHud()
     {
         while (Target != null)
         {
-            yield return new WaitForSeconds(0.1f);
+            //yield return new WaitForSeconds(0.1f);
+            yield return null;
 
             float currentHp = Target.GetInStatData(STAT_TYPE.HP);
             float diff = currentHp - previousHp;
@@ -153,25 +177,27 @@ public class Hphud : MonoBehaviour
     IEnumerator IHphud()
     {
         float value = DivisionHp / MaxDivisionHp;
-        float currentFill = CURRHP.fillAmount;
-        float time = 0;
+        float time = 0f;
+        float startFill = CURRHP.fillAmount;
 
-        while (time <= 0.5f)
+        while (time <= 1f)
         {
             time += Time.deltaTime * 5.0f;
-            CURRHP.fillAmount = Mathf.Lerp(currentFill, value, time);
+            CURRHP.fillAmount = Mathf.Lerp(startFill, value, time);
             yield return null;
         }
+
+        CURRHP.fillAmount = value;
     }
 
     void ChangeColor()
     {
         CurrColor = NextColor;
         CURRHP.color = CurrColor;
-        CURRHP.fillAmount = 1.0f;
+        //CURRHP.fillAmount = 1.0f;
 
         // 새로운 랜덤 색상
-        NextColor = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+        NextColor = new Color(Random.Range(0.7f, 1f), 0.3f,0.3f);
         NEXTHP.color = NextColor;
     }
 }
