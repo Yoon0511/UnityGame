@@ -19,5 +19,9 @@ public class DeBuff : Buff
         
     }
 
+    public override void UpdateBuff()
+    {
+
+    }
     public DEBUFF_TYPE GetDebuffType() { return DebuffType; }
 }

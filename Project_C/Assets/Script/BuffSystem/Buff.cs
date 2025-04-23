@@ -17,4 +17,5 @@ public abstract class Buff
 
     public abstract void ApplyBuff();
     public abstract void EndBuff();
+    public abstract void UpdateBuff();
 }

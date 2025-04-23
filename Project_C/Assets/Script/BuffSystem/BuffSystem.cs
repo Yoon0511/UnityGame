@@ -48,6 +48,7 @@ public class BuffSystem : MonoBehaviour
     {
         foreach (var buff in DicBuffs.ToList())
         {
+            buff.Key.UpdateBuff();
             DicBuffs[buff.Key] -= Time.deltaTime; // 남은 시간 감소
             if (buff.Value <= 0)
             {

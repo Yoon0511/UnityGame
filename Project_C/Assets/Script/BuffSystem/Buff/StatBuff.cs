@@ -22,4 +22,9 @@ public class StatBuff : Buff
     {
         Target.GetComponent<StatData>().EnhanceStat(StatType, -StatIncrease);
     }
+
+    public override void UpdateBuff()
+    {
+
+    }
 }

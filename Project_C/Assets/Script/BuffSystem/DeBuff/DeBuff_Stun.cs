@@ -17,4 +17,8 @@ public class DeBuff_Stun : DeBuff
     {
         Target.GetComponent<Character>().SetIsStun(false);
     }
+    public override void UpdateBuff()
+    {
+
+    }
 }
