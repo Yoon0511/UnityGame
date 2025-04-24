@@ -46,6 +46,8 @@ public partial class Player
 
             atk = atk + (ComboAtk * ComboIndex * atk);
 
+            IsCritical(ref atk);
+
             other.GetComponent<Character>().Hit(atk);
 
             Shared.ParticleMgr.CreateParticle("DarkHit", SLASH_TRAIL.transform, 0.6f);

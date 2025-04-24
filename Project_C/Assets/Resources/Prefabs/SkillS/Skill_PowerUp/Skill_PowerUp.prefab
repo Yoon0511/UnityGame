@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bfc37caccc9ece49acb2e8c574c2507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Owner: {fileID: 0}
   SpriteName: UI_Skill_Icon_Buff
   CoolTime: 10
   SkillName: "\uAC15\uD654"
@@ -51,5 +52,10 @@ MonoBehaviour:
   UseMp: 5
   Explanation: "\uC77C\uC815\uC2DC\uAC04 \uACF5\uACA9\uB825\uC99D\uAC00"
   SkillMotion: 7
-  SkillUseState: 4
+  CurrentState: 0
   SkillType: 1
+  Instant: 0
+  IsAtkRange: 0
+  StatType: 4
+  Duration: 30
+  StatIncrease: 15

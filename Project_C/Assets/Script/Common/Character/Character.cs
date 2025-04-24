@@ -11,7 +11,8 @@ public abstract partial class Character : MonoBehaviour
     protected int CharacterType = (int)CHARACTER_TYPE.NONE;
     protected bool IsStun = false;
     protected Character TargetCharacter;
-
+    [SerializeField]
+    protected GameObject BodyParticlePoint;
     private void Start()
     {
         Init();
@@ -56,4 +57,6 @@ public abstract partial class Character : MonoBehaviour
 
     public void SetTargetCharacter(Character _target) { TargetCharacter = _target; }
     public Character GetTargetCharacter() { return TargetCharacter; }
+
+    public GameObject GetBodyParticlePointObj() { return BodyParticlePoint; }
 }

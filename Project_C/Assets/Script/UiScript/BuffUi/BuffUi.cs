@@ -108,9 +108,37 @@ public class BuffUi : MonoBehaviour
         UiReset();
 
         Target = _target;
+        // 전체 버프 갱신
         foreach(Buff buff in Target.BuffSystem.GetDicBuff().Keys)
         {
             AddBuff(buff, Target);
+        }
+    }
+
+    public void UpdateBuffUi(Character _target)
+    {
+        Target = _target;
+
+        Dictionary<Buff, float> currentBuffs = Target.BuffSystem.GetDicBuff();
+        List<Buff> uiBuffs = BuffKvpList.Select(kvp => kvp.Key).ToList();
+
+        // 새로 추가된 버프가 있다면 Ui에 추가
+        foreach (Buff buff in currentBuffs.Keys)
+        {
+            if (!uiBuffs.Contains(buff))
+            {
+                AddBuff(buff, Target);
+            }
+        }
+
+        // 이미 없어진 버프가 있다면 UI에서 제거
+        for (int i = BuffKvpList.Count - 1; i >= 0; i--)
+        {
+            if (!currentBuffs.ContainsKey(BuffKvpList[i].Key))
+            {
+                Destroy(BuffKvpList[i].Value.gameObject);
+                BuffKvpList.RemoveAt(i);
+            }
         }
     }
 

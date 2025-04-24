@@ -28,11 +28,13 @@ public abstract partial class Character
         if (_index < MaxSkillCount && CurrentSkill[_index] != null)
         {
             if (DicSkillCoolTime[CurrentSkill[_index].SkillName] <= 0f)
-            {
+            {                
                 CurrUseSkillIndex = _index;
                 ChangeState(_state, _skillmotion);
+                // MP소모
+                Statdata.EnhanceStat(STAT_TYPE.MP, -CurrentSkill[CurrUseSkillIndex].UseMp);
 
-                if(_skillmotion == NoneSkillMotion
+                if (_skillmotion == NoneSkillMotion
                     || _instant == true)
                 {
                     CurrentUseSkill();
@@ -53,6 +55,8 @@ public abstract partial class Character
             if (DicSkillCoolTime[CurrentSkill[_index].SkillName] <= 0f)
             {
                 CurrUseSkillIndex = _index;
+                // MP소모
+                Statdata.EnhanceStat(STAT_TYPE.MP, -CurrentSkill[CurrUseSkillIndex].UseMp);
                 
                 PlayAnimation("Ani_State", _skillmotion);
 
@@ -78,6 +82,8 @@ public abstract partial class Character
             if (DicSkillCoolTime[CurrentSkill[_index].SkillName] <= 0f)
             {
                 CurrUseSkillIndex = _index;
+                // MP소모
+                Statdata.EnhanceStat(STAT_TYPE.MP, -CurrentSkill[CurrUseSkillIndex].UseMp);
 
                 PlayAnimation("Ani_State", _skillmotion);
 
@@ -101,8 +107,8 @@ public abstract partial class Character
     }
     public void CurrentUseSkill()
     {
-        Statdata.EnhanceStat(STAT_TYPE.MP, -CurrentSkill[CurrUseSkillIndex].UseMp);
-
+        //Statdata.EnhanceStat(STAT_TYPE.MP, -CurrentSkill[CurrUseSkillIndex].UseMp);
+        
         CurrentSkill[CurrUseSkillIndex].UseSkill();
     }
     public List<Skill> GetSkillList()

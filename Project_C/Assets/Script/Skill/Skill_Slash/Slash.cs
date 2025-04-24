@@ -20,9 +20,13 @@ public class Slash : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("TAG_MONSTER"))
+        bool check = Shared.GameMgr.IsCheckCharacterType(other, (int)CHARACTER_TYPE.MONSTER);
+        if (check)
         {
-            other.GetComponent<Monster>().Hit(Atk);
+            GameObject hitpoint = Shared.GameMgr.GetMiddleObj(transform.position, other.transform.position);
+            Shared.ParticleMgr.CreateParticle("DarkHit", hitpoint.transform, 0.7f);
+
+            other.GetComponent<Character>().Hit(Atk);
             Destroy(gameObject);
         }
     }

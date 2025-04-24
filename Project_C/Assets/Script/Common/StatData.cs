@@ -14,7 +14,7 @@ public class StatData : MonoBehaviour
     public void TakeDamage(float _damage)
     {
         float damage = _damage - dicstat[STAT_TYPE.DEF];
-        Shared.GameMgr.DAMAGEIMAGETEXT.CreateDamageImage((int)damage, uihead.position);
+        Shared.GameMgr.DAMAGE_FONT.CreateDamageFont((int)damage, uihead.position);
         dicstat[STAT_TYPE.HP] = dicstat[STAT_TYPE.HP] - damage;
     }
 

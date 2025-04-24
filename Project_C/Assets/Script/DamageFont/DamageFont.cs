@@ -57,7 +57,7 @@ public class DamageFont : MonoBehaviour
         Destroy(_obj.gameObject);
     }
 
-    public void CreateDamageImage(int _damage, Vector3 _pos)
+    public void CreateDamageFont(int _damage, Vector3 _pos)
     {
         string damage = _damage.ToString();
 

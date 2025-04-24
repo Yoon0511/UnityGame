@@ -55,6 +55,10 @@ public class Skill_Rush : Skill
         if (IsPlayer || IsMonster)
         {
             other.gameObject.GetComponent<Character>().Hit(Atk);
+            
+            // 충돌한 other와의 중간거리에 충돌이펙트 생성
+            GameObject hitpoint = Shared.GameMgr.GetMiddleObj(transform.position, other.transform.position);
+            Shared.ParticleMgr.CreateParticle("BlueHit", hitpoint.transform, 0.7f);
         }
     }
 }

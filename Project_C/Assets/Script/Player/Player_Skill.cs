@@ -11,5 +11,8 @@ public partial class Player
     {
         UseSkill(_index,(int)STATE.ATTACK, CurrentSkill[_index].SkillMotion, CurrentSkill[_index].Instant);
         //UseSkill(_index,CurrentSkill[_index].SkillMotion);
+
+        //HP,MP정보 갱신
+        UpdateUnitFrame();
     }
 }

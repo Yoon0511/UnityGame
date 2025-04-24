@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Skill_PowerUp : Skill
 {
+    public STAT_TYPE StatType;
+    public float Duration;
+    public float StatIncrease;
     public override void UseSkill()
     {
-        StatBuff statBuff = new StatBuff(STAT_TYPE.ATK,5.0f,5.0f,
+        StatBuff statBuff = new StatBuff(StatType, StatIncrease, Duration,
             Owner,SpriteName);
 
         Owner.GetComponent<Character>().AddBuff(statBuff);

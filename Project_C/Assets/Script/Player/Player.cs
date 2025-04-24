@@ -147,7 +147,7 @@ public partial class Player : Character
         base.AddBuff(buff);
 
         Shared.GameMgr.BUFFUI.AddBuff(buff,this);
-        Shared.ParticleMgr.CreateParticle("Buff", transform, 1.0f);
+        Shared.ParticleMgr.CreateParticle("Buff", transform, 1.5f);
     }
 
     public override void AddDeBuff(DeBuff _debuff)
@@ -160,7 +160,7 @@ public partial class Player : Character
             case DEBUFF_TYPE.STUN:
                 {
                     PlayAnimation("Ani_State", (int)PLAYER_ANI_STATE.IDLE);
-                    Shared.ParticleMgr.CreateParticle("Stun", SKILL_PARTICLE_POINT.transform, _debuff.Duration);
+                    Shared.ParticleMgr.CreateParticle("Stun", BodyParticlePoint.transform, _debuff.Duration);
                     break;
                 }
         }

@@ -7,12 +7,6 @@ public partial class Player
     GameObject HITBOX;
 
     [SerializeField]
-    GameObject SLASH_PARTICLE;
-
-    [SerializeField]
-    GameObject SKILL_PARTICLE_POINT;
-
-    [SerializeField]
     GameObject SLASH_TRAIL;
     public void OnHitBoxActive()
     {
@@ -38,7 +32,7 @@ public partial class Player
 
     public void OnSlashParticle()
     {
-        Shared.ParticleMgr.CreateParticle("ChargeSlashBlack", SKILL_PARTICLE_POINT.transform, 1.0f, gameObject.transform);
+        Shared.ParticleMgr.CreateParticle("ChargeSlashBlack", BodyParticlePoint.transform, 1.0f, gameObject.transform);
     }
 
     public override void OnAniEnd()

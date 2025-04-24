@@ -29,6 +29,8 @@ public class Hphud : MonoBehaviour
 
     [SerializeField]
     BuffUi BuffUi;
+
+    int PrevBuffCount = 0;
     private void Start()
     {
         ChangeColor();
@@ -93,6 +95,9 @@ public class Hphud : MonoBehaviour
         {
             //yield return new WaitForSeconds(0.1f);
             yield return null;
+
+            // 현재 타겟이 가지고 있는 실시간 버프 정보 갱신
+            BuffUi.UpdateBuffUi(Target);
 
             float currentHp = Target.GetInStatData(STAT_TYPE.HP);
             float diff = currentHp - previousHp;
@@ -199,5 +204,10 @@ public class Hphud : MonoBehaviour
         // 새로운 랜덤 색상
         NextColor = new Color(Random.Range(0.7f, 1f), 0.3f,0.3f);
         NEXTHP.color = NextColor;
+    }
+
+    void CheckBuffSystem()
+    {
+
     }
 }

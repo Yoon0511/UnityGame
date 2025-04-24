@@ -10,7 +10,7 @@ public class GameMgr : MonoBehaviour
     public Player PLAYER;
 
     //UI
-    public DamageFont DAMAGEIMAGETEXT;
+    public DamageFont DAMAGE_FONT;
     public Canvas CANVAS;
     public Joystick JOYSTICK;
     public GameObject NPC_DIALOGUEWINDOW;
@@ -75,5 +75,16 @@ public class GameMgr : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public GameObject GetMiddleObj(Vector3 pos1, Vector3 pos2)
+    {
+        Vector3 Middlepos = (pos1 + pos2) / 2f;
+
+        GameObject hitpoint = new GameObject();
+        hitpoint.transform.position = Middlepos;
+        hitpoint.transform.rotation = Quaternion.identity;
+
+        return hitpoint;
     }
 }

@@ -84,6 +84,8 @@ public enum STAT_TYPE
     MAXMP,
     EXP,
     LEVEL,
+    CRITICAL_CANCE,
+    CRITICAL_MULTIPLIER,
     ENUM_END
 }
 
@@ -160,5 +162,14 @@ public enum DEBUFF_TYPE
     NONE,
     STUN,
     BLEED,
+    ENUM_END
+}
+
+public enum DAMAGEFONT_TYPE
+{
+    NONE,
+    NOMAL,
+    CRITICAL,
+    POISON,
     ENUM_END
 }
