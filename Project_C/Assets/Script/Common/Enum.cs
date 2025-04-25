@@ -168,8 +168,8 @@ public enum DEBUFF_TYPE
 public enum DAMAGEFONT_TYPE
 {
     NONE,
-    NOMAL,
     CRITICAL,
-    POISON,
+    GREEN,
+    YELLOW,
     ENUM_END
 }

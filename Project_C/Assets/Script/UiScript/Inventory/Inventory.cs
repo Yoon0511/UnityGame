@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
     public int NUM_MAX_ITEM = 25;
     public GameObject ITEMSLOT;
     public GameObject PARENTGRID;
+    Character Owner;
 
     [SerializeField]
     List<ItemBase> items = new List<ItemBase>();
@@ -57,6 +58,10 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
     {
         if(items.Count < NUM_MAX_ITEM)
         {
+            if (Owner != null)
+            {
+                _item.Owner = Owner;
+            }
             items.Add(_item);
             Refresh();
         }
@@ -77,4 +82,7 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
             slot.OnClickSlot();
         }
     }
+
+    public void SetOwner(Character _owner) { Owner = _owner; }
+    public Character GetOwner() { return Owner; }
 }

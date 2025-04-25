@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class HP_Postion : ItemBase
 {
+    public float HealAmount = 100f;
     public override void ItemUse()
     {
-        Debug.Log("HP_POTION - " + Id);
+        Owner.EnhanceStat(STAT_TYPE.HP, HealAmount);
+        Shared.ParticleMgr.CreateParticle("Healing", Owner.GetBodyParticlePointObj().transform, 1.0f);
     }
 }

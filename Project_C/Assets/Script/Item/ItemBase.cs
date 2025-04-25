@@ -9,6 +9,7 @@ public abstract class ItemBase : MonoBehaviour
     public string ItemName;
     public int Id;
     public string SpriteName;
+    public Character Owner;
 
     public abstract void ItemUse();
 }

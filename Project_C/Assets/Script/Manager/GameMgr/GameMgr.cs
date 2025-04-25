@@ -19,11 +19,15 @@ public class GameMgr : MonoBehaviour
     public BuffUi BUFFUI;
     //UI
 
+    public DamageDataPool DamageDataPool;
+
+
     [NonReorderable]
     Dictionary<string, SpriteAtlas> DicSpriteAtlas = new Dictionary<string, SpriteAtlas>();
     private void Awake()
     {
         Shared.GameMgr = this;
+        DamageDataPool = new DamageDataPool();
     }
 
     public Sprite GetSpriteAtlas(string _Atlas, string _Name)

@@ -3,22 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract partial class Character : MonoBehaviour
+public abstract partial class Character : Object
 {
     public StatData Statdata;
     public BuffSystem BuffSystem;
+    [SerializeField]
     protected string CharacterName;
+    [SerializeField]
     protected int CharacterType = (int)CHARACTER_TYPE.NONE;
     protected bool IsStun = false;
     protected Character TargetCharacter;
     [SerializeField]
     protected GameObject BodyParticlePoint;
+
     private void Start()
     {
         Init();
     }
     public abstract void Init();
-    public abstract void Hit(float _damage);
+    public abstract void Hit(DamageData _damagedata);
     public string GetCharacterName() { return CharacterName; }
     public float GetInStatData(STAT_TYPE _type)
     { 
@@ -57,6 +60,5 @@ public abstract partial class Character : MonoBehaviour
 
     public void SetTargetCharacter(Character _target) { TargetCharacter = _target; }
     public Character GetTargetCharacter() { return TargetCharacter; }
-
     public GameObject GetBodyParticlePointObj() { return BodyParticlePoint; }
 }

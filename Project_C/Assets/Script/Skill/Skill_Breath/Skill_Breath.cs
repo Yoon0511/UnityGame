@@ -40,7 +40,8 @@ public class Skill_Breath : Skill
 
             if (Target != null && IsPointInTriangle(Target.transform.position))
             {
-                Target.Hit(Atk);
+                DamageData damgedata = Shared.GameMgr.DamageDataPool.Get(Atk, DAMAGEFONT_TYPE.YELLOW);
+                Target.Hit(damgedata);
             }
 
             yield return new WaitForSeconds(DamageInterval);

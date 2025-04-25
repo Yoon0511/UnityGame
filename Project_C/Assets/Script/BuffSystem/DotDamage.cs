@@ -31,7 +31,8 @@ public class DotDamage : StatBuff
         if(ElapsedTime >= DotInterval)
         {
             ElapsedTime = 0.0f;
-            DotTarget.Hit(StatIncrease);
+            DamageData damgedata =  Shared.GameMgr.DamageDataPool.Get(StatIncrease,DAMAGEFONT_TYPE.GREEN);
+            DotTarget.Hit(damgedata);
         }
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Pool;
 using ExitGames.Client.Photon;
+using UnityEngine.Rendering.PostProcessing;
+using System;
 
 public class DamageFont : MonoBehaviour
 {
@@ -16,12 +18,33 @@ public class DamageFont : MonoBehaviour
     IObjectPool<GameObject> DamageFontPool;
     IObjectPool<GameObject> DamageNumberPool;
     public int MaxPoolSize = 100;
+
+    Dictionary<DAMAGEFONT_TYPE, Sprite[]> DicDamgeFont = new Dictionary<DAMAGEFONT_TYPE, Sprite[]>();
     private void Start()
     {
-        for (int i =0;i<10;++i)
+        Sprite[] arrSprite = Resources.LoadAll<Sprite>("DamageFont/");
+
+        int index = 0;
+        foreach (DAMAGEFONT_TYPE type in Enum.GetValues(typeof(DAMAGEFONT_TYPE)))
         {
-            DamageImg[i] = Shared.GameMgr.GetSpriteAtlas("Damage", i.ToString());
+            if (type == DAMAGEFONT_TYPE.NONE || type == DAMAGEFONT_TYPE.ENUM_END) continue;
+
+            Sprite[] numberSprites = new Sprite[10];
+            for (int j = 0; j < 10; ++j)
+            {
+                numberSprites[j] = Shared.GameMgr.GetSpriteAtlas("DamageFont", arrSprite[index].name);
+                index++;
+            }
+
+            DicDamgeFont[type] = numberSprites;
         }
+
+
+        //for (int i =0;i<10;++i)
+        //{
+        //    DamageImg[i] = Shared.GameMgr.GetSpriteAtlas("Damage", i.ToString());
+        //}
+
         Canvas = Shared.GameMgr.CANVAS;
 
         //m_Pool = new ObjectPool<ParticleSystem>(CreatePooledItem, OnTakeFromPool,
@@ -57,9 +80,9 @@ public class DamageFont : MonoBehaviour
         Destroy(_obj.gameObject);
     }
 
-    public void CreateDamageFont(int _damage, Vector3 _pos)
+    public void CreateDamageFont(DamageData _damagedata, Vector3 _pos)
     {
-        string damage = _damage.ToString();
+        string strdamage = _damagedata.Damage.ToString();
 
         Vector3 pos = Camera.main.WorldToScreenPoint(_pos);
 
@@ -69,17 +92,25 @@ public class DamageFont : MonoBehaviour
         PoolObj.GetComponent<DamageNumber>().DamageNumberPool = DamageNumberPool;
         PoolObj.GetComponent<RectTransform>().anchoredPosition = pos;
         
-        for (int i = 0; i < damage.Length; ++i)
+        for (int i = 0; i < strdamage.Length; ++i)
         {
             GameObject PoolNumber = DamageNumberPool.Get();
             PoolNumber.transform.SetParent(PoolObj.transform,false);
             PoolNumber.transform.SetAsLastSibling();
-            int SpriteIndex = damage[i] - '0';
-            PoolNumber.GetComponent<Image>().sprite = DamageImg[SpriteIndex];
+            int SpriteIndex = strdamage[i] - '0';
+            //PoolNumber.GetComponent<Image>().sprite = DamageImg[SpriteIndex];
+            PoolNumber.GetComponent<Image>().sprite = GetDamageFontSprite(_damagedata.DamageFont_Type, SpriteIndex);
             PoolObj.GetComponent<DamageNumber>().AddDamageNumber(PoolNumber);
         }
     }
 
+    public Sprite GetDamageFontSprite(DAMAGEFONT_TYPE type, int number)
+    {
+        if (!DicDamgeFont.ContainsKey(type)) return null;
+        if (number < 0 || number >= DicDamgeFont[type].Length) return null;
+
+        return DicDamgeFont[type][number];
+    }
 
     //public void CreateDamageImage(int _damage,Vector3 _pos)
     //{

@@ -9,9 +9,9 @@ public partial class Dragon : Monster
         Fsm.UpdateState();
     }
     
-    public override void Hit(float _damage)
+    public override void Hit(DamageData _damagedata)
     {
-        Statdata.TakeDamage(_damage);
+        Statdata.TakeDamage(_damagedata);
     }
 
     public override void Init()

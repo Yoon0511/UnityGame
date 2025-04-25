@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract partial class Character
 {
-    public void IsCritical(ref float _damage)
+    public void IsCritical(ref DamageData _damagedata)
     {
         float CiritcalCance = GetInStatData(STAT_TYPE.CRITICAL_CANCE);
         float CiritcalMultiplier = GetInStatData(STAT_TYPE.CRITICAL_MULTIPLIER);
@@ -13,7 +13,8 @@ public abstract partial class Character
 
         if(isCritical)
         {
-            _damage *= CiritcalMultiplier;
+            _damagedata.Damage *= CiritcalMultiplier;
+            _damagedata.DamageFont_Type = DAMAGEFONT_TYPE.CRITICAL;
         }
     }
 }

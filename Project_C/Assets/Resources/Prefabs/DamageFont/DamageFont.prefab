@@ -57,7 +57,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
-  m_ChildForceExpandHeight: 0
+  m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
@@ -75,6 +75,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 837b6edea9b4bce4bb7d52819c1af9d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeleteTime: 0.3
+  DeleteTime: 0.5
   Speed: 200
   Dir: {x: 0, y: 1, z: 0}

@@ -7,4 +7,5 @@ public partial class Player
     [SerializeField]
     Inventory inventory;
     public Inventory GetInventory() { return inventory; }
+    void InventoryInit() { inventory.SetOwner(this); }
 }

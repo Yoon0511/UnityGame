@@ -11,10 +11,10 @@ public class StatData : MonoBehaviour
     [SerializeField]
     Transform uihead;
 
-    public void TakeDamage(float _damage)
+    public void TakeDamage(DamageData _damagedata)
     {
-        float damage = _damage - dicstat[STAT_TYPE.DEF];
-        Shared.GameMgr.DAMAGE_FONT.CreateDamageFont((int)damage, uihead.position);
+        float damage = _damagedata.Damage - dicstat[STAT_TYPE.DEF];
+        Shared.GameMgr.DAMAGE_FONT.CreateDamageFont(_damagedata, uihead.position);
         dicstat[STAT_TYPE.HP] = dicstat[STAT_TYPE.HP] - damage;
     }
 

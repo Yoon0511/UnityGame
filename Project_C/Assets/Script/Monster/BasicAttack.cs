@@ -11,7 +11,8 @@ public class BasicAttack : MonoBehaviour
         bool IsPlayer = Shared.GameMgr.IsCheckCharacterType(other, (int)CHARACTER_TYPE.PLAYER);
         if(IsPlayer)
         {
-            other.gameObject.GetComponent<Character>().Hit(monster.GetInStatData(STAT_TYPE.ATK));
+            DamageData damgedata = Shared.GameMgr.DamageDataPool.Get(monster.GetInStatData(STAT_TYPE.ATK), DAMAGEFONT_TYPE.YELLOW);
+            other.gameObject.GetComponent<Character>().Hit(damgedata);
         }
     }
 }

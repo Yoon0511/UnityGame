@@ -129,6 +129,7 @@ public partial class Player : Character
 
         Fsm_Init();
         UpdateUnitFrame();
+        InventoryInit();
     }
     public override void RayTargetEvent()
     {

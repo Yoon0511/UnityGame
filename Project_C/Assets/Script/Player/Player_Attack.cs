@@ -28,9 +28,9 @@ public partial class Player
             IsComboEnable = false;
         }
     }
-    public override void Hit(float _damage)
+    public override void Hit(DamageData _damagedata)
     {
-        Statdata.TakeDamage(_damage);
+        Statdata.TakeDamage(_damagedata);
         UpdateHpbar();
     }
 
@@ -46,12 +46,18 @@ public partial class Player
 
             atk = atk + (ComboAtk * ComboIndex * atk);
 
-            IsCritical(ref atk);
+            //크리티컬 데미지 계산
+            DamageData damgedata = Shared.GameMgr.DamageDataPool.Get(atk, DAMAGEFONT_TYPE.YELLOW);
+            IsCritical(ref damgedata);
+            other.GetComponent<Character>().Hit(damgedata);
 
-            other.GetComponent<Character>().Hit(atk);
-
+            //파티클 생성
             Shared.ParticleMgr.CreateParticle("DarkHit", SLASH_TRAIL.transform, 0.6f);
-            Shared.MainCamera.Shake(0,0f,0.1f,new Vector3(0.0f,2.0f,0.0f),5f,2f,1);
+
+            
+            //other.GetComponent<Character>().Shake(0.1f, 0.1f);
+            //카메라 흔들기
+            //Shared.MainCamera.Shake(0,0f,0.1f,new Vector3(0.0f,2.0f,0.0f),5f,2f,1);
         }
     }
 }

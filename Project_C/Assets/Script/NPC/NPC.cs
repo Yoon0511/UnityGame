@@ -10,12 +10,12 @@ public partial class NPC : Character
 
     public override void Fsm_Init()
     {
-        throw new System.NotImplementedException();
+        
     }
 
-    public override void Hit(float _damage)
+    public override void Hit(DamageData _damagedata)
     {
-        throw new System.NotImplementedException();
+        
     }
     public override void RayTargetEvent()
     {

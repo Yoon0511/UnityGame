@@ -54,6 +54,8 @@ MonoBehaviour:
   ItemName: HP_Postion
   Id: 0
   SpriteName: Free-Fantasy-Items_48
+  Owner: {fileID: 0}
+  HealAmount: 100
 --- !u!222 &5807710692051993180
 CanvasRenderer:
   m_ObjectHideFlags: 0

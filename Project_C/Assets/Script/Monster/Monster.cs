@@ -65,9 +65,10 @@ public partial class Monster : Character
         BuffSystem.AddBuff(buff_4);
     }
 
-    public override void Hit(float _damage)
+    public override void Hit(DamageData _damagedata)
     {
-        Statdata.TakeDamage(_damage);
+        Shake(0.2f, 0.05f);
+        Statdata.TakeDamage(_damagedata);
 
         if(CheckHP())
         {
