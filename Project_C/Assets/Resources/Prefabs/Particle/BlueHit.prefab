@@ -14663,7 +14663,7 @@ ParticleSystemRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_RenderMode: 0
+  m_RenderMode: 4
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -14686,7 +14686,7 @@ ParticleSystemRenderer:
   m_VertexStreams: 00010304
   m_UseCustomTrailVertexStreams: 0
   m_TrailVertexStreams: 00010304
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
@@ -14704,7 +14704,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6823302871133167919}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7b34b0cf688e6e4dafbb1e871ee09e9, type: 3}
+  m_Script: {fileID: 11500000, guid: f3a04764c8858db418a8c3ce5d6e2c74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 0
