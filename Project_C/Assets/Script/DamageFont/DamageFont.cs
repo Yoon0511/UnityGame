@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Pool;
-using ExitGames.Client.Photon;
-using UnityEngine.Rendering.PostProcessing;
 using System;
 
 public class DamageFont : MonoBehaviour
