@@ -7,7 +7,6 @@ public static class Shared
     public static BattleMgr BattleMgr;
 
     //////////////////////////////////////
-    public static PhotonMgr PhotonMgr;
     public static MainCamera MainCamera;
     //////////////////////////////////////
 }
