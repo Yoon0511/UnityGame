@@ -9805,7 +9805,7 @@ GameObject:
   - component: {fileID: 7264847263909231863}
   - component: {fileID: 4642848129145531053}
   - component: {fileID: 3978223574929838918}
-  - component: {fileID: 7569075848250829887}
+  - component: {fileID: 1237344779976249049}
   m_Layer: 0
   m_Name: BlueHit
   m_TagString: Untagged
@@ -14695,7 +14695,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &7569075848250829887
+--- !u!114 &1237344779976249049
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14704,7 +14704,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6823302871133167919}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3a04764c8858db418a8c3ce5d6e2c74, type: 3}
+  m_Script: {fileID: 11500000, guid: b7b34b0cf688e6e4dafbb1e871ee09e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 0
