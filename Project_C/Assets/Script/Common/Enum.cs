@@ -127,6 +127,8 @@ public enum DRAGON_SKILL
     RUSH,
     FALLING_ROCK,
     ROAR,
+    PROJECTILE,
+    FIRESTOME,
     ENUM_END
 }
 

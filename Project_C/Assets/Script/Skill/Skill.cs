@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public abstract class Skill : MonoBehaviour
 {
     public GameObject Owner; //스킬 사용자
+    protected Character OwnerCharacter;
     public string SpriteName;
     public float CoolTime;
     public string SkillName;
@@ -21,6 +22,7 @@ public abstract class Skill : MonoBehaviour
     public void SetOwner(GameObject _owner)
     {
         Owner = _owner;
+        OwnerCharacter = _owner.GetComponent<Character>();
         CurrentState = (int)SKILL_STATE.READY;
     }
     public virtual void UseSkill()

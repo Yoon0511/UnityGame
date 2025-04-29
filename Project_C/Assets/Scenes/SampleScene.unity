@@ -1239,6 +1239,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Statdata: {fileID: 165890082}
   BuffSystem: {fileID: 165890080}
+  CharacterName: 
+  CharacterType: 0
   BodyParticlePoint: {fileID: 0}
   Animator: {fileID: 165890083}
   SkillList: []
@@ -2070,7 +2072,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b99d0967b8163e4e9265ca33a93ed2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PV: {fileID: 362635884}
 --- !u!114 &362635884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2083,16 +2084,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  observableSearch: 2
-  Synchronization: 3
-  OwnershipTransfer: 0
-  ObservedComponents: []
-  viewIdField: 1
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!4 &362635885
 Transform:
   m_ObjectHideFlags: 0
@@ -4045,6 +4036,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Statdata: {fileID: 683796214}
   BuffSystem: {fileID: 683796212}
+  CharacterName: 
+  CharacterType: 0
   BodyParticlePoint: {fileID: 103125310}
   Animator: {fileID: 683796215}
   SkillList: []
@@ -4446,6 +4439,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Statdata: {fileID: 0}
   BuffSystem: {fileID: 0}
+  CharacterName: 
+  CharacterType: 0
   BodyParticlePoint: {fileID: 0}
   Animator: {fileID: 0}
   SkillList: []
@@ -7942,6 +7937,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Statdata: {fileID: 1525673007}
   BuffSystem: {fileID: 1525673009}
+  CharacterName: 
+  CharacterType: 0
   BodyParticlePoint: {fileID: 1128399256}
   Animator: {fileID: 1525673006}
   SkillList: []
@@ -8223,6 +8220,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Statdata: {fileID: 1534029075}
   BuffSystem: {fileID: 1534029076}
+  CharacterName: 
+  CharacterType: 0
   BodyParticlePoint: {fileID: 495547049}
   Animator: {fileID: 0}
   SkillList: []
@@ -10182,6 +10181,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Statdata: {fileID: 1942591416}
   BuffSystem: {fileID: 1942591417}
+  CharacterName: 
+  CharacterType: 0
   BodyParticlePoint: {fileID: 1457719080}
   Animator: {fileID: 1942591415}
   SkillList:
@@ -11650,110 +11651,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dragon
       objectReference: {fileID: 0}
-    - target: {fileID: 485567446969305355, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3534656115129835164, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: DesiredTime
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3693449084650341166, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: DesiredTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5367980185580203209, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: DesiredTime
-      value: 1.2
-      objectReference: {fileID: 0}
     - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
       propertyPath: uihead
       value: 
       objectReference: {fileID: 1461099448}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.size
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[1].Key
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[2].Key
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[3].Key
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[4].Key
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[5].Key
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[6].Key
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[7].Key
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[8].Key
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[9].Key
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[10].Key
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[1].Value
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[2].Value
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[3].Value
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[4].Value
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[5].Value
-      value: 9999
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[6].Value
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[7].Value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[8].Value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[9].Value
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649800646403041479, guid: e29575146e397bd489a394669864c87e, type: 3}
-      propertyPath: dicstat._serializedList.Array.data[10].Value
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5957471196885184906, guid: e29575146e397bd489a394669864c87e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.99

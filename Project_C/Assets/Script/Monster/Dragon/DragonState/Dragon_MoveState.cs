@@ -41,5 +41,6 @@ public class Dragon_MoveState : StateBase
     void SetTarget()
     {
         Dragon.ChangeTarget(Shared.GameMgr.PLAYEROBJ);
+        Dragon.SetTargetCharacter(Shared.GameMgr.PLAYER);
     }
 }
