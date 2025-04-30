@@ -55,17 +55,12 @@ MonoBehaviour:
   CurrentState: 0
   SkillType: 1
   Instant: 0
-  AtkRangeCircle: {fileID: 3009416545490582367, guid: 96f545352e0e7724ab41204e85e58878, type: 3}
+  IsAtkRange: 0
+  AtkRangeCircle: {fileID: 1207430491662756871, guid: faa137a5271ba2047b64635696f01942, type: 3}
   Rock:
-  - {fileID: 2040145519782903273, guid: a24bc478d8edd2b468867285ec56a4af, type: 3}
-  - {fileID: 1213490724044531373, guid: f91d6d036d08fc04b9ff331f04b761e1, type: 3}
-  - {fileID: 6390630857657926224, guid: c0b826e0a673f6f418740d93c5e40048, type: 3}
-  - {fileID: 1231909215900800693, guid: bf0a4dc5b4d252a47b6668f8224e6cf0, type: 3}
-  - {fileID: 2222083280583130480, guid: 44853518217a4924eb60a07159cbb2e9, type: 3}
-  - {fileID: 2110397422985802995, guid: 980cfbcd182398f4aa322dc86375411c, type: 3}
-  - {fileID: 1649971028671782476, guid: 39e53c2960de9de46a3111a027e5c2ff, type: 3}
-  - {fileID: 8471907640526278623, guid: 3cf2004303bbbef4483380feae91d601, type: 3}
-  - {fileID: 3039626291625607476, guid: 935b70ec6d51390469130b20653cc99d, type: 3}
-  RockCount: 5
-  ROCKMINSPEED: 3
-  ROCKMAXSPEED: 10
+  - {fileID: 7659556646641050925, guid: cc7d3969de5576a4c885316f14997da6, type: 3}
+  ROCKCOUNT: 0
+  ROCK_MIN_SPEED: 3
+  ROCK_MAX_SPEED: 10
+  MIN_STUN_DURATION: 0.2
+  MAX_STUN_DURATION: 0.5

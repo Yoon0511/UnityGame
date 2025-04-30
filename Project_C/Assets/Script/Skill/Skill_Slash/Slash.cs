@@ -23,8 +23,9 @@ public class Slash : MonoBehaviour
         bool check = Shared.GameMgr.IsCheckCharacterType(other, (int)CHARACTER_TYPE.MONSTER);
         if (check)
         {
-            GameObject hitpoint = Shared.GameMgr.GetMiddleObj(transform.position, other.transform.position);
-            Shared.ParticleMgr.CreateParticle("DarkHit", hitpoint.transform, 0.7f);
+            Character character = other.GetComponent<Character>();
+            //GameObject hitpoint = Shared.GameMgr.GetMiddleObj(transform.position, other.transform.position);
+            Shared.ParticleMgr.CreateParticle("DarkHit", character.GetBodyParticlePointObj().transform, 0.7f);
 
             DamageData damgedata = Shared.GameMgr.DamageDataPool.Get(Atk, DAMAGEFONT_TYPE.GREEN);
             other.GetComponent<Character>().Hit(damgedata);

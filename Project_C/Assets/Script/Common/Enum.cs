@@ -175,3 +175,12 @@ public enum DAMAGEFONT_TYPE
     YELLOW,
     ENUM_END
 }
+
+public enum ATKRANGE_TYPE
+{
+    NONE,
+    RECT,
+    CIRCLE,
+    CONE,
+    ENUM_END
+}

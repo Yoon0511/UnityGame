@@ -14,7 +14,7 @@ public class Skill_Projectile : Skill
         GameObject obj = Instantiate(ProjectileObj);
         obj.transform.position = OwnerCharacter.GetProjectilePoint().position;
         ProjectileObjBase projectileObjBase = obj.GetComponent<ProjectileObjBase>();
-        projectileObjBase.Init(target);
+        projectileObjBase.Init(Atk,target);
         base.SkillEnd();
     }
 

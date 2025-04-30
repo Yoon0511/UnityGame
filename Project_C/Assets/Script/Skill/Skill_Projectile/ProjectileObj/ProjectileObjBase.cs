@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class ProjectileObjBase : MonoBehaviour
 {
-    public abstract void Init(GameObject _target = null);
+    public abstract void Init(float _atk,GameObject _target = null);
 }

@@ -24,13 +24,13 @@ public class Skill_FallingRock : Skill
             //Shared.MainCamera.Shake(0);
         }
 
+        //공격 범위 생성
         for(int i = 0;i < ROCKCOUNT; i++)
-
         {
             float RandomRange = Random.Range(-15f, 15f);
             Vector3 randpos = new Vector3(RandomRange, 0, RandomRange);
             Vector3 pos = Owner.transform.position + randpos;
-            pos.y = 0.5f;
+            pos.y = 0.6f;
             GameObject AtkCircle = Instantiate(AtkRangeCircle, pos, Quaternion.identity);
             AtkCircle.GetComponent<AtkRange>().SetDesiredTime(Random.Range(3.0f,10.0f));
             ListAtkRangeCircle.Add(AtkCircle.GetComponent<AtkRange>());
@@ -50,7 +50,6 @@ public class Skill_FallingRock : Skill
             {
                 //돌 생성
                 int random = Random.Range(0, Rock.Length);
-                random = 0;
                 GameObject rockobj = Instantiate(Rock[random]);
                 float RockSpeed = Random.Range(ROCK_MIN_SPEED, ROCK_MAX_SPEED);
                 rockobj.GetComponent<Rock>().Init(ListAtkRangeCircle[i].transform.position, 

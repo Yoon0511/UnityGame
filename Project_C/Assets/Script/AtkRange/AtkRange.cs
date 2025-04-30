@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class AtkRange : MonoBehaviour
 {
-    public GameObject DAMAGE_RANGE;
+    Material Material;
     public float DesiredTime = 2f;
     private float StretchProgress = 0f;
     public bool ScaleX;
     public bool ScaleZ;
+    public ATKRANGE_TYPE ATKRANGE_TYPE;
 
     private float StartTime;
 
@@ -17,6 +18,7 @@ public class AtkRange : MonoBehaviour
     private void Start()
     {
         StartTime = Time.time;
+        Material = GetComponent<MeshRenderer>().material;
     }
 
     private void OnEnable()
@@ -26,15 +28,26 @@ public class AtkRange : MonoBehaviour
 
     public void StartSizeUp()
     {
+        if(Material == null)
+        {
+            Material = GetComponent<MeshRenderer>().material;
+            return;
+        }
         float elapsedTime = Time.time - StartTime;
+        //elapsedTime += Time.deltaTime;
         StretchProgress = Mathf.Clamp01(elapsedTime / DesiredTime);
 
         if (StretchProgress < 1.0f)
         {
-            Vector3 scale = DAMAGE_RANGE.transform.localScale;
-            scale.x = ScaleX ? StretchProgress : scale.x;
-            scale.z = ScaleZ ? StretchProgress : scale.z;
-            DAMAGE_RANGE.transform.localScale = scale;
+            if(ATKRANGE_TYPE == ATKRANGE_TYPE.CIRCLE)
+            {
+                StretchProgress *= 0.5f;
+            }
+            Material.SetFloat("_Progress", StretchProgress);
+            //Vector3 scale = DAMAGE_RANGE.transform.localScale;
+            //scale.x = ScaleX ? StretchProgress : scale.x;
+            //scale.z = ScaleZ ? StretchProgress : scale.z;
+            //DAMAGE_RANGE.transform.localScale = scale;
         }
     }
 
@@ -58,18 +71,18 @@ public class AtkRange : MonoBehaviour
     private void OnDisable()
     {
         StretchProgress = 0f;
-        Vector3 scale = DAMAGE_RANGE.transform.localScale;
-        scale.x = ScaleX ? StretchProgress : scale.x;
-        scale.z = ScaleZ ? StretchProgress : scale.z;
-        DAMAGE_RANGE.transform.localScale = scale;
+        //Vector3 scale = DAMAGE_RANGE.transform.localScale;
+        //scale.x = ScaleX ? StretchProgress : scale.x;
+        //scale.z = ScaleZ ? StretchProgress : scale.z;
+        //DAMAGE_RANGE.transform.localScale = scale;
     }
 
     private void OnReset()
     {
         StretchProgress = 0f;
-        Vector3 scale = DAMAGE_RANGE.transform.localScale;
-        scale.x = ScaleX ? StretchProgress : scale.x;
-        scale.z = ScaleZ ? StretchProgress : scale.z;
-        DAMAGE_RANGE.transform.localScale = scale;
+        //Vector3 scale = DAMAGE_RANGE.transform.localScale;
+        //scale.x = ScaleX ? StretchProgress : scale.x;
+        //scale.z = ScaleZ ? StretchProgress : scale.z;
+        //DAMAGE_RANGE.transform.localScale = scale;
     }
 }
