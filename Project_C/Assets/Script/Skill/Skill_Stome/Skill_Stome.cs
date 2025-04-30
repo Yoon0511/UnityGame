@@ -21,7 +21,7 @@ public class Skill_Stome : Skill
 
             obj.transform.position = SpwanPoint.transform.position;
             obj.transform.rotation = Owner.transform.rotation;
-            obj.GetComponent<FireStome>().Init(distx, DistZ);
+            obj.GetComponent<FireStorm>().Init(distx, DistZ);
         }
         base.SkillEnd();
     }

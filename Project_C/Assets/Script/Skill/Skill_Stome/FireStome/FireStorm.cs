@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireStome : MonoBehaviour
+public class FireStorm : MonoBehaviour
 {
     Vector3 startPoint;
     Vector3 controlPoint;
@@ -13,12 +13,17 @@ public class FireStome : MonoBehaviour
     float DistX = 0f;
     float DistZ = 0f;
 
+    private void Start()
+    {
+        Init(8.0f, 15.0f);
+    }
+
     public void Init(float _distx,float _distz)
     {
         DistX = _distx;
         DistZ = _distz;
 
-        startPoint = transform.position;
+        startPoint = transform.localPosition;
 
         endPoint.x = startPoint.x + DistX;
         endPoint.z = startPoint.z + DistZ;
@@ -37,7 +42,7 @@ public class FireStome : MonoBehaviour
         
         Vector3 m1 = Vector3.Slerp(startPoint, controlPoint, progress);
         Vector3 m2 = Vector3.Slerp(controlPoint, endPoint, progress);
-        transform.position = Vector3.Slerp(m1, m2, progress);
+        transform.localPosition = Vector3.Slerp(m1, m2, progress);
         
         if(Vector3.Distance(startPoint, endPoint) <= 1.0f)
         {
