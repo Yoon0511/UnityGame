@@ -18,13 +18,18 @@ public class StatData : MonoBehaviour
         dicstat[STAT_TYPE.HP] = dicstat[STAT_TYPE.HP] - damage;
     }
 
-    public void EnhanceStat(STAT_TYPE _type,float _num)
+    public void EnhanceStat(STAT_TYPE _type,float _value)
     {
-        dicstat[_type] += _num;
+        dicstat[_type] += _value;
     }
 
     public float GetData(STAT_TYPE _type)
     {
         return dicstat[_type];
+    }
+
+    public void SetStat(STAT_TYPE _type,float _value)
+    {
+        dicstat[_type] = _value;
     }
 }

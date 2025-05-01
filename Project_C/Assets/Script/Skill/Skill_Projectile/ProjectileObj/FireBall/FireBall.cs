@@ -14,6 +14,8 @@ public class FireBall : ProjectileObjBase
             return;
         Atk = _atk;
         Dir = (_target.transform.position - transform.position).normalized;
+        Shared.ParticleMgr.CreateParticle("Explosion",transform,0.7f);
+
     }
 
     private void FixedUpdate()

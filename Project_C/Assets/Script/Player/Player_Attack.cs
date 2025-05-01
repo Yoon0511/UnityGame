@@ -30,6 +30,11 @@ public partial class Player
     }
     public override void Hit(DamageData _damagedata)
     {
+        if(IsGuard)
+        {
+            GuardSuccess();
+            return;
+        }
         Statdata.TakeDamage(_damagedata);
         UpdateHpbar();
     }

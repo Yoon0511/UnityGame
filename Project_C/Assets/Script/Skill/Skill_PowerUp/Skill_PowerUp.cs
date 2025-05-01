@@ -12,6 +12,9 @@ public class Skill_PowerUp : Skill
         StatBuff statBuff = new StatBuff(StatType, StatIncrease, Duration,
             Owner,SpriteName);
 
-        Owner.GetComponent<Character>().AddBuff(statBuff);
+        Character character = Owner.GetComponent<Character>();
+
+        Shared.ParticleMgr.CreateParticle("Buff", character.transform, 1.5f);
+        character.AddBuff(statBuff);
     }
 }

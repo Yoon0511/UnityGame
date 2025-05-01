@@ -73,12 +73,11 @@ public class Dragon_AttackState : StateBase
         {
             SkillElapsedTime = 0.0f;
             int RandomSkil = Random.Range((int)DRAGON_SKILL.BREATH, (int)DRAGON_SKILL.ENUM_END);
-            if(i>= 3)
-            {
-                i = 0;
-            }
-            Dragon.UseDragonSkill((int)DRAGON_SKILL.FALLING_ROCK);
-            i++;
+
+            Dragon.transform.LookAt(Dragon.GetTargetCharacter().transform,Vector3.up);
+
+            Dragon.UseDragonSkill(RandomSkil);
+            
             //Dragon.UseDragonSkill(RandomSkil);
         }
 

@@ -37,6 +37,11 @@ public partial class Player : Character
             OnAttack();
         }
 
+        //가드 테스트
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            Guard();
+        }
 
         //테스트
         if (Input.GetKeyDown(KeyCode.F3)) //포션
@@ -147,7 +152,7 @@ public partial class Player : Character
         base.AddBuff(buff);
 
         Shared.GameMgr.BUFFUI.AddBuff(buff,this);
-        Shared.ParticleMgr.CreateParticle("Buff", transform, 1.5f);
+        //Shared.ParticleMgr.CreateParticle("Buff", transform, 1.5f);
     }
 
     public override void AddDeBuff(DeBuff _debuff)

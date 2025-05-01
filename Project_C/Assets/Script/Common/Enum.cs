@@ -22,6 +22,7 @@ public enum PLAYER_ANI_STATE
     SKILL_BUFF,
     SKILL_SPELLCAST,
     SKILL_RUSH,
+    GUARD,
     ENUM_END
 }
 public enum BUFF_TYPE
@@ -31,6 +32,7 @@ public enum BUFF_TYPE
     SPEED,
     ATK,
     DEF,
+    SHIELD,
     ENUM_END
 }
 
@@ -86,6 +88,7 @@ public enum STAT_TYPE
     LEVEL,
     CRITICAL_CANCE,
     CRITICAL_MULTIPLIER,
+    SHIELD,
     ENUM_END
 }
 

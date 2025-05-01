@@ -27,8 +27,9 @@ public class Skill_FallingRock : Skill
         //공격 범위 생성
         for(int i = 0;i < ROCKCOUNT; i++)
         {
-            float RandomRange = Random.Range(-15f, 15f);
-            Vector3 randpos = new Vector3(RandomRange, 0, RandomRange);
+            float RandomX = Random.Range(-15f, 15f);
+            float RandomZ = Random.Range(-15f, 15f);
+            Vector3 randpos = new Vector3(RandomX, 0, RandomZ);
             Vector3 pos = Owner.transform.position + randpos;
             pos.y = 0.6f;
             GameObject AtkCircle = Instantiate(AtkRangeCircle, pos, Quaternion.identity);

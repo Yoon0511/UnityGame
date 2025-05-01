@@ -34,7 +34,7 @@ public partial class Player
     public void JoystickMove(Vector3 _dir, float _dist,bool _isdrag)
     {
         if (CurrState == (int)STATE.ATTACK ||
-            IsStun == true)
+            IsStun == true || IsGuard == true)
         {
             return;
         }

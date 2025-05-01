@@ -42,8 +42,8 @@ public class FireStorm : MonoBehaviour
         //Vector3 m2 = Vector3.Slerp(controlPoint, endPoint, progress);
         //transform.localPosition = Vector3.Slerp(m1, m2, progress);
         transform.localPosition = Vector3.Slerp(startPoint, endPoint, progress);
-        
-        if(Vector3.Distance(startPoint, endPoint) <= 1.0f)
+
+        if (progress >= 1.0f)
         {
             Destroy(gameObject);
         }
