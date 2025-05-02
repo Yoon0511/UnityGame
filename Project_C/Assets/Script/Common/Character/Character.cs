@@ -34,7 +34,7 @@ public abstract partial class Character : Object
 
     public int GetCharacterType() { return CharacterType; }
 
-    public abstract void RayTargetEvent();
+    public abstract void RayTargetEvent(Character _character);
     // RayCast로 선택되었을때 호출
 
     // Character를 상속받는 모든 클래스에 RayTargetEvent 선언
@@ -61,4 +61,9 @@ public abstract partial class Character : Object
     public void SetTargetCharacter(Character _target) { TargetCharacter = _target; }
     public Character GetTargetCharacter() { return TargetCharacter; }
     public GameObject GetBodyParticlePointObj() { return BodyParticlePoint; }
+    
+    public void LookatTarget()
+    {
+        transform.LookAt(GetTargetCharacter().transform, Vector3.up);
+    }
 }

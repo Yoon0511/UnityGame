@@ -11,6 +11,7 @@ public partial class Dragon : Monster
     
     public override void Hit(DamageData _damagedata)
     {
+        Shake(0.2f, 0.05f);
         Statdata.TakeDamage(_damagedata);
     }
 
@@ -37,7 +38,7 @@ public partial class Dragon : Monster
         BuffSystem.AddBuff(buff_3);
         BuffSystem.AddBuff(buff_4);
     }
-    public override void RayTargetEvent()
+    public override void RayTargetEvent(Character _character)
     {
         Shared.GameMgr.Hphud.SetTarget(this);
     }

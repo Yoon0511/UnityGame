@@ -99,7 +99,7 @@ public partial class Monster : Character
         
     }
 
-    public override void RayTargetEvent()
+    public override void RayTargetEvent(Character _character)
     {
         Shared.GameMgr.Hphud.SetTarget(this);
     }

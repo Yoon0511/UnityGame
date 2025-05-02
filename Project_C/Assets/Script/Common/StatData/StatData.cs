@@ -20,7 +20,17 @@ public class StatData : MonoBehaviour
 
     public void EnhanceStat(STAT_TYPE _type,float _value)
     {
+        int type = (int) _type;
         dicstat[_type] += _value;
+        switch (type)
+        {
+            case (int)STAT_TYPE.HP:
+                dicstat[_type] = Mathf.Clamp(dicstat[_type], 0, dicstat[STAT_TYPE.MAXHP]);
+                break;
+            case (int)STAT_TYPE.MP:
+                dicstat[_type] = Mathf.Clamp(dicstat[_type], 0, dicstat[STAT_TYPE.MAXMP]);
+                break;
+        }
     }
 
     public float GetData(STAT_TYPE _type)

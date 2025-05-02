@@ -58,13 +58,13 @@ public class GameMgr : MonoBehaviour
         return JOYSTICK.IsDrag;
     }
 
-    public void OnNPCDialogueWindow(NPC _npc)
+    public void OnNPCDialogueWindow(NPC _npc,Player _player)
     {
         if (NPC_DialogueWindow == null)
             NPC_DialogueWindow = NPC_DIALOGUEWINDOW.GetComponent<NPC_DialogueWindow>();
 
         NPC_DIALOGUEWINDOW.SetActive(true);
-        NPC_DialogueWindow.Init(_npc);
+        NPC_DialogueWindow.Init(_npc,_player);
     }
 
     public bool IsCheckCharacterType(Collider _other,int _type)

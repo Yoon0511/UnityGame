@@ -17,8 +17,10 @@ public class NPC_DialogueWindow : MonoBehaviour
     int MaxTextIndex = 0;
     int EndConverstationIndex = 0;
     NPC CurrentNPC;
-    public void Init(NPC _npc)
+    Player Player;
+    public void Init(NPC _npc,Player _player)
     {
+        Player = _player;
         CurrentNPC = _npc;
         NPC_NAME.text = CurrentNPC.GetCharacterName();
         List_ConverstaionTexts = CurrentNPC.GetConverstationTexts();
@@ -56,7 +58,7 @@ public class NPC_DialogueWindow : MonoBehaviour
 
     public void OnQusetAccecpt()
     {
-        CurrentNPC.QuestAccpect();
+        CurrentNPC.QuestAccpect(Player);
         DialogueEnd();
     }
 
@@ -68,7 +70,6 @@ public class NPC_DialogueWindow : MonoBehaviour
 
     public void DialogueReset()
     {
-        //´ëÈ­Ã¢²¨Áü
         BTN_QUESTACCEPT.SetActive(false);
         BTN_QUESTREFUSAL.SetActive(false);
         BTN_TEXT.text = "NEXT";
@@ -78,6 +79,7 @@ public class NPC_DialogueWindow : MonoBehaviour
         CurrentNPC = null;
     }
 
+    //´ëÈ­Ã¢²¨Áü
     void DialogueEnd()
     {
         DialogueReset();

@@ -86,15 +86,17 @@ public partial class Player : Character
 
         if (Input.GetKeyDown(KeyCode.F10)) //퀘스트 테스트
         {
-            //Debug.Log("hunting");
-            //HuntingMsg huntingMsg = new HuntingMsg();
-            //huntingMsg.SetMsg(10, 10, (int)QUEST_TYPE.HUNTING, 10, 3);
-            //QusetProgress(huntingMsg);
+            Debug.Log("hunting");
+            HuntingMsg huntingMsg = new HuntingMsg();
+            huntingMsg.SetMsg(10, 10, (int)QUEST_TYPE.HUNTING, 10, 3);
+            QusetProgress(huntingMsg);
 
-            //DeBuff deBuff = new DeBuff_Stun(0.5f, gameObject, "UI_Skill_Icon_Blackhole");
-            DotDamage dot = new DotDamage(0.5f,STAT_TYPE.HP,30f,5f,gameObject, "UI_Skill_Icon_PsycicAttack");
+            DeBuff deBuff = new DeBuff_Stun(0.5f, gameObject, "UI_Skill_Icon_Blackhole");
+
+            //도트데미지 테스트
+            //DotDamage dot = new DotDamage(0.5f,STAT_TYPE.HP,30f,5f,gameObject, "UI_Skill_Icon_PsycicAttack");
             
-            AddBuff(dot);
+            //AddBuff(dot);
         }
     }
 
@@ -109,7 +111,7 @@ public partial class Player : Character
 
             if (hitcharacter != null)
             {
-                hitcharacter.RayTargetEvent();
+                hitcharacter.RayTargetEvent(this);
                 SetTargetCharacter(hitcharacter);
             }
 
@@ -134,8 +136,9 @@ public partial class Player : Character
         Fsm_Init();
         UpdateUnitFrame();
         InventoryInit();
+        StartCoroutine(AutomaticRecovery(1.0f));
     }
-    public override void RayTargetEvent()
+    public override void RayTargetEvent(Character _character)
     {
         //Shared.GameMgr.Hphud.SetTarget(this);
     }

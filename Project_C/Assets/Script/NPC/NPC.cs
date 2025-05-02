@@ -17,9 +17,9 @@ public partial class NPC : Character
     {
         
     }
-    public override void RayTargetEvent()
+    public override void RayTargetEvent(Character _character)
     {
-        Shared.GameMgr.OnNPCDialogueWindow(this);
+        Shared.GameMgr.OnNPCDialogueWindow(this,(Player)_character);
         Shared.GameMgr.Hphud.SetTarget(this);
     }
 
@@ -40,7 +40,7 @@ public partial class NPC : Character
 
         //퀘스트 생성 - 변경예정
         Quest = new HuntingQuset();
-        ((HuntingQuset)Quest).Init("HuntingQuest_123", "huntting monster - 5",5,10,10);
+        ((HuntingQuset)Quest).Init("HuntingQuest_123", "huntting monster - ",5,10,10,this);
     }
 
     public List<string> GetConverstationTexts()
@@ -48,10 +48,11 @@ public partial class NPC : Character
         return List_ConverstationTexts;
     }
 
-
-    public void QuestAccpect()
+    public void QuestAccpect(Player _player)
     {
-        Shared.GameMgr.PLAYER.AddQuest(Quest);
+        _player.AddQuest(Quest);
+
+        Quest.SetProgressPlayer(_player);
     }
 
     public void QuestRefusal()

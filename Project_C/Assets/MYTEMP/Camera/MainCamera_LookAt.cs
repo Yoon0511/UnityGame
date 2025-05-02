@@ -50,7 +50,7 @@ public partial class MainCamera : MonoBehaviour
             float mouseY = Input.GetAxis("Mouse Y");
 
             Yaw += mouseX * MouseSensitivity;
-            Yaw = Mathf.Clamp(Yaw, MinYaw, MaxYaw);
+            //Yaw = Mathf.Clamp(Yaw, MinYaw, MaxYaw);
 
             Pitch -= mouseY * MouseSensitivity;
             Pitch = Mathf.Clamp(Pitch, MinPitch, MaxPitch);
@@ -64,8 +64,11 @@ public partial class MainCamera : MonoBehaviour
         
         Quaternion rotation = Quaternion.Euler(Pitch, Yaw, 0);
         Vector3 desiredPosition = Target.position + rotation * Offset;
-        
+
         CAMERAMOVE.transform.localPosition = desiredPosition;
         CAMERAMOVE.transform.LookAt(Target);
+
+        //Quaternion targetRotation = Quaternion.Euler(0, Yaw, 0);
+        //Target.rotation = Quaternion.Slerp(Target.rotation, targetRotation, Time.deltaTime * 30f);
     }
 }

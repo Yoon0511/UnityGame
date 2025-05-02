@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class QuestList : MonoBehaviour
+public class QuestInfo : MonoBehaviour
 {
     public Text QUEST_NAME;
     public Text QUEST_CONTENTS;
@@ -12,18 +12,20 @@ public class QuestList : MonoBehaviour
 
     string QuestNameText = "QuestName";
     string QuestContentsText = "QuestContents";
-    string QuestRewardText = "QuestReward";
+    string QuestRewardText = "QuestReward : ";
 
+    QuestBase Quest;
     public void Init(QuestBase _quest)
     {
-        QUEST_NAME.text = _quest.GetQusetName();
-        QUEST_CONTENTS.text = _quest.GetContents();
-        QUEST_REWARD.text = QuestRewardText + _quest.GetReward().ToString();
+        Quest = _quest;
+        QUEST_NAME.text = Quest.GetQusetName();
+        QUEST_CONTENTS.text = Quest.GetContents();
+        QUEST_REWARD.text = QuestRewardText + Quest.GetReward().ToString();
     }
 
-    public void Refresh(string _contents)
+    public void Refresh()
     {
-        QUEST_CONTENTS.text = _contents;
+        QUEST_CONTENTS.text = Quest.GetContents();
     }
 
     public void QuestReset()

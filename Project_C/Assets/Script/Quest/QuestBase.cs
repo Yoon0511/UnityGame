@@ -8,6 +8,8 @@ public abstract class QuestBase
     protected int       QuestType;
     protected int       Reward;
     protected bool      IsComplete = false;
+    protected NPC       OwnerNPC;
+    protected Player    ProgressPlayer;
 
     public abstract void Accept(); //수락
     public abstract void Refusal(); //거절
@@ -18,14 +20,13 @@ public abstract class QuestBase
     public void SetQusetName(string _qusetname) { QuestName = _qusetname; }
     public string GetQusetName() { return QuestName; }
     public void SetContents(string _contents) { Contents = _contents; }
-    public string GetContents() { return Contents; }
+    public abstract string GetContents();
     public void SetReward(int _reward) { Reward = _reward; }
     public int GetReward() { return Reward; }
     public void SetIsComplete(bool _iscomplete) { IsComplete = _iscomplete; }
     public bool GetIsComplete() {  return IsComplete; }
+    public void SetOwnerNPC(NPC _owner) { OwnerNPC = _owner; }
+    public NPC GetOwnerNPC() { return OwnerNPC; }
+    public void SetProgressPlayer(Player _player) { ProgressPlayer = _player; } 
+    public Player GetProgressPlayer() { return ProgressPlayer; }
 }
-
-//msgbase -         atkmsg  /  converstationMsg / storemsg
-//type           ->  atk,converstion,store 
-//                   target(id)
-//action         ->  atk,take /   start,end       / sell,buy

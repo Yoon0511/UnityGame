@@ -8,7 +8,7 @@ public class HuntingQuset : QuestBase
     public int CurrentGoalCount;
     public int GoalCount;
     public int TargetId;
-    public void Init(string _name,string _contents,int _goalcount,int _targetid,int _reward)
+    public void Init(string _name,string _contents,int _goalcount,int _targetid,int _reward,NPC _owner)
     {
         GoalCount = _goalcount;
         TargetId = _targetid;
@@ -16,6 +16,7 @@ public class HuntingQuset : QuestBase
         SetContents(_contents);
         SetReward(_reward);
         QuestType = (int)QUEST_TYPE.HUNTING;
+
     }
     public override void Progress(QuestMsgBase _questmsg)
     {
@@ -43,7 +44,7 @@ public class HuntingQuset : QuestBase
         
     }
 
-    public override void Complete()
+    public override void Complete() //º¸»ó
     {
         UnityEngine.Debug.Log("HuntingQuest Complete");
         IsComplete = true;
@@ -52,5 +53,11 @@ public class HuntingQuset : QuestBase
     public override void Fail()
     {
 
+    }
+
+    public override string GetContents()
+    {
+        string contents = Contents + CurrentGoalCount.ToString() + "/" + GoalCount.ToString();
+        return contents;
     }
 }

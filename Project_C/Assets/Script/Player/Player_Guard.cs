@@ -21,7 +21,7 @@ public partial class Player
     IEnumerator IGuard()
     {
         yield return new WaitForSeconds(GuardTime);
-        PlayAnimation("Ani_State",(int)PLAYER_ANI_STATE.IDLE);
+        ChangeState((int)PLAYER_ANI_STATE.IDLE);
         IsGuard = false;
     }
 

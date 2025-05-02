@@ -1,33 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Dragon_AttackState : StateBase
 {
     Dragon Dragon;
     float SkillElapsedTime;
-    float SkillDelayTime;
+    float SkillDelayTime;       // 스킬 사용 주기
     float BiteAtkElapsedTime;
-    float BiteAtkDelayTime;
+    float BiteAtkDelayTime;     // 평타 사용 주기
     float SearchElapsedTime;
-    float SearchDelayTime;
+    float SearchDelayTime;      // 탐색하는 동안 멈추는 시간
     bool Searching;
 
-    //test
-    int i = 0;
-    //test
+    float SequenceElapsedTime;
+    float SequenceDelayTime;    //추가 스킬 공격 대기
+
+
+    int CurrSkill = 0;
     public Dragon_AttackState(Dragon _dragon)
     {
         Dragon = _dragon;
     }
     public override void OnStateEnter()
     {
-        SkillDelayTime = 7.0f;
+        SkillDelayTime = 6.0f;
         BiteAtkDelayTime = 1.5f;
         SearchDelayTime = 0.5f;
         BiteAtkElapsedTime = 1.2f;
         SkillElapsedTime = 5.0f;
         Searching = false;
+
+        SequenceDelayTime = 0.7f;
+        SequenceElapsedTime = 0f;
     }
 
     public override void OnStateExit()
@@ -65,6 +71,7 @@ public class Dragon_AttackState : StateBase
         }
 
         SkillElapsedTime += Time.deltaTime;
+        
 
         if (Dragon.GetIsAniRunning() == false &&
                Dragon.GetIsOnAttackRange() == false &&
@@ -74,11 +81,12 @@ public class Dragon_AttackState : StateBase
             SkillElapsedTime = 0.0f;
             int RandomSkil = Random.Range((int)DRAGON_SKILL.BREATH, (int)DRAGON_SKILL.ENUM_END);
 
-            Dragon.transform.LookAt(Dragon.GetTargetCharacter().transform,Vector3.up);
-
-            Dragon.UseDragonSkill(RandomSkil);
-            
-            //Dragon.UseDragonSkill(RandomSkil);
+            // 타겟을 향해 회전
+            Dragon.LookatTarget();
+            //Dragon.UseDragonSkill((int)DRAGON_SKILL.RUSH);
+            CurrSkill = (int)DRAGON_SKILL.ROAR;
+            Debug.Log("Atk");
+            Dragon.UseDragonSkill(CurrSkill);
         }
 
             //if (SkillElapsedTime >= SkillDelayTime)
@@ -113,16 +121,56 @@ public class Dragon_AttackState : StateBase
             //    }
             //}
 
-        if (Dragon.GetCurrentSkill().GetCurrentState() == (int)SKILL_STATE.END)
+        if (Dragon.GetCurrentSkill().GetCurrentState() == (int)SKILL_STATE.END && Dragon.GetIsAniRunning() == false)
         {
             Dragon.GetCurrentSkill().SetCurrentState((int)SKILL_STATE.READY);
-            
-            if(Dragon.IsPlayerInAttackRange() == false)
+
+            // 추가 스킬 공격
+            while(SequenceElapsedTime <= SequenceDelayTime)
             {
-                Searching = true;
-                Dragon.ChangeState((int)DRAGON_STATE.MOVE);
+                SequenceElapsedTime += Time.deltaTime;
+            }
+            if (SequenceElapsedTime >= SequenceDelayTime)
+            {
+                SequenceElapsedTime = 0.0f;
+
+                SequenceAtk(CurrSkill);
+
+                if (Dragon.IsPlayerInAttackRange() == false)
+                {
+                    Searching = true;
+                    Dragon.ChangeState((int)DRAGON_STATE.MOVE);
+                }
             }
         }
+    }
+
+    void SequenceAtk(int _CurrSkill)
+    {
+        switch (_CurrSkill)
+        {
+            case (int)DRAGON_SKILL.ROAR:
+                {
+                    Skill_Roar Roar = Dragon.GetCurrentSkill() as Skill_Roar;
+                    if (Roar != null && Roar.IsHit)
+                    {
+                        //로어 스킬 명중시 70% 확률로 Brath 추가 공격
+                        if(ShouldPerformExtraAttack(0.7f))
+                        {
+                            SkillElapsedTime = 0.0f;
+                            _CurrSkill = (int)DRAGON_SKILL.BREATH;
+                            Dragon.LookatTarget();
+                            Dragon.UseDragonSkill(_CurrSkill);
+                        }
+                    }
+                }
+            break;
+        }
+    }
+
+    bool ShouldPerformExtraAttack(float _probability)
+    {
+        return Random.value < _probability;
     }
 
     void Search()

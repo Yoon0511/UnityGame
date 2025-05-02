@@ -7,9 +7,12 @@ public class Skill_Roar : Skill
     public float Duration;
     public float Range;
     public float AtferDelay;
+    public bool IsHit;
+    
     public override void UseSkill()
     {
         base.UseSkill();
+        IsHit = false;
         StartCoroutine(IRoar());
     }
 
@@ -22,6 +25,7 @@ public class Skill_Roar : Skill
 
         if (dist <= Range)
         {
+            IsHit = true;
             DeBuff Stun = new DeBuff_Stun(Duration, Shared.GameMgr.PLAYEROBJ, "UI_Skill_Icon_Blackhole");
             Shared.GameMgr.PLAYER.AddDeBuff(Stun);
         }

@@ -36,8 +36,8 @@ public class FireBall : ProjectileObjBase
                 character.Hit(damageData);
             }
         }
-
         Shared.ParticleMgr.CreateParticle("RedHit", transform, 0.5f);
         Destroy(gameObject);
+
     }
 }
