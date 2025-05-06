@@ -28,10 +28,16 @@ public class QuestInfo : MonoBehaviour
         QUEST_CONTENTS.text = Quest.GetContents();
     }
 
+    public void Refresh(QuestBase _quest)
+    {
+        QUEST_CONTENTS.text = _quest.GetContents();
+    }
     public void QuestReset()
     {
         QUEST_NAME.text = QuestNameText;
         QUEST_CONTENTS.text = QuestContentsText;
         QUEST_REWARD.text = QuestRewardText;
     }
+
+    public QuestBase GetQuest() { return Quest; }
 }

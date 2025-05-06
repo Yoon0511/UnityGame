@@ -8,8 +8,9 @@ public class HuntingQuset : QuestBase
     public int CurrentGoalCount;
     public int GoalCount;
     public int TargetId;
-    public void Init(string _name,string _contents,int _goalcount,int _targetid,int _reward,NPC _owner)
+    public void Init(int _id,string _name,string _contents,int _goalcount,int _targetid,int _reward,NPC _owner)
     {
+        Id = _id;
         GoalCount = _goalcount;
         TargetId = _targetid;
         SetQusetName(_name);
@@ -26,7 +27,7 @@ public class HuntingQuset : QuestBase
         if(TargetId == _questmsg.GetDicMsgValue("TargetId"))
         {
             CurrentGoalCount++;
-            UnityEngine.Debug.Log(CurrentGoalCount + " - " + GoalCount);
+            //UnityEngine.Debug.Log(CurrentGoalCount + " - " + GoalCount);
             if(CurrentGoalCount == GoalCount) //목표치 달성
             {
                 Complete();

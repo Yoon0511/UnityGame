@@ -10,7 +10,7 @@ public abstract class QuestBase
     protected bool      IsComplete = false;
     protected NPC       OwnerNPC;
     protected Player    ProgressPlayer;
-
+    protected int       Id;
     public abstract void Accept(); //수락
     public abstract void Refusal(); //거절
     public abstract void Complete(); //퀘스트 완료
@@ -29,4 +29,5 @@ public abstract class QuestBase
     public NPC GetOwnerNPC() { return OwnerNPC; }
     public void SetProgressPlayer(Player _player) { ProgressPlayer = _player; } 
     public Player GetProgressPlayer() { return ProgressPlayer; }
+    public int GetId() { return Id; }
 }

@@ -1,27 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public partial class Player
 {
-    //list로 변경
-    QuestBase Quest;
-    //QuestUi
-    public QuestInfo QuestInfo;
-
+    [SerializeField]
     List<QuestBase> ListQuest = new List<QuestBase>();
+
+    public QuestUi QuestUi;
     
     public void AddQuest(QuestBase _quest)
     {
-        Quest = _quest;
-        //ListQuest.Add(_quest);
-
-        QuestInfo.Init(_quest);
+        ListQuest.Add(_quest);
+        QuestUi.AddQuest(_quest);
     }
 
     public void RemoveQuest()
     {
-        Quest = null;
+        
     }
 
     public void RemoveQuest(QuestBase _quest)
@@ -34,23 +31,26 @@ public partial class Player
         ListQuest.Clear();
     }
 
-    public QuestBase GetCurrentQuest() { return Quest; }
     public List<QuestBase> GetQusetList() { return ListQuest; }
 
     public void QusetProgress(QuestMsgBase _questmsg)
     {
-        Quest.Progress(_questmsg);
-        QuestInfo.Refresh();
+        List<QuestBase> ListRemove = new List<QuestBase>();
 
-        if (Quest.GetIsComplete())
+        foreach (QuestBase quest in ListQuest)
         {
-            RemoveQuest();
-            QuestInfo.QuestReset();
+            quest.Progress(_questmsg);
+            if(quest.GetIsComplete())
+            {
+                ListRemove.Add(quest);
+            }
         }
+        
+        QuestUi.Refresh(); //QuestUi 갱신
 
-        //foreach (QuestBase _quest in ListQuest)
-        //{
-        //    _quest.Progress(_questmsg);
-        //}
+        for(int i = 0;i< ListRemove.Count;++i)
+        {
+            RemoveQuest(ListRemove[i]);
+        }
     }
 }
