@@ -12,28 +12,30 @@ public class UnitFrame : MonoBehaviour
     public Text HPTEXT;
     public Text MPTEXT;
 
-    public void UpdateHpbar(float _currentHp, float _maxHp)
+    public void UpdateHpbar(float _currenthp, float _maxhp)
     {
-        if(_currentHp <= 0)
+        if(_currenthp <= 0)
         {
             HP_BAR.fillAmount = 0;
             return;
         }
 
-        HPTEXT.text = _currentHp.ToString() + "/" + _maxHp.ToString();
-        StartCoroutine(IUpdateBar(HP_BAR, _currentHp, _maxHp));
+        int intcurrentHp = (int)_currenthp;
+        HPTEXT.text = intcurrentHp.ToString() + "/" + _maxhp.ToString();
+        StartCoroutine(IUpdateBar(HP_BAR, _currenthp, _maxhp));
     }
 
-    public void UpdateMpbar(float _currentHp, float _maxHp)
+    public void UpdateMpbar(float _currentmp, float _maxmp)
     {
-        if (_currentHp <= 0)
+        if (_currentmp <= 0)
         {
             MP_BAR.fillAmount = 0;
             return;
         }
 
-        MPTEXT.text = _currentHp.ToString() + "/" + _maxHp.ToString();
-        StartCoroutine(IUpdateBar(MP_BAR, _currentHp, _maxHp));
+        int intcurrentMp = (int)_currentmp;
+        MPTEXT.text = _currentmp.ToString() + "/" + _maxmp.ToString();
+        StartCoroutine(IUpdateBar(MP_BAR, _currentmp, _maxmp));
     }
 
     public void UpdateUnitFrame(float currentHp, float maxHp, float currentMp, float maxMp)

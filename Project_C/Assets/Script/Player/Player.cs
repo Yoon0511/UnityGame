@@ -68,15 +68,14 @@ public partial class Player : Character
         if (Input.GetKeyDown(KeyCode.F8)) //HP
         {
             Statdata.EnhanceStat(STAT_TYPE.HP, -100f);
-            UpdateHpbar();
+            UpdateUnitFrame();
         }
 
         if (Input.GetKeyDown(KeyCode.F9)) //MP
         {
-            Statdata.EnhanceStat(STAT_TYPE.HP, 100f);
-            //Statdata.EnhanceStat(STAT_TYPE.MP, -10);
-            UpdateMpbar();
-            UpdateHpbar();
+            //Statdata.EnhanceStat(STAT_TYPE.HP, 100f);
+            Statdata.EnhanceStat(STAT_TYPE.MP, -10f);
+            UpdateUnitFrame();
         }
 
         if(Input.GetMouseButtonDown(0))
