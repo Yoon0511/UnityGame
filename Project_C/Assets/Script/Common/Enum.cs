@@ -187,3 +187,12 @@ public enum ATKRANGE_TYPE
     CONE,
     ENUM_END
 }
+
+public enum QUESTUI_OPNE_TYPE
+{
+    NONE,
+    CANSTART_QUEST,
+    PROGRESS_QUEST,
+    COMPLETE_QUEST,
+    ENUM_END
+}

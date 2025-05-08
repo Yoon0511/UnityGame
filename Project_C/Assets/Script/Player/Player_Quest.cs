@@ -6,14 +6,16 @@ using UnityEngine;
 public partial class Player
 {
     [SerializeField]
-    List<QuestBase> ListQuest = new List<QuestBase>();
+    List<QuestBase> ListProgessQuest = new List<QuestBase>();
+    List<QuestBase> ListCompleteQuest = new List<QuestBase>();
 
-    public QuestUi QuestUi;
+
+    public QuestListUi QUESTLISTUI;
     
     public void AddQuest(QuestBase _quest)
     {
-        ListQuest.Add(_quest);
-        QuestUi.AddQuest(_quest);
+        ListProgessQuest.Add(_quest);
+        QUESTLISTUI.AddQuest(_quest);
     }
 
     public void RemoveQuest()
@@ -23,30 +25,31 @@ public partial class Player
 
     public void RemoveQuest(QuestBase _quest)
     {
-        ListQuest.Remove(_quest);
+        ListProgessQuest.Remove(_quest);
     }
 
     public void RemoveQuestAll()
     {
-        ListQuest.Clear();
+        ListProgessQuest.Clear();
     }
 
-    public List<QuestBase> GetQusetList() { return ListQuest; }
-
+    public List<QuestBase> GetProgressQusetList() { return ListProgessQuest; }
+    public List<QuestBase> GetCompleteQuestList() { return ListCompleteQuest; }
     public void QusetProgress(QuestMsgBase _questmsg)
     {
         List<QuestBase> ListRemove = new List<QuestBase>();
 
-        foreach (QuestBase quest in ListQuest)
+        foreach (QuestBase quest in ListProgessQuest)
         {
             quest.Progress(_questmsg);
             if(quest.GetIsComplete())
             {
+                ListCompleteQuest.Add(quest); //완료된 퀘스트 리스트에 추가
                 ListRemove.Add(quest);
             }
         }
-        
-        QuestUi.Refresh(); //QuestUi 갱신
+
+        QUESTLISTUI.Refresh(); //QuestUi 갱신
 
         for(int i = 0;i< ListRemove.Count;++i)
         {

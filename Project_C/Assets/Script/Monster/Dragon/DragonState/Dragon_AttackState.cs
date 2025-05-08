@@ -85,7 +85,7 @@ public class Dragon_AttackState : StateBase
             Dragon.LookatTarget();
             //Dragon.UseDragonSkill((int)DRAGON_SKILL.RUSH);
             CurrSkill = (int)DRAGON_SKILL.ROAR;
-            Debug.Log("Atk");
+
             Dragon.UseDragonSkill(CurrSkill);
         }
 
@@ -130,6 +130,7 @@ public class Dragon_AttackState : StateBase
             {
                 SequenceElapsedTime += Time.deltaTime;
             }
+
             if (SequenceElapsedTime >= SequenceDelayTime)
             {
                 SequenceElapsedTime = 0.0f;

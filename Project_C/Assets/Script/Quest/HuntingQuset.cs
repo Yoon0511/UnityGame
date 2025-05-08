@@ -17,6 +17,7 @@ public class HuntingQuset : QuestBase
         SetContents(_contents);
         SetReward(_reward);
         QuestType = (int)QUEST_TYPE.HUNTING;
+        OwnerNPC = _owner;
 
     }
     public override void Progress(QuestMsgBase _questmsg)
@@ -58,7 +59,13 @@ public class HuntingQuset : QuestBase
 
     public override string GetContents()
     {
-        string contents = Contents + CurrentGoalCount.ToString() + "/" + GoalCount.ToString();
+        string contents = Contents + " " + CurrentGoalCount.ToString() + "/" + GoalCount.ToString();
         return contents;
+    }
+
+    public override string GetRewardDetail()
+    {
+        string detail = "EXP = " + GetReward().ToString();
+        return detail;
     }
 }

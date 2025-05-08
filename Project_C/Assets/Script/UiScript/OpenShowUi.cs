@@ -9,6 +9,5 @@ public class OpenShowUi : MonoBehaviour
     public void OnOpen()
     {
         OPENUI.SetActive(IsOpen);
-        IsOpen = !IsOpen;
     }
 }

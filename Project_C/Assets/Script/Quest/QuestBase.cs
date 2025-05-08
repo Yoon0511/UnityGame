@@ -30,4 +30,5 @@ public abstract class QuestBase
     public void SetProgressPlayer(Player _player) { ProgressPlayer = _player; } 
     public Player GetProgressPlayer() { return ProgressPlayer; }
     public int GetId() { return Id; }
+    public abstract string GetRewardDetail();
 }
