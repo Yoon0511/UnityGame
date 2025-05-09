@@ -12,15 +12,15 @@ public class QuestInfo : MonoBehaviour
 
     string QuestNameText = "QuestName";
     string QuestContentsText = "QuestContents";
-    string QuestRewardText = "QuestReward : ";
+    string QuestRewardText = "Reward : ";
 
     QuestBase Quest;
     public void Init(QuestBase _quest)
     {
         Quest = _quest;
-        QUEST_NAME.text = Quest.GetQusetName();
+        QUEST_NAME.text = "<color=#FFD700><b>" + Quest.GetQusetName() + "</b></color>";
         QUEST_CONTENTS.text = Quest.GetContents();
-        QUEST_REWARD.text = QuestRewardText + Quest.GetReward().ToString();
+        QUEST_REWARD.text = QuestRewardText + Quest.GetRewardDetail();
     }
 
     public void Refresh()

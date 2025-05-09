@@ -11,7 +11,7 @@ public class EquipmentSlot : ItemSlot
     public override void OnClickSlot() //장비 해제
     {
         Shared.GameMgr.PLAYER.GetInventory().AddItem(quipmentItem);
-        equipmentWindow.Unequip(quipmentItem.equimentType);
+        equipmentWindow.Unequip(quipmentItem.EquimentType);
         UnEquipmentItem();
     }
 

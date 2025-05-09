@@ -20,8 +20,8 @@ public class EquipmentWindow : MonoBehaviour, IPointerClickHandler
 
     public void EquippedItem(EquipmentItem _equipmentItem)
     {
-        player.GetDicEquitmentItem().Add(_equipmentItem.equimentType, _equipmentItem);
-        dicEquitmentSlot[_equipmentItem.equimentType].InputEquipmentItem(_equipmentItem);
+        player.GetDicEquitmentItem().Add(_equipmentItem.EquimentType, _equipmentItem);
+        dicEquitmentSlot[_equipmentItem.EquimentType].InputEquipmentItem(_equipmentItem);
         player.ApplyEquipItem(_equipmentItem);
         infoPlayer.Refresh();
     }

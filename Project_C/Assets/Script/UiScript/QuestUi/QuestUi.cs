@@ -15,7 +15,11 @@ public class QuestUi : MonoBehaviour
 
     bool FirstOpen = true;
     QUESTUI_OPNE_TYPE QUESTUI_OPNE_TYPE;
-
+    ToggleGroup ContentToggleGroup;
+    private void Start()
+    {
+        ContentToggleGroup = CONTENT.GetComponent<ToggleGroup>();
+    }
     public void OnEnable()
     {
         if(FirstOpen)
@@ -60,11 +64,16 @@ public class QuestUi : MonoBehaviour
 
     void CatalogueInit(List<QuestBase> _listquest)
     {
+        if(ContentToggleGroup == null)
+        {
+            ContentToggleGroup = CONTENT.GetComponent<ToggleGroup>();
+        }
+
         foreach (QuestBase Quest in _listquest)
         {
             GameObject CatalogueQuest = Shared.PoolMgr.GetObject("CatalogueQuest");
             CatalogueQuest.transform.SetParent(CONTENT.transform,false);
-            CatalogueQuest.GetComponent<CatalogueQuest>().Init(Quest, QUESTDETAILS);
+            CatalogueQuest.GetComponent<CatalogueQuest>().Init(Quest, QUESTDETAILS, ContentToggleGroup);
             ListContent.Add(CatalogueQuest);
         }
     }

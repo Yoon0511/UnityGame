@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public abstract class ItemSlot : MonoBehaviour
+public abstract class ItemSlot : PoolAble
 {
     protected ItemBase Item;
     public Image Image;

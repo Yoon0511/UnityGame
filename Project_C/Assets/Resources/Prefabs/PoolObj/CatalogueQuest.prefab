@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 3305566012707225528}
   - component: {fileID: 3078899398532491697}
   - component: {fileID: 7271339137571317297}
-  - component: {fileID: 8139964870095883898}
+  - component: {fileID: 7895097759909249585}
   m_Layer: 5
   m_Name: CatalogueQuest
   m_TagString: Untagged
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TEXT: {fileID: 7812946367673501898}
   QUESTDETAILS: {fileID: 0}
---- !u!114 &8139964870095883898
+--- !u!114 &7895097759909249585
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6491452155091294146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -212,7 +212,10 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 3078899398532491697}
-  m_OnClick:
+  toggleTransition: 1
+  graphic: {fileID: 0}
+  m_Group: {fileID: 0}
+  onValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7271339137571317297}
@@ -227,3 +230,4 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  m_IsOn: 0

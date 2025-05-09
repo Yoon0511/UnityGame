@@ -9,15 +9,11 @@ public class QuestDetails : MonoBehaviour
     public Text QUESCONTENT;
     public Text QUESREWARD;
 
-    public GameObject REWARDIMG;
-
     public void Init(QuestBase _quest)
     {
-        QUESTNAME.text  = _quest.GetQusetName();
-        QUESCONTENT.text = _quest.GetContents();
+        QUESTNAME.text  = "<color=#FFD700><b>" + _quest.GetQusetName() + "</b></color>";
+        QUESCONTENT.text = "<color=#FFFFFF>" + _quest.GetContents() + "</color>";
         QUESREWARD.text = _quest.GetRewardDetail();
-
-        REWARDIMG.SetActive(true);
     }
 
     public void OnDisable()
@@ -25,7 +21,5 @@ public class QuestDetails : MonoBehaviour
         QUESTNAME.text = "QUEST_NAME";
         QUESCONTENT.text = "QUEST_CONTENT";
         QUESREWARD.text = "QUEST_REWARD";
-
-        REWARDIMG.SetActive(false);
     }
 }

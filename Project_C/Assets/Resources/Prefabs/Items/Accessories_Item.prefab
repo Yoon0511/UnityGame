@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8694452030798560137}
-  - component: {fileID: 6851662882637961033}
+  - component: {fileID: -7994469555400598412}
   m_Layer: 0
   m_Name: Accessories_Item
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6851662882637961033
+--- !u!114 &-7994469555400598412
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,15 +41,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1488686703838716952}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0e79cdde09026243bbeff046539b41a, type: 3}
+  m_Script: {fileID: 11500000, guid: 66b0a6671ec46b24eafd0b1f15449e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ItemType: 1
   ItemName: Ring
   Id: 0
   SpriteName: Free-Fantasy-Items_42
-  equimentType: 3
-  dic_EquipmentItemStat:
+  Owner: {fileID: 0}
+  EquimentType: 3
+  DicEquipmentItemStat:
     _serializedList:
     - Key: 3
-      Value: 10
+      Value: 5

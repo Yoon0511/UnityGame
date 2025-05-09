@@ -21,25 +21,7 @@ public partial class Monster : Character
         StateUpdate();
     }
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            ChangeState((int)MONSTER_STATE.IDLE);
-        }
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            ChangeState((int)MONSTER_STATE.MOVE);
-        }
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            ChangeState((int)MONSTER_STATE.ATTACK);
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            ChangeState((int)MONSTER_STATE.DIE);
-        }
-    }
+
     public override void Init()
     {
         CharacterName = "Monster";

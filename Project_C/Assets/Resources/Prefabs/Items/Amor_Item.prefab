@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 848690590802991837}
-  - component: {fileID: 1650913060803658287}
+  - component: {fileID: -8377694153036047605}
   m_Layer: 0
   m_Name: Amor_Item
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1650913060803658287
+--- !u!114 &-8377694153036047605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,15 +41,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 865799283538789898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0e79cdde09026243bbeff046539b41a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d52bb909de9ac74897bdb85ebd0e607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ItemType: 1
   ItemName: Amor
   Id: 0
   SpriteName: Free-Fantasy-Items_26
-  equimentType: 2
-  dic_EquipmentItemStat:
+  Owner: {fileID: 0}
+  EquimentType: 2
+  DicEquipmentItemStat:
     _serializedList:
     - Key: 5
-      Value: 5
+      Value: 10

@@ -59,13 +59,17 @@ public class HuntingQuset : QuestBase
 
     public override string GetContents()
     {
-        string contents = Contents + " " + CurrentGoalCount.ToString() + "/" + GoalCount.ToString();
+        string TextGoal = "<color=#CCCCCC><b>" + GoalCount.ToString() + "</b></color>";
+        string TextCrrentGoal = "<color=#FF6B6B><b>" + CurrentGoalCount.ToString() + "</b></color>";
+        string contents = Contents + " " + TextCrrentGoal + "/" + TextGoal;
         return contents;
     }
 
     public override string GetRewardDetail()
     {
-        string detail = "EXP = " + GetReward().ToString();
+        string TextExp = "<color=#ADFF2F><b>" + "EXP" + "</b></color>";
+        string TextReward = "<color=#00FF00>" + GetReward().ToString() + "</color>";
+        string detail = TextExp + " - "+ TextReward;
         return detail;
     }
 }

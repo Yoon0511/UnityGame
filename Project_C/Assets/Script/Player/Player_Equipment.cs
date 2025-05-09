@@ -21,7 +21,7 @@ public partial class Player
         for (int i = 1; i < (int)STAT_TYPE.ENUM_END; ++i)
         {
             float statValue = 0.0f;
-            bool IsInStat = _equipmentItem.dic_EquipmentItemStat.TryGetValue((STAT_TYPE)i, out statValue);
+            bool IsInStat = _equipmentItem.DicEquipmentItemStat.TryGetValue((STAT_TYPE)i, out statValue);
 
             if (IsInStat && UnEquip == false) //장비 스탯 추가
             {

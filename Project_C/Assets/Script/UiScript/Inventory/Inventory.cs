@@ -85,4 +85,5 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
 
     public void SetOwner(Character _owner) { Owner = _owner; }
     public Character GetOwner() { return Owner; }
+    public List<ItemBase> GetItems() { return items; }
 }
