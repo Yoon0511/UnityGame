@@ -22,16 +22,20 @@ public class CatalogueQuest : PoolAble
         QUESTDETAILS = _questdetails;
     }
 
+    // 클릭 시 실행
     public void OnQuestDetails()
     {
+        // 해당 퀘스트의 자세한 정보 표시를 위해 QuestDetails에 Quest를 전달한다.
         QUESTDETAILS.Init(Quest);
         
         if(Toggle.isOn)
         {
+            //클릭 시 노란색으로 변경
             TEXT.text = "<color=#FFD700><b>" + Quest.GetQusetName() + "</b></color>";
         }
         else
         {
+            //클릭 해제 시 하늘색으로 변경
             TEXT.text = "<color=#66D9EF>" + Quest.GetQusetName() + "</color>";
         }
     }

@@ -7,8 +7,8 @@ public abstract class EquipmentItem : ItemBase
     public EQUITMENT_TYPE EquimentType;
     public SerializedDictionary<STAT_TYPE, float> DicEquipmentItemStat;
 
-    protected int EnhanceValue;
-    protected float EnhanceRisingAmount;
+    public int EnhanceValue;
+    public float EnhanceRisingAmount;
     protected float EnhanceProbability = 1.0f;
     public override void ItemUse()
     {
@@ -24,7 +24,7 @@ public abstract class EquipmentItem : ItemBase
     }
 
     public abstract bool Enhance();
-    public abstract string EnhanceInfo();
+    public abstract string GetEnhanceInfo();
 
     public void SetEnhanceValue(int value) { EnhanceValue = value; }
     public int GetEnhanceValue() { return EnhanceValue; }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Character를 상속받는 Player
 public partial class Player : Character
 {
     //아이템, 인벤토리 테스트
@@ -121,13 +122,13 @@ public partial class Player : Character
             //}
         }
     }
-
     public override void Init()
     {
         CharacterType = (int)CHARACTER_TYPE.PLAYER;
         CharacterName = "Player_1";
 
-        for(int i = 0; i < MaxSkillCount; i++)
+
+        for (int i = 0; i < MaxSkillCount; i++)
         {
             CurrentSkill.Add(null);
         }
@@ -137,10 +138,12 @@ public partial class Player : Character
         InventoryInit();
         StartCoroutine(AutomaticRecovery(1.0f));
     }
+
     public override void RayTargetEvent(Character _character)
     {
-        //Shared.GameMgr.Hphud.SetTarget(this);
+        Shared.GameMgr.Hphud.SetTarget(this);
     }
+
 
     public override void EnhanceStat(STAT_TYPE _type, float _num)
     {

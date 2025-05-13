@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class EquipmentEnhancement : MonoBehaviour
 {
     public GameObject CONTENT;
+    public EnhanceView ENHANCEVIEW;
 
     List<GameObject> ListEnhaceEquipItemSlot = new List<GameObject>();
     Player Player;
@@ -42,7 +43,7 @@ public class EquipmentEnhancement : MonoBehaviour
     {
         GameObject EnhanceEquipItemSlot = Shared.PoolMgr.GetObject("EnhanceEquipItemSlot");
         EnhanceEquipItemSlot.transform.SetParent(CONTENT.transform, false);
-        EnhanceEquipItemSlot.GetComponent<EnhanceEquipItemSlot>().Init(_equipitem);
+        EnhanceEquipItemSlot.GetComponent<EnhanceEquipItemSlot>().Init(_equipitem, ENHANCEVIEW);
         ListEnhaceEquipItemSlot.Add(EnhanceEquipItemSlot);
     }
 

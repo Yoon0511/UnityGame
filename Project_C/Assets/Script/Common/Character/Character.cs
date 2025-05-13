@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Player,Monster에 상속되는 Character Class
 public abstract partial class Character : Object
 {
     public StatData Statdata;
@@ -20,8 +21,15 @@ public abstract partial class Character : Object
     {
         Init();
     }
+    //케릭터 생성시 기본 세팅을 위한 Init();
     public abstract void Init();
+    //케릭터 별로 Damage Hit처리를 위한 함수
     public abstract void Hit(DamageData _damagedata);
+    // RayCast로 선택되었을때 호출
+    // Character를 상속받는 모든 클래스에 RayTargetEvent 선언
+    // 상속받는 클래스에서 RayTargetEvent 정의
+    // 각각의 CharacterType에 맞는 행동 구현
+    public abstract void RayTargetEvent(Character _character);
     public string GetCharacterName() { return CharacterName; }
     public float GetInStatData(STAT_TYPE _type)
     { 
@@ -33,13 +41,8 @@ public abstract partial class Character : Object
     }
 
     public int GetCharacterType() { return CharacterType; }
-
-    public abstract void RayTargetEvent(Character _character);
-    // RayCast로 선택되었을때 호출
-
-    // Character를 상속받는 모든 클래스에 RayTargetEvent 선언
-    // 상속받는 클래스에서 RayTargetEvent 정의
-    // 각각의 CharacterType에 맞는 행동 구현
+   
+ 
 
     public virtual void EnhanceStat(STAT_TYPE _type, float _num)
     {

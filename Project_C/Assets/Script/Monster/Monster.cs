@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
+//Character를 상속받는 Monster
 public partial class Monster : Character
 {
     [SerializeField]
@@ -20,18 +21,19 @@ public partial class Monster : Character
     {
         StateUpdate();
     }
-    // Update is called once per frame
 
+    // Monster Init - 몬스터 생성시 기본 세팅값 설정
     public override void Init()
     {
         CharacterName = "Monster";
         CharacterType = (int)CHARACTER_TYPE.MONSTER;
         player = Shared.GameMgr.PLAYEROBJ;
         Fsm_Init();
-
-        //test//
-        //Test();
-        //test//
+    }
+    // Monster 클릭 시 실행되는 함수
+    public override void RayTargetEvent(Character _character)
+    {
+        Shared.GameMgr.Hphud.SetTarget(this);
     }
 
     void Test()
@@ -47,17 +49,19 @@ public partial class Monster : Character
         BuffSystem.AddBuff(buff_4);
     }
 
+    // Monster가 Damage를 받을 시 실행되는 함수
     public override void Hit(DamageData _damagedata)
     {
         Shake(0.2f, 0.05f);
         Statdata.TakeDamage(_damagedata);
 
-        if(CheckHP())
+        if (CheckHP())
         {
             DropItem();
             Destroy(gameObject);
         }
     }
+
 
     bool CheckHP() 
     {
@@ -81,8 +85,5 @@ public partial class Monster : Character
         
     }
 
-    public override void RayTargetEvent(Character _character)
-    {
-        Shared.GameMgr.Hphud.SetTarget(this);
-    }
+    
 }

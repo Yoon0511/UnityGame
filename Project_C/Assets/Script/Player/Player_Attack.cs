@@ -28,9 +28,10 @@ public partial class Player
             IsComboEnable = false;
         }
     }
+
     public override void Hit(DamageData _damagedata)
     {
-        if(IsGuard)
+        if (IsGuard)
         {
             GuardSuccess();
             return;

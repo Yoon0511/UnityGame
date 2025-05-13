@@ -41,6 +41,5 @@ public abstract class ItemSlot : PoolAble
     {
         Image.color = new Color(Image.color.r, Image.color.g, Image.color.b, _value);
     }
-
     public abstract void OnClickSlot();
 }

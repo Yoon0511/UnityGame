@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class Accessories : EquipmentItem
 {
-    private void Start()
-    {
-        EnhanceValue = 0;
-        EnhanceRisingAmount = 0.5f;
-    }
-    public override string EnhanceInfo()
+    public override string GetEnhanceInfo()
     {
         string Stat = "<color=#CCCCCC>" + DicEquipmentItemStat[STAT_TYPE.SPEED].ToString("F0") + "</color>";
         string Plus = "<color=#FFA500><b>  =>  </b></color>";
@@ -21,6 +16,7 @@ public class Accessories : EquipmentItem
     {
         if (TryEnhance())
         {
+            Debug.Log(EnhanceValue.ToString() + ItemName + "Success");
             EnhanceValue++;
             EnhanceProbability -= 0.05f;
             DicEquipmentItemStat[STAT_TYPE.SPEED] += EnhanceRisingAmount;
@@ -29,6 +25,7 @@ public class Accessories : EquipmentItem
         }
         else
         {
+            Debug.Log(ItemName + "fail");
             return false;
         }
     }

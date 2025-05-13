@@ -8,15 +8,18 @@ public class EnhanceEquipItemSlot : ItemSlot
     public Text EnhanceValue;
     public Text ItemName;
     EquipmentItem EquipmentItem;
-    public void Init(EquipmentItem _equipmentItem)
+    EnhanceView EnhanceView;
+    public void Init(EquipmentItem _equipmentItem,EnhanceView _enhanceView)
     {
         EquipmentItem = _equipmentItem;
         InputItem(EquipmentItem);
         EnhanceValue.text = "+" + EquipmentItem.GetEnhanceValue().ToString();
         ItemName.text = EquipmentItem.ItemName;
+
+        EnhanceView = _enhanceView;
     }
     public override void OnClickSlot()
     {
-        Debug.Log(EquipmentItem.ItemName);
+        EnhanceView.Init(EquipmentItem);
     }
 }

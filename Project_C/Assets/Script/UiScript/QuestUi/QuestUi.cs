@@ -20,15 +20,15 @@ public class QuestUi : MonoBehaviour
     {
         ContentToggleGroup = CONTENT.GetComponent<ToggleGroup>();
     }
-    public void OnEnable()
+    public void OnEnable() // 퀘스트 UI Open시 실행
     {
-        if(FirstOpen)
+        if(FirstOpen) //처음 실행시
         {
             FirstOpen = false;
-            OnCanStartQuest();
+            OnCanStartQuest(); //시작가능 퀘스트 표시
         }
 
-        switch(QUESTUI_OPNE_TYPE)
+        switch(QUESTUI_OPNE_TYPE) // 마지막에 열고 있던 퀘스트 카테고리를 보여줌
         {
             case QUESTUI_OPNE_TYPE.CANSTART_QUEST:
                 OnCanStartQuest();
@@ -41,23 +41,26 @@ public class QuestUi : MonoBehaviour
                 break;
         }
     }
-    public void OnCanStartQuest()
+    public void OnCanStartQuest() // 시작가능 퀘스트
     {
         ContentReset();
+        // 시작가능한 퀘스트 list를 가져온다.
         CatalogueInit(CreateStartQuest());
         QUESTUI_OPNE_TYPE = QUESTUI_OPNE_TYPE.CANSTART_QUEST;
     }
 
-    public void OnProgressQuest()
+    public void OnProgressQuest() // 진행중인 퀘스트
     {
         ContentReset();
-        CatalogueInit(Shared.GameMgr.PLAYER.GetProgressQusetList());
+        //Player의 진행중인 퀘스트 list를 가져온다
+        CatalogueInit(Shared.GameMgr.PLAYER.GetProgressQusetList()); 
         QUESTUI_OPNE_TYPE = QUESTUI_OPNE_TYPE.PROGRESS_QUEST;
     }
 
-    public void OnCompleteQuest()
+    public void OnCompleteQuest() // 완료된 퀘스트
     {
         ContentReset();
+        // Player의 완료된 퀘스트 list를 가져온다.
         CatalogueInit(Shared.GameMgr.PLAYER.GetCompleteQuestList());
         QUESTUI_OPNE_TYPE = QUESTUI_OPNE_TYPE.COMPLETE_QUEST;
     }

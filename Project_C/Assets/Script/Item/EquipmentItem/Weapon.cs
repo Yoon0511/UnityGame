@@ -5,12 +5,7 @@ using UnityEngine;
 
 public class Weapon : EquipmentItem
 {
-    private void Start()
-    {
-        EnhanceValue = 0;
-        EnhanceRisingAmount = 2.0f;
-    }
-    public override string EnhanceInfo()
+    public override string GetEnhanceInfo()
     {
         string Stat = "<color=#CCCCCC>" + DicEquipmentItemStat[STAT_TYPE.ATK].ToString("F0") + "</color>";
         string Plus = "<color=#FFA500><b>  =>  </b></color>";
@@ -22,6 +17,7 @@ public class Weapon : EquipmentItem
     {
         if(TryEnhance())
         {
+            Debug.Log(EnhanceValue.ToString() + ItemName + "Success");
             EnhanceValue++;
             EnhanceProbability -= 0.05f;
             DicEquipmentItemStat[STAT_TYPE.ATK] += EnhanceRisingAmount;
@@ -30,6 +26,7 @@ public class Weapon : EquipmentItem
         }
         else
         {
+            Debug.Log(ItemName + "fail");
             return false;
         }
     }
