@@ -7,13 +7,20 @@ public class EquipmentEnhancement : MonoBehaviour
 {
     public GameObject CONTENT;
     public EnhanceView ENHANCEVIEW;
+    public GameObject ENHANCERESULT_EFFECT;
+    public GameObject ENHANCERESULT_VIEW;
+
+    [SerializeField]
+    EnhanceResultView EnhanceResultView;
 
     List<GameObject> ListEnhaceEquipItemSlot = new List<GameObject>();
     Player Player;
     public void Init()
     {
+        EnhaceEquipSlotReset();
+
         //장착중인 장비, 인벤에 있는 장비 가져와서 리스트 만들기
-        if(Player == null)
+        if (Player == null)
         {
             Player = Shared.GameMgr.PLAYER;
         }
@@ -61,5 +68,30 @@ public class EquipmentEnhancement : MonoBehaviour
             }
         }
         ListEnhaceEquipItemSlot.Clear();
+    }
+
+    public void OnEnhanceEffect() // 1.결과창 이펙트 생성
+    {
+        ENHANCERESULT_EFFECT.SetActive(true);
+    }
+
+    public void OnCheckResults() // 2.클릭시 결과 확인
+    {
+        ENHANCERESULT_VIEW.SetActive(true);
+
+        bool Result = ENHANCEVIEW.TryEnhance(); //강화시도
+        EnhanceResultView.Init(ENHANCEVIEW.GetEnhaceViewItem(),Result); //결과전달
+    }
+
+    public void OffEnhanceResult() //3.결과창 끔
+    {
+        ENHANCERESULT_EFFECT.SetActive(false);
+        ENHANCERESULT_VIEW.SetActive(false);
+
+        //장비슬롯초기화 및 갱신
+        EnhaceEquipSlotReset();
+        Init();
+
+        ENHANCEVIEW.Refresh(); //강화뷰 갱신
     }
 }

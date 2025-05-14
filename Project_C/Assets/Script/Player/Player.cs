@@ -54,16 +54,19 @@ public partial class Player : Character
 
         if (Input.GetKeyDown(KeyCode.F5)) //¹«±â
         {
-            inventory.AddItem(weapon);
+            Weapon obj = Instantiate(weapon).GetComponent<Weapon>();
+            inventory.AddItem(obj);
             //equiment.EquippedItem(weapon);
         }
         if (Input.GetKeyDown(KeyCode.F6)) //°©¿Ê
         {
-            inventory.AddItem(amor);
+            Amor obj = Instantiate(amor).GetComponent<Amor>();
+            inventory.AddItem(obj);
         }
         if (Input.GetKeyDown(KeyCode.F7)) //¾Ç¼¼¼­¸®
         {
-            inventory.AddItem(ring);
+            Accessories obj = Instantiate(ring).GetComponent<Accessories>();
+            inventory.AddItem(obj);
         }
 
         if (Input.GetKeyDown(KeyCode.F8)) //HP

@@ -53,4 +53,6 @@ MonoBehaviour:
   DicEquipmentItemStat:
     _serializedList:
     - Key: 4
-      Value: 10
+      Value: 7
+  EnhanceValue: 0
+  EnhanceRisingAmount: 1

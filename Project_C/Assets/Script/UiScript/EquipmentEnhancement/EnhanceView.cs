@@ -19,11 +19,19 @@ public class EnhanceView : MonoBehaviour
         EQUIP_IMG.sprite = Shared.GameMgr.GetSpriteAtlas("Items", Item.SpriteName);
         EQUIP_NAME.text = "+" + Item.GetEnhanceValue().ToString() + " " + Item.ItemName;
         EQUIPSTAT_PREVIEW.text = Item.GetEnhanceInfo();
-        ENHANCE_MATERIALS.text = "Gold = 5000";
+        ENHANCE_MATERIALS.text = "<color=#FFD700><b>" + "5000" + "</b></color>";
     }
 
-    public void OnTryEnhance()
+    public bool TryEnhance()
     {
-        Item.Enhance();
+        bool Enhance = Item.Enhance();
+        return Enhance;
     }
+
+    public void Refresh()
+    {
+        Init(Item);
+    }
+
+    public EquipmentItem GetEnhaceViewItem() { return Item; }
 }
