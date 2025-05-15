@@ -49,24 +49,24 @@ public partial class Player : Character
         {
             ItemBase obj = Instantiate(item).GetComponent<ItemBase>();
             obj.Id = itemcount++;
-            inventory.AddItem(obj);
+            Inventory.AddItem(obj);
         }
 
         if (Input.GetKeyDown(KeyCode.F5)) //¹«±â
         {
             Weapon obj = Instantiate(weapon).GetComponent<Weapon>();
-            inventory.AddItem(obj);
+            Inventory.AddItem(obj);
             //equiment.EquippedItem(weapon);
         }
         if (Input.GetKeyDown(KeyCode.F6)) //°©¿Ê
         {
             Amor obj = Instantiate(amor).GetComponent<Amor>();
-            inventory.AddItem(obj);
+            Inventory.AddItem(obj);
         }
         if (Input.GetKeyDown(KeyCode.F7)) //¾Ç¼¼¼­¸®
         {
             Accessories obj = Instantiate(ring).GetComponent<Accessories>();
-            inventory.AddItem(obj);
+            Inventory.AddItem(obj);
         }
 
         if (Input.GetKeyDown(KeyCode.F8)) //HP
@@ -91,15 +91,19 @@ public partial class Player : Character
         {
             //Debug.Log("hunting");
             HuntingMsg huntingMsg = new HuntingMsg();
-            huntingMsg.SetMsg(10, 10, (int)QUEST_TYPE.HUNTING, 10, 3);
+            huntingMsg.SetMsg(10, 10, (int)QUEST_TYPE.HUNTING, (int)MONSTER_ID.GOLEM, 3);
             QusetProgress(huntingMsg);
 
             //DeBuff deBuff = new DeBuff_Stun(0.5f, gameObject, "UI_Skill_Icon_Blackhole");
 
             //µµÆ®µ¥¹ÌÁö Å×½ºÆ®
             //DotDamage dot = new DotDamage(0.5f,STAT_TYPE.HP,30f,5f,gameObject, "UI_Skill_Icon_PsycicAttack");
-            
+
             //AddBuff(dot);
+
+
+            //°ñµå Å×½ºÆ®
+            AddGold(3000);
         }
     }
 

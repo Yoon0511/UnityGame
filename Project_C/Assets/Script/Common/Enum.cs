@@ -196,3 +196,11 @@ public enum QUESTUI_OPNE_TYPE
     COMPLETE_QUEST,
     ENUM_END
 }
+
+public enum MONSTER_ID
+{
+    NONE,
+    GOLEM,
+    DRAGON,
+    ENUM_END
+}

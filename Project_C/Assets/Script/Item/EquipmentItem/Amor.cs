@@ -21,6 +21,7 @@ public class Amor : EquipmentItem
             EnhanceValue++;
             EnhanceProbability -= 0.05f;
             DicEquipmentItemStat[STAT_TYPE.DEF] += EnhanceRisingAmount;
+            EnhanceMaterial += 20; //강화 비용 증가
 
             return true;
         }

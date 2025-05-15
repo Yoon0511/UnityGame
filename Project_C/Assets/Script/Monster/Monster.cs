@@ -27,6 +27,7 @@ public partial class Monster : Character
     {
         CharacterName = "Monster";
         CharacterType = (int)CHARACTER_TYPE.MONSTER;
+        Id = (int)MONSTER_ID.GOLEM;
         player = Shared.GameMgr.PLAYEROBJ;
         Fsm_Init();
     }
@@ -55,18 +56,17 @@ public partial class Monster : Character
         Shake(0.2f, 0.05f);
         Statdata.TakeDamage(_damagedata);
 
-        if (CheckHP())
-        {
-            DropItem();
-            Destroy(gameObject);
-        }
+        CheckHP();
     }
 
 
-    bool CheckHP() 
+    protected bool CheckHP() 
     {
         if(Statdata.GetData(STAT_TYPE.HP) <= 0)
         {
+            SendQuestMsg(); //Monster -> Player 퀘스트 메시지 발송
+            DropItem(); //전리품 드랍
+            Destroy(gameObject); //삭제
             return true;
         }
         return false;
@@ -85,5 +85,10 @@ public partial class Monster : Character
         
     }
 
-    
+    protected void SendQuestMsg()
+    {
+        HuntingMsg huntingMsg = new HuntingMsg();
+        huntingMsg.SetMsg(10, 10, (int)QUEST_TYPE.HUNTING, Id, 3);
+        Shared.GameMgr.PLAYER.QusetProgress(huntingMsg);
+    }
 }

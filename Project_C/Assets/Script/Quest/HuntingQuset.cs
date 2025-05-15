@@ -48,7 +48,9 @@ public class HuntingQuset : QuestBase
 
     public override void Complete() //보상
     {
-        UnityEngine.Debug.Log("HuntingQuest Complete");
+        //골드보상지급
+        ProgressPlayer.AddGold(Reward);
+
         IsComplete = true;
     }
 
@@ -67,9 +69,10 @@ public class HuntingQuset : QuestBase
 
     public override string GetRewardDetail()
     {
-        string TextExp = "<color=#ADFF2F><b>" + "EXP" + "</b></color>";
+        //string TextExp = "<color=#ADFF2F><b>" + "EXP" + "</b></color>";
+        string TextGold = "<color=#FFD700><b>" + "GOLD" + "</b></color>";
         string TextReward = "<color=#00FF00>" + GetReward().ToString() + "</color>";
-        string detail = TextExp + " - "+ TextReward;
+        string detail = TextGold + " - "+ TextReward;
         return detail;
     }
 }

@@ -40,7 +40,7 @@ public partial class NPC : Character
 
         //퀘스트 생성 - 변경예정
         Quest = new HuntingQuset();
-        ((HuntingQuset)Quest).Init(1,"HuntingQuest_123", "huntting monster - ",5,10,10,this);
+        ((HuntingQuset)Quest).Init(1,"GolemHunt", "Target Golem - ",5,(int)MONSTER_ID.GOLEM,500,this);
     }
 
     public List<string> GetConverstationTexts()

@@ -4,8 +4,25 @@ using UnityEngine;
 
 public partial class Player
 {
+    protected int Gold;
     [SerializeField]
-    Inventory inventory;
-    public Inventory GetInventory() { return inventory; }
-    void InventoryInit() { inventory.SetOwner(this); }
+    Inventory Inventory;
+    public Inventory GetInventory() { return Inventory; }
+    void InventoryInit() { Inventory.SetOwner(this); }
+    public int GetGold() { return Gold; }
+    public void AddGold(int _gold) 
+    { 
+        Gold += _gold;
+        Inventory.UpdateGoldText();
+    }
+
+    public bool UseGold(int _gold)
+    {
+        if (Gold < _gold)
+            return false;
+
+        Gold -= _gold;
+        Inventory.UpdateGoldText();
+        return true;
+    }
 }

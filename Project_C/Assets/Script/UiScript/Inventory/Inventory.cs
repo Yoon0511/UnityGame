@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
     public int NUM_MAX_ITEM = 25;
     public GameObject ITEMSLOT;
     public GameObject PARENTGRID;
+    public Text GOLDTEXT;
     Character Owner;
 
     [SerializeField]
@@ -41,6 +42,7 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
         }
         Refresh();
     }
+
     public void Refresh()
     {
         int i = 0;
@@ -52,6 +54,8 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
         {
             slots[i].InputItem(null);
         }
+
+        UpdateGoldText();
     }
 
     public void AddItem(ItemBase _item)
@@ -86,4 +90,15 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
     public void SetOwner(Character _owner) { Owner = _owner; }
     public Character GetOwner() { return Owner; }
     public List<ItemBase> GetItems() { return items; }
+    public void UpdateGoldText()
+    {
+        Player player = Owner as Player;
+        if(player != null)
+        {
+            string Gold = player.GetGold().ToString();
+
+            //π‡¿∫ ∞ÒµÂ
+            GOLDTEXT.text = "<color=#FFD700><b>" + Gold + "</b></color>";
+        }
+    }
 }

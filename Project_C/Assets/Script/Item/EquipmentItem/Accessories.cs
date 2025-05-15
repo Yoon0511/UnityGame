@@ -19,9 +19,9 @@ public class Accessories : EquipmentItem
         {
             Debug.Log(EnhanceValue.ToString() + ItemName + "Success");
             EnhanceValue++;
-            EnhanceProbability -= 0.05f;
-            DicEquipmentItemStat[STAT_TYPE.SPEED] += EnhanceRisingAmount;
-
+            EnhanceProbability -= 0.05f; //성공확률 5%씩 감소
+            DicEquipmentItemStat[STAT_TYPE.SPEED] += EnhanceRisingAmount; //EnhanceRisingAmount만큼의 스탯증가
+            EnhanceMaterial += 10; //강화비용증가
             return true;
         }
         else

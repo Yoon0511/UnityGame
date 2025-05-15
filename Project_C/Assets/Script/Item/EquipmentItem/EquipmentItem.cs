@@ -11,6 +11,13 @@ public abstract class EquipmentItem : ItemBase
     public int EnhanceValue;
     public float EnhanceRisingAmount;
     protected float EnhanceProbability = 1.0f;
+    protected int EnhanceMaterial;
+    protected int MaterialRisingAmount;
+
+    public EquipmentItem()
+    {
+        EnhanceMaterial = 100;
+    }
     public override void ItemUse()
     {
         //Àåºñ½½·Ô¿¡ ÀåÂø
@@ -55,4 +62,6 @@ public abstract class EquipmentItem : ItemBase
        string color = $"<color=#FFFFFF>¼º°øÈ®·ü </color> : <color={colorHex}><b> {EnhanceProbability.ToString("P0")}</b></color>";
         return color;
     }
+
+    public int GetEnhaceMaterial() { return EnhanceMaterial; }
 }

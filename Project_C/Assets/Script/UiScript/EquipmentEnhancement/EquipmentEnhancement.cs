@@ -9,6 +9,7 @@ public class EquipmentEnhancement : MonoBehaviour
     public EnhanceView ENHANCEVIEW;
     public GameObject ENHANCERESULT_EFFECT;
     public GameObject ENHANCERESULT_VIEW;
+    public Image ENHANCERESULT_IMAGE;
 
     [SerializeField]
     EnhanceResultView EnhanceResultView;
@@ -70,9 +71,17 @@ public class EquipmentEnhancement : MonoBehaviour
         ListEnhaceEquipItemSlot.Clear();
     }
 
-    public void OnEnhanceEffect() // 1.결과창 이펙트 생성
+    public void OnEnhanceEffect() // 1.강화하기 버튼 클릭 -> 결과창 이펙트 생성
     {
-        ENHANCERESULT_EFFECT.SetActive(true);
+        int RequireGold = ENHANCEVIEW.GetEnhaceViewItem().GetEnhaceMaterial();
+        
+        if (Player.UseGold(RequireGold)) //골드 사용
+        {
+            //강화에 사용할 골드를 충분한 보유시
+            ENHANCERESULT_EFFECT.SetActive(true);
+            string SpriteName = ENHANCEVIEW.GetEnhaceViewItem().SpriteName;
+            ENHANCERESULT_IMAGE.sprite = Shared.GameMgr.GetSpriteAtlas("Items", SpriteName);
+        }
     }
 
     public void OnCheckResults() // 2.클릭시 결과 확인

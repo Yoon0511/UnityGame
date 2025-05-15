@@ -13,12 +13,15 @@ public partial class Dragon : Monster
     {
         Shake(0.2f, 0.05f);
         Statdata.TakeDamage(_damagedata);
+
+        CheckHP();
     }
 
     public override void Init()
     {
         CharacterName = "Dragon";
         CharacterType = (int)CHARACTER_TYPE.MONSTER;
+        Id = (int)MONSTER_ID.DRAGON;
         SkillInit();
         Fsm_Init();
 

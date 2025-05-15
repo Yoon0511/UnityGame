@@ -17,6 +17,7 @@ public abstract partial class Character : Object
     [SerializeField]
     protected GameObject BodyParticlePoint;
 
+    protected int Id;
     private void Start()
     {
         Init();
@@ -41,9 +42,6 @@ public abstract partial class Character : Object
     }
 
     public int GetCharacterType() { return CharacterType; }
-   
- 
-
     public virtual void EnhanceStat(STAT_TYPE _type, float _num)
     {
         Statdata.EnhanceStat(_type, _num);
@@ -69,4 +67,5 @@ public abstract partial class Character : Object
     {
         transform.LookAt(GetTargetCharacter().transform, Vector3.up);
     }
+    public int GetId() { return Id; }
 }
