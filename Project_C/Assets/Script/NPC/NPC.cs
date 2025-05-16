@@ -6,7 +6,7 @@ public partial class NPC : Character
 {
     protected int Job;
     List<string> List_ConverstationTexts = new List<string>();
-    QuestBase Quest;
+    public string NPC_NAME;
 
     public override void Fsm_Init()
     {
@@ -19,8 +19,8 @@ public partial class NPC : Character
     }
     public override void RayTargetEvent(Character _character)
     {
-        Shared.GameMgr.OnNPCDialogueWindow(this,(Player)_character);
-        Shared.GameMgr.Hphud.SetTarget(this);
+        //Shared.GameMgr.OnNPCDialogueWindow(this,(Player)_character);
+        //Shared.GameMgr.Hphud.SetTarget(this);
     }
 
     public override void UseSkill(int _index)
@@ -30,7 +30,7 @@ public partial class NPC : Character
 
     public override void Init()
     {
-        CharacterName = "NPC_123";
+        CharacterName = NPC_NAME;
         CharacterType = (int)CHARACTER_TYPE.NPC;
         List_ConverstationTexts.Clear();
         List_ConverstationTexts.Add("(start)1.Leave me alone.");
@@ -39,24 +39,12 @@ public partial class NPC : Character
         List_ConverstationTexts.Add("(end)4.haven't heard anything from him in some number of weeks.");
 
         //퀘스트 생성 - 변경예정
-        Quest = new HuntingQuset();
-        ((HuntingQuset)Quest).Init(1,"GolemHunt", "Target Golem - ",5,(int)MONSTER_ID.GOLEM,500,this);
+        //Quest = new HuntingQuset();
+        //((HuntingQuset)Quest).Init(1,"GolemHunt", "Target Golem - ",5,(int)MONSTER_ID.GOLEM,500,this);
     }
 
     public List<string> GetConverstationTexts()
     {
         return List_ConverstationTexts;
-    }
-
-    public void QuestAccpect(Player _player)
-    {
-        _player.AddQuest(Quest);
-
-        Quest.SetProgressPlayer(_player);
-    }
-
-    public void QuestRefusal()
-    {
-        Quest.Refusal();
     }
 }

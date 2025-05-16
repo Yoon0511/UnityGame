@@ -17,7 +17,6 @@ public class Accessories : EquipmentItem
     {
         if (TryEnhance())
         {
-            Debug.Log(EnhanceValue.ToString() + ItemName + "Success");
             EnhanceValue++;
             EnhanceProbability -= 0.05f; //성공확률 5%씩 감소
             DicEquipmentItemStat[STAT_TYPE.SPEED] += EnhanceRisingAmount; //EnhanceRisingAmount만큼의 스탯증가
@@ -26,7 +25,6 @@ public class Accessories : EquipmentItem
         }
         else
         {
-            Debug.Log(ItemName + "fail");
             return false;
         }
     }

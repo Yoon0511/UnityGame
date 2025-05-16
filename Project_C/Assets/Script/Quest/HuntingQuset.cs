@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,7 +8,13 @@ public class HuntingQuset : QuestBase
 {
     public int CurrentGoalCount;
     public int GoalCount;
+    [NonSerialized]
     public int TargetId;
+    public MONSTER_ID MONSTER_ID;
+    private void Start()
+    {
+        TargetId = (int)MONSTER_ID;
+    }
     public void Init(int _id,string _name,string _contents,int _goalcount,int _targetid,int _reward,NPC _owner)
     {
         Id = _id;

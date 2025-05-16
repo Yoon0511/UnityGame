@@ -18,7 +18,6 @@ public class Weapon : EquipmentItem
     {
         if(TryEnhance())
         {
-            Debug.Log(EnhanceValue.ToString() + ItemName + "Success");
             EnhanceValue++;
             EnhanceProbability -= 0.05f;
             DicEquipmentItemStat[STAT_TYPE.ATK] += EnhanceRisingAmount;
@@ -28,7 +27,6 @@ public class Weapon : EquipmentItem
         }
         else
         {
-            Debug.Log(ItemName + "fail");
             return false;
         }
     }

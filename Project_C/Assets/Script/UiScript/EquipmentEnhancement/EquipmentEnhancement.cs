@@ -16,6 +16,12 @@ public class EquipmentEnhancement : MonoBehaviour
 
     List<GameObject> ListEnhaceEquipItemSlot = new List<GameObject>();
     Player Player;
+
+    private void OnEnable()
+    {
+        Init();
+    }
+
     public void Init()
     {
         EnhaceEquipSlotReset();

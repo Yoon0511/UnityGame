@@ -8,9 +8,7 @@ public abstract partial class Character : Object
 {
     public StatData Statdata;
     public BuffSystem BuffSystem;
-    [SerializeField]
     protected string CharacterName;
-    [SerializeField]
     protected int CharacterType = (int)CHARACTER_TYPE.NONE;
     protected bool IsStun = false;
     protected Character TargetCharacter;

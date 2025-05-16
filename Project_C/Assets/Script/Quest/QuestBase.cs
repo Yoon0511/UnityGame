@@ -1,15 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
-public abstract class QuestBase
+public abstract class QuestBase : MonoBehaviour
 {
+    [SerializeField]
     protected string    QuestName;
+    [SerializeField]
     protected string    Contents;
     protected int       QuestType;
+    [SerializeField]
     protected int       Reward;
     protected bool      IsComplete = false;
     protected NPC       OwnerNPC;
     protected Player    ProgressPlayer;
+    [SerializeField]
     protected int       Id;
     public abstract void Accept(); //수락
     public abstract void Refusal(); //거절

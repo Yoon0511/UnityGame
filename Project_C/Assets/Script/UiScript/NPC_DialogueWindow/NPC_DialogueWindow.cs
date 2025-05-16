@@ -16,9 +16,9 @@ public class NPC_DialogueWindow : MonoBehaviour
     int TextIndex = 0;
     int MaxTextIndex = 0;
     int EndConverstationIndex = 0;
-    NPC CurrentNPC;
+    QuestNPC CurrentNPC;
     Player Player;
-    public void Init(NPC _npc,Player _player)
+    public void Init(QuestNPC _npc,Player _player)
     {
         Player = _player;
         CurrentNPC = _npc;

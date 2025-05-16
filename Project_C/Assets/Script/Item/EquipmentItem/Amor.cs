@@ -17,7 +17,6 @@ public class Amor : EquipmentItem
     {
         if (TryEnhance())
         {
-            Debug.Log(EnhanceValue.ToString() + ItemName + "Success");
             EnhanceValue++;
             EnhanceProbability -= 0.05f;
             DicEquipmentItemStat[STAT_TYPE.DEF] += EnhanceRisingAmount;
@@ -27,7 +26,6 @@ public class Amor : EquipmentItem
         }
         else
         {
-            Debug.Log(ItemName + "fail");
             return false;
         }
     }
