@@ -4,9 +4,11 @@ using UnityEngine;
 
 public partial class NPC : Character
 {
-    protected int Job;
+    [SerializeField]
+    protected string Job;
     List<string> List_ConverstationTexts = new List<string>();
-    public string NPC_NAME;
+    [SerializeField]
+    protected string NPC_NAME;
 
     public override void Fsm_Init()
     {
@@ -46,5 +48,16 @@ public partial class NPC : Character
     public List<string> GetConverstationTexts()
     {
         return List_ConverstationTexts;
+    }
+
+    public override string GetCharacterName()
+    {
+        //ÇÏ´Ã»ö (½Ã¾È)
+        string Strjob = "<color=#00BFFF>" + Job + "</color>\n";
+        //¹àÀº ¿¬µÎ»ö
+        string StrName = "<color=#7CFC00><b>" + base.GetCharacterName() + "</b></color>";
+        string ColorJobName = Strjob + StrName;
+
+        return ColorJobName;
     }
 }

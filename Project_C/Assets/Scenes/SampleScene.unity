@@ -6539,7 +6539,6 @@ MonoBehaviour:
   Character: {fileID: 631462247}
   Distance: 5
   TextPos: {fileID: 1225578092}
-  HexColor: FFD700
 --- !u!114 &635422647 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7668634624828555625, guid: 1e2c4686d67f4ac4ea0e68ef44bf15a2, type: 3}
@@ -9569,6 +9568,7 @@ MonoBehaviour:
   ProjectilePoint: {fileID: 0}
   MaxSkillCount: 3
   CurrentSkill: []
+  Job: 
   NPC_NAME: 
 --- !u!114 &1534029075
 MonoBehaviour:
@@ -16237,6 +16237,7 @@ MonoBehaviour:
   ProjectilePoint: {fileID: 0}
   MaxSkillCount: 3
   CurrentSkill: []
+  Job: "<\uC7A5\uBE44\uAC15\uD654>"
   NPC_NAME: ' BlackSmith'
   SERVICEUI: {fileID: 382158291}
 --- !u!114 &2018095239
@@ -16254,7 +16255,6 @@ MonoBehaviour:
   Character: {fileID: 2018095238}
   Distance: 5
   TextPos: {fileID: 1714191198}
-  HexColor: 7CFC00
 --- !u!1 &2076061942
 GameObject:
   m_ObjectHideFlags: 0
@@ -17384,6 +17384,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6127199259177895372, guid: 87af3cb2fd6859a4a94abd66af3371c2, type: 3}
+      propertyPath: Job
+      value: "<\uC2DC\uBBFC>"
+      objectReference: {fileID: 0}
     - target: {fileID: 7688558514901597417, guid: 87af3cb2fd6859a4a94abd66af3371c2, type: 3}
       propertyPath: uihead
       value: 
@@ -18052,6 +18056,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 959922582}
     m_Modifications:
+    - target: {fileID: 2272519265035377620, guid: bfd9096bdae14a74da119194badd18d4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 155
+      objectReference: {fileID: 0}
     - target: {fileID: 6084842933521911965, guid: bfd9096bdae14a74da119194badd18d4, type: 3}
       propertyPath: m_Name
       value: HP_HUD
@@ -18122,7 +18130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9102678194243337381, guid: bfd9096bdae14a74da119194badd18d4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 451
+      value: 453
       objectReference: {fileID: 0}
     - target: {fileID: 9102678194243337381, guid: bfd9096bdae14a74da119194badd18d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

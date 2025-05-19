@@ -29,7 +29,7 @@ public abstract partial class Character : Object
     // 상속받는 클래스에서 RayTargetEvent 정의
     // 각각의 CharacterType에 맞는 행동 구현
     public abstract void RayTargetEvent(Character _character);
-    public string GetCharacterName() { return CharacterName; }
+    public virtual string GetCharacterName() { return CharacterName; }
     public float GetInStatData(STAT_TYPE _type)
     { 
         return Statdata.GetData(_type);

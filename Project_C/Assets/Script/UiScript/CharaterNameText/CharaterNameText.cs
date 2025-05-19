@@ -8,7 +8,6 @@ public class CharaterNameText : MonoBehaviour
     public Character Character;
     public float Distance;
     public Transform TextPos;
-    public string HexColor; 
     Transform Ctransform;
 
     GameObject NameText;
@@ -28,7 +27,7 @@ public class CharaterNameText : MonoBehaviour
         NameText = Shared.PoolMgr.GetObject("CharaterNameText");
         NameText.transform.SetParent(Shared.GameMgr.CANVAS.transform, false);
         NameText.transform.SetAsFirstSibling();
-        NameText.GetComponent<Text>().text = "<color=#" + HexColor + "><b>" + Character.GetCharacterName() + "</b></color>";;
+        NameText.GetComponent<Text>().text = Character.GetCharacterName();
         OnName();
     }
     public void OnName()

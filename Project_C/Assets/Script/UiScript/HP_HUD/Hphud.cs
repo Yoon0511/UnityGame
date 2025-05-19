@@ -30,7 +30,8 @@ public class Hphud : MonoBehaviour
     [SerializeField]
     BuffUi BuffUi;
 
-    int PrevBuffCount = 0;
+    bool IsShow = false;
+    public GameObject HP_HUDUI;
     private void Start()
     {
         ChangeColor();
@@ -86,11 +87,14 @@ public class Hphud : MonoBehaviour
         // 현재 타겟이 보유한 버프 정보 갱신
         BuffUi.SetTarget(Target);
 
+        IsShow = true;
+        HP_HUDUI.transform.GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, 0f);
         testCoroutine = StartCoroutine(IUpdateHpHud());
     }
 
     IEnumerator IUpdateHpHud()
     {
+        float ElaspedTime = 0.0f;
         while (Target != null)
         {
             //yield return new WaitForSeconds(0.1f);
@@ -106,7 +110,19 @@ public class Hphud : MonoBehaviour
 
             HPTEXT.text = CurrHp.ToString("F0") + "/" + MaxHp.ToString("F0");
 
+            if(IsShow)
+            {
+                ElaspedTime += Time.deltaTime;
+                if(ElaspedTime >= 3.0f)
+                {
+                    IsShow = false;
+                    HP_HUDUI.transform.GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, 155f);
+                }
+            }
+
             if (Mathf.Abs(diff) < 0.01f) continue;
+
+            ElaspedTime = 0.0f;
 
             if (diff < 0)
             {
@@ -204,10 +220,5 @@ public class Hphud : MonoBehaviour
         // 새로운 랜덤 색상
         NextColor = new Color(Random.Range(0.7f, 1f), 0.3f,0.3f);
         NEXTHP.color = NextColor;
-    }
-
-    void CheckBuffSystem()
-    {
-
     }
 }
