@@ -36,6 +36,12 @@ public class SkillBtn: MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
 
     public void UseSkill()
     {
+        if(Skill == null)
+        {
+            Shared.UiMgr.CreateSystemMsg("스킬을 등록해주세요.", SYSTEM_MSG_TYPE.UI);
+            return;
+        }
+
         Player.UseSkill(SkillIndex);
 
         if (Player.IsCurrentSkillNull(SkillIndex) == false)

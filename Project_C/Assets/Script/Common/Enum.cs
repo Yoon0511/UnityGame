@@ -85,6 +85,7 @@ public enum STAT_TYPE
     MAXHP,
     MAXMP,
     EXP,
+    MAXEXP,
     LEVEL,
     CRITICAL_CANCE,
     CRITICAL_MULTIPLIER,
@@ -202,5 +203,21 @@ public enum MONSTER_ID
     NONE,
     GOLEM,
     DRAGON,
+    ENUM_END
+}
+
+public enum QUEST_REWARD_TYPE
+{
+    NONE,
+    EXP,
+    GOLD,
+    ENUM_END
+}
+
+public enum SYSTEM_MSG_TYPE
+{
+    NONE,
+    UI,
+    QUEST_COMPLETE,
     ENUM_END
 }

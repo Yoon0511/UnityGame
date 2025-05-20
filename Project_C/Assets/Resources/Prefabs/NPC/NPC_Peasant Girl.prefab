@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5252839928023282015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2700154976114079444}
+  m_Layer: 0
+  m_Name: NPCUiHead
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2700154976114079444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5252839928023282015}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2224572770613602377}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7310766224628518939
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,15 +72,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 6ed29fd5852d7524986a37af72910c2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.760834
+      value: 327.46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6ed29fd5852d7524986a37af72910c2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.56
+      value: 6.28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6ed29fd5852d7524986a37af72910c2d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.99292
+      value: 314.61
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6ed29fd5852d7524986a37af72910c2d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -101,6 +132,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6ed29fd5852d7524986a37af72910c2d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7383137379828424139}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6ed29fd5852d7524986a37af72910c2d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2700154976114079444}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6ed29fd5852d7524986a37af72910c2d, type: 3}
       insertIndex: -1
@@ -120,6 +154,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6ed29fd5852d7524986a37af72910c2d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6127199259177895372}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6ed29fd5852d7524986a37af72910c2d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6715264938732599876}
   m_SourcePrefab: {fileID: 100100000, guid: 6ed29fd5852d7524986a37af72910c2d, type: 3}
 --- !u!1 &1555032193768518387 stripped
 GameObject:
@@ -238,6 +275,7 @@ MonoBehaviour:
   CurrentGoalCount: 3
   GoalCount: 10
   MONSTER_ID: 1
+  QUEST_REWARD_TYPE: 1
 --- !u!114 &6127199259177895372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,11 +293,27 @@ MonoBehaviour:
   BodyParticlePoint: {fileID: 7310766224628518939}
   Animator: {fileID: 5205996184716702259}
   SkillList: []
-  ProjectilePoint: {fileID: 0}
+  ProjectilePoint: {fileID: 7383137379828424139}
   MaxSkillCount: 3
   CurrentSkill: []
+  Job: "<\uC2DC\uBBFC>"
   NPC_NAME: PeasantGirl
   Quest: {fileID: 8501153770148233026}
+--- !u!114 &6715264938732599876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555032193768518387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd20d8be2a30b141bdb6071b5a528c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Character: {fileID: 6127199259177895372}
+  Distance: 5
+  TextPos: {fileID: 2700154976114079444}
 --- !u!4 &2224572770613602377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6ed29fd5852d7524986a37af72910c2d, type: 3}

@@ -88,6 +88,11 @@ public class EquipmentEnhancement : MonoBehaviour
             string SpriteName = ENHANCEVIEW.GetEnhaceViewItem().SpriteName;
             ENHANCERESULT_IMAGE.sprite = Shared.GameMgr.GetSpriteAtlas("Items", SpriteName);
         }
+        else
+        {
+            //강화에 사용할 골드가 부족할시
+            Shared.UiMgr.CreateSystemMsg("골드가 부족합니다.",SYSTEM_MSG_TYPE.UI);
+        }
     }
 
     public void OnCheckResults() // 2.클릭시 결과 확인

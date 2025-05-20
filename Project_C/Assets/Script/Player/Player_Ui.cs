@@ -12,6 +12,7 @@ public partial class Player
     {
         UpdateHpbar();
         UpdateMpbar();
+        UpdateExpbar();
     }
 
     void UpdateHpbar()
@@ -21,5 +22,9 @@ public partial class Player
     void UpdateMpbar()
     {
         UnitFrame.UpdateMpbar(Statdata.GetData(STAT_TYPE.MP), Statdata.GetData(STAT_TYPE.MAXMP));
+    }
+    void UpdateExpbar()
+    {
+        UnitFrame.UpdateExpbar(Statdata.GetData(STAT_TYPE.EXP), Statdata.GetData(STAT_TYPE.MAXEXP),Statdata.GetData(STAT_TYPE.LEVEL));
     }
 }

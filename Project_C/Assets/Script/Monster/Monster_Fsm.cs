@@ -4,7 +4,9 @@ using UnityEngine;
 
 public partial class Monster
 {
-    public List<GameObject> patrolPoint = new List<GameObject>();
+    [SerializeField]
+    Transform[] PatrolPointTransform;
+    Vector3[] patrolPoint;
     int patrolIndex = 0;
     public override void Fsm_Init()
     {
@@ -20,6 +22,8 @@ public partial class Monster
         DicState.Add((int)MONSTER_STATE.DIE, new Monster_DieState(this));
 
         Fsm.ChangeState(DicState[(int)MONSTER_STATE.IDLE]);
+
+        PatrolPointInit();
     }
 
     public bool IsPlayerInDetectionRange()
@@ -57,21 +61,31 @@ public partial class Monster
     public void PatrolModeInit()
     {
         patrolIndex = 0;
-        ChangeTarget(patrolPoint[patrolIndex]);
     }
     public void PatrolMode()
     {
-        MoveToTarget();
+        float speed = Statdata.GetData(STAT_TYPE.SPEED);
+        Vector3 dir = patrolPoint[patrolIndex] - transform.position;
+        dir.y = 0f; //y축 거리는 제외
 
-        float dist = Vector3.Distance(transform.position, patrolPoint[patrolIndex].transform.position);
+        Vector3 MovePos = dir.normalized * speed * Time.deltaTime;
+        transform.Translate(MovePos, Space.World);
+
+        if (dir != Vector3.zero)
+            transform.rotation = Quaternion.LookRotation(dir, Vector3.up);
+
+        //y축을 제외한 거리 계산
+        Vector2 a = new Vector2(transform.position.x, transform.position.z);
+        Vector2 b = new Vector2(patrolPoint[patrolIndex].x, patrolPoint[patrolIndex].z);
+        float dist = Vector2.Distance(a,b);
+
         if (dist <= 0.5f)
         {
             patrolIndex++;
-            if (patrolIndex >= patrolPoint.Count)
+            if (patrolIndex >= patrolPoint.Length)
             {
                 patrolIndex = 0;
             }
-            ChangeTarget(patrolPoint[patrolIndex]);
         }
     }
     public void SetPatrolIndex(int _index)
@@ -87,5 +101,14 @@ public partial class Monster
     {
         yield return new WaitForSeconds(_time);
         ChangeState((int)MONSTER_STATE.PATROL);
+    }
+
+    void PatrolPointInit()
+    {
+        patrolPoint = new Vector3[PatrolPointTransform.Length];
+        for (int i = 0; i < PatrolPointTransform.Length; i++)
+        {
+            patrolPoint[i] = PatrolPointTransform[i].position;
+        }
     }
 }

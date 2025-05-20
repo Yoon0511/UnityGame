@@ -60,4 +60,9 @@ public partial class NPC : Character
 
         return ColorJobName;
     }
+
+    public string GetOnlyCharacterName()
+    {
+        return CharacterName;
+    }
 }

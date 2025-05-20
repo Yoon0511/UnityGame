@@ -9,7 +9,7 @@ public class QuestNPC : NPC
     public override void RayTargetEvent(Character _character)
     {
         Shared.GameMgr.OnNPCDialogueWindow(this, (Player)_character);
-        Shared.GameMgr.Hphud.SetTarget(this);
+        //Shared.GameMgr.Hphud.SetTarget(this);
     }
 
     public void QuestAccpect(Player _player)

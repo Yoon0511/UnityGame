@@ -7,10 +7,13 @@ public class UnitFrame : MonoBehaviour
 {
     public Image HP_BAR;
     public Image MP_BAR;
+    public Image EXP_BAR;
     public float UpdateSpeed = 5.0f;
 
     public Text HPTEXT;
     public Text MPTEXT;
+    public Text EXPTEXT;
+    public Text LEVELTEXT;
 
     public void UpdateHpbar(float _currenthp, float _maxhp)
     {
@@ -36,6 +39,15 @@ public class UnitFrame : MonoBehaviour
         int intcurrentMp = (int)_currentmp;
         MPTEXT.text = _currentmp.ToString() + "/" + _maxmp.ToString();
         StartCoroutine(IUpdateBar(MP_BAR, _currentmp, _maxmp));
+    }
+
+    public void UpdateExpbar(float _currentexp, float _maxexp,float _level)
+    {
+        int intcurrentExp = (int)_currentexp;
+        EXPTEXT.text = _currentexp.ToString() + "%";
+        StartCoroutine(IUpdateBar(EXP_BAR, _currentexp, _maxexp));
+
+        LEVELTEXT.text = _level.ToString();
     }
 
     public void UpdateUnitFrame(float currentHp, float maxHp, float currentMp, float maxMp)

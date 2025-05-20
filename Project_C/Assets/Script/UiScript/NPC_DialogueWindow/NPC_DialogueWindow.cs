@@ -22,7 +22,7 @@ public class NPC_DialogueWindow : MonoBehaviour
     {
         Player = _player;
         CurrentNPC = _npc;
-        NPC_NAME.text = CurrentNPC.GetCharacterName();
+        NPC_NAME.text = CurrentNPC.GetOnlyCharacterName();
         List_ConverstaionTexts = CurrentNPC.GetConverstationTexts();
         TextIndex = 0;
         MaxTextIndex = List_ConverstaionTexts.Count;

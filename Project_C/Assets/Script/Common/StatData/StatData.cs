@@ -42,4 +42,15 @@ public class StatData : MonoBehaviour
     {
         dicstat[_type] = _value;
     }
+
+    public void AddExp(float _value)
+    {
+        dicstat[STAT_TYPE.EXP] += _value;
+
+        if (dicstat[STAT_TYPE.EXP] >= dicstat[STAT_TYPE.MAXEXP])
+        {
+            dicstat[STAT_TYPE.EXP] = 0;
+            dicstat[STAT_TYPE.LEVEL]++;
+        }
+    }
 }

@@ -116,8 +116,14 @@ public class Hphud : MonoBehaviour
                 if(ElaspedTime >= 3.0f)
                 {
                     IsShow = false;
-                    HP_HUDUI.transform.GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, 155f);
+                    HP_HUDUI.transform.GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, 165f);
                 }
+            }
+
+            if(CurrHp <= 0 && IsShow)
+            {
+                IsShow = false;
+                HP_HUDUI.transform.GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, 165f);
             }
 
             if (Mathf.Abs(diff) < 0.01f) continue;

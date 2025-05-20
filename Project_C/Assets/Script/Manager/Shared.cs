@@ -6,6 +6,7 @@ public static class Shared
     public static ParticleMgr ParticleMgr;
     public static BattleMgr BattleMgr;
     public static PoolMgr PoolMgr;
+    public static UiMgr UiMgr;
 
     //////////////////////////////////////
     public static MainCamera MainCamera;

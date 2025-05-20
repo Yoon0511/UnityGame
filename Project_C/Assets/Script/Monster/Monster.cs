@@ -25,7 +25,7 @@ public partial class Monster : Character
     // Monster Init - 몬스터 생성시 기본 세팅값 설정
     public override void Init()
     {
-        CharacterName = "Monster";
+        CharacterName = gameObject.name;
         CharacterType = (int)CHARACTER_TYPE.MONSTER;
         Id = (int)MONSTER_ID.GOLEM;
         player = Shared.GameMgr.PLAYEROBJ;
@@ -79,6 +79,7 @@ public partial class Monster : Character
     {
         Target = _target;
     }
+
 
     public override void UseSkill(int _index)
     {
