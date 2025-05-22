@@ -17,6 +17,8 @@ public abstract class QuestBase : MonoBehaviour
     protected Player    ProgressPlayer;
     [SerializeField]
     protected int       Id;
+    [SerializeField]
+    protected QUEST_REWARD_TYPE QUEST_REWARD_TYPE;
     public abstract void Accept(); //수락
     public abstract void Refusal(); //거절
     public abstract void Complete(); //퀘스트 완료
@@ -37,4 +39,40 @@ public abstract class QuestBase : MonoBehaviour
     public Player GetProgressPlayer() { return ProgressPlayer; }
     public int GetId() { return Id; }
     public abstract string GetRewardDetail();
+
+    public void GiveQuestReward()
+    {
+        switch (QUEST_REWARD_TYPE)
+        {
+            case QUEST_REWARD_TYPE.GOLD://골드보상지급
+                {
+                    ProgressPlayer.AddGold(Reward);
+                    break;
+                }
+            case QUEST_REWARD_TYPE.EXP: //경험치보상
+                {
+                    ProgressPlayer.AddExp(Reward);
+                    break;
+                }
+        }
+    }
+
+    public string GetRewardTypeText()
+    {
+        string RewardTypeText = "";
+        switch (QUEST_REWARD_TYPE)
+        {
+            case QUEST_REWARD_TYPE.GOLD://골드
+                {
+                    RewardTypeText = "<color=#FFD700><b>" + "GOLD" + "</b></color>";
+                    break;
+                }
+            case QUEST_REWARD_TYPE.EXP: //경험치
+                {
+                    RewardTypeText = "<color=#ADFF2F><b>" + "EXP" + "</b></color>";
+                    break;
+                }
+        }
+        return RewardTypeText;
+    }
 }

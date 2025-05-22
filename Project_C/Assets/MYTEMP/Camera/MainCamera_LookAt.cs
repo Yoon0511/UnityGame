@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public partial class MainCamera : MonoBehaviour
 {
@@ -62,6 +63,7 @@ public partial class MainCamera : MonoBehaviour
         if (CameraShake) return;
         if (Target == null) return;
         
+        //메인 카메라
         Quaternion rotation = Quaternion.Euler(Pitch, Yaw, 0);
         Vector3 desiredPosition = Target.position + rotation * Offset;
 

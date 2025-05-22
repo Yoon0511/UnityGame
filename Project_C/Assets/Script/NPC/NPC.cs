@@ -9,6 +9,8 @@ public partial class NPC : Character
     List<string> List_ConverstationTexts = new List<string>();
     [SerializeField]
     protected string NPC_NAME;
+    [SerializeField]
+    protected int NPC_ID;
 
     public override void Fsm_Init()
     {
@@ -21,8 +23,7 @@ public partial class NPC : Character
     }
     public override void RayTargetEvent(Character _character)
     {
-        //Shared.GameMgr.OnNPCDialogueWindow(this,(Player)_character);
-        //Shared.GameMgr.Hphud.SetTarget(this);
+        SendQuestMsg();
     }
 
     public override void UseSkill(int _index)
@@ -64,5 +65,15 @@ public partial class NPC : Character
     public string GetOnlyCharacterName()
     {
         return CharacterName;
+    }
+
+    public void SetNPCID(int _ID) { NPC_ID = _ID; }
+    public int GetNPCID() { return NPC_ID; }
+
+    protected void SendQuestMsg()
+    {
+        NpcMeetingMsg MeetingMsg = new NpcMeetingMsg();
+        MeetingMsg.SetMsg((int)QUEST_TYPE.MEETING, NPC_ID);
+        Shared.GameMgr.PLAYER.QusetProgress(MeetingMsg);
     }
 }

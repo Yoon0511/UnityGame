@@ -53,4 +53,6 @@ public class StatData : MonoBehaviour
             dicstat[STAT_TYPE.LEVEL]++;
         }
     }
+
+    public Transform GetUiHeadTransform() {return uihead;}
 }

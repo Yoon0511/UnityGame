@@ -11,7 +11,7 @@ public class HuntingQuset : QuestBase
     [NonSerialized]
     public int TargetId;
     public MONSTER_ID MONSTER_ID;
-    public QUEST_REWARD_TYPE QUEST_REWARD_TYPE;
+    
     private void Start()
     {
         TargetId = (int)MONSTER_ID;
@@ -26,7 +26,6 @@ public class HuntingQuset : QuestBase
         SetReward(_reward);
         QuestType = (int)QUEST_TYPE.HUNTING;
         OwnerNPC = _owner;
-
     }
     public override void Progress(QuestMsgBase _questmsg)
     {
@@ -56,19 +55,7 @@ public class HuntingQuset : QuestBase
 
     public override void Complete() //보상
     {
-        switch(QUEST_REWARD_TYPE)
-        {
-            case QUEST_REWARD_TYPE.GOLD://골드보상지급
-                {
-                    ProgressPlayer.AddGold(Reward);
-                    break;
-                }
-            case QUEST_REWARD_TYPE.EXP: //경험치보상
-                {
-                    ProgressPlayer.AddExp(Reward);
-                    break;
-                }
-        }
+        GiveQuestReward();
        
         IsComplete = true;
 
@@ -91,23 +78,8 @@ public class HuntingQuset : QuestBase
 
     public override string GetRewardDetail()
     {
-        string RewardTypeText = "";
-        switch (QUEST_REWARD_TYPE)
-        {
-            case QUEST_REWARD_TYPE.GOLD://골드
-                {
-                    RewardTypeText = "<color=#FFD700><b>" + "GOLD" + "</b></color>";
-                    break;
-                }
-            case QUEST_REWARD_TYPE.EXP: //경험치
-                {
-                    RewardTypeText = "<color=#ADFF2F><b>" + "EXP" + "</b></color>";
-                    break;
-                }
-        }
-
         string TextReward = "<color=#00FF00>" + GetReward().ToString() + "</color>";
-        string detail = RewardTypeText + " - "+ TextReward;
+        string detail = GetRewardTypeText() + " - "+ TextReward;
         return detail;
     }
 }

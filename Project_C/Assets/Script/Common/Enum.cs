@@ -72,6 +72,7 @@ public enum MONSTER_ANI_STATE
     MOVE,
     ATTACK,
     DIE,
+    RUN,
     ENUM_END
 }
 public enum STAT_TYPE
@@ -151,6 +152,7 @@ public enum QUEST_TYPE
     HUNTING,
     COMMON,
     STORE,
+    MEETING,
     ENUM_END
 }
 
@@ -203,6 +205,7 @@ public enum MONSTER_ID
     NONE,
     GOLEM,
     DRAGON,
+    WOLF,
     ENUM_END
 }
 
