@@ -34,13 +34,19 @@ public class MyTemp : MonoBehaviour
     //    StartCoroutine(DBPost(Http + ConnectUrl,"dev"));
     //}
 
-
+    string[] name = { "Oakridge", "Redhill", "Brimford", "Greenbrook" };
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.I))
         {
             Enhancement.gameObject.SetActive(true);
             Enhancement.Init();
+        }
+
+        if(Input.GetKeyDown(KeyCode.O))
+        {
+            VillageName villageName = Shared.PoolMgr.GetObject("VillageName").GetComponent<VillageName>();
+            villageName.Init(name[Random.Range(0,name.Length)]);
         }
     }
 }

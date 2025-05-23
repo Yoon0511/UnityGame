@@ -13,6 +13,7 @@ public class EnhanceEquipItemSlot : ItemSlot
     {
         EquipmentItem = _equipmentItem;
         InputItem(EquipmentItem);
+
         EnhanceValue.text = "+" + EquipmentItem.GetEnhanceValue().ToString();
         ItemName.text = EquipmentItem.ItemName;
 

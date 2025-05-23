@@ -27,7 +27,6 @@ public class Monster_PatrolState : StateBase
 
         if (monster.IsPlayerInDetectionRange()) //플레이어 감지
         {
-            Shared.UiMgr.CreateSpeiclMark("Exclamation_mark",1.0f,monster.GetUiHead());
             monster.ChangeTarget(Shared.GameMgr.PLAYEROBJ);
             monster.ChangeState((int)MONSTER_STATE.CHASE);
         }

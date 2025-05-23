@@ -13,6 +13,7 @@ public class Monster_ChaseState : StateBase //타겟을 쫒아가는 상태
     }
     public override void OnStateEnter()
     {
+        Shared.UiMgr.CreateSpeiclMark("Exclamation_mark", 1.0f, monster.GetUiHead());
         OrgSpeed = monster.GetSpeed();
         RunSpeed = OrgSpeed * 1.5f;
         monster.SetSpeed(RunSpeed);

@@ -28,7 +28,7 @@ public partial class Monster
 
     public bool IsPlayerInDetectionRange()
     {
-        float dist = Vector3.Distance(player.transform.position, transform.position);
+        float dist = DistXZ(player.transform.position, transform.position);
         if (dist <= detectionRange)
         {
             return true;
@@ -50,7 +50,7 @@ public partial class Monster
     /////////////////// 범위 테스트 ///////////////////
     public bool IsPlayerInAttackRange()
     {
-        float dist = Vector3.Distance(Target.transform.position, transform.position);
+        float dist = DistXZ(Target.transform.position, transform.position);
         if (dist <= attackRange)
         {
             return true;
@@ -75,9 +75,7 @@ public partial class Monster
             transform.rotation = Quaternion.LookRotation(dir, Vector3.up);
 
         //y축을 제외한 거리 계산
-        Vector2 a = new Vector2(transform.position.x, transform.position.z);
-        Vector2 b = new Vector2(patrolPoint[patrolIndex].x, patrolPoint[patrolIndex].z);
-        float dist = Vector2.Distance(a,b);
+        float dist = DistXZ(transform.position, patrolPoint[patrolIndex]);
 
         if (dist <= 0.5f)
         {
@@ -88,6 +86,15 @@ public partial class Monster
             }
         }
     }
+
+    public float DistXZ(Vector3 _a,Vector3 _b)
+    {
+        Vector2 a = new Vector2(_a.x, _a.z);
+        Vector2 b = new Vector2(_b.x, _b.z);
+        float dist = Vector2.Distance(a, b);
+        return dist;
+    }
+
     public void SetPatrolIndex(int _index)
     {
         patrolIndex = _index;
@@ -103,7 +110,7 @@ public partial class Monster
         ChangeState((int)MONSTER_STATE.PATROL);
     }
 
-    void PatrolPointInit()
+    protected void PatrolPointInit()
     {
         patrolPoint = new Vector3[PatrolPointTransform.Length];
         for (int i = 0; i < PatrolPointTransform.Length; i++)

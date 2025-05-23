@@ -53,7 +53,7 @@ public partial class Monster : Character
     // Monster가 Damage를 받을 시 실행되는 함수
     public override void Hit(DamageData _damagedata)
     {
-        Shake(0.2f, 0.05f);
+        Shake(0.1f, 0.05f);
         Statdata.TakeDamage(_damagedata);
 
         CheckHP();
