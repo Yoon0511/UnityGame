@@ -15,6 +15,7 @@ public partial class Player : Character
         DicState.Add((int)STATE.RUN, new Player_RunState(this));
         DicState.Add((int)STATE.ATTACK, new Player_AttackState(this));
         DicState.Add((int)STATE.DIE, new Player_DieState(this));
+        DicState.Add((int)STATE.RIDING, new Player_RidingState(this));
         
         Fsm.ChangeState(DicState[(int)STATE.IDLE]);
     }
@@ -22,17 +23,38 @@ public partial class Player : Character
     void StateChageJoystick(float _speed)
     {
         float speed = Statdata.GetData(STAT_TYPE.SPEED);
-        if (_speed >= speed * 0.6f)
+        if (_speed >= speed * 0.5f)
         {
-            ChangeState((int)STATE.RUN);
+            if(IsRiding)
+            {
+                Riding.ChangeState((int)RIDING_STATE.RUN);
+            }
+            else
+            {
+                ChangeState((int)STATE.RUN);
+            }
         }
-        else if (_speed > speed * 0.4f)
+        else if (_speed > speed * 0.1f)
         {
-            ChangeState((int)STATE.WALK);
+            if (IsRiding)
+            {
+                Riding.ChangeState((int)RIDING_STATE.WALK);
+            }
+            else
+            {
+                ChangeState((int)STATE.WALK);
+            }
         }
         else
         {
-            ChangeState((int)STATE.IDLE);
+            if (IsRiding)
+            {
+                Riding.ChangeState((int)RIDING_STATE.IDLE);
+            }
+            else
+            {
+                ChangeState((int)STATE.IDLE);
+            }
         }
     }
 }

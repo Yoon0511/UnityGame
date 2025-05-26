@@ -21,8 +21,10 @@ public partial class Player
 
     public void OnAttackAniEnd()
     {
-        //ChangeState(PrevState);
-        ChangeState((int)STATE.IDLE);
+        if(IsRiding == false)
+        {
+            ChangeState((int)STATE.IDLE);
+        }
     }
 
     public void OnCurrentUseSkill()

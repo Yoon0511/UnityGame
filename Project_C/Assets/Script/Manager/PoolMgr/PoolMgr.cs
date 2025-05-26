@@ -28,7 +28,7 @@ public class PoolMgr : MonoBehaviour
             DicPoolObjects.Add(obj.name, obj);
             
             IObjectPool<GameObject> pool = new ObjectPool<GameObject>(CreateObject, OnTakeFromPool, OnReturnedToPool, OnDestroyPoolObject,
-           true, 5, MaxPoolSize);
+           true, LoadCount, MaxPoolSize);
 
             DicObjectsPool.Add(obj.name, pool);
 

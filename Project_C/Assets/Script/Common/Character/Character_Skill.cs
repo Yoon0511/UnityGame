@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract partial class Character
@@ -10,9 +11,9 @@ public abstract partial class Character
     Transform ProjectilePoint;
 
     int CurrUseSkillIndex;
-    public int MaxSkillCount = 3;
+    public int MaxSkillCount = 4;
     [SerializeField]
-    protected List<Skill> CurrentSkill = new();
+    protected List<Skill> CurrentSkill = new List<Skill>();
     Dictionary<string, float> DicSkillCoolTime = new();
 
     bool IsCoolTimeRunning = false;

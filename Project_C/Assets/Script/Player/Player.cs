@@ -38,8 +38,18 @@ public partial class Player : Character
             OnAttack();
         }
 
+        //라이딩 테스트
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            OnRiding();
+        }
+        if (Input.GetKeyDown(KeyCode.F2))
+        {
+            OffRiding();
+        }
+
         //가드 테스트
-        if(Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             Guard();
         }

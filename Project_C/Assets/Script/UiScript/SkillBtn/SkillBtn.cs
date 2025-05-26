@@ -19,12 +19,24 @@ public class SkillBtn: MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
     public GameObject DragAndDropSkill;
     GameObject Dragobj;
     Skill Skill;
+
+    [SerializeField]
+    Skill FixSkil;
     private void Start()
     {
         Player = Shared.GameMgr.PLAYER;
         Canvas = Shared.GameMgr.CANVAS;
-    }
 
+        if(FixSkil != null)
+        {
+            StartCoroutine(ISkillInput());
+        }
+    }
+    IEnumerator ISkillInput()
+    {
+        yield return new WaitForSeconds(0.1f);
+        InputSkill(FixSkil);
+    }
     public void InputSkill(Skill _skill)
     {
         Skill = _skill;

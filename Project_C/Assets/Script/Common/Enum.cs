@@ -8,6 +8,7 @@ public enum STATE
     RUN,
     ATTACK,
     DIE,
+    RIDING,
     ENUM_END
 }
 public enum PLAYER_ANI_STATE
@@ -23,6 +24,7 @@ public enum PLAYER_ANI_STATE
     SKILL_SPELLCAST,
     SKILL_RUSH,
     GUARD,
+    RIDING,
     ENUM_END
 }
 public enum BUFF_TYPE
@@ -222,5 +224,14 @@ public enum SYSTEM_MSG_TYPE
     NONE,
     UI,
     QUEST_COMPLETE,
+    ENUM_END
+}
+
+public enum RIDING_STATE
+{
+    NONE,
+    IDLE,
+    WALK,
+    RUN,
     ENUM_END
 }

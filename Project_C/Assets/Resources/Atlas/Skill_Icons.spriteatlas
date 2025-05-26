@@ -58,6 +58,7 @@ SpriteAtlas:
     - 61dab0b6e506c6a43b12d9fde15b2393: 21300000
     - 300abdf8cbdd5c742a05b6506767fd64: 21300000
     - bbe833a9207e7fa41bbd3ce71ad09605: 21300000
+    - b1cdd62b930575c46a1202fbdb772762: 21300000
     - 2a5c892bdd014164da633b8c6fd0f246: 21300000
     - a2563f2b8dbc4044b9a50537d3a29962: 21300000
     - 125bb49b217257347be09ede099b888d: 21300000
@@ -78,6 +79,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 61dab0b6e506c6a43b12d9fde15b2393, type: 3}
   - {fileID: 21300000, guid: 300abdf8cbdd5c742a05b6506767fd64, type: 3}
   - {fileID: 21300000, guid: bbe833a9207e7fa41bbd3ce71ad09605, type: 3}
+  - {fileID: 21300000, guid: b1cdd62b930575c46a1202fbdb772762, type: 3}
   - {fileID: 21300000, guid: 2a5c892bdd014164da633b8c6fd0f246, type: 3}
   - {fileID: 21300000, guid: a2563f2b8dbc4044b9a50537d3a29962, type: 3}
   - {fileID: 21300000, guid: 125bb49b217257347be09ede099b888d, type: 3}
@@ -97,6 +99,7 @@ SpriteAtlas:
   - UI_Skill_Icon_Pound
   - UI_Skill_Icon_MeteorShower
   - UI_Skill_Icon_PsycicAttack
+  - UI_Skill_Icon_Riding
   - UI_Skill_Icon_Slash
   - UI_Skill_Icon_Buff
   - UI_Skill_Icon_Arrow_Barrage
