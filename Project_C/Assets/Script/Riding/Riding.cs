@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.UI.GridLayoutGroup;
 
 public partial class Riding : MonoBehaviour
 {
@@ -14,9 +15,17 @@ public partial class Riding : MonoBehaviour
     GameObject Body;
     [SerializeField]
     Player Owner;
+    public GameObject Sanddle;
+
+    public Transform BACKFOOT_R;
+    public Transform BACKFOOT_L;
+    public Transform FRONTFOOT_R;
+    public Transform FRONTFOOT_L;
 
     private void Start()
     {
+        Owner = Shared.GameMgr.PLAYER;
+        Owner.SetSanddle(Sanddle);
         FsmInit();
     }
 

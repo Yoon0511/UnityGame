@@ -21,7 +21,7 @@ public class Weapon : EquipmentItem
             EnhanceValue++;
             EnhanceProbability -= 0.05f;
             DicEquipmentItemStat[STAT_TYPE.ATK] += EnhanceRisingAmount;
-            EnhanceMaterial += 30; //강화비용증가
+            EnhanceMaterial += MaterialRisingAmount; //강화비용증가
 
             return true;
         }

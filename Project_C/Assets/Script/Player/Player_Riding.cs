@@ -11,11 +11,16 @@ public partial class Player
     [SerializeField]
     GameObject Sword;
 
-    [SerializeField]
     GameObject Sanddle;
 
     [SerializeField]
     Riding Riding;
+
+    public void SetSanddle(GameObject _sanddle)
+    {
+        Sanddle = _sanddle;
+    }
+
     public void OnRiding()
     {
         Shared.ParticleMgr.CreateParticle("Smoke", transform, 0.7f);

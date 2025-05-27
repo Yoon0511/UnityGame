@@ -17,6 +17,7 @@ public abstract class EquipmentItem : ItemBase
     public EquipmentItem()
     {
         EnhanceMaterial = 100;
+        MaterialRisingAmount = 30;
     }
     public override void ItemUse()
     {
