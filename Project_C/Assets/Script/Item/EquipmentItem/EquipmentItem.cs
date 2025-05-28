@@ -11,6 +11,7 @@ public abstract class EquipmentItem : ItemBase
     public int EnhanceValue;
     public float EnhanceRisingAmount;
     protected float EnhanceProbability = 1.0f;
+    protected float EnhanceProbabilityDecreaseAmount;
     protected int EnhanceMaterial;
     protected int MaterialRisingAmount;
 
@@ -65,4 +66,19 @@ public abstract class EquipmentItem : ItemBase
     }
 
     public int GetEnhaceMaterial() { return EnhanceMaterial; }
+
+    public void InputEquipMentData(TableItem.EquipMentItemInfo _info, TableItem.EquipItemStatInfo _stat)
+    {
+        //EquipMentItemInfo
+        EquimentType            = (EQUITMENT_TYPE)_info.EquipmentType;
+        EnhanceValue            = _info.EnhanceValue;
+        EnhanceRisingAmount     = _info.EnhanceRisingAmount;
+        EnhanceProbability      = _info.EnhanceProbability;
+        EnhanceProbabilityDecreaseAmount      = _info.EnhanceProbabilityDecreaseAmount;
+        EnhanceMaterial         = _info.EnhanceMaterial;
+        MaterialRisingAmount    = _info.MaterialRisingAmount;
+
+        //Stat
+        DicEquipmentItemStat[(STAT_TYPE)_stat.StatType] = _stat.Value;
+    }
 }

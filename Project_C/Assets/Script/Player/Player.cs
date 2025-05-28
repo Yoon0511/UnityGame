@@ -57,25 +57,34 @@ public partial class Player : Character
         //Å×½ºÆ®
         if (Input.GetKeyDown(KeyCode.F3)) //Æ÷¼Ç
         {
-            ItemBase obj = Instantiate(item).GetComponent<ItemBase>();
-            obj.Id = itemcount++;
+            //ItemBase obj = Instantiate(item).GetComponent<ItemBase>();
+            HP_Postion obj = (HP_Postion)Shared.DataMgr.GetItem(1004);
+
             Inventory.AddItem(obj);
         }
 
         if (Input.GetKeyDown(KeyCode.F5)) //¹«±â
         {
-            Weapon obj = Instantiate(weapon).GetComponent<Weapon>();
+            // 1 26 42
+            // 2 29 45
+           // Weapon obj = Instantiate(weapon).GetComponent<Weapon>();
+            Weapon obj = (Weapon)Shared.DataMgr.GetItem(1001);
+           
             Inventory.AddItem(obj);
             //equiment.EquippedItem(weapon);
         }
         if (Input.GetKeyDown(KeyCode.F6)) //°©¿Ê
         {
-            Amor obj = Instantiate(amor).GetComponent<Amor>();
+            //Amor obj = Instantiate(amor).GetComponent<Amor>();
+            Amor obj = (Amor)Shared.DataMgr.GetItem(1002);
+
             Inventory.AddItem(obj);
         }
         if (Input.GetKeyDown(KeyCode.F7)) //¾Ç¼¼¼­¸®
         {
-            Accessories obj = Instantiate(ring).GetComponent<Accessories>();
+            //Accessories obj = Instantiate(ring).GetComponent<Accessories>();
+            Accessories obj = (Accessories)Shared.DataMgr.GetItem(1003);
+
             Inventory.AddItem(obj);
         }
 
@@ -101,9 +110,9 @@ public partial class Player : Character
         if (Input.GetKeyDown(KeyCode.F10)) //Äù½ºÆ® Å×½ºÆ®
         {
             //Debug.Log("hunting");
-            HuntingMsg huntingMsg = new HuntingMsg();
-            huntingMsg.SetMsg(10, 10, (int)QUEST_TYPE.HUNTING, (int)MONSTER_ID.GOLEM, 3);
-            QusetProgress(huntingMsg);
+            //HuntingMsg huntingMsg = new HuntingMsg();
+            //huntingMsg.SetMsg(10, 10, (int)QUEST_TYPE.HUNTING, (int)MONSTER_ID.GOLEM, 3);
+            //QusetProgress(huntingMsg);
 
             //DeBuff deBuff = new DeBuff_Stun(0.5f, gameObject, "UI_Skill_Icon_Blackhole");
 

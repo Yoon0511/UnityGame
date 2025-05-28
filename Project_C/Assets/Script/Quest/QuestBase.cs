@@ -19,6 +19,8 @@ public abstract class QuestBase : MonoBehaviour
     protected int       Id;
     [SerializeField]
     protected QUEST_REWARD_TYPE QUEST_REWARD_TYPE;
+    string[] Conversation;
+
     public abstract void Accept(); //수락
     public abstract void Refusal(); //거절
     public abstract void Complete(); //퀘스트 완료
@@ -39,7 +41,7 @@ public abstract class QuestBase : MonoBehaviour
     public Player GetProgressPlayer() { return ProgressPlayer; }
     public int GetId() { return Id; }
     public abstract string GetRewardDetail();
-
+    public string[] GetConversation() { return Conversation; }
     public void GiveQuestReward()
     {
         switch (QUEST_REWARD_TYPE)
@@ -74,5 +76,18 @@ public abstract class QuestBase : MonoBehaviour
                 }
         }
         return RewardTypeText;
+    }
+
+    public void InputQuestBaseData(TableQuest.QuestBaseInfo _info)
+    {
+        Id = _info.Id;
+        QuestType = _info.Type;
+        QuestName = _info.Name;
+        Contents = _info.Contents;
+        QUEST_REWARD_TYPE = (QUEST_REWARD_TYPE)_info.RewardType;
+        Reward = _info.Reward;
+        int count = _info.ConversationCount;
+        Conversation = new string[count];
+        Conversation = _info.Conversation.Split("-",StringSplitOptions.None);
     }
 }

@@ -82,4 +82,11 @@ public class HuntingQuset : QuestBase
         string detail = GetRewardTypeText() + " - "+ TextReward;
         return detail;
     }
+
+    public void InputHuntingQuestData(TableQuest.HuntingQuestInfo _info)
+    {
+        CurrentGoalCount = _info.CurrentGoalCount;
+        GoalCount = _info.GoalCount;
+        TargetId =  _info.TargetId;
+    }
 }

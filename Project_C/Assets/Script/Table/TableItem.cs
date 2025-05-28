@@ -20,9 +20,11 @@ public class TableItem : TableBase
     public class EquipMentItemInfo
     {
         public int Id;
+        public byte EquipmentType;
         public int EnhanceValue;
         public float EnhanceRisingAmount;
         public float EnhanceProbability;
+        public float EnhanceProbabilityDecreaseAmount;
         public int EnhanceMaterial;
         public int MaterialRisingAmount;
     }
@@ -133,9 +135,11 @@ public class TableItem : TableBase
             return false;
 
         _Reader.get(_Row, ref _Info.Id);
+        _Reader.get(_Row, ref _Info.EquipmentType);
         _Reader.get(_Row, ref _Info.EnhanceValue);
         _Reader.get(_Row, ref _Info.EnhanceRisingAmount);
         _Reader.get(_Row, ref _Info.EnhanceProbability);
+        _Reader.get(_Row, ref _Info.EnhanceProbabilityDecreaseAmount);
         _Reader.get(_Row, ref _Info.EnhanceMaterial);
         _Reader.get(_Row, ref _Info.MaterialRisingAmount);
 
@@ -212,18 +216,37 @@ public class TableItem : TableBase
 
     public ItemBaseInfo GetItemBaseInfo(int _id)
     {
-        return DicItemBase[_id];
+        if (DicItemBase.TryGetValue(_id, out var info))
+            return info;
+
+        Debug.LogWarning($"[DataMgr] ItemBaseInfo ID {_id}가 존재하지 않습니다.");
+        return null;
     }
+
     public EquipMentItemInfo GetEquipMentItemInfo(int _id)
     {
-        return DicEquipMentItem[_id];
+        if (DicEquipMentItem.TryGetValue(_id, out var info))
+            return info;
+
+        Debug.LogWarning($"[DataMgr] EquipMentItemInfo ID {_id}가 존재하지 않습니다.");
+        return null;
     }
+
     public EquipItemStatInfo GetEquipItemStatInfo(int _id)
     {
-        return DicEquipMentStat[_id];
+        if (DicEquipMentStat.TryGetValue(_id, out var info))
+            return info;
+
+        Debug.LogWarning($"[DataMgr] EquipItemStatInfo ID {_id}가 존재하지 않습니다.");
+        return null;
     }
+
     public UseItemInfo GetUseItemInfo(int _id)
     {
-        return DicUseItem[_id];
+        if (DicUseItem.TryGetValue(_id, out var info))
+            return info;
+
+        Debug.LogWarning($"[DataMgr] UseItemInfo ID {_id}가 존재하지 않습니다.");
+        return null;
     }
 }

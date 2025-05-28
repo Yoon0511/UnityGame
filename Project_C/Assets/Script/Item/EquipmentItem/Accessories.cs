@@ -18,7 +18,7 @@ public class Accessories : EquipmentItem
         if (TryEnhance())
         {
             EnhanceValue++;
-            EnhanceProbability -= 0.05f; //성공확률 5%씩 감소
+            EnhanceProbability -= EnhanceProbabilityDecreaseAmount; //성공확률 5%씩 감소
             DicEquipmentItemStat[STAT_TYPE.SPEED] += EnhanceRisingAmount; //EnhanceRisingAmount만큼의 스탯증가
             EnhanceMaterial += MaterialRisingAmount; //강화비용증가
             return true;

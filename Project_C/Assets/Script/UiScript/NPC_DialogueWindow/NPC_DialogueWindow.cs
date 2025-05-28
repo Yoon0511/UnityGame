@@ -11,7 +11,7 @@ public class NPC_DialogueWindow : MonoBehaviour
     public GameObject BTN_QUESTACCEPT;
     public GameObject BTN_QUESTREFUSAL;
 
-    List<string> List_ConverstaionTexts = new List<string>();
+    string[] ConverstaionTexts;
 
     int TextIndex = 0;
     int MaxTextIndex = 0;
@@ -23,17 +23,13 @@ public class NPC_DialogueWindow : MonoBehaviour
         Player = _player;
         CurrentNPC = _npc;
         NPC_NAME.text = CurrentNPC.GetOnlyCharacterName();
-        List_ConverstaionTexts = CurrentNPC.GetConverstationTexts();
+        ConverstaionTexts = CurrentNPC.GetConverstationTexts();
         TextIndex = 0;
-        MaxTextIndex = List_ConverstaionTexts.Count;
+        MaxTextIndex = ConverstaionTexts.Length;
         EndConverstationIndex = MaxTextIndex - 1;
-        NPC_CONVERSTATIONTEXT.text = List_ConverstaionTexts[TextIndex];
+        NPC_CONVERSTATIONTEXT.text = ConverstaionTexts[TextIndex];
     }
     
-    public void InputConverstaionText(string text)
-    {
-        List_ConverstaionTexts.Add(text);
-    }
 
     public void OnDialogueNextBtn()
     {
@@ -41,7 +37,7 @@ public class NPC_DialogueWindow : MonoBehaviour
 
         //다음 대화대사 진행
         if(TextIndex <= EndConverstationIndex)
-            NPC_CONVERSTATIONTEXT.text = List_ConverstaionTexts[TextIndex];
+            NPC_CONVERSTATIONTEXT.text = ConverstaionTexts[TextIndex];
 
         if(TextIndex >= EndConverstationIndex)
         {

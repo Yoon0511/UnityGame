@@ -1,4 +1,4 @@
-﻿ID,EnhanceValue,EnhanceRisingAmount,EnhanceProbability,EnhanceMaterial,MaterialRisingAmount
-1001,0,3,0.9,300,100
-1002,0,4,0.9,200,50
-1003,0,5,0.9,100,30
+﻿ID,EquimentType,EnhanceValue,EnhanceRisingAmount,EnhanceProbability,EnhanceProbabilityDecreaseAmount,EnhanceMaterial,MaterialRisingAmount
+1001,1,0,3,0.9,0.07,300,100
+1002,2,0,4,0.9,0.05,200,50
+1003,3,0,5,0.9,0.05,100,30

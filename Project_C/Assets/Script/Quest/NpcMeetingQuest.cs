@@ -74,4 +74,9 @@ public class NpcMeetingQuest : QuestBase
     {
         
     }
+
+    public void InputNPCMeetingData(TableQuest.NPCMeetingQuestInfo _info)
+    {
+        TargetNPCId = _info.TargetNPCId;
+    }
 }

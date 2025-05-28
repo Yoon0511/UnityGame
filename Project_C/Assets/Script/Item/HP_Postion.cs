@@ -10,4 +10,9 @@ public class HP_Postion : ItemBase
         Owner.EnhanceStat(STAT_TYPE.HP, HealAmount);
         Shared.ParticleMgr.CreateParticle("Healing", Owner.GetBodyParticlePointObj().transform, 1.0f);
     }
+
+    public void InputUseItemData(TableItem.UseItemInfo _info)
+    {
+        HealAmount = _info.Amount;
+    }
 }

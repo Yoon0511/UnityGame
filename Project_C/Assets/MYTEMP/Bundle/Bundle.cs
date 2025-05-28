@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using System.IO;
+using UnityEngine.U2D;
 
 public class Bundle : MonoBehaviour
 {
@@ -50,5 +51,18 @@ public class Bundle : MonoBehaviour
         //obj.name = "LoadBundle";
 
         local.Unload(true);
+    }
+
+
+    IEnumerator asd()
+    {
+        AssetBundleCreateRequest async = AssetBundle.LoadFromFileAsync(Path.Combine(Application.streamingAssetsPath, "atlasitem"));
+        yield return async;
+        AssetBundle local = async.assetBundle;
+
+        if(local == null)
+            yield break;
+        var obj = local.LoadAsset("Item");
+        SpriteAtlas sa = obj as SpriteAtlas;
     }
 }
