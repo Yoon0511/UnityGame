@@ -58,7 +58,7 @@ public class GameMgr : MonoBehaviour
         return JOYSTICK.IsDrag;
     }
 
-    public void OnNPCDialogueWindow(QuestNPC _npc,Player _player)
+    public void OnNPCDialogueWindow(NPC _npc,Player _player)
     {
         if (NPC_DialogueWindow == null)
             NPC_DialogueWindow = NPC_DIALOGUEWINDOW.GetComponent<NPC_DialogueWindow>();

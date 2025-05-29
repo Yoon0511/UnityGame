@@ -26,7 +26,7 @@ public class NpcMeetingQuest : QuestBase
 
     public override void Accept()
     {
-        
+        QuestState = QUEST_STATE.PROGRESS;
     }
 
     public override void Complete()
@@ -34,9 +34,6 @@ public class NpcMeetingQuest : QuestBase
         GiveQuestReward();
 
         IsComplete = true;
-
-        //완료 안내 메시지
-        Shared.UiMgr.CreateSystemMsg(GetQusetName() + "완료!", SYSTEM_MSG_TYPE.QUEST_COMPLETE);
     }
 
     public override void Fail()
@@ -78,5 +75,6 @@ public class NpcMeetingQuest : QuestBase
     public void InputNPCMeetingData(TableQuest.NPCMeetingQuestInfo _info)
     {
         TargetNPCId = _info.TargetNPCId;
+        TargetNPCName = _info.TargetNPCName;
     }
 }

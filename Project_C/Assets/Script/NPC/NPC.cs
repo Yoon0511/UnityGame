@@ -24,6 +24,7 @@ public partial class NPC : Character
     public override void RayTargetEvent(Character _character)
     {
         SendQuestMsg();
+        Shared.GameMgr.OnNPCDialogueWindow(this, (Player)_character);
     }
 
     public override void UseSkill(int _index)
@@ -37,7 +38,7 @@ public partial class NPC : Character
         CharacterType = (int)CHARACTER_TYPE.NPC;
 
         ConverstationTexts = new string[1];
-        ConverstationTexts[0] = $"저는" + GetCharacterName() + "입니다.";
+        ConverstationTexts[0] = $"저는 {Job} {GetOnlyCharacterName()}입니다.";
         //퀘스트 생성 - 변경예정
         //Quest = new HuntingQuset();
         //((HuntingQuset)Quest).Init(1,"GolemHunt", "Target Golem - ",5,(int)MONSTER_ID.GOLEM,500,this);

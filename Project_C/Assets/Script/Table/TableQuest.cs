@@ -16,8 +16,9 @@ public class TableQuest : TableBase
         public string Contents;
         public byte RewardType;
         public int Reward;
-        public int ConversationCount;
         public string Conversation;
+        public string ProgressConversation;
+        public string CompleteConversation;
     }
 
     [Serializable]
@@ -34,6 +35,7 @@ public class TableQuest : TableBase
     {
         public int Id;
         public int TargetNPCId;
+        public string TargetNPCName;
     }
 
     string[] ItemFile = { "Quest(QuestBase)", "Quest(HuntingQuest)", "Quest(NPCMeetingQuest)"};
@@ -102,8 +104,9 @@ public class TableQuest : TableBase
         _Reader.get(_Row, ref _Info.Contents);
         _Reader.get(_Row, ref _Info.RewardType);
         _Reader.get(_Row, ref _Info.Reward);
-        _Reader.get(_Row, ref _Info.ConversationCount);
         _Reader.get(_Row, ref _Info.Conversation);
+        _Reader.get(_Row, ref _Info.ProgressConversation);
+        _Reader.get(_Row, ref _Info.CompleteConversation);
 
         return true;
     }
@@ -129,6 +132,7 @@ public class TableQuest : TableBase
 
         _Reader.get(_Row, ref _Info.Id);
         _Reader.get(_Row, ref _Info.TargetNPCId);
+        _Reader.get(_Row, ref _Info.TargetNPCName);
 
         return true;
     }
@@ -149,8 +153,9 @@ public class TableQuest : TableBase
                          $"- Contents: {info.Contents}\n" +
                          $"- RewardType: {info.RewardType}\n" +
                          $"- Reward: {info.Reward}\n" +
-                         $"- ConversationCount: {info.ConversationCount}\n" +
-                         $"- Conversation: {info.Conversation}";
+                         $"- Conversation: {info.Conversation}\n" +
+                         $"- ProgressConversation: {info.ProgressConversation}\n" +
+                         $"- CompleteConversation: {info.CompleteConversation}\n";
 
             Debug.Log(log);
         }

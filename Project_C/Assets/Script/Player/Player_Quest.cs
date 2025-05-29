@@ -37,21 +37,43 @@ public partial class Player
     public List<QuestBase> GetCompleteQuestList() { return ListCompleteQuest; }
     public void QusetProgress(QuestMsgBase _questmsg)
     {
-        List<QuestBase> ListRemove = new List<QuestBase>();
-
-        foreach (QuestBase quest in ListProgessQuest)
+        for(int i = 0;i< ListProgessQuest.Count;++i)
         {
-            quest.Progress(_questmsg);
-            if(quest.GetIsComplete())
+            ListProgessQuest[i].Progress(_questmsg);
+        }
+
+        //foreach (QuestBase quest in ListProgessQuest)
+        //{
+        //    quest.Progress(_questmsg);
+        //}
+
+        QUESTLISTUI.Refresh(); //QuestUi 갱신        
+    }
+
+    public void QuestRefresh()
+    {
+        List<QuestBase> ListRemove = new List<QuestBase>();
+        for (int i = 0; i < ListProgessQuest.Count; ++i)
+        {
+            if(ListProgessQuest[i].GetIsComplete())
             {
-                ListCompleteQuest.Add(quest); //완료된 퀘스트 리스트에 추가
-                ListRemove.Add(quest);
+                ListCompleteQuest.Add(ListProgessQuest[i]); //완료된 퀘스트 리스트에 추가
+                ListRemove.Add(ListProgessQuest[i]);
             }
         }
 
-        QUESTLISTUI.Refresh(); //QuestUi 갱신
+        //foreach (QuestBase quest in ListProgessQuest)
+        //{
+        //    if (quest.GetIsComplete())
+        //    {
+        //        ListCompleteQuest.Add(quest); //완료된 퀘스트 리스트에 추가
+        //        ListRemove.Add(quest);
+        //    }
+        //}
 
-        for(int i = 0;i< ListRemove.Count;++i)
+        QUESTLISTUI.Refresh();
+
+        for (int i = 0; i < ListRemove.Count; ++i)
         {
             RemoveQuest(ListRemove[i]);
         }

@@ -19,7 +19,11 @@ public abstract class QuestBase : MonoBehaviour
     protected int       Id;
     [SerializeField]
     protected QUEST_REWARD_TYPE QUEST_REWARD_TYPE;
-    string[] Conversation;
+    string[] Conversation; // 시작대화
+    string[] ProgressConversation; // 진행중 대화
+    string[] CompleteConversation; // 완료 대화
+
+    protected QUEST_STATE QuestState = QUEST_STATE.START;
 
     public abstract void Accept(); //수락
     public abstract void Refusal(); //거절
@@ -41,7 +45,22 @@ public abstract class QuestBase : MonoBehaviour
     public Player GetProgressPlayer() { return ProgressPlayer; }
     public int GetId() { return Id; }
     public abstract string GetRewardDetail();
-    public string[] GetConversation() { return Conversation; }
+    public void StateChange(QUEST_STATE _state){QuestState = _state;}
+    public QUEST_STATE GetQuestState() { return QuestState; }
+    public string[] GetConversation() 
+    {
+        switch (QuestState)
+        {
+            case QUEST_STATE.START:
+                return Conversation;
+            case QUEST_STATE.PROGRESS:
+                return ProgressConversation;
+            case QUEST_STATE.COMPLETE:
+                return CompleteConversation;
+            default:
+                return null;
+        }
+    }
     public void GiveQuestReward()
     {
         switch (QUEST_REWARD_TYPE)
@@ -57,6 +76,11 @@ public abstract class QuestBase : MonoBehaviour
                     break;
                 }
         }
+        //Player 퀘스트 정보 갱신
+        ProgressPlayer.QuestRefresh();
+
+        //완료 안내 메시지
+        Shared.UiMgr.CreateSystemMsg(GetQusetName() + "완료!", SYSTEM_MSG_TYPE.QUEST_COMPLETE);
     }
 
     public string GetRewardTypeText()
@@ -86,8 +110,20 @@ public abstract class QuestBase : MonoBehaviour
         Contents = _info.Contents;
         QUEST_REWARD_TYPE = (QUEST_REWARD_TYPE)_info.RewardType;
         Reward = _info.Reward;
-        int count = _info.ConversationCount;
+        QuestState = QUEST_STATE.START;
+        //시작대화
+        int count = _info.Conversation.Split("-", StringSplitOptions.None).Length;
         Conversation = new string[count];
-        Conversation = _info.Conversation.Split("-",StringSplitOptions.None);
+        Conversation = _info.Conversation.Split("-", StringSplitOptions.None);
+
+        // 진행 중 대화
+        count = _info.ProgressConversation.Split("-", StringSplitOptions.None).Length;
+        ProgressConversation = new string[count];
+        ProgressConversation = _info.ProgressConversation.Split("-", StringSplitOptions.None);
+
+        // 완료 대화
+        count = _info.CompleteConversation.Split("-", StringSplitOptions.None).Length;
+        CompleteConversation = new string[count];
+        CompleteConversation = _info.CompleteConversation.Split("-", StringSplitOptions.None);
     }
 }

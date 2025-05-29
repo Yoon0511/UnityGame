@@ -110,9 +110,9 @@ public partial class Player : Character
         if (Input.GetKeyDown(KeyCode.F10)) //퀘스트 테스트
         {
             //Debug.Log("hunting");
-            //HuntingMsg huntingMsg = new HuntingMsg();
-            //huntingMsg.SetMsg(10, 10, (int)QUEST_TYPE.HUNTING, (int)MONSTER_ID.GOLEM, 3);
-            //QusetProgress(huntingMsg);
+            HuntingMsg huntingMsg = new HuntingMsg();
+            huntingMsg.SetMsg(10, 10, (int)QUEST_TYPE.HUNTING, (int)MONSTER_ID.GOLEM, 3);
+            QusetProgress(huntingMsg);
 
             //DeBuff deBuff = new DeBuff_Stun(0.5f, gameObject, "UI_Skill_Icon_Blackhole");
 
@@ -132,7 +132,11 @@ public partial class Player : Character
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if(Physics.Raycast(ray, out hit))
+        // VillageColliderLayer(6번) 무시
+        int IgnoreLayerMask = 1 << 6;
+        int LayerMask = ~IgnoreLayerMask;
+
+        if (Physics.Raycast(ray, out hit,Mathf.Infinity,LayerMask))
         {
             Character hitcharacter = hit.transform.GetComponent<Character>();
 

@@ -26,6 +26,7 @@ public class HuntingQuset : QuestBase
         SetReward(_reward);
         QuestType = (int)QUEST_TYPE.HUNTING;
         OwnerNPC = _owner;
+        QuestState = QUEST_STATE.START;
     }
     public override void Progress(QuestMsgBase _questmsg)
     {
@@ -38,14 +39,15 @@ public class HuntingQuset : QuestBase
             //UnityEngine.Debug.Log(CurrentGoalCount + " - " + GoalCount);
             if(CurrentGoalCount == GoalCount) //목표치 달성
             {
-                Complete();
+                //Complete();
+                StateChange(QUEST_STATE.COMPLETE);
             }
         }
     }
 
     public override void Accept()
     {
-     
+        StateChange(QUEST_STATE.PROGRESS);
     }
 
     public override void Refusal()
@@ -55,12 +57,9 @@ public class HuntingQuset : QuestBase
 
     public override void Complete() //보상
     {
-        GiveQuestReward();
-       
         IsComplete = true;
-
-        //완료 안내 메시지
-        Shared.UiMgr.CreateSystemMsg(GetQusetName() + "완료!",SYSTEM_MSG_TYPE.QUEST_COMPLETE);
+        StateChange(QUEST_STATE.END);
+        GiveQuestReward();
     }
 
     public override void Fail()
@@ -70,9 +69,28 @@ public class HuntingQuset : QuestBase
 
     public override string GetContents()
     {
-        string TextGoal = "<color=#CCCCCC><b>" + GoalCount.ToString() + "</b></color>";
-        string TextCrrentGoal = "<color=#FF6B6B><b>" + CurrentGoalCount.ToString() + "</b></color>";
-        string contents = Contents + " " + TextCrrentGoal + "/" + TextGoal;
+        string Goalcolor = "CCCCCC";
+        string CrrentGoalcolor = "FF6B6B";
+        string ContentsColor = "FFFFFF";
+
+        if (QuestState == QUEST_STATE.COMPLETE ||
+            QuestState == QUEST_STATE.END)
+        {
+            Goalcolor = "808080";
+            CrrentGoalcolor = "808080";
+            ContentsColor = "808080";
+        }
+
+        string TextGoal = $"<color=#{Goalcolor}><b>" + GoalCount.ToString() + "</b></color>";
+        string TextCrrentGoal = $"<color=#{CrrentGoalcolor}><b>" + CurrentGoalCount.ToString() + "</b></color>";
+        string contents = $"<color=#{ContentsColor}><b>{Contents}</b></color>" + " " + TextCrrentGoal + $"<color=#{ContentsColor}>/</color>" + TextGoal;
+
+
+        if (QuestState == QUEST_STATE.COMPLETE)
+        {
+            contents += "\n <color=#00BFFF><b>완료가능!</b></color>";
+        }
+
         return contents;
     }
 

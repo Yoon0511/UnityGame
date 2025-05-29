@@ -158,6 +158,16 @@ public enum QUEST_TYPE
     ENUM_END
 }
 
+public enum QUEST_STATE
+{
+    NONE,
+    START,
+    PROGRESS,
+    COMPLETE,
+    END,
+    ENUM_END,
+}
+
 public enum SKILL_STATE
 {
     NONE,

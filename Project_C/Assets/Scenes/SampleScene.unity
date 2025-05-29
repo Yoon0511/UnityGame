@@ -6037,7 +6037,7 @@ GameObject:
   - component: {fileID: 463485183}
   - component: {fileID: 463485185}
   - component: {fileID: 463485184}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VillageCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9611,7 +9611,6 @@ GameObject:
   - component: {fileID: 1534029075}
   - component: {fileID: 1534029076}
   - component: {fileID: 1534029078}
-  - component: {fileID: 1534029077}
   - component: {fileID: 1534029079}
   m_Layer: 0
   m_Name: NPC
@@ -9780,25 +9779,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee13c021d88a8348b4a8dd31247a900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1534029077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1534029068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74b216faceb577d4da0ebba0e18bc112, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  QuestName: 
-  Contents: 
-  Reward: 30
-  Id: 1
-  QUEST_REWARD_TYPE: 2
-  TargetNPCId: 5
-  TargetNPCName: BBB
 --- !u!114 &1534029078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9822,7 +9802,7 @@ MonoBehaviour:
   Job: "<\uC2DC\uBBFC>"
   NPC_NAME: AAA
   NPC_ID: 2
-  Quest: {fileID: 1534029077}
+  QuestId: 2004
 --- !u!114 &1534029079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18100,6 +18080,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3668704995639130243, guid: 87af3cb2fd6859a4a94abd66af3371c2, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668704995639130243, guid: 87af3cb2fd6859a4a94abd66af3371c2, type: 3}
+      propertyPath: m_Size.y
+      value: 1.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668704995639130243, guid: 87af3cb2fd6859a4a94abd66af3371c2, type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127199259177895372, guid: 87af3cb2fd6859a4a94abd66af3371c2, type: 3}
+      propertyPath: Quest
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127199259177895372, guid: 87af3cb2fd6859a4a94abd66af3371c2, type: 3}
+      propertyPath: QuestId
+      value: 2001
+      objectReference: {fileID: 0}
     - target: {fileID: 7688558514901597417, guid: 87af3cb2fd6859a4a94abd66af3371c2, type: 3}
       propertyPath: uihead
       value: 
@@ -18112,7 +18112,8 @@ PrefabInstance:
       propertyPath: CurrentGoalCount
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8501153770148233026, guid: 87af3cb2fd6859a4a94abd66af3371c2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
