@@ -18,6 +18,9 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     List<InvenSlot> slots = new List<InvenSlot>();
 
+    [SerializeField]
+    GameObject Ui;
+
     void Awake()
     {
         if (items.Count == 0)
@@ -100,5 +103,10 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
             //π‡¿∫ ∞ÒµÂ
             GOLDTEXT.text = "<color=#FFD700><b>" + Gold + "</b></color>";
         }
+    }
+
+    public void OpenUi()
+    {
+        Ui.SetActive(true);
     }
 }

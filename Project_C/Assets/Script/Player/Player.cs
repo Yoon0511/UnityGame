@@ -58,7 +58,7 @@ public partial class Player : Character
         if (Input.GetKeyDown(KeyCode.F3)) //Æ÷¼Ç
         {
             //ItemBase obj = Instantiate(item).GetComponent<ItemBase>();
-            HP_Postion obj = (HP_Postion)Shared.DataMgr.GetItem(1004);
+            HP_Postion obj = (HP_Postion)Shared.DataMgr.GetItem(1016);
 
             Inventory.AddItem(obj);
         }
@@ -76,14 +76,14 @@ public partial class Player : Character
         if (Input.GetKeyDown(KeyCode.F6)) //°©¿Ê
         {
             //Amor obj = Instantiate(amor).GetComponent<Amor>();
-            Amor obj = (Amor)Shared.DataMgr.GetItem(1002);
+            Amor obj = (Amor)Shared.DataMgr.GetItem(1006);
 
             Inventory.AddItem(obj);
         }
         if (Input.GetKeyDown(KeyCode.F7)) //¾Ç¼¼¼­¸®
         {
             //Accessories obj = Instantiate(ring).GetComponent<Accessories>();
-            Accessories obj = (Accessories)Shared.DataMgr.GetItem(1003);
+            Accessories obj = (Accessories)Shared.DataMgr.GetItem(1011);
 
             Inventory.AddItem(obj);
         }

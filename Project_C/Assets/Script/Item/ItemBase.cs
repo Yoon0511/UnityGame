@@ -10,6 +10,8 @@ public abstract class ItemBase : PoolAble
     public int Id;
     public string SpriteName;
     public Character Owner;
+    public int SellPrice;
+    public int BuyPrice;
 
     public abstract void ItemUse();
 
@@ -19,5 +21,7 @@ public abstract class ItemBase : PoolAble
         ItemName = _info.ItemName;
         Id = _info.Id;
         SpriteName = _info.SpriteName;
+        SellPrice = _info.SellPrice;
+        BuyPrice = _info.BuyPrice;
     }
 }

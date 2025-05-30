@@ -14,6 +14,8 @@ public class TableItem : TableBase
         public string Prefabs;
         public string ItemName;
         public string SpriteName;
+        public int SellPrice;
+        public int BuyPrice;
     }
 
     [Serializable]
@@ -124,6 +126,8 @@ public class TableItem : TableBase
         _Reader.get(_Row, ref _Info.Prefabs);
         _Reader.get(_Row, ref _Info.ItemName);
         _Reader.get(_Row, ref _Info.SpriteName);
+        _Reader.get(_Row, ref _Info.SellPrice);
+        _Reader.get(_Row, ref _Info.BuyPrice);
 
         return true;
     }
@@ -179,6 +183,8 @@ public class TableItem : TableBase
             Debug.Log($"Key: {kvp.Key} | Value: {kvp.Value.Prefabs}");
             Debug.Log($"Key: {kvp.Key} | Value: {kvp.Value.ItemName}");
             Debug.Log($"Key: {kvp.Key} | Value: {kvp.Value.SpriteName}");
+            Debug.Log($"Key: {kvp.Key} | Value: {kvp.Value.SellPrice}");
+            Debug.Log($"Key: {kvp.Key} | Value: {kvp.Value.BuyPrice}");
         }
     }
 

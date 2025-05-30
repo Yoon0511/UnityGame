@@ -25,4 +25,15 @@ public partial class Player
         Inventory.UpdateGoldText();
         return true;
     }
+
+    public void AddItem(int _itemid)
+    {
+        Inventory.AddItem(Shared.DataMgr.GetItem(_itemid));
+        Inventory.UpdateGoldText();
+    }
+
+    public void OpenInventory()
+    {
+        Inventory.OpenUi();
+    }
 }

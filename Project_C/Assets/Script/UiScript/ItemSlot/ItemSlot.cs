@@ -9,7 +9,7 @@ public abstract class ItemSlot : PoolAble
     protected ItemBase Item;
     public Image Image;
 
-    public void InputItem(ItemBase _Item)
+    public virtual void InputItem(ItemBase _Item)
     {
         if (_Item == null)
         {
@@ -42,4 +42,10 @@ public abstract class ItemSlot : PoolAble
         Image.color = new Color(Image.color.r, Image.color.g, Image.color.b, _value);
     }
     public abstract void OnClickSlot();
+
+    public override void ReleaseObject()
+    {
+        base.ReleaseObject();
+        Item.ReleaseObject();
+    }
 }

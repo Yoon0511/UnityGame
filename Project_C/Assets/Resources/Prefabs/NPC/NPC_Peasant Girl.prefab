@@ -150,9 +150,6 @@ PrefabInstance:
       addedObject: {fileID: 3668704995639130243}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6ed29fd5852d7524986a37af72910c2d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8501153770148233026}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6ed29fd5852d7524986a37af72910c2d, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 6127199259177895372}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6ed29fd5852d7524986a37af72910c2d, type: 3}
       insertIndex: -1
@@ -254,28 +251,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.67, z: 1}
+  m_Size: {x: 1, y: 1.69, z: 1}
   m_Center: {x: 0, y: 1.1, z: 0}
---- !u!114 &8501153770148233026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1555032193768518387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d6a4c3e86d0c0f48b596f1c802a9ad2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  QuestName: HuntGolem
-  Contents: HuntGolem
-  Reward: 500
-  Id: 0
-  CurrentGoalCount: 3
-  GoalCount: 10
-  MONSTER_ID: 1
-  QUEST_REWARD_TYPE: 1
 --- !u!114 &6127199259177895372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +275,8 @@ MonoBehaviour:
   CurrentSkill: []
   Job: "<\uC2DC\uBBFC>"
   NPC_NAME: PeasantGirl
-  Quest: {fileID: 8501153770148233026}
+  NPC_ID: 0
+  QuestId: 2001
 --- !u!114 &6715264938732599876
 MonoBehaviour:
   m_ObjectHideFlags: 0

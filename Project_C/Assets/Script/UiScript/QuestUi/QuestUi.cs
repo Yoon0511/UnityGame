@@ -104,8 +104,8 @@ public class QuestUi : MonoBehaviour
 
         for(int i = 0;i< Count; ++i)
         {
-            QuestBase quest = new HuntingQuset();
-            ((HuntingQuset)quest).Init(i, "시작퀘스트-" + i.ToString(), i.ToString() + " - 시작퀘스트",
+            QuestBase quest = new HuntingQuest();
+            ((HuntingQuest)quest).Init(i, "시작퀘스트-" + i.ToString(), i.ToString() + " - 시작퀘스트",
                 Random.Range(10, 30), i, Random.Range(500, 3000), null);
 
             list.Add(quest);
@@ -120,8 +120,8 @@ public class QuestUi : MonoBehaviour
 
         for (int i = 0; i < Count; ++i)
         {
-            QuestBase quest = new HuntingQuset();
-            ((HuntingQuset)quest).Init(i, "진행중-" + i.ToString(), i.ToString() + "- 진행중",
+            QuestBase quest = new HuntingQuest();
+            ((HuntingQuest)quest).Init(i, "진행중-" + i.ToString(), i.ToString() + "- 진행중",
                 Random.Range(10, 30), i, Random.Range(500, 3000), null);
 
             list.Add(quest);

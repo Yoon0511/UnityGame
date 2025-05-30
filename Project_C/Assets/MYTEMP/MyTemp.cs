@@ -35,6 +35,8 @@ public class MyTemp : MonoBehaviour
     //}
 
     string[] name = { "Oakridge", "Redhill", "Brimford", "Greenbrook" };
+
+    public Store Store;
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.I))
@@ -47,6 +49,12 @@ public class MyTemp : MonoBehaviour
         {
             VillageName villageName = Shared.PoolMgr.GetObject("VillageName").GetComponent<VillageName>();
             villageName.Init(name[Random.Range(0,name.Length)]);
+        }
+
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            Store.gameObject.SetActive(true);
+            Store.Init();
         }
     }
 }

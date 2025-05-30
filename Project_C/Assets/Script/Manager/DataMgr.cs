@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class DataMgr : MonoBehaviour
 {
@@ -20,49 +21,54 @@ public class DataMgr : MonoBehaviour
     public ItemBase GetItem(int _id)
     {
         TableItem.ItemBaseInfo ItemBaseInfo = TableItem.GetItemBaseInfo(_id);
-        TableItem.EquipItemStatInfo EquipItemStatInfo = TableItem.GetEquipItemStatInfo(_id);
-        TableItem.EquipMentItemInfo EquipMentItemInfo = TableItem.GetEquipMentItemInfo(_id);
-        TableItem.UseItemInfo UseItemInfo = TableItem.GetUseItemInfo(_id);
+        if(ItemBaseInfo == null)
+            return null;
 
-        if (ItemBaseInfo.Type == (int)ITEM_TYPE.EQUIPMENT)
+        switch((ITEM_TYPE)ItemBaseInfo.Type)
         {
-            EquipmentItem Equipmentitem = Shared.PoolMgr.GetObject(ItemBaseInfo.Prefabs).GetComponent<EquipmentItem>();
-            Equipmentitem.InputItemBaseData(ItemBaseInfo);
-            Equipmentitem.InputEquipMentData(EquipMentItemInfo, EquipItemStatInfo);
+            case ITEM_TYPE.EQUIPMENT:
+                TableItem.EquipItemStatInfo EquipItemStatInfo = TableItem.GetEquipItemStatInfo(_id);
+                TableItem.EquipMentItemInfo EquipMentItemInfo = TableItem.GetEquipMentItemInfo(_id);
+                EquipmentItem Equipmentitem = Shared.PoolMgr.GetObject(ItemBaseInfo.Prefabs).GetComponent<EquipmentItem>();
+                //EquipmentItem Equipmentitem = new Weapon();
+                Equipmentitem.InputItemBaseData(ItemBaseInfo);
+                Equipmentitem.InputEquipMentData(EquipMentItemInfo, EquipItemStatInfo);
+                return Equipmentitem;
 
-            return Equipmentitem;
-        }
-        else if(ItemBaseInfo.Type == (int) ITEM_TYPE.USE)
-        {
-            HP_Postion UseItem = Shared.PoolMgr.GetObject(ItemBaseInfo.Prefabs).GetComponent<HP_Postion>();
-            UseItem.InputItemBaseData(ItemBaseInfo);
-            UseItem.InputUseItemData(UseItemInfo);
+            case ITEM_TYPE.USE:
+                TableItem.UseItemInfo UseItemInfo = TableItem.GetUseItemInfo(_id);
+                HP_Postion UseItem = Shared.PoolMgr.GetObject(ItemBaseInfo.Prefabs).GetComponent<HP_Postion>();
+                UseItem.InputItemBaseData(ItemBaseInfo);
+                UseItem.InputUseItemData(UseItemInfo);
+                return UseItem;
 
-            return UseItem;
-        }
-        
-        return null;
+            default:
+                return null;
+        }       
     }
 
     public QuestBase GetQuest(int _id)
     {
         TableQuest.QuestBaseInfo QuestBaseInfo = TableQuest.GetQuestBaseInfo(_id);
-        TableQuest.HuntingQuestInfo HuntingQuestInfo = TableQuest.GetHuntingQuestInfo(_id);
-        TableQuest.NPCMeetingQuestInfo NPCMeetingQuestInfo = TableQuest.GetNPCMeetingQuestInfo(_id);
-        
+        if(QuestBaseInfo == null)
+            return null;
 
-        switch (QuestBaseInfo.Type)
+        switch ((QUEST_TYPE)QuestBaseInfo.Type)
         {
-            case (int)QUEST_TYPE.HUNTING:
-                HuntingQuset huntingQuset = new HuntingQuset();
+            case QUEST_TYPE.HUNTING:
+                TableQuest.HuntingQuestInfo HuntingQuestInfo = TableQuest.GetHuntingQuestInfo(_id);
+                HuntingQuest huntingQuset = new HuntingQuest();
                 huntingQuset.InputQuestBaseData(QuestBaseInfo);
                 huntingQuset.InputHuntingQuestData(HuntingQuestInfo);
                 return huntingQuset;
-            case (int)QUEST_TYPE.MEETING:
+
+            case QUEST_TYPE.MEETING:
+                TableQuest.NPCMeetingQuestInfo NPCMeetingQuestInfo = TableQuest.GetNPCMeetingQuestInfo(_id);
                 NpcMeetingQuest NpcMeetingQuest = new NpcMeetingQuest();
                 NpcMeetingQuest.InputQuestBaseData(QuestBaseInfo);
                 NpcMeetingQuest.InputNPCMeetingData(NPCMeetingQuestInfo);
                 return NpcMeetingQuest;
+
             default:
                 return null;
         }
