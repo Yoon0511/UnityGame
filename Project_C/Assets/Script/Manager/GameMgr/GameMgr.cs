@@ -17,10 +17,9 @@ public class GameMgr : MonoBehaviour
     NPC_DialogueWindow NPC_DialogueWindow;
     public Hphud Hphud;
     public BuffUi BUFFUI;
+    public GameObject CAMERAMOVE;
     //UI
-
     public DamageDataPool DamageDataPool;
-
 
     [NonReorderable]
     Dictionary<string, SpriteAtlas> DicSpriteAtlas = new Dictionary<string, SpriteAtlas>();
