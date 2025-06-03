@@ -8,7 +8,6 @@ public partial class Monster : Character
 {
     [SerializeField]
     protected GameObject Target;
-
     protected GameObject player;
 
     [SerializeField]
@@ -17,6 +16,8 @@ public partial class Monster : Character
     protected float attackRange;
 
     public bool OnPatrol = false;
+
+
     private void FixedUpdate()
     {
         StateUpdate();

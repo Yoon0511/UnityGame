@@ -9,8 +9,6 @@ public partial class NPC : Character
     protected string[] ConverstationTexts;
     [SerializeField]
     protected string NPC_NAME;
-    [SerializeField]
-    protected int NPC_ID;
 
     public override void Fsm_Init()
     {
@@ -65,13 +63,10 @@ public partial class NPC : Character
         return CharacterName;
     }
 
-    public void SetNPCID(int _ID) { NPC_ID = _ID; }
-    public int GetNPCID() { return NPC_ID; }
-
     protected void SendQuestMsg()
     {
         NpcMeetingMsg MeetingMsg = new NpcMeetingMsg();
-        MeetingMsg.SetMsg((int)QUEST_TYPE.MEETING, NPC_ID);
+        MeetingMsg.SetMsg((int)QUEST_TYPE.MEETING, GetId());
         Shared.GameMgr.PLAYER.QusetProgress(MeetingMsg);
     }
 }

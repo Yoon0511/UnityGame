@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using UnityEditor.Timeline;
 
 //
 public class HuntingQuest : QuestBase
@@ -41,6 +42,7 @@ public class HuntingQuest : QuestBase
             {
                 //Complete();
                 StateChange(QUEST_STATE.COMPLETE);
+                UpdateMiniMapIcon();
             }
         }
     }
@@ -48,6 +50,7 @@ public class HuntingQuest : QuestBase
     public override void Accept()
     {
         StateChange(QUEST_STATE.PROGRESS);
+        UpdateMiniMapIcon();
     }
 
     public override void Refusal()
@@ -59,6 +62,7 @@ public class HuntingQuest : QuestBase
     {
         IsComplete = true;
         StateChange(QUEST_STATE.END);
+        UpdateMiniMapIcon();
         GiveQuestReward();
     }
 
@@ -106,5 +110,27 @@ public class HuntingQuest : QuestBase
         CurrentGoalCount = _info.CurrentGoalCount;
         GoalCount = _info.GoalCount;
         TargetId =  _info.TargetId;
+    }
+
+    public override void UpdateMiniMapIcon()
+    {
+        if (OwnerNPC.GetMiniMapIcon() == null)
+            return;
+
+        switch(QuestState)
+        {
+            case QUEST_STATE.START: // 시작가능상태 - 미니맵 아이콘 = (!)
+                OwnerNPC.GetMiniMapIcon().SetImage("Exclamation_mark");
+                OwnerNPC.GetMiniMapIcon().SetIconSize(12, 12);
+                break;
+            case QUEST_STATE.COMPLETE: // 완료가능 - 미니맵 아이콘 = (?)
+                OwnerNPC.GetMiniMapIcon().SetImage("Question_mark");
+                OwnerNPC.GetMiniMapIcon().SetIconSize(12, 12);
+                break;
+            default: // 기본 아이콘
+                OwnerNPC.GetMiniMapIcon().SetImage("NPC");
+                OwnerNPC.GetMiniMapIcon().SetIconSize(5, 5);
+                break;
+        }
     }
 }

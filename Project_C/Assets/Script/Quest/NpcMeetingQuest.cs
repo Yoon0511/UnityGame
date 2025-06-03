@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,17 +24,19 @@ public class NpcMeetingQuest : QuestBase
         TargetNPCName = _targetNpcName;
         QuestType = (int)QUEST_TYPE.MEETING;
     }
-
     public override void Accept()
     {
-        QuestState = QUEST_STATE.PROGRESS;
+        StateChange(QUEST_STATE.PROGRESS);
+        UpdateMiniMapIcon();
     }
 
     public override void Complete()
     {
         GiveQuestReward();
-
+        StateChange(QUEST_STATE.COMPLETE);
+        UpdateMiniMapIcon();
         IsComplete = true;
+        StateChange(QUEST_STATE.END);
     }
 
     public override void Fail()
@@ -76,5 +79,33 @@ public class NpcMeetingQuest : QuestBase
     {
         TargetNPCId = _info.TargetNPCId;
         TargetNPCName = _info.TargetNPCName;
+    }
+
+    public override void UpdateMiniMapIcon()
+    {
+        if (OwnerNPC.GetMiniMapIcon() == null)
+            return;
+
+        switch (QuestState)
+        {
+            case QUEST_STATE.START: // 시작가능상태 - 미니맵 아이콘 = (!)
+                OwnerNPC.GetMiniMapIcon().SetImage("Exclamation_mark");
+                OwnerNPC.GetMiniMapIcon().SetIconSize(12, 12);
+                break;
+            case QUEST_STATE.PROGRESS: // 진행중 - 타겟NPC아이콘 변경 - 미니맵 아이콘 = (?)
+                OwnerNPC.GetMiniMapIcon().SetImage("NPC");
+                OwnerNPC.GetMiniMapIcon().SetIconSize(5, 5);
+                Shared.GameMgr.GetNPCinList(TargetNPCId).GetMiniMapIcon().SetImage("Question_mark");
+                Shared.GameMgr.GetNPCinList(TargetNPCId).GetMiniMapIcon().SetIconSize(12, 12);
+                break;
+            case QUEST_STATE.COMPLETE:
+                Shared.GameMgr.GetNPCinList(TargetNPCId).GetMiniMapIcon().SetImage("NPC");
+                Shared.GameMgr.GetNPCinList(TargetNPCId).GetMiniMapIcon().SetIconSize(5, 5);
+                break;
+            default: // 기본 아이콘
+                OwnerNPC.GetMiniMapIcon().SetImage("NPC");
+                OwnerNPC.GetMiniMapIcon().SetIconSize(5, 5);
+                break;
+        }
     }
 }

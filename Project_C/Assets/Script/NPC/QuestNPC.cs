@@ -12,6 +12,7 @@ public class QuestNPC : NPC
     {
         base.Init();
         Quest = Shared.DataMgr.GetQuest(QuestId);
+        Quest.SetOwnerNPC(this);
         //int count = Quest.GetConversation().Length;
         //ConverstationTexts = new string[count];
         //Array.Copy(Quest.GetConversation(), ConverstationTexts, count);
@@ -25,7 +26,11 @@ public class QuestNPC : NPC
 
     public override string[] GetConverstationTexts()
     {
-        return Quest.GetConversation();
+        if(Quest.GetQuestState() != QUEST_STATE.END)
+        {
+            return Quest.GetConversation();
+        }
+        return base.GetConverstationTexts();
     }
     public void QuestAccpect(Player _player)
     {
@@ -46,4 +51,9 @@ public class QuestNPC : NPC
     }
 
     public QuestBase GetQuest() {  return Quest; }
+
+    public override void UpdateMiniMapIcon()
+    {
+        Quest.UpdateMiniMapIcon();
+    }
 }

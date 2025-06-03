@@ -45,8 +45,12 @@ public abstract class QuestBase : MonoBehaviour
     public Player GetProgressPlayer() { return ProgressPlayer; }
     public int GetId() { return Id; }
     public abstract string GetRewardDetail();
-    public void StateChange(QUEST_STATE _state){QuestState = _state;}
     public QUEST_STATE GetQuestState() { return QuestState; }
+
+    public void StateChange(QUEST_STATE _state)
+    {
+        QuestState = _state;
+    }
     public string[] GetConversation() 
     {
         switch (QuestState)
@@ -126,4 +130,6 @@ public abstract class QuestBase : MonoBehaviour
         CompleteConversation = new string[count];
         CompleteConversation = _info.CompleteConversation.Split("-", StringSplitOptions.None);
     }
+
+    public abstract void UpdateMiniMapIcon();
 }

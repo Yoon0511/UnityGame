@@ -23,6 +23,11 @@ public class GameMgr : MonoBehaviour
 
     [NonReorderable]
     Dictionary<string, SpriteAtlas> DicSpriteAtlas = new Dictionary<string, SpriteAtlas>();
+
+    [SerializeField]
+    List<Monster> ListMonster = new List<Monster>();
+    [SerializeField]
+    List<NPC> ListNPC = new List<NPC>();
     private void Awake()
     {
         Shared.GameMgr = this;
@@ -89,5 +94,45 @@ public class GameMgr : MonoBehaviour
         hitpoint.transform.rotation = Quaternion.identity;
 
         return hitpoint;
+    }
+
+    public void AddNPC(Character _npc)
+    {
+        NPC npc = _npc as NPC;
+        if (npc != null)
+        {
+            ListNPC.Add(npc);
+        }
+    }
+
+    public void AddMonster(Character _monster)
+    {
+        Monster monster = _monster as Monster;
+        if(monster != null)
+        {
+            ListMonster.Add(monster);
+        }
+    }
+
+    public List<Monster> GetListMonster()
+    {
+        return ListMonster;
+    }
+
+    public List<NPC> GetListNPC()
+    {
+        return ListNPC;
+    }
+
+    public NPC GetNPCinList(int _id)
+    {
+        for(int i =0;i<ListNPC.Count;++i)
+        {
+            if (ListNPC[i].GetId() == _id)
+            {
+                return ListNPC[i];
+            }
+        }
+        return null;
     }
 }

@@ -51,14 +51,23 @@ SpriteAtlas:
     cachedData: {fileID: 0}
     packedSpriteRenderDataKeys:
     - 25f646f018071d8498fd19771b9c5186: 21300000
+    - d7815801d3d7ac14196dda4d4c29a4d7: 21300000
+    - 0275be2194bd9ff42859950b515c7865: 21300000
     - c18b0a03597a299488e2b16650b6153c: 21300000
+    - be71cc26e94e89244aa7df4bb5bca912: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 25f646f018071d8498fd19771b9c5186, type: 3}
+  - {fileID: 21300000, guid: d7815801d3d7ac14196dda4d4c29a4d7, type: 3}
+  - {fileID: 21300000, guid: 0275be2194bd9ff42859950b515c7865, type: 3}
   - {fileID: 21300000, guid: c18b0a03597a299488e2b16650b6153c, type: 3}
+  - {fileID: 21300000, guid: be71cc26e94e89244aa7df4bb5bca912, type: 3}
   m_PackedSpriteNamesToIndex:
   - Question_mark
+  - Player
+  - NPC
   - Exclamation_mark
+  - Monster
   m_RenderDataMap: {}
   m_Tag: SpecialMark
   m_IsVariant: 0

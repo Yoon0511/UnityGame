@@ -15,10 +15,17 @@ public abstract partial class Character : Object
     [SerializeField]
     protected GameObject BodyParticlePoint;
 
+    [SerializeField]
     protected int Id;
+
+    [NonSerialized]
+    public bool ShowMiniMapIcon = false;
+
+    protected MiniMapIcon MiniMapIcon = null;
     private void Start()
     {
         Init();
+        AddGameMgrList();
     }
     //케릭터 생성시 기본 세팅을 위한 Init();
     public abstract void Init();
@@ -66,4 +73,24 @@ public abstract partial class Character : Object
         transform.LookAt(GetTargetCharacter().transform, Vector3.up);
     }
     public int GetId() { return Id; }
+
+    public MiniMapIcon GetMiniMapIcon() { return MiniMapIcon; }
+    public void SetMiniMapIcon(MiniMapIcon _icon) { MiniMapIcon = _icon; }
+    public void AddGameMgrList()
+    {
+        switch((CHARACTER_TYPE)CharacterType)
+        {
+            case CHARACTER_TYPE.NPC:
+                Shared.GameMgr.AddNPC(this);
+                break;
+            case CHARACTER_TYPE.MONSTER:
+                Shared.GameMgr.AddMonster(this);
+                break;
+        }
+    }
+
+    public virtual void UpdateMiniMapIcon() 
+    {
+        MiniMapIcon.Init(GetCharacterType());
+    }
 }
