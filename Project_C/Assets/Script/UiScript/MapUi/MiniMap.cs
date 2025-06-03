@@ -18,13 +18,14 @@ public class MiniMap : MonoBehaviour
     Vector3 TerrainPos;
 
     public float Zoom;
-    Rect MiniMapRect;
 
     [SerializeField]
     List<Monster> ListMonster;
     List<NPC> ListNPC;
     RectTransform playerBox;
 
+    protected bool IsRotate;
+    protected bool IsZoom;
     void CreatePlayerCenterBox()
     {
         GameObject boxObj = new GameObject("PlayerCenterBox", typeof(RectTransform), typeof(Image));
@@ -47,16 +48,26 @@ public class MiniMap : MonoBehaviour
         TerrainSize = Terrain.terrainData.size;
         TerrainPos = Terrain.transform.position;
 
-        MiniMapRect = MiniMapUi.rect;
-
         ListMonster = Shared.GameMgr.GetListMonster();
         ListNPC = Shared.GameMgr.GetListNPC();
 
         CreatePlayerCenterBox();
+        Init();
+    }
+
+    public virtual void Init()
+    {
+        IsRotate = true;
+        IsZoom = true;
     }
 
     // Update is called once per frame
     private void FixedUpdate()
+    {
+        MiniMapUpdate();
+    }
+
+    public void MiniMapUpdate()
     {
         UpdatePlayerIcon();
         UpdateMonsterIcon();
@@ -64,7 +75,7 @@ public class MiniMap : MonoBehaviour
         UpdatePlayerCenterBox();
     }
 
-    void UpdatePlayerIcon()
+    protected void UpdatePlayerIcon()
     {
         Vector3 playerWorldPos = Player.transform.position;
 
@@ -75,11 +86,17 @@ public class MiniMap : MonoBehaviour
         MiniMapImg.localPosition = -PlayerIcon.localPosition * Zoom;
 
         // 미니맵 확대
-        MiniMapImg.localScale = new Vector3(Zoom, Zoom, 1);
+        if(IsZoom)
+        {
+            MiniMapImg.localScale = new Vector3(Zoom, Zoom, 1);
+        }
 
         // 미니맵 회전
-        float playerYAngle = Shared.GameMgr.CAMERAMOVE.transform.eulerAngles.y;
-        MiniMapRoation.localRotation = Quaternion.Euler(0, 0, playerYAngle);
+        if(IsRotate)
+        {
+            float playerYAngle = Shared.GameMgr.CAMERAMOVE.transform.eulerAngles.y;
+            MiniMapRoation.localRotation = Quaternion.Euler(0, 0, playerYAngle);
+        }
     }
 
     Vector2 TransMiniMapPos(Vector3 _pos)
@@ -98,7 +115,7 @@ public class MiniMap : MonoBehaviour
         return new Vector2(iconX, iconY);
     }
 
-    void UpdateNPCIcon()
+    protected void UpdateNPCIcon()
     {
         if (ListNPC == null || ListNPC.Count == 0)
         {
@@ -137,7 +154,7 @@ public class MiniMap : MonoBehaviour
 
         return outsideX || outsideY; // 하나라도 벗어나면 true (범위 밖)
     }
-    void UpdatePlayerCenterBox()
+    protected void UpdatePlayerCenterBox()
     {
         if (playerBox == null) return;
 
@@ -153,33 +170,33 @@ public class MiniMap : MonoBehaviour
     {
         Vector2 pos = TransMiniMapPos(_char.transform.position);
         //Character character = ListMonster[i].GetComponent<Character>();
-
+        MiniMapIcon icon = _char.GetMiniMapIcon(this);
         if (!IsInsideMiniMap(pos))
         {
             _char.ShowMiniMapIcon = true;
-
-            if (_char.GetMiniMapIcon() != null)
+            if (icon != null)
             {
-                _char.GetMiniMapIcon().SetPos(pos);
+                icon.SetPos(pos);
             }
             else
             {
-                GameObject icon = Shared.PoolMgr.GetObject("MiniMapIcon");
-                icon.transform.SetParent(MiniMapImg.transform, false);
-                _char.SetMiniMapIcon(icon.GetComponent<MiniMapIcon>());
+                GameObject iconObj = Shared.PoolMgr.GetObject("MiniMapIcon");
+                iconObj.transform.SetParent(MiniMapImg.transform, false);
+                MiniMapIcon newIcon = iconObj.GetComponent<MiniMapIcon>();
+                _char.SetMiniMapIcon(this, newIcon);
                 _char.UpdateMiniMapIcon();
-                _char.GetMiniMapIcon().SetPos(pos);
+                newIcon.SetPos(pos);
             }
         }
         else
         {
             _char.ShowMiniMapIcon = false;
-
-            if (_char.GetMiniMapIcon() != null)
-            {
-                _char.GetMiniMapIcon().ReleaseObject();
-                _char.SetMiniMapIcon(null);
-            }
+            _char.RemoveMiniMapIcon(this);
         }
+    }
+
+    public void OnOpenWorldMap()
+    {
+        Shared.UiMgr.WORLDMAPUI.SetActive(true);
     }
 }

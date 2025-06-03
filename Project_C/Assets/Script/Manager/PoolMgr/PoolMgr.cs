@@ -5,7 +5,7 @@ using UnityEngine.Pool;
 
 public class PoolMgr : MonoBehaviour
 {
-    public int MaxPoolSize = 10;
+    public int MaxPoolSize = 30;
     public int LoadCount = 3;
     [NonReorderable]
     Dictionary<string, GameObject> DicPoolObjects = new Dictionary<string, GameObject>();
