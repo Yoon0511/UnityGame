@@ -90,26 +90,16 @@ public class NpcMeetingQuest : QuestBase
         {
             case QUEST_STATE.START: // 시작가능상태 - 미니맵 아이콘 = (!)
                 OwnerNPC.AllUpdateMapIcon("Exclamation_mark", 12, 12);
-                //OwnerNPC.GetMiniMapIcon().SetImage("Exclamation_mark");
-                //OwnerNPC.GetMiniMapIcon().SetIconSize(12, 12);
                 break;
             case QUEST_STATE.PROGRESS: // 진행중 - 타겟NPC아이콘 변경 - 미니맵 아이콘 = (?)
                 OwnerNPC.AllUpdateMapIcon("NPC", 5, 5);
-                //OwnerNPC.GetMiniMapIcon().SetImage("NPC");
-                //OwnerNPC.GetMiniMapIcon().SetIconSize(5, 5);
                 Shared.GameMgr.GetNPCinList(TargetNPCId).AllUpdateMapIcon("Question_mark", 12, 12);
-                //Shared.GameMgr.GetNPCinList(TargetNPCId).GetMiniMapIcon().SetImage("Question_mark");
-                //Shared.GameMgr.GetNPCinList(TargetNPCId).GetMiniMapIcon().SetIconSize(12, 12);
                 break;
             case QUEST_STATE.COMPLETE:
                 Shared.GameMgr.GetNPCinList(TargetNPCId).AllUpdateMapIcon("NPC", 5, 5);
-                //Shared.GameMgr.GetNPCinList(TargetNPCId).GetMiniMapIcon().SetImage("NPC");
-                //Shared.GameMgr.GetNPCinList(TargetNPCId).GetMiniMapIcon().SetIconSize(5, 5);
                 break;
             default: // 기본 아이콘
                 OwnerNPC.AllUpdateMapIcon("Exclamation_mark", 12, 12);
-                //OwnerNPC.GetMiniMapIcon().SetImage("NPC");
-                //OwnerNPC.GetMiniMapIcon().SetIconSize(5, 5);
                 break;
         }
     }

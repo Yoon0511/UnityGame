@@ -121,18 +121,12 @@ public class HuntingQuest : QuestBase
         {
             case QUEST_STATE.START: // 시작가능상태 - 미니맵 아이콘 = (!)
                 OwnerNPC.AllUpdateMapIcon("Exclamation_mark", 12, 12);
-                //OwnerNPC.GetMiniMapIcon().SetImage("Exclamation_mark");
-                //OwnerNPC.GetMiniMapIcon().SetIconSize(12, 12);
                 break;
             case QUEST_STATE.COMPLETE: // 완료가능 - 미니맵 아이콘 = (?)
                 OwnerNPC.AllUpdateMapIcon("Question_mark", 12, 12);
-                //OwnerNPC.GetMiniMapIcon().SetImage("Question_mark");
-                //OwnerNPC.GetMiniMapIcon().SetIconSize(12, 12);
                 break;
             default: // 기본 아이콘
                 OwnerNPC.AllUpdateMapIcon("NPC", 5, 5);
-                //OwnerNPC.GetMiniMapIcon().SetImage("NPC");
-                //OwnerNPC.GetMiniMapIcon().SetIconSize(5, 5);
                 break;
         }
     }

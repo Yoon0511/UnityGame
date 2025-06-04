@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class UiMgr : MonoBehaviour
 {
     public GameObject WORLDMAPUI;
+    public Store STORE;
+
     private void Awake()
     {
         Shared.UiMgr = this;

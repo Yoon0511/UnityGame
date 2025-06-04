@@ -7,6 +7,8 @@ public partial class Player
     protected int Gold;
     [SerializeField]
     Inventory Inventory;
+
+    bool UseStore = false;
     public Inventory GetInventory() { return Inventory; }
     void InventoryInit() { Inventory.SetOwner(this); }
     public int GetGold() { return Gold; }
@@ -36,4 +38,17 @@ public partial class Player
     {
         Inventory.OpenUi();
     }
+
+    public void SellItem(ItemBase _item)
+    {
+        AddGold(_item.BuyPrice);
+        Inventory.DeleteItem(_item);
+    }
+
+    public void SetUseStore(bool _usestore)
+    {
+        UseStore = _usestore;
+    }
+
+    public bool GetUseStore() { return UseStore; }
 }

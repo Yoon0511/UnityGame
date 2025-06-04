@@ -33,6 +33,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 036595ac03790ba48b5017ed8191039a, type: 3}
+    - {fileID: 102900000, guid: 8882fdfdff0bb054e85799535f6a568a, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -41,12 +42,14 @@ SpriteAtlas:
     - 4dc051a0301cecb4aa1a85036ace2a58: 21300000
     - 719c2201c2f5f6c4aafffaeb5abdf5f9: 21300000
     - 2d089513ae4adfc48a683c362ad9992c: 21300000
+    - f94004c5e8c9b4145ae63f64c0ea3884: 21300000
     - 108ca3e7dda90d945b0914bf9259ec94: 21300000
     - 2c04f4986ebc72e48a8b0c3eb2e42db2: 21300000
     - 8a5f9829a049c704fa992203bfc451f2: 21300000
     - d659f7396cd57754eba78763cf986c51: 21300000
     - 9895f5f95566ceb47bb239149d90cb44: 21300000
     - 7092324b93851a14c858530cca4a6b26: 21300000
+    - abd3e50e8b37c9145aa3463f43c3dfa2: 21300000
     - cf6478ef684ce7f4c830edba147c7607: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -54,24 +57,28 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 4dc051a0301cecb4aa1a85036ace2a58, type: 3}
   - {fileID: 21300000, guid: 719c2201c2f5f6c4aafffaeb5abdf5f9, type: 3}
   - {fileID: 21300000, guid: 2d089513ae4adfc48a683c362ad9992c, type: 3}
+  - {fileID: 21300000, guid: f94004c5e8c9b4145ae63f64c0ea3884, type: 3}
   - {fileID: 21300000, guid: 108ca3e7dda90d945b0914bf9259ec94, type: 3}
   - {fileID: 21300000, guid: 2c04f4986ebc72e48a8b0c3eb2e42db2, type: 3}
   - {fileID: 21300000, guid: 8a5f9829a049c704fa992203bfc451f2, type: 3}
   - {fileID: 21300000, guid: d659f7396cd57754eba78763cf986c51, type: 3}
   - {fileID: 21300000, guid: 9895f5f95566ceb47bb239149d90cb44, type: 3}
   - {fileID: 21300000, guid: 7092324b93851a14c858530cca4a6b26, type: 3}
+  - {fileID: 21300000, guid: abd3e50e8b37c9145aa3463f43c3dfa2, type: 3}
   - {fileID: 21300000, guid: cf6478ef684ce7f4c830edba147c7607, type: 3}
   m_PackedSpriteNamesToIndex:
   - skill_icon_02_nobg
   - skill_icon_01_nobg
   - weapon_icon
   - skill_icon_01
+  - Enlargement
   - stoune_icon
   - skill_icon_02
   - skill_icon_03
   - armor_icon
   - skill_icon_04_nobg
   - skill_icon_04
+  - Reduction
   - skill_icon_03_nobg
   m_RenderDataMap: {}
   m_Tag: Common

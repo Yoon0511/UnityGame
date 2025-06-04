@@ -28,6 +28,6 @@ public class StoreItemSlot : ItemSlot
 
     public override void OnClickSlot()
     {
-        Store.OnPopup(Item);
+        Store.OnBuyPopup(Item);
     }
 }

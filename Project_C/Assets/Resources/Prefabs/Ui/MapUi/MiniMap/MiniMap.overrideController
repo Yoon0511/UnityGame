@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MiniMap
+  m_Controller: {fileID: 9100000, guid: d6e97abc30bd97d4eb00dbd8068b0322, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: adb114b4ddcf84c45967170287ed8e58, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 95130aca8b7c20b48959b2b57d298f1e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c1455c0666010f24b863f87f0a0373b7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 47b5362c268d572448c1ec08812a1c32, type: 2}

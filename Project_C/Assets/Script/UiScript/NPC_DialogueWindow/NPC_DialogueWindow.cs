@@ -20,6 +20,9 @@ public class NPC_DialogueWindow : MonoBehaviour
     int EndConverstationIndex = 0;
     NPC CurrentNPC;
     Player Player;
+
+    bool Typing = false;
+    Coroutine TypeCorutine;
     public void Init(NPC _npc,Player _player)
     {
         Player = _player;
@@ -32,7 +35,7 @@ public class NPC_DialogueWindow : MonoBehaviour
         MaxTextIndex = ConverstaionTexts.Length;
         EndConverstationIndex = MaxTextIndex - 1;
         //NPC_CONVERSTATIONTEXT.text = ConverstaionTexts[TextIndex];
-        StartCoroutine(ITypingText(ConverstaionTexts[TextIndex]));
+        TypeCorutine = StartCoroutine(ITypingText(ConverstaionTexts[TextIndex]));
 
         ShowBtns();
     }
@@ -45,7 +48,18 @@ public class NPC_DialogueWindow : MonoBehaviour
         //다음 대화대사 진행
         if(TextIndex <= EndConverstationIndex)
         {
-            StartCoroutine(ITypingText(ConverstaionTexts[TextIndex]));
+            if(TypeCorutine != null)
+            {
+                if(Typing)
+                {
+                    StopCoroutine(TypeCorutine);
+                    NPC_CONVERSTATIONTEXT.text = ConverstaionTexts[TextIndex];
+                }
+                else
+                {
+                    TypeCorutine = StartCoroutine(ITypingText(ConverstaionTexts[TextIndex]));
+                }
+            }
             //NPC_CONVERSTATIONTEXT.text = ConverstaionTexts[TextIndex];
         }
 
@@ -63,9 +77,11 @@ public class NPC_DialogueWindow : MonoBehaviour
         NPC_CONVERSTATIONTEXT.text = "";
         for (int i = 0;i<_text.Length;i++)
         {
+            Typing = true;
             NPC_CONVERSTATIONTEXT.text += _text[i];
             yield return new WaitForSeconds(0.05f);
         }
+        Typing = false;
         yield return null;
     }
 

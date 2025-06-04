@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class Store : MonoBehaviour
 {
-    public GameObject POPUP;
+    public GameObject BUYPOPUP;
+    public GameObject SELLPOPUP;
     public GameObject PARENTITEMLIST;
-    public StoreItemSlot POPUP_ITEMSLOT;
+    public StoreItemSlot BUYPOPUP_ITEMSLOT;
+    public StoreItemSlot SELLPOPUP_ITEMSLOT;
     List<int> ListItemId = new List<int>();
 
     List<StoreItemSlot> ListStoreItemSlot = new List<StoreItemSlot>();
@@ -21,7 +24,15 @@ public class Store : MonoBehaviour
     {
         Init();
         Shared.GameMgr.PLAYER.OpenInventory();
+        Shared.GameMgr.PLAYER.SetUseStore(true);
     }
+
+    public void OnDisable()
+    {
+        StroeItemSlotReset();
+        Shared.GameMgr.PLAYER.SetUseStore(false);
+    }
+
     public void Init()
     {
         //상점목록생성
@@ -38,11 +49,11 @@ public class Store : MonoBehaviour
         }
     }
 
-    public void OnPopup(ItemBase _item)
+    public void OnBuyPopup(ItemBase _item)
     {
-        POPUP.SetActive(true);
+        BUYPOPUP.SetActive(true);
         SelectItem = _item;
-        POPUP_ITEMSLOT.InputItem(SelectItem);
+        BUYPOPUP_ITEMSLOT.InputItem(SelectItem);
     }
 
     public void OnBuy()
@@ -58,18 +69,14 @@ public class Store : MonoBehaviour
             Shared.UiMgr.CreateSystemMsg("골드가 부족합니다.", SYSTEM_MSG_TYPE.UI);
         }
 
-        POPUP.SetActive(false);
+        BUYPOPUP.SetActive(false);
     }
 
-    public void OnCancel()
+    public void OnBuyCancel()
     {
-        POPUP.SetActive(false);
+        BUYPOPUP.SetActive(false);
     }
 
-    public void OnDisable()
-    {
-        StroeItemSlotReset();
-    }
     public void StroeItemSlotReset()
     {
         for (int i = ListStoreItemSlot.Count-1; i >= 0;i--)
@@ -80,5 +87,23 @@ public class Store : MonoBehaviour
             }
         }
         ListStoreItemSlot.Clear();
+    }
+
+    public void OnSellPopup(ItemBase _item)
+    {
+        SELLPOPUP.SetActive(true);
+        SelectItem = _item;
+        SELLPOPUP_ITEMSLOT.InputItem(SelectItem);
+    }
+
+    public void OnSell()
+    {
+        Shared.GameMgr.PLAYER.SellItem(SelectItem);
+        SELLPOPUP.SetActive(false);
+    }
+
+    public void OnSellCancle()
+    {
+        SELLPOPUP.SetActive(false);
     }
 }

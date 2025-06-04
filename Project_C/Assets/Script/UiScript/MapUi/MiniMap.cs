@@ -199,4 +199,16 @@ public class MiniMap : MonoBehaviour
     {
         Shared.UiMgr.WORLDMAPUI.SetActive(true);
     }
+
+    public void OnZoomIn()
+    {
+        Zoom += 0.3f;
+        Zoom = Mathf.Clamp(Zoom, 1.0f, 3.5f);
+    }
+
+    public void OnZoomOut()
+    {
+        Zoom -= 0.3f;
+        Zoom = Mathf.Clamp(Zoom, 1.0f, 3.5f);
+    }
 }
