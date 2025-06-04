@@ -245,3 +245,11 @@ public enum RIDING_STATE
     RUN,
     ENUM_END
 }
+
+public enum SERIVE_TYPE
+{
+    NONE,
+    ENHANCE,
+    STORE,
+    ENUM_END
+}

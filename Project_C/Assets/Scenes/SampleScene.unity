@@ -18011,6 +18011,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniMap
       objectReference: {fileID: 0}
+    - target: {fileID: 5210649601653266736, guid: 05ba4c0c262895f4baa447df12201c4a, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7543470318576991220, guid: 05ba4c0c262895f4baa447df12201c4a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -18177,6 +18181,10 @@ PrefabInstance:
       propertyPath: SERVICEUI
       value: 
       objectReference: {fileID: 382158291}
+    - target: {fileID: 2242331338054835509, guid: e332d7b099b46764d91bcca2a021c86c, type: 3}
+      propertyPath: SERIVE_TYPE
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7280321276664152128, guid: e332d7b099b46764d91bcca2a021c86c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 341.34
@@ -19065,6 +19073,10 @@ PrefabInstance:
       propertyPath: SERVICEUI
       value: 
       objectReference: {fileID: 1619040933}
+    - target: {fileID: 3709527073022823384, guid: 24d116ca2b7f3c1478197722eb671650, type: 3}
+      propertyPath: SERIVE_TYPE
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8333725215869965391, guid: 24d116ca2b7f3c1478197722eb671650, type: 3}
       propertyPath: m_Name
       value: NPC_Kachujin(Store)
