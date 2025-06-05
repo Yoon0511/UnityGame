@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public partial class Player
@@ -36,34 +37,39 @@ public partial class Player
         if (Input.GetKeyDown(KeyCode.F3)) //器记
         {
             //ItemBase obj = Instantiate(item).GetComponent<ItemBase>();
-            HP_Postion obj = (HP_Postion)Shared.DataMgr.GetItem(1016);
-
-            Inventory.AddItem(obj);
+            for(int i = 1016;i<=1025;++i)
+            {
+                Potion obj = (Potion)Shared.DataMgr.GetItem(i);
+               Inventory.AddItem(obj);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.F5)) //公扁
         {
-            // 1 26 42
-            // 2 29 45
-            // Weapon obj = Instantiate(weapon).GetComponent<Weapon>();
-            Weapon obj = (Weapon)Shared.DataMgr.GetItem(1001);
+            for(int i = 1001;i<=1005;++i)
+            {
+                Weapon obj = (Weapon)Shared.DataMgr.GetItem(i);
+                Inventory.AddItem(obj);
+            }
 
-            Inventory.AddItem(obj);
             //equiment.EquippedItem(weapon);
         }
         if (Input.GetKeyDown(KeyCode.F6)) //癌渴
         {
-            //Amor obj = Instantiate(amor).GetComponent<Amor>();
-            Amor obj = (Amor)Shared.DataMgr.GetItem(1006);
+            for(int i = 1006;i<=1010;++i)
+            {
+                Amor obj = (Amor)Shared.DataMgr.GetItem(i);
+                Inventory.AddItem(obj);
+            }
 
-            Inventory.AddItem(obj);
         }
         if (Input.GetKeyDown(KeyCode.F7)) //厩技辑府
         {
-            //Accessories obj = Instantiate(ring).GetComponent<Accessories>();
-            Accessories obj = (Accessories)Shared.DataMgr.GetItem(1011);
-
-            Inventory.AddItem(obj);
+            for (int i = 1011; i <= 1015; ++i)
+            {
+                Accessories obj = (Accessories)Shared.DataMgr.GetItem(i);
+                Inventory.AddItem(obj);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.F8)) //HP

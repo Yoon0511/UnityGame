@@ -71,6 +71,7 @@ public partial class Player : Character
         Fsm_Init();
         UpdateUnitFrame();
         InventoryInit();
+        //자동회복
         StartCoroutine(AutomaticRecovery(1.0f));
     }
 

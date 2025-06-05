@@ -54,7 +54,8 @@ public class MyTemp : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.P))
         {
             Store.gameObject.SetActive(true);
-            Store.Init();
+            //
+            //Store.Init();
         }
     }
 }

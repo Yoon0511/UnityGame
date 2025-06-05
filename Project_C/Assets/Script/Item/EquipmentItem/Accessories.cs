@@ -38,4 +38,9 @@ public class Accessories : EquipmentItem
     {
         return "SPEED";
     }
+
+    public override string GetItemExplanation()
+    {
+        return $"<color=#FFFFFF>{GetStrSTAT_Type()}+</color> <color=#FF4500>{GetItemStat()}</color>";
+    }
 }

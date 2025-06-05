@@ -37,7 +37,7 @@ public class DataMgr : MonoBehaviour
 
             case ITEM_TYPE.USE:
                 TableItem.UseItemInfo UseItemInfo = TableItem.GetUseItemInfo(_id);
-                HP_Postion UseItem = Shared.PoolMgr.GetObject(ItemBaseInfo.Prefabs).GetComponent<HP_Postion>();
+                Potion UseItem = Shared.PoolMgr.GetObject(ItemBaseInfo.Prefabs).GetComponent<Potion>();
                 UseItem.InputItemBaseData(ItemBaseInfo);
                 UseItem.InputUseItemData(UseItemInfo);
                 return UseItem;

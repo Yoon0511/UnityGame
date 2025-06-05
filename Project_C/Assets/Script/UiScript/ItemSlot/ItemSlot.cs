@@ -4,11 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public abstract class ItemSlot : PoolAble
+public abstract class ItemSlot : PoolAble, IPointerEnterHandler, IPointerExitHandler
 {
     protected ItemBase Item;
     public Image Image;
-
+    ItemToolTip ItemToolTip;
+    RectTransform RectTransform;
+    public void Start()
+    {
+        RectTransform = GetComponent<RectTransform>();
+    }
     public virtual void InputItem(ItemBase _Item)
     {
         if (_Item == null)
@@ -47,5 +52,28 @@ public abstract class ItemSlot : PoolAble
     {
         base.ReleaseObject();
         Item.ReleaseObject();
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (ItemToolTip == null)
+        {
+            if(Item != null)
+            {
+                ItemToolTip = Shared.PoolMgr.GetObject("ItemToolTip").GetComponent<ItemToolTip>();
+                ItemToolTip.Input(Item);
+                ItemToolTip.SetPos(eventData.position);
+            }
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (ItemToolTip != null)
+        {
+            //Debug.Log("out");
+            ItemToolTip.ReleaseObject();
+            ItemToolTip = null;
+        }
     }
 }

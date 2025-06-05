@@ -15,7 +15,7 @@ public class EnhanceEquipItemSlot : ItemSlot
         InputItem(EquipmentItem);
 
         EnhanceValue.text = "+" + EquipmentItem.GetEnhanceValue().ToString();
-        ItemName.text = EquipmentItem.ItemName;
+        ItemName.text = EquipmentItem.GetItemName();
 
         EnhanceView = _enhanceView;
     }

@@ -40,4 +40,9 @@ public class Weapon : EquipmentItem
     {
         return "ATK";
     }
+
+    public override string GetItemExplanation()
+    {
+        return $"<color=#FFFFFF>{GetStrSTAT_Type()}+</color> <color=#FF4500>{GetItemStat()}</color>";
+    }
 }

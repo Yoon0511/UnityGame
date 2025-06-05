@@ -23,7 +23,7 @@ public class StoreItemSlot : ItemSlot
         base.InputItem(_Item);
 
         ITEMPRICE.text = Item.BuyPrice.ToString();
-        ITEMNAME.text = Item.ItemName;
+        ITEMNAME.text = Item.GetItemName();
     }
 
     public override void OnClickSlot()

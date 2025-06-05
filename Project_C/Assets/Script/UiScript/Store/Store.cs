@@ -18,7 +18,8 @@ public class Store : MonoBehaviour
     ItemBase SelectItem;
 
     // table연결필요
-    int[] temp = { 1001, 1004, 1007, 1010, 1012, 1013,1016 };
+    //int[] StoreItemIds = { 1001, 1004, 1007, 1010, 1012, 1013,1016,1017 };
+    int[] StoreItemIds = { 1016, 1017, 1018, 1019, 1020, 1021 };
 
     public void OnEnable()
     {
@@ -35,17 +36,28 @@ public class Store : MonoBehaviour
 
     public void Init()
     {
+        //상점 아이템 랜덤 6개
+        RandomStoreItem();
+
         //상점목록생성
-        for (int i = 0; i < temp.Length; ++i)
+        for (int i = 0; i < StoreItemIds.Length; ++i)
         {
             StoreItemSlot storeItemSlot = Shared.PoolMgr.GetObject("StoreItemSlot").GetComponent<StoreItemSlot>();
             storeItemSlot.transform.SetParent(PARENTITEMLIST.transform, false);
 
-            ItemBase item = Shared.DataMgr.GetItem(temp[i]);
+            ItemBase item = Shared.DataMgr.GetItem(StoreItemIds[i]);
             storeItemSlot.InputItem(item);
             storeItemSlot.Store = this;
 
             ListStoreItemSlot.Add(storeItemSlot);
+        }
+    }
+
+    void RandomStoreItem()
+    {
+        for(int i =0;i<6;++i)
+        {
+            StoreItemIds[i] = Random.Range(1001, 1025);
         }
     }
 
@@ -62,7 +74,7 @@ public class Store : MonoBehaviour
         {
             //구매 성공
             Shared.GameMgr.PLAYER.AddItem(SelectItem.Id);
-            Shared.UiMgr.CreateSystemMsg($"{SelectItem.ItemName}을 구매했습니다.", SYSTEM_MSG_TYPE.UI);
+            Shared.UiMgr.CreateSystemMsg($"{SelectItem.GetItemName()}을 구매했습니다.", SYSTEM_MSG_TYPE.UI);
         }
         else //골드 부족으로 구매 실패
         {

@@ -66,6 +66,10 @@ public abstract class EquipmentItem : ItemBase
     }
 
     public int GetEnhaceMaterial() { return EnhanceMaterial; }
+    public override string GetItemExplanation()
+    {
+        return null;
+    }
 
     public void InputEquipMentData(TableItem.EquipMentItemInfo _info, TableItem.EquipItemStatInfo _stat)
     {

@@ -16,6 +16,7 @@ public class TableItem : TableBase
         public string SpriteName;
         public int SellPrice;
         public int BuyPrice;
+        public int Grade;
     }
 
     [Serializable]
@@ -43,6 +44,7 @@ public class TableItem : TableBase
     public class UseItemInfo
     {
         public int Id;
+        public int PotionType;
         public float Amount;
     }
 
@@ -128,6 +130,7 @@ public class TableItem : TableBase
         _Reader.get(_Row, ref _Info.SpriteName);
         _Reader.get(_Row, ref _Info.SellPrice);
         _Reader.get(_Row, ref _Info.BuyPrice);
+        _Reader.get(_Row, ref _Info.Grade);
 
         return true;
     }
@@ -170,6 +173,7 @@ public class TableItem : TableBase
             return false;
 
         _Reader.get(_Row, ref _Info.Id);
+        _Reader.get(_Row, ref _Info.PotionType);
         _Reader.get(_Row, ref _Info.Amount);
 
         return true;

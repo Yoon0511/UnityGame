@@ -253,3 +253,22 @@ public enum SERIVE_TYPE
     STORE,
     ENUM_END
 }
+
+public enum POTION_TYPE
+{
+    NONE,
+    HP_POTION,
+    MP_POTION,
+    ENUM_END
+}
+
+public enum ITEM_GRADE
+{
+    NONE,
+    COMMON,
+    UNCOMMON,
+    RARE,
+    EPIC,
+    LEGENDARY,
+    ENUM_END
+}

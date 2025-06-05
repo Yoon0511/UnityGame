@@ -5634,6 +5634,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  mixedModeIsReliable: 0
+  OwnershipTransfer: 0
+  observableSearch: 0
+  ObservedComponents: []
+  RpcMonoBehaviours: []
+  <IsMine>k__BackingField: 0
+  <CreatorActorNr>k__BackingField: 0
+  <AmOwner>k__BackingField: 0
+  sceneViewId: 1
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+  removedFromLocalViewList: 0
 --- !u!4 &362635885
 Transform:
   m_ObjectHideFlags: 0
