@@ -33,6 +33,8 @@ public partial class Player : Character
 
     public void ClickToRay()
     {
+        PhotonViewIsMine();
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
@@ -140,6 +142,9 @@ public partial class Player : Character
 
         //조이스틱
         Shared.GameMgr.JOYSTICK.SetTarget(this);
+
+        //스킬북
+        Shared.UiMgr.SkillBook.Init(this);
     }
 
     //키보드 조작

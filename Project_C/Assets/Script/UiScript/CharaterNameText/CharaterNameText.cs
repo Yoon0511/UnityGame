@@ -52,7 +52,8 @@ public class CharaterNameText : MonoBehaviour
     {
         if (PlayerObj == null)
         {
-            PlayerObj = Shared.GameMgr.PLAYEROBJ;
+            //PlayerObj = Shared.GameMgr.PLAYEROBJ;
+            return;
         }
         float dist = Vector3.Distance(Ctransform.position, PlayerObj.transform.position);
 

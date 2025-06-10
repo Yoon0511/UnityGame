@@ -17,9 +17,12 @@ public partial class Monster : Character
 
     public bool OnPatrol = false;
 
-
     private void FixedUpdate()
     {
+        if(player == null)
+        {
+            return;
+        }
         StateUpdate();
     }
 

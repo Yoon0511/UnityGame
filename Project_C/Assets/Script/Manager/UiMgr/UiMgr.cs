@@ -15,6 +15,7 @@ public class UiMgr : MonoBehaviour
     public MainCamera MainCamera;
     public MiniMap MiniMap;
     public WorldMap WorldMap;
+    public SkillBook SkillBook;
     private void Awake()
     {
         Shared.UiMgr = this;

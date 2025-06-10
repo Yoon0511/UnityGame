@@ -39,6 +39,10 @@ public class SkillBtn: MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
     public void InputSkill(Skill _skill)
     {
         Skill = _skill;
+        if(Player == null)
+        {
+            Player = Shared.GameMgr.PLAYER;
+        }
         Player.SetCurrentSkill(SkillIndex, Skill);
 
         Image.sprite = Shared.GameMgr.GetSpriteAtlas("Skill_Icons", Skill.SpriteName);

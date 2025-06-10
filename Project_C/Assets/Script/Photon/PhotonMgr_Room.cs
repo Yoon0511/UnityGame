@@ -52,24 +52,8 @@ public partial class PhotonMgr : MonoBehaviourPunCallbacks
     {
         foreach(RoomInfo room in roomList)
         {
+            
         }
-    }
-
-    public override void OnJoinRoomFailed(short returnCode, string message)
-    {
-        base.OnJoinRoomFailed(returnCode, message);
-    }
-
-    public override void OnJoinRandomFailed(short returnCode, string message)
-    {
-        base.OnJoinRandomFailed(returnCode, message);
-
-        Debug.Log("·£´ý ·ë ¾øÀ½. »õ·Î¿î ·ë »ý¼º");
-
-        // ·ëÀÌ ¾øÀ¸¸é »ý¼º
-        RoomOptions roomOptions = new RoomOptions();
-        roomOptions.MaxPlayers = 4;
-        PhotonNetwork.CreateRoom(null, roomOptions);
     }
 
     public void SendRoomEntry()
