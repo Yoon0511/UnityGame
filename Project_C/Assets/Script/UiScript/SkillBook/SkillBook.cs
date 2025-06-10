@@ -9,9 +9,19 @@ public class SkillBook : MonoBehaviour
     [SerializeField]
     GameObject ParentContent;
 
-    private void Start()
+    //private void Start()
+    //{
+    //    Player player = Shared.GameMgr.PLAYER;
+    //    List<Skill> skillList = player.GetSkillList();
+    //    foreach (Skill skill in skillList)
+    //    {
+    //        AddSkill(skill);
+    //    }
+    //}
+
+    public void Init(Player _player)
     {
-        Player player = Shared.GameMgr.PLAYER;
+        Player player = _player;
         List<Skill> skillList = player.GetSkillList();
         foreach (Skill skill in skillList)
         {

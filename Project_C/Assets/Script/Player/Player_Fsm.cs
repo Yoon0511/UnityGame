@@ -23,6 +23,7 @@ public partial class Player : Character
     void StateChageJoystick(float _speed)
     {
         float speed = Statdata.GetData(STAT_TYPE.SPEED);
+        
         if (_speed >= speed * 0.5f)
         {
             if(IsRiding)
@@ -34,7 +35,7 @@ public partial class Player : Character
                 ChangeState((int)STATE.RUN);
             }
         }
-        else if (_speed > speed * 0.1f)
+        else if (_speed > speed * 0.2f)
         {
             if (IsRiding)
             {

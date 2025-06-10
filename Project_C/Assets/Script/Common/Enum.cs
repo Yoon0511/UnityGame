@@ -272,3 +272,11 @@ public enum ITEM_GRADE
     LEGENDARY,
     ENUM_END
 }
+
+public enum SCENE
+{
+    NONE,
+    TITLE,
+    INGAME,
+    ENUM_END
+}

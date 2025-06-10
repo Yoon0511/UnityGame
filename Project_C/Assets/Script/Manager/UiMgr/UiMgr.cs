@@ -8,7 +8,13 @@ public class UiMgr : MonoBehaviour
 {
     public GameObject WORLDMAPUI;
     public Store STORE;
-
+    public BuffUi BuffUi;
+    public UnitFrame UnitFrame;
+    public Inventory Inventory;
+    public QuestListUi QuestListUi;
+    public MainCamera MainCamera;
+    public MiniMap MiniMap;
+    public WorldMap WorldMap;
     private void Awake()
     {
         Shared.UiMgr = this;

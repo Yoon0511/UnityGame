@@ -34,11 +34,12 @@ public partial class MainCamera : MonoBehaviour
         Vector3 angles = CAMERAMOVE.transform.eulerAngles;
         Yaw = angles.y;
         Pitch = angles.x;
-
-        if (Target == null)
-        {
-            Debug.LogError("Target이 설정되지 않았습니다!");
-        }
+        //Target = Shared.GameMgr.PLAYEROBJ.transform;
+        //
+        //if (Target == null)
+        //{
+        //    Debug.LogError("Target이 설정되지 않았습니다!");
+        //}
     }
 
     private void Update()
@@ -72,5 +73,10 @@ public partial class MainCamera : MonoBehaviour
 
         //Quaternion targetRotation = Quaternion.Euler(0, Yaw, 0);
         //Target.rotation = Quaternion.Slerp(Target.rotation, targetRotation, Time.deltaTime * 30f);
+    }
+
+    public void SetTarget(Transform _tartget)
+    {
+        Target = _tartget;
     }
 }

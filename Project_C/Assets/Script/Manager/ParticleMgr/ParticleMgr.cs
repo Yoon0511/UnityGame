@@ -35,7 +35,7 @@ public class ParticleMgr : MonoBehaviour
 
             for(int i = 0;i< LoadCount; ++i)
             {
-                CreateParticle(obj.name, Shared.GameMgr.PLAYEROBJ.transform, 1.0f);
+                CreateParticle(obj.name, transform, 1.0f);
             }
         }
     }

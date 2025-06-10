@@ -12,7 +12,7 @@ public class MiniMap : MonoBehaviour
     public RectTransform MiniMapRoation;
     public RectTransform PlayerIcon;
     public RectTransform MiniMapUi;
-    GameObject Player;
+    protected GameObject Player;
 
     Vector3 TerrainSize;
     Vector3 TerrainPos;
@@ -24,8 +24,8 @@ public class MiniMap : MonoBehaviour
     List<NPC> ListNPC;
     RectTransform playerBox;
 
-    protected bool IsRotate;
-    protected bool IsZoom;
+    protected bool IsRotate = true;
+    protected bool IsZoom = true;
     void CreatePlayerCenterBox()
     {
         GameObject boxObj = new GameObject("PlayerCenterBox", typeof(RectTransform), typeof(Image));
@@ -43,8 +43,6 @@ public class MiniMap : MonoBehaviour
     }
     void Start()
     {
-        Player = Shared.GameMgr.PLAYEROBJ;
-
         TerrainSize = Terrain.terrainData.size;
         TerrainPos = Terrain.transform.position;
 
@@ -52,13 +50,11 @@ public class MiniMap : MonoBehaviour
         ListNPC = Shared.GameMgr.GetListNPC();
 
         CreatePlayerCenterBox();
-        Init();
     }
 
-    public virtual void Init()
+    public virtual void Init(GameObject _player)
     {
-        IsRotate = true;
-        IsZoom = true;
+        Player = _player;
     }
 
     // Update is called once per frame
@@ -69,6 +65,11 @@ public class MiniMap : MonoBehaviour
 
     public void MiniMapUpdate()
     {
+        if(Player == null)
+        {
+            return;
+        }
+
         UpdatePlayerIcon();
         UpdateMonsterIcon();
         UpdateNPCIcon();

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,11 +16,10 @@ public partial class Player : Character
     public EquipmentItem ring;
     //아이템, 인벤토리 테스트
 
-    private void Awake()
-    {
-        Shared.GameMgr.PLAYER = this;
-        Shared.GameMgr.PLAYEROBJ = this.gameObject;
-    }
+    //private void Awake()
+    //{
+    //    
+    //}
     private void FixedUpdate()
     {
         Fsm.UpdateState();
@@ -62,17 +62,22 @@ public partial class Player : Character
         CharacterType = (int)CHARACTER_TYPE.PLAYER;
         CharacterName = "Player_1";
 
-
         for (int i = 0; i < MaxSkillCount; i++)
         {
             CurrentSkill.Add(null);
         }
 
+        UiInit();
         Fsm_Init();
         UpdateUnitFrame();
         InventoryInit();
         //자동회복
         StartCoroutine(AutomaticRecovery(1.0f));
+
+        //PhotonViewIsMine();
+        //Shared.GameMgr.PLAYER = this;
+        //Shared.GameMgr.PLAYEROBJ = this.gameObject;
+
     }
 
     public override void RayTargetEvent(Character _character)
@@ -110,6 +115,31 @@ public partial class Player : Character
                     break;
                 }
         }
+    }
+
+    public void UiInit()
+    {
+        PhotonViewIsMine();
+        Shared.GameMgr.PLAYER = this;
+        Shared.GameMgr.PLAYEROBJ = gameObject;
+
+        Inventory = Shared.UiMgr.Inventory;
+        BuffUi = Shared.UiMgr.BuffUi;
+        UnitFrame = Shared.UiMgr.UnitFrame;
+
+        //퀘스트
+        QUESTLISTUI = Shared.UiMgr.QuestListUi;
+        QUESTLISTUI.SetPlayerQuest(GetProgressQusetList());
+
+        //카메라 타겟
+        Shared.MainCamera.SetTarget(transform);
+
+        //미니맵,월드맵
+        Shared.UiMgr.MiniMap.Init(gameObject);
+        Shared.UiMgr.WorldMap.Init(gameObject);
+
+        //조이스틱
+        Shared.GameMgr.JOYSTICK.SetTarget(this);
     }
 
     //키보드 조작

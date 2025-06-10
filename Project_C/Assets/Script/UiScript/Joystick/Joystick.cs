@@ -8,7 +8,6 @@ public class Joystick : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHan
     // Start is called before the first frame update
     public GameObject BG;
     public GameObject STICK;
-    public GameObject TARGET;
 
     [SerializeField]
     float MaxRange = 100f;
@@ -19,7 +18,7 @@ public class Joystick : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHan
 
     private RectTransform stick;
     private RectTransform bg;
-    private Player player;
+    private Player Player;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -43,19 +42,18 @@ public class Joystick : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHan
         IsDrag = false;
 
         stick.anchoredPosition = Vector2.zero;
-        player.JoystickMove(InputPos.normalized, 0.0f,IsDrag);
+        Player.JoystickMove(InputPos.normalized, 0.0f,IsDrag);
     }
 
     void Start()
     {
         stick = STICK.GetComponent<RectTransform>();
         bg = BG.GetComponent<RectTransform>();
-        player = TARGET.GetComponent<Player>();
     }
 
     private void FixedUpdate()
     {
-        if (IsDrag == false)
+        if (IsDrag == false || Player == null)
             return;
 
         MoveToPlayer();
@@ -75,6 +73,11 @@ public class Joystick : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHan
     }
     void MoveToPlayer()
     {
-        player.JoystickMove(InputPos.normalized, Dist, IsDrag);
+        Player.JoystickMove(InputPos.normalized, Dist, IsDrag);
+    }
+
+    public void SetTarget(Player _player)
+    {
+        Player = _player;
     }
 }

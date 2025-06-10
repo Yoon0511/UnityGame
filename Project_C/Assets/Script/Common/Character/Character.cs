@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 //Player,Monster에 상속되는 Character Class
@@ -80,6 +81,14 @@ public abstract partial class Character : Object
             case CHARACTER_TYPE.MONSTER:
                 Shared.GameMgr.AddMonster(this);
                 break;
+        }
+    }
+
+    protected void PhotonViewIsMine()
+    {
+        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+        {
+            return;
         }
     }
 }

@@ -9,7 +9,6 @@ public partial class Player
     List<QuestBase> ListProgessQuest = new List<QuestBase>();
     List<QuestBase> ListCompleteQuest = new List<QuestBase>();
 
-
     public QuestListUi QUESTLISTUI;
     
     public void AddQuest(QuestBase _quest)

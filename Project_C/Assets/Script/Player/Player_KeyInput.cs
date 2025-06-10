@@ -115,6 +115,11 @@ public partial class Player
 
     void KeyBoardMove()
     {
+        if(Shared.GameMgr.JOYSTICK.IsDrag)
+        {
+            return;
+        }
+
         bool MoveKeyDown = false;
         float IsWalk = 1;
         float w = 0.0f;

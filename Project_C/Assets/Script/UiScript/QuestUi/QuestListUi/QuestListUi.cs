@@ -12,10 +12,11 @@ public class QuestListUi : MonoBehaviour
     [SerializeField]
     List<QuestInfo> ListQuestInfo = new List<QuestInfo>();
     List<QuestBase> ListPlayerQuest;
-    private void Start()
-    {
-        ListPlayerQuest = Shared.GameMgr.PLAYER.GetProgressQusetList();
-    }
+    //private void Start()
+    //{
+    //    ListPlayerQuest = Shared.GameMgr.PLAYER.GetProgressQusetList();
+    //}
+    
     public void AddQuest(QuestBase _quest)
     {
         GameObject quest = Instantiate(QUESTINFO);
@@ -56,5 +57,10 @@ public class QuestListUi : MonoBehaviour
         {
             HIDEEXPOSEBTN.SetActive(false);
         }
+    }
+
+    public void SetPlayerQuest(List<QuestBase> _quest)
+    {
+        ListPlayerQuest = _quest;
     }
 }

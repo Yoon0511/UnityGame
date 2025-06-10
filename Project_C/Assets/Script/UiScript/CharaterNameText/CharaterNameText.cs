@@ -50,6 +50,10 @@ public class CharaterNameText : MonoBehaviour
 
     public void LateUpdate()
     {
+        if (PlayerObj == null)
+        {
+            PlayerObj = Shared.GameMgr.PLAYEROBJ;
+        }
         float dist = Vector3.Distance(Ctransform.position, PlayerObj.transform.position);
 
         if (dist < Distance) //일정 거리 이내이면 이름 표시

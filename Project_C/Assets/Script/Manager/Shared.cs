@@ -8,6 +8,8 @@ public static class Shared
     public static PoolMgr PoolMgr;
     public static UiMgr UiMgr;
     public static DataMgr DataMgr;
+    public static PhotonMgr PhotonMgr;
+    public static SceneMgr SceneMgr;
 
     //////////////////////////////////////
     public static MainCamera MainCamera;

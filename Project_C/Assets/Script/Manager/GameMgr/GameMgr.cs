@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.U2D;
+using Photon.Pun;
 
-public class GameMgr : MonoBehaviour
+public partial class GameMgr : MonoBehaviourPun
 {
     public GameObject PLAYEROBJ;
     public Player PLAYER;

@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class Object : MonoBehaviour
+public class Object : MonoBehaviourPun
 {
     float Duration;
     float Veclocity;
