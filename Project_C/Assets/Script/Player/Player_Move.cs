@@ -9,7 +9,7 @@ public partial class Player
 
     public void JoystickMove(Vector3 _dir, float _dist,bool _isdrag)
     {
-        if (!photonView.IsMine) return;
+        if (!PV.IsMine) return;
 
         if (CurrState == (int)STATE.ATTACK ||
             IsStun == true || IsGuard == true)

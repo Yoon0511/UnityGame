@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
 public abstract class Skill : MonoBehaviour
 {
+    public PLAYER_SKILL_ID PLAYER_SKILL_ID;
+    protected int Id;
     public GameObject Owner; //스킬 사용자
     protected Character OwnerCharacter;
     public string SpriteName;
@@ -37,4 +40,6 @@ public abstract class Skill : MonoBehaviour
 
     public int GetCurrentState() { return CurrentState; }
     public void SetCurrentState(int _state) {  CurrentState = _state; }
+    public int GetId() { return Id; }
+    public void InitId() { Id = (int)PLAYER_SKILL_ID; }
 }

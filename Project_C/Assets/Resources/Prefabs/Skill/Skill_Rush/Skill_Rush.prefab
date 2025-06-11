@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 918d6c519ce3b8b4594cec656e5d414c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PLAYER_SKILL_ID: 4
   Owner: {fileID: 0}
   SpriteName: UI_Skill_Icon_Dash
   CoolTime: 7
@@ -56,6 +57,7 @@ MonoBehaviour:
   CurrentState: 0
   SkillType: 1
   Instant: 1
+  IsAtkRange: 0
   Speed: 15
   Distance: 15
   HITBOX: {fileID: 4634200373796353147}

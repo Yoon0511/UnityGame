@@ -10,19 +10,25 @@ public class InfoPlayer : MonoBehaviour
     public Text DEF;
     public Text SPEED;
 
-    public Player player;
+    Player player;
 
-    private void Start()
-    {
-        player = Shared.GameMgr.PLAYER;
-    }
-    private void OnEnable()
-    {
-        if (player == null) return;
-        Refresh();
-    }
+    //private void Start()
+    //{
+    //    player = Shared.GameMgr.PLAYER;
+    //}
+    //private void OnEnable()
+    //{
+    //    Refresh();
+    //}
     public void Refresh()
     {
+        player = Shared.GameMgr.PLAYER;
+
+        if(player == null )
+        {
+            return;
+        }
+
         NAME.text = "<color=#C0C0C0>" + player.GetCharacterName() + "</color>";
         ATK.text = "ATK : " + player.GetInStatData(STAT_TYPE.ATK);
         DEF.text = "DEF : " + player.GetInStatData(STAT_TYPE.DEF);

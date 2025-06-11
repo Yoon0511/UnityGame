@@ -280,3 +280,17 @@ public enum SCENE
     INGAME,
     ENUM_END
 }
+
+public enum PLAYER_SKILL_ID
+{
+    NONE,
+    POISON,
+    POWERUP,
+    SLASH,
+    RUSH,
+    FALLINGROCK,
+    SELFHEAL,
+    SHIELD,
+    RIDING,
+    ENUM_END
+}

@@ -135,18 +135,6 @@ public abstract partial class Character
     public Skill GetCurrentSkill(int _index) { return CurrentSkill[_index]; }
     public void SetCurrentSkill(int _index, Skill _skill)
     {
-        //if (_index < MaxSkillCount)
-        //{
-        //    if (CurrentSkill[_index] != null &&
-        //        DicSkillCoolTime.ContainsKey(CurrentSkill[_index]))
-        //    {
-        //        DicSkillCoolTime.Remove(CurrentSkill[_index]);
-        //    }
-        //    _skill.SetOwner(gameObject);
-        //    CurrentSkill[_index] = _skill;
-        //    DicSkillCoolTime.Add(CurrentSkill[_index], 0f);
-        //}
-
         if (_index < 0 || _index >= MaxSkillCount || _skill == null)
             return;
         
@@ -162,7 +150,34 @@ public abstract partial class Character
             DicSkillCoolTime[CurrentSkill[_index].SkillName] = 0f;
         }
     }
+    public void SetCurrentSkill(int _index, int _skillid)
+    {
+        if (_index < 0 || _index >= MaxSkillCount || _skillid == (int)PLAYER_SKILL_ID.NONE)
+            return;
 
+        //skillid로 스킬장착
+        Skill _skill = null;
+        for(int i = 0;i<SkillList.Count;++i)
+        {
+            if (SkillList[i].GetId() == _skillid)
+            {
+                _skill = SkillList[i];
+                break;
+            }
+        }
+
+        _skill.SetOwner(gameObject);
+        CurrentSkill[_index] = _skill;
+
+        if (!DicSkillCoolTime.ContainsKey(_skill.SkillName))
+        {
+            DicSkillCoolTime.Add(_skill.SkillName, 0f);
+        }
+        else
+        {
+            DicSkillCoolTime[CurrentSkill[_index].SkillName] = 0f;
+        }
+    }
     public void SwapSkill(int _skillindex1, int _skillindex2)
     {
         Skill temp = CurrentSkill[_skillindex1];

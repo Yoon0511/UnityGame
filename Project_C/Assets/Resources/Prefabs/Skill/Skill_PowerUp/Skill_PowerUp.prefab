@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bfc37caccc9ece49acb2e8c574c2507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PLAYER_SKILL_ID: 2
   Owner: {fileID: 0}
   SpriteName: UI_Skill_Icon_Buff
   CoolTime: 10

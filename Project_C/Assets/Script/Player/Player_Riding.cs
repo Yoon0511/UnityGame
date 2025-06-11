@@ -11,11 +11,16 @@ public partial class Player
     [SerializeField]
     GameObject Sword;
 
+    [SerializeField]
     GameObject Sanddle;
 
     [SerializeField]
     Riding Riding;
 
+    public void RidingInit()
+    {
+        Riding.Init();
+    }
     public void SetSanddle(GameObject _sanddle)
     {
         Sanddle = _sanddle;

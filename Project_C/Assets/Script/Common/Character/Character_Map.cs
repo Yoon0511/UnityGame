@@ -63,4 +63,17 @@ public abstract partial class Character
             icon.SetIconSize(_width, _height);
         }
     }
+
+    protected void AllRemoveMapIcon()
+    {
+        var enumerator = DicMapIcons.GetEnumerator();
+        while (enumerator.MoveNext())
+        {
+            var kvp = enumerator.Current;
+            MiniMap map = kvp.Key;
+            MiniMapIcon icon = kvp.Value;
+            icon.ReleaseObject();
+        }
+        DicMapIcons.Clear();
+    }
 }

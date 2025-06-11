@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c224f10a9a57a142aa5ac88f9fd9bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PLAYER_SKILL_ID: 3
   Owner: {fileID: 0}
   SpriteName: UI_Skill_Icon_Slash
   CoolTime: 3
@@ -54,4 +55,6 @@ MonoBehaviour:
   SkillMotion: 6
   CurrentState: 1
   SkillType: 1
+  Instant: 0
+  IsAtkRange: 0
   SLASH_PREFAP: {fileID: 1286683050383161832, guid: bb2e73fc233beda4d809e23dd1f94fac, type: 3}

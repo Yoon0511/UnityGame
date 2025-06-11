@@ -20,6 +20,7 @@ public partial class Player : Character
     //{
     //    
     //}
+    PhotonView PV;
     private void FixedUpdate()
     {
         Fsm.UpdateState();
@@ -33,7 +34,10 @@ public partial class Player : Character
 
     public void ClickToRay()
     {
-        PhotonViewIsMine();
+        if(PV.IsMine == false)
+        {
+            return;
+        }
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -64,18 +68,23 @@ public partial class Player : Character
         CharacterType = (int)CHARACTER_TYPE.PLAYER;
         CharacterName = "Player_1";
 
+        for(int i = 0;i<GetSkillList().Count;i++)
+        {
+            GetSkillList()[i].InitId();
+        }
+
         for (int i = 0; i < MaxSkillCount; i++)
         {
             CurrentSkill.Add(null);
         }
 
-        UiInit();
+        PV = GetComponent<PhotonView>();
+        LocalInit();
         Fsm_Init();
         UpdateUnitFrame();
         InventoryInit();
         //ÀÚµ¿È¸º¹
         StartCoroutine(AutomaticRecovery(1.0f));
-
         //PhotonViewIsMine();
         //Shared.GameMgr.PLAYER = this;
         //Shared.GameMgr.PLAYEROBJ = this.gameObject;
@@ -119,22 +128,27 @@ public partial class Player : Character
         }
     }
 
-    public void UiInit()
+    public void LocalInit()
     {
-        PhotonViewIsMine();
-        Shared.GameMgr.PLAYER = this;
-        Shared.GameMgr.PLAYEROBJ = gameObject;
-
         Inventory = Shared.UiMgr.Inventory;
         BuffUi = Shared.UiMgr.BuffUi;
         UnitFrame = Shared.UiMgr.UnitFrame;
+        QUESTLISTUI = Shared.UiMgr.QuestListUi;
+        Shared.GameMgr.AddPlayer(this);
+
+        if (PV.IsMine == false) return;
+
+        Shared.GameMgr.PLAYER = this;
+        Shared.GameMgr.PLAYEROBJ = gameObject;
+
+        //¸ó½ºÅÍ Å¸°Ù
+        Shared.GameMgr.AllMonsterSetPlayer();
 
         //Äù½ºÆ®
-        QUESTLISTUI = Shared.UiMgr.QuestListUi;
         QUESTLISTUI.SetPlayerQuest(GetProgressQusetList());
 
-        //Ä«¸Þ¶ó Å¸°Ù
-        Shared.MainCamera.SetTarget(transform);
+        //½ºÅ³ºÏ
+        Shared.UiMgr.SkillBook.Init(this);
 
         //¹Ì´Ï¸Ê,¿ùµå¸Ê
         Shared.UiMgr.MiniMap.Init(gameObject);
@@ -142,9 +156,16 @@ public partial class Player : Character
 
         //Á¶ÀÌ½ºÆ½
         Shared.GameMgr.JOYSTICK.SetTarget(this);
+        //Ä«¸Þ¶ó Å¸°Ù
+        Shared.MainCamera.SetTarget(transform);
 
-        //½ºÅ³ºÏ
-        Shared.UiMgr.SkillBook.Init(this);
+        //Å»°Í
+        RidingInit();
+    }
+
+    public int GetPhotonViewId()
+    {
+        return PV.ViewID;
     }
 
     //Å°º¸µå Á¶ÀÛ

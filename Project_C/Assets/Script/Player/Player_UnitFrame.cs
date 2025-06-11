@@ -10,6 +10,10 @@ public partial class Player
 
     void UpdateUnitFrame()
     {
+        if(PV.IsMine == false)
+        {
+            return;
+        }
         UpdateHpbar();
         UpdateMpbar();
         UpdateExpbar();

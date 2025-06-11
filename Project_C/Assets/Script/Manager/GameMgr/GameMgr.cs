@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.U2D;
 using Photon.Pun;
+using Photon.Pun.Demo.Cockpit;
 
 public partial class GameMgr : MonoBehaviourPun
 {
@@ -29,6 +30,8 @@ public partial class GameMgr : MonoBehaviourPun
     List<Monster> ListMonster = new List<Monster>();
     [SerializeField]
     List<NPC> ListNPC = new List<NPC>();
+    [SerializeField]
+    List<Player> ListPlayer = new List<Player>();
     private void Awake()
     {
         Shared.GameMgr = this;
@@ -109,9 +112,21 @@ public partial class GameMgr : MonoBehaviourPun
     public void AddMonster(Character _monster)
     {
         Monster monster = _monster as Monster;
-        if(monster != null)
+        if (monster != null)
         {
             ListMonster.Add(monster);
+        }
+    }
+    public void RemoveMonster(Monster _monster)
+    {
+        ListMonster.Remove(_monster);
+        Debug.Log(ListMonster.Count);
+    }
+    public void AllMonsterSetPlayer()
+    {
+        for (int i = 0; i < ListMonster.Count;++i)
+        {
+            ListMonster[i].SetPlayer(PLAYEROBJ);
         }
     }
 
@@ -132,6 +147,27 @@ public partial class GameMgr : MonoBehaviourPun
             if (ListNPC[i].GetId() == _id)
             {
                 return ListNPC[i];
+            }
+        }
+        return null;
+    }
+
+    public void AddPlayer(Player _player)
+    {
+        ListPlayer.Add(_player);
+    }
+    public List<Player> GetListPLayer()
+    {
+        return ListPlayer;
+    }
+
+    public Player GetPlayerinListforViewid(int _viewid)
+    {
+        for (int i = 0; i < ListPlayer.Count; ++i)
+        {
+            if (ListPlayer[i].GetPhotonViewId() == _viewid)
+            {
+                return ListPlayer[i];
             }
         }
         return null;

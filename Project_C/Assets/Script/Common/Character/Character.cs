@@ -83,12 +83,4 @@ public abstract partial class Character : Object
                 break;
         }
     }
-
-    protected void PhotonViewIsMine()
-    {
-        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
-        {
-            return;
-        }
-    }
 }

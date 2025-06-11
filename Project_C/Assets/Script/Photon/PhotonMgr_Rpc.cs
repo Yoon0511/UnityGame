@@ -8,13 +8,16 @@ using Photon.Realtime;
 public partial class PhotonMgr : MonoBehaviourPunCallbacks
 {
     [PunRPC]
-    void OnSkill(bool _Owner,int _Skill)
+    void OnSkill(int _viewid,int _skillid, int _index)
     {
+        Player player = Shared.GameMgr.GetPlayerinListforViewid(_viewid);
 
+        player.SetCurrentSkill(_index, _skillid);
+        player.UseOtherPlayerSkill(_index);
     }
 
-    public void SendSkill()
+    public void SendSkill(int _viewid, int _skillid, int _index)
     {
-        PV.RPC("OnSkill", RpcTarget.All, true, 1);
+        PV.RPC("OnSkill", RpcTarget.Others, _viewid, _skillid, _index);
     }
 }

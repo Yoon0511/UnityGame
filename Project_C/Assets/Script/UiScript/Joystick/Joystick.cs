@@ -18,7 +18,7 @@ public class Joystick : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHan
 
     private RectTransform stick;
     private RectTransform bg;
-    private Player Player;
+    public Player Player;
 
     public void OnBeginDrag(PointerEventData eventData)
     {

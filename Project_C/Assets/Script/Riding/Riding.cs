@@ -22,7 +22,14 @@ public partial class Riding : MonoBehaviour
     public Transform FRONTFOOT_R;
     public Transform FRONTFOOT_L;
 
-    private void Start()
+    //private void Start()
+    //{
+    //    Owner = Shared.GameMgr.PLAYER;
+    //    Owner.SetSanddle(Sanddle);
+    //    FsmInit();
+    //}
+
+    public void Init()
     {
         Owner = Shared.GameMgr.PLAYER;
         Owner.SetSanddle(Sanddle);

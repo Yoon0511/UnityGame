@@ -139,6 +139,11 @@ public class MiniMap : MonoBehaviour
 
         for(int i = 0;i<ListMonster.Count;++i)
         {
+            if(ListMonster[i] == null)
+            {
+                continue;
+            }
+
             CharcaterIconUpdate(ListMonster[i]);
         }
     }

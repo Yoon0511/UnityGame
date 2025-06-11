@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af13228a61e84a946ba55b48ac376360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PLAYER_SKILL_ID: 1
   Owner: {fileID: 0}
   SpriteName: UI_Skill_Icon_PsycicAttack
   CoolTime: 12

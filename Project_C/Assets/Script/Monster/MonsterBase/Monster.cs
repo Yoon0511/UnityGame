@@ -16,6 +16,7 @@ public partial class Monster : Character
     protected float attackRange;
 
     public bool OnPatrol = false;
+    bool IsDead = false;
 
     private void FixedUpdate()
     {
@@ -32,9 +33,14 @@ public partial class Monster : Character
         CharacterName = gameObject.name;
         CharacterType = (int)CHARACTER_TYPE.MONSTER;
         Id = (int)MONSTER_ID.GOLEM;
-        player = Shared.GameMgr.PLAYEROBJ;
+        //player = Shared.GameMgr.PLAYEROBJ;
         Fsm_Init();
     }
+    public void SetPlayer(GameObject _player)
+    {
+        player = _player;
+    }
+
     // Monster 클릭 시 실행되는 함수
     public override void RayTargetEvent(Character _character)
     {
@@ -70,7 +76,11 @@ public partial class Monster : Character
         {
             SendQuestMsg(); //Monster -> Player 퀘스트 메시지 발송
             DropItem(); //전리품 드랍
-            Destroy(gameObject); //삭제
+
+            //삭제
+            AllRemoveMapIcon();
+            Shared.GameMgr.RemoveMonster(this);
+            Destroy(gameObject);
             return true;
         }
         return false;
@@ -101,4 +111,6 @@ public partial class Monster : Character
     {
         return Statdata.GetUiHeadTransform();
     }
+
+    public bool GetIsDead() { return IsDead; }
 }

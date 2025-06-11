@@ -22,40 +22,64 @@ public partial class Player : Character
 
     void StateChageJoystick(float _speed)
     {
-        float speed = Statdata.GetData(STAT_TYPE.SPEED);
-        
-        if (_speed >= speed * 0.5f)
+        //float speed = Statdata.GetData(STAT_TYPE.SPEED);
+        //
+        //if (_speed >= speed * 0.5f)
+        //{
+        //    if(IsRiding)
+        //    {
+        //        Debug.Log($"run = {_speed}");
+        //        Riding.ChangeState((int)RIDING_STATE.RUN);
+        //    }
+        //    else
+        //    {
+        //        ChangeState((int)STATE.RUN);
+        //    }
+        //}
+        //else if (_speed > speed * 0.2f)
+        //{
+        //    if (IsRiding)
+        //    {
+        //        Riding.ChangeState((int)RIDING_STATE.WALK);
+        //    }
+        //    else
+        //    {
+        //        ChangeState((int)STATE.WALK);
+        //    }
+        //}
+        //else
+        //{
+        //    if (IsRiding)
+        //    {
+        //        Debug.Log($"idle = {_speed}");
+        //        Riding.ChangeState((int)RIDING_STATE.IDLE);
+        //    }
+        //    else
+        //    {
+        //        ChangeState((int)STATE.IDLE);
+        //    }
+        //}
+        float baseSpeed = Statdata.GetData(STAT_TYPE.SPEED);
+        int newState;
+        //Debug.Log($"[Speed] {_speed}, [Thresholds] run: {_speed * 0.5f}, walk: {_speed * 0.2f}");
+        if (_speed >= baseSpeed * 0.5f)
         {
-            if(IsRiding)
-            {
-                Riding.ChangeState((int)RIDING_STATE.RUN);
-            }
-            else
-            {
-                ChangeState((int)STATE.RUN);
-            }
+            newState = IsRiding ? (int)RIDING_STATE.RUN : (int)STATE.RUN;
+            //if (IsRiding) Debug.Log($"run = {_speed}");
         }
-        else if (_speed > speed * 0.2f)
+        else if (_speed > baseSpeed * 0.2f)
         {
-            if (IsRiding)
-            {
-                Riding.ChangeState((int)RIDING_STATE.WALK);
-            }
-            else
-            {
-                ChangeState((int)STATE.WALK);
-            }
+            newState = IsRiding ? (int)RIDING_STATE.WALK : (int)STATE.WALK;
         }
         else
         {
-            if (IsRiding)
-            {
-                Riding.ChangeState((int)RIDING_STATE.IDLE);
-            }
-            else
-            {
-                ChangeState((int)STATE.IDLE);
-            }
+            newState = IsRiding ? (int)RIDING_STATE.IDLE : (int)STATE.IDLE;
+            //if (IsRiding) Debug.Log($"idle = {_speed}");
         }
+
+        if (IsRiding)
+            Riding.ChangeState(newState);
+        else
+            ChangeState(newState);
     }
 }

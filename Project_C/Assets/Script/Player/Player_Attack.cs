@@ -10,6 +10,11 @@ public partial class Player
     int ComboIndex = 0;
     public void OnAttack()
     {
+        if(PV.IsMine == false)
+        {
+            return;
+        }
+
         if (CurrState != (int)STATE.ATTACK)
         {
             ChangeState((int)STATE.ATTACK);

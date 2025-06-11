@@ -10,7 +10,7 @@ public partial class Player
 
     bool UseStore = false;
     public Inventory GetInventory() { return Inventory; }
-    void InventoryInit() { Inventory.SetOwner(this); }
+    void InventoryInit() { Inventory.SetOwner(Shared.GameMgr.PLAYER); }
     public int GetGold() { return Gold; }
     public void AddGold(int _gold) 
     { 

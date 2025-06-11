@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07206cdb52355d249b8c56a02cf0172d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PLAYER_SKILL_ID: 5
   Owner: {fileID: 0}
   SpriteName: UI_Skill_Icon_MeteorShower
   CoolTime: 5

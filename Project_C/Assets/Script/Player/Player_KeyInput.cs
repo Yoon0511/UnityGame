@@ -110,7 +110,7 @@ public partial class Player
             AddGold(3000);
         }
 
-        KeyBoardMove();
+        //KeyBoardMove();
     }
 
     void KeyBoardMove()
@@ -159,7 +159,7 @@ public partial class Player
         if(MoveKeyDown == false)
         {
             dist = 0;
-            JoystickMove(dir.normalized, (1 / IsWalk) * dist, true);
+            JoystickMove(dir.normalized, 0.0f, true);
         }
 
         if (MoveKeyDown)

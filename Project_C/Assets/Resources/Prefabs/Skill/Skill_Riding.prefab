@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 330a7a301505c054288a8e173d1a847b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PLAYER_SKILL_ID: 8
   Owner: {fileID: 0}
   SpriteName: UI_Skill_Icon_Riding
   CoolTime: 1
