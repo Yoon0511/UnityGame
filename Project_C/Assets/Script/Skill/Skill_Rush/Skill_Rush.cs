@@ -24,7 +24,14 @@ public class Skill_Rush : Skill
         if(Owner.GetComponent<Character>().GetCharacterType() == 
             (int)CHARACTER_TYPE.PLAYER)
         {
-            Shared.MainCamera.ZoomEndStage(0.2f, 1.0f, 0.3f, 0.3f, 0.3f, Vector3.zero);
+            Player player = null;
+            if (Owner.TryGetComponent<Player>(out player))
+            {
+                if(player.GetPVIsMine())
+                {
+                    Shared.MainCamera.ZoomEndStage(0.2f, 1.0f, 0.3f, 0.3f, 0.3f, Vector3.zero);
+                }
+            }
         }
 
 

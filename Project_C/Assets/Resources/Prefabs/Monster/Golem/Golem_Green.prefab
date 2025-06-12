@@ -308,6 +308,9 @@ GameObject:
   - component: {fileID: 3566666222997977771}
   - component: {fileID: 8942143390153546707}
   - component: {fileID: 7440291098451390452}
+  - component: {fileID: -4627176693169000101}
+  - component: {fileID: 7702129578222699990}
+  - component: {fileID: -4775020893098819108}
   m_Layer: 0
   m_Name: Golem_Green
   m_TagString: TAG_MONSTER
@@ -350,6 +353,7 @@ MonoBehaviour:
   Statdata: {fileID: 3566666222997977771}
   BuffSystem: {fileID: 7440291098451390452}
   BodyParticlePoint: {fileID: 3063694387693383974}
+  Id: 0
   Animator: {fileID: 208020583755487552}
   SkillList: []
   ProjectilePoint: {fileID: 0}
@@ -359,6 +363,7 @@ MonoBehaviour:
   detectionRange: 6
   attackRange: 2
   OnPatrol: 1
+  PV: {fileID: 0}
   BasicAttackCollider: {fileID: 1299830155421792566}
   PatrolPointTransform:
   - {fileID: 3438908547939877215}
@@ -479,6 +484,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee13c021d88a8348b4a8dd31247a900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4627176693169000101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5421347076534600066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 7702129578222699990}
+  - {fileID: -4775020893098819108}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &7702129578222699990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5421347076534600066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
+--- !u!114 &-4775020893098819108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5421347076534600066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 3
+    SynchronizeType: 1
+    Name: Ani_State
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
 --- !u!1 &6976470856596865860
 GameObject:
   m_ObjectHideFlags: 0

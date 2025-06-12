@@ -9,12 +9,13 @@ public class Skill_PowerUp : Skill
     public float StatIncrease;
     public override void UseSkill()
     {
-        StatBuff statBuff = new StatBuff(StatType, StatIncrease, Duration,
-            Owner,SpriteName);
-
-        Character character = Owner.GetComponent<Character>();
-
+        Player character = Owner.GetComponent<Player>();
+        if(character.GetPVIsMine())
+        {
+            StatBuff statBuff = new StatBuff(StatType, StatIncrease, Duration, Owner,SpriteName);
+            character.AddBuff(statBuff);
+        }
+        
         Shared.ParticleMgr.CreateParticle("Buff", character.transform, 1.5f);
-        character.AddBuff(statBuff);
     }
 }

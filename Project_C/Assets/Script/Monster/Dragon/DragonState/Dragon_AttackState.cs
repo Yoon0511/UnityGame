@@ -84,7 +84,7 @@ public class Dragon_AttackState : StateBase
             // 타겟을 향해 회전
             Dragon.LookatTarget();
             //Dragon.UseDragonSkill((int)DRAGON_SKILL.RUSH);
-            CurrSkill = (int)DRAGON_SKILL.ROAR;
+            CurrSkill = (int)DRAGON_SKILL.BREATH;
 
             Dragon.UseDragonSkill(CurrSkill);
         }

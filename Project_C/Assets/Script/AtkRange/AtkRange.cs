@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class AtkRange : MonoBehaviour
+public class AtkRange : PoolAble
 {
     Material Material;
     public float DesiredTime = 2f;
@@ -24,6 +24,11 @@ public class AtkRange : MonoBehaviour
     private void OnEnable()
     {
         StartTime = Time.time;
+    }
+
+    private void FixedUpdate()
+    {
+        StartSizeUp();
     }
 
     public void StartSizeUp()
@@ -55,6 +60,8 @@ public class AtkRange : MonoBehaviour
     {
         DesiredTime = _time;
     }
+
+    public float GetDesiredTime() { return DesiredTime; }
     public bool IsStretchEnd()
     {
         //if (StretchProgress < 1.0f)

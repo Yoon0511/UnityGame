@@ -12,8 +12,9 @@ public class BasicAttack : MonoBehaviour
         if(IsPlayer)
         {
             DamageData damgedata = Shared.GameMgr.DamageDataPool.Get(monster.GetInStatData(STAT_TYPE.ATK), DAMAGEFONT_TYPE.YELLOW);
-            other.gameObject.GetComponent<Character>().Hit(damgedata);
-            Shared.ParticleMgr.CreateParticle("WhiteHit", Shared.GameMgr.PLAYER.GetBodyParticlePointObj().transform, 0.5f);
+            Character character = other.GetComponent<Character>();
+            character.Hit(damgedata);
+            Shared.ParticleMgr.CreateParticle("WhiteHit", character.GetBodyParticlePointObj().transform, 0.5f);
         }
     }
 }

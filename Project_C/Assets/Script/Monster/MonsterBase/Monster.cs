@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
+using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 //Character를 상속받는 Monster
 public partial class Monster : Character
@@ -9,6 +10,7 @@ public partial class Monster : Character
     [SerializeField]
     protected GameObject Target;
     protected GameObject player;
+    List<Player> ListPlayer;
 
     [SerializeField]
     protected float detectionRange;
@@ -18,15 +20,33 @@ public partial class Monster : Character
     public bool OnPatrol = false;
     bool IsDead = false;
 
+    [SerializeField]
+    PhotonView PV;
     private void FixedUpdate()
     {
-        if(player == null)
+        if(ListPlayer == null)
+        {
+            //player = Shared.GameMgr.PLAYEROBJ;
+            ListPlayer = Shared.GameMgr.GetListPLayer();
+            return;
+        }
+        if(PV == null)
+        {
+            PV = gameObject.GetComponent<PhotonView>();
+            return;
+        }
+
+        if(PV.IsMine == false)
         {
             return;
         }
+
         StateUpdate();
     }
-
+    private void Awake()
+    {
+        PV = gameObject.GetComponent<PhotonView>();
+    }
     // Monster Init - 몬스터 생성시 기본 세팅값 설정
     public override void Init()
     {
@@ -34,6 +54,7 @@ public partial class Monster : Character
         CharacterType = (int)CHARACTER_TYPE.MONSTER;
         Id = (int)MONSTER_ID.GOLEM;
         //player = Shared.GameMgr.PLAYEROBJ;
+        
         Fsm_Init();
     }
     public void SetPlayer(GameObject _player)

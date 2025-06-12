@@ -168,6 +168,10 @@ public partial class Player : Character
         return PV.ViewID;
     }
 
+    public bool GetPVIsMine()
+    {
+        return PV.IsMine;
+    }
     //키보드 조작
     void UpdateAnimation()
     {

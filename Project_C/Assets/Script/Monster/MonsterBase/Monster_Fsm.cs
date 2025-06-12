@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun.Demo.Cockpit;
 using UnityEngine;
 
 public partial class Monster
@@ -28,11 +29,22 @@ public partial class Monster
 
     public bool IsPlayerInDetectionRange()
     {
-        float dist = DistXZ(player.transform.position, transform.position);
-        if (dist <= detectionRange)
+        for(int i = 0; i < ListPlayer.Count; ++i)
         {
-            return true;
+            float dist = DistXZ(ListPlayer[i].transform.position, transform.position);
+            if (dist <= detectionRange)
+            {
+                ChangeTarget(ListPlayer[i].gameObject);
+                return true;
+            }
         }
+
+        //float dist = DistXZ(ListPlayer[i].transform.position, transform.position);
+        //if (dist <= detectionRange)
+        //{
+        //    return true;
+        //}
+
         return false;
     }
 
@@ -50,10 +62,19 @@ public partial class Monster
     /////////////////// 범위 테스트 ///////////////////
     public bool IsPlayerInAttackRange()
     {
-        float dist = DistXZ(Target.transform.position, transform.position);
-        if (dist <= attackRange)
+        //float dist = DistXZ(Target.transform.position, transform.position);
+        //if (dist <= attackRange)
+        //{
+        //    return true;
+        //}
+
+        for (int i = 0; i < ListPlayer.Count; ++i)
         {
-            return true;
+            float dist = DistXZ(ListPlayer[i].transform.position, transform.position);
+            if (dist <= attackRange)
+            {
+                return true;
+            }
         }
         return false;
     }

@@ -11,17 +11,22 @@ public partial class Player
 
     void Guard()
     {
+        Shared.ParticleMgr.CreateParticle("MagicShieldYellow", transform, GuardTime);
+        
+        if(PV.IsMine == false)
+        {
+            return;
+        }
+
         IsGuard = true;
         PlayAnimation("Ani_State", (int)PLAYER_ANI_STATE.GUARD);
-        Shared.ParticleMgr.CreateParticle("MagicShieldYellow", transform, GuardTime);
         StartCoroutine(IGuard());
-
     }
 
     IEnumerator IGuard()
     {
         yield return new WaitForSeconds(GuardTime);
-        ChangeState((int)PLAYER_ANI_STATE.IDLE);
+        PlayAnimation("Ani_State", (int)PLAYER_ANI_STATE.IDLE);
         IsGuard = false;
     }
 

@@ -205,6 +205,9 @@ GameObject:
   - component: {fileID: 8195632456674063198}
   - component: {fileID: 2446487206838079786}
   - component: {fileID: 1969641326546743470}
+  - component: {fileID: -3292393875841736507}
+  - component: {fileID: 4655006369402922131}
+  - component: {fileID: -8032110046441522976}
   m_Layer: 0
   m_Name: Wolf_leader
   m_TagString: Untagged
@@ -247,6 +250,7 @@ MonoBehaviour:
   Statdata: {fileID: 4481884498457531615}
   BuffSystem: {fileID: 8615692650275024200}
   BodyParticlePoint: {fileID: 4375224580326033134}
+  Id: 0
   Animator: {fileID: 1969641326546743470}
   SkillList: []
   ProjectilePoint: {fileID: 0}
@@ -256,6 +260,7 @@ MonoBehaviour:
   detectionRange: 4.5
   attackRange: 2
   OnPatrol: 1
+  PV: {fileID: 0}
   BasicAttackCollider: {fileID: 6942212298059654803}
   PatrolPointTransform:
   - {fileID: 4364854001071376665}
@@ -264,9 +269,9 @@ MonoBehaviour:
   - {fileID: 8799623525991770633}
   IsLeader: 1
   ListColleagueMonsters:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1739190282939269064, guid: 2f8fa9281b1168242a952cf4a42ce3b3, type: 3}
+  - {fileID: 1739190282939269064, guid: 2f8fa9281b1168242a952cf4a42ce3b3, type: 3}
+  - {fileID: 1739190282939269064, guid: 2f8fa9281b1168242a952cf4a42ce3b3, type: 3}
 --- !u!114 &8615692650275024200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,6 +390,67 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-3292393875841736507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6423267078485947779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 3
+    SynchronizeType: 1
+    Name: Ani_State
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
+--- !u!114 &4655006369402922131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6423267078485947779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: -3292393875841736507}
+  - {fileID: -8032110046441522976}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &-8032110046441522976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6423267078485947779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &6942212298059654803
 GameObject:
   m_ObjectHideFlags: 0

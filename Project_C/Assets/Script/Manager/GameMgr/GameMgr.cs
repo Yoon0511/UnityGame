@@ -10,7 +10,7 @@ public partial class GameMgr : MonoBehaviourPun
 {
     public GameObject PLAYEROBJ;
     public Player PLAYER;
-
+    public Terrain Terrain;
     //UI
     public DamageFont DAMAGE_FONT;
     public Canvas CANVAS;
@@ -171,5 +171,10 @@ public partial class GameMgr : MonoBehaviourPun
             }
         }
         return null;
+    }
+
+    public float GetTerrainHeight(Vector3 position)
+    {
+        return Terrain.activeTerrain.SampleHeight(position);
     }
 }

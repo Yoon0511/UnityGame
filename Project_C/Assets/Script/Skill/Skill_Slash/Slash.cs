@@ -6,12 +6,14 @@ public class Slash : MonoBehaviour
 {
     float Atk;
     float Speed = 5.0f;
+    float DeleteTime = 3.0f;
     public void Init(Quaternion _rotate,Vector3 _pos,float _atk,float _speed)
     {
         Atk = _atk;
         Speed = _speed;
         transform.rotation = _rotate;
         transform.position = _pos;
+        StartCoroutine(ISlash());
     }
 
     private void FixedUpdate()
@@ -31,5 +33,11 @@ public class Slash : MonoBehaviour
             other.GetComponent<Character>().Hit(damgedata);
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator ISlash()
+    {
+        yield return new WaitForSeconds(DeleteTime);
+        Destroy(gameObject);
     }
 }

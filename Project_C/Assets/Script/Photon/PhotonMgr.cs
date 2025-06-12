@@ -210,6 +210,18 @@ public partial class PhotonMgr : MonoBehaviourPunCallbacks
             UpdateStatusText("오류: 플레이어 스폰 실패 (SpawnPoint 누락).");
         }
 
+        //마스터 클라이언트라면 몬스터 생성
+        if (PhotonNetwork.IsMasterClient)
+        {
+            //몬스터 생성
+            Shared.GameMgr.MonsterSpawn();
+        }
+        else
+        {
+            //로컬 몬스터 삭제
+            Shared.GameMgr.RemoveLocalMonster();
+        }
+
         CheckPlayersInRoom();
 
         StatusText.text = PhotonNetwork.CloudRegion;

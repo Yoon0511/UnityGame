@@ -27,7 +27,6 @@ public class Monster_PatrolState : StateBase
 
         if (monster.IsPlayerInDetectionRange()) //플레이어 감지
         {
-            monster.ChangeTarget(Shared.GameMgr.PLAYEROBJ);
             monster.ChangeState((int)MONSTER_STATE.CHASE);
         }
         //Debug.Log("OnIdleUpdate");

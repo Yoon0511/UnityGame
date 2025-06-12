@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class Skill_FallingRock : Skill
@@ -14,6 +15,8 @@ public class Skill_FallingRock : Skill
 
     List<AtkRange> ListAtkRangeCircle = new List<AtkRange>();
 
+    string RockPrefapPath = "Prefabs/Skill/SKill_FallingRock/Rock/Rock";
+
     public override void UseSkill()
     {
         base.UseSkill();
@@ -24,20 +27,36 @@ public class Skill_FallingRock : Skill
             //Shared.MainCamera.Shake(0);
         }
 
-        //공격 범위 생성
-        for(int i = 0;i < ROCKCOUNT; i++)
+        Player Player;
+        if(Owner.transform.TryGetComponent(out Player))
         {
-            float RandomX = Random.Range(-15f, 15f);
-            float RandomZ = Random.Range(-15f, 15f);
-            Vector3 randpos = new Vector3(RandomX, 0, RandomZ);
-            Vector3 pos = Owner.transform.position + randpos;
-            pos.y = 0.6f;
-            GameObject AtkCircle = Instantiate(AtkRangeCircle, pos, Quaternion.identity);
-            AtkCircle.GetComponent<AtkRange>().SetDesiredTime(Random.Range(3.0f,10.0f));
-            ListAtkRangeCircle.Add(AtkCircle.GetComponent<AtkRange>());
-        }
+            Vector3[] RpcAtkPos = new Vector3[ROCKCOUNT];
+            float[] RpcAtkTime = new float[ROCKCOUNT];
 
-        StartCoroutine(IFallingRock());
+            //공격 범위 생성
+            for (int i = 0; i < ROCKCOUNT; i++)
+            {
+                float RandomX = Random.Range(-15f, 15f);
+                float RandomZ = Random.Range(-15f, 15f);
+                Vector3 randpos = new Vector3(RandomX, 0, RandomZ);
+                Vector3 pos = Owner.transform.position + randpos;
+                pos.y = Shared.GameMgr.GetTerrainHeight(pos) + 0.1f;
+
+                //GameObject AtkCircle = Instantiate(AtkRangeCircle, pos, Quaternion.identity);
+                GameObject AtkCircle = Shared.PoolMgr.GetObject("AtkRange_Circle");
+                AtkCircle.transform.position = pos;
+                AtkCircle.GetComponent<AtkRange>().SetDesiredTime(Random.Range(3.0f, 10.0f));
+                ListAtkRangeCircle.Add(AtkCircle.GetComponent<AtkRange>());
+
+                //Rpc
+                RpcAtkPos[i] = AtkCircle.transform.position;
+                RpcAtkTime[i] = AtkCircle.GetComponent<AtkRange>().GetDesiredTime();
+            }
+            Shared.PhotonMgr.SendAtkRange(RpcAtkPos, RpcAtkTime);
+
+            StartCoroutine(IFallingRock());
+        }
+        
         base.SkillEnd();
     }
 
@@ -51,7 +70,8 @@ public class Skill_FallingRock : Skill
             {
                 //돌 생성
                 int random = Random.Range(0, Rock.Length);
-                GameObject rockobj = Instantiate(Rock[random]);
+                //GameObject rockobj = Instantiate(Rock[random]);
+                GameObject rockobj = PhotonNetwork.Instantiate(RockPrefapPath, ListAtkRangeCircle[i].transform.position,Quaternion.identity,0);
                 float RockSpeed = Random.Range(ROCK_MIN_SPEED, ROCK_MAX_SPEED);
                 rockobj.GetComponent<Rock>().Init(ListAtkRangeCircle[i].transform.position, 
                     RockSpeed, Atk,Random.Range(4.0f,7.0f), Random.Range(MIN_STUN_DURATION, MAX_STUN_DURATION));
@@ -59,10 +79,10 @@ public class Skill_FallingRock : Skill
                 Destroy(ListAtkRangeCircle[i].gameObject);
                 ListAtkRangeCircle.RemoveAt(i);
             }
-            else
-            {
-                ListAtkRangeCircle[i].StartSizeUp();
-            }
+            //else
+            //{
+            //    ListAtkRangeCircle[i].StartSizeUp();
+            //}
             ++i;
             yield return null;
         }
