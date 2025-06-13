@@ -16,6 +16,11 @@ public class UiMgr : MonoBehaviour
     public MiniMap MiniMap;
     public WorldMap WorldMap;
     public SkillBook SkillBook;
+    public PartyFrame PartyFrame;
+
+    /// <test>
+    public Text Text;
+    /// </test>
     private void Awake()
     {
         Shared.UiMgr = this;
@@ -31,5 +36,17 @@ public class UiMgr : MonoBehaviour
     {
         SpecialMark mark = Shared.PoolMgr.GetObject("SpecialMark").GetComponent<SpecialMark>();
         mark.Init(_markname,_duration,_owner);
+    }
+
+    public void CreateSelectUi(int _inviteid,Player _player)
+    {
+        SelectUi selectUi = Shared.PoolMgr.GetObject("SelectUi").GetComponent<SelectUi>();
+        selectUi.Init(_inviteid,_player);
+    }
+    
+    public void CreatePartyInvitePopup(Player _player)
+    {
+        PartyInvitePopup partyInvitePopup = Shared.PoolMgr.GetObject("PartyInvitePopup").GetComponent<PartyInvitePopup>();
+        partyInvitePopup.Init(_player);
     }
 }

@@ -34,4 +34,49 @@ public partial class PhotonMgr : MonoBehaviourPunCallbacks
     {
         PV.RPC("CreateAtkRange", RpcTarget.Others, _positions, _photonTime);
     }
+
+    //파티초대
+    [PunRPC]
+    void PartyInvite(int _inviteid,int _beinviteid)
+    {
+        Player player = Shared.GameMgr.GetPlayerinListforViewid(_beinviteid);
+
+        if (player != null)
+        {
+            player.PartyInvite(_inviteid);
+        }
+    }
+    public void SendPartyInvite(int _inviteid,int _beinviteid)
+    {
+        PV.RPC("PartyInvite", RpcTarget.Others, _inviteid,_beinviteid);
+    }
+
+    //파티가입 수락
+    [PunRPC]
+    void PartyAccept(int _inviteid, int _beinviteid)
+    {
+        Player inviteplayer = Shared.GameMgr.GetPlayerinListforViewid(_inviteid);
+        Player beinviteplayer = Shared.GameMgr.GetPlayerinListforViewid(_beinviteid);
+
+        if (inviteplayer != null)
+        {
+            inviteplayer.PartyJoin(beinviteplayer);
+            beinviteplayer.PartyJoin(inviteplayer);
+        }
+    }
+    public void SendPartyAccept(int _inviteid,int _beinviteid)
+    {
+        PV.RPC("PartyAccept", RpcTarget.All,_inviteid,_beinviteid);
+    }
+
+    //파티가입 거절
+    [PunRPC]
+    void PartyRefuse()
+    {
+
+    }
+    public void SendPartyRefuse()
+    {
+        PV.RPC("PartyRefuse", RpcTarget.Others);
+    }
 }

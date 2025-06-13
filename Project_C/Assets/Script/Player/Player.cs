@@ -65,10 +65,12 @@ public partial class Player : Character
     }
     public override void Init()
     {
+        PV = GetComponent<PhotonView>();
         CharacterType = (int)CHARACTER_TYPE.PLAYER;
-        CharacterName = "Player_1";
+        CharacterName = "Player_" + GetPhotonViewId().ToString();
+        name = CharacterName;
 
-        for(int i = 0;i<GetSkillList().Count;i++)
+        for (int i = 0; i < GetSkillList().Count; i++)
         {
             GetSkillList()[i].InitId();
         }
@@ -78,7 +80,6 @@ public partial class Player : Character
             CurrentSkill.Add(null);
         }
 
-        PV = GetComponent<PhotonView>();
         LocalInit();
         Fsm_Init();
         UpdateUnitFrame();
@@ -89,11 +90,23 @@ public partial class Player : Character
         //Shared.GameMgr.PLAYER = this;
         //Shared.GameMgr.PLAYEROBJ = this.gameObject;
 
+        if(PV.IsMine)
+        {
+            Shared.UiMgr.Text.text = CharacterName;
+        }
     }
 
     public override void RayTargetEvent(Character _character)
     {
         Shared.GameMgr.Hphud.SetTarget(this);
+
+        //다른 플레이어 클릭 시
+        if(PV.IsMine == false)
+        {
+            int OtherPVId = ((Player)_character).GetPhotonViewId();
+            SelectPlayerViewId = OtherPVId;
+            Shared.UiMgr.CreateSelectUi(GetPhotonViewId(),this);
+        }
     }
 
 

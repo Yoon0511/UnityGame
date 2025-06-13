@@ -354,6 +354,7 @@ MonoBehaviour:
     _serializedList: []
   GuardTime: 0.75
   Inventory: {fileID: 0}
+  Party: []
   ListProgessQuest: []
   QUESTLISTUI: {fileID: 0}
   Body: {fileID: 6168597396447236445}

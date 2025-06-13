@@ -110,6 +110,17 @@ public partial class Player
             AddGold(3000);
         }
 
+        if(Input.GetKeyDown(KeyCode.H))
+        {
+            foreach (var player in Party)
+            {
+                if (player != null)
+                {
+                    Debug.Log(player.GetCharacterName());
+                }
+            }
+        }
+
         //KeyBoardMove();
     }
 

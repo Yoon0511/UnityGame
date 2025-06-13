@@ -222,7 +222,7 @@ public partial class PhotonMgr : MonoBehaviourPunCallbacks
             Shared.GameMgr.RemoveLocalMonster();
         }
 
-        CheckPlayersInRoom();
+        //CheckPlayersInRoom();
 
         StatusText.text = PhotonNetwork.CloudRegion;
     }
@@ -230,17 +230,17 @@ public partial class PhotonMgr : MonoBehaviourPunCallbacks
     public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
     {
         base.OnPlayerEnteredRoom(newPlayer);
-        UpdateStatusText($"플레이어 {newPlayer.NickName}이 룸에 입장했습니다.");
-        Debug.Log($"플레이어 {newPlayer.NickName} (ID: {newPlayer.ActorNumber})이 룸에 입장했습니다.");
-        CheckPlayersInRoom();
+        //UpdateStatusText($"플레이어 {newPlayer.NickName}이 룸에 입장했습니다.");
+        //Debug.Log($"플레이어 {newPlayer.NickName} (ID: {newPlayer.ActorNumber})이 룸에 입장했습니다.");
+        //CheckPlayersInRoom();
     }
 
     public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)
     {
         base.OnPlayerLeftRoom(otherPlayer);
-        UpdateStatusText($"플레이어 {otherPlayer.NickName}이 룸을 떠났습니다.");
-        Debug.Log($"플레이어 {otherPlayer.NickName} (ID: {otherPlayer.ActorNumber})이 룸을 떠났습니다.");
-        CheckPlayersInRoom();
+        //UpdateStatusText($"플레이어 {otherPlayer.NickName}이 룸을 떠났습니다.");
+        //Debug.Log($"플레이어 {otherPlayer.NickName} (ID: {otherPlayer.ActorNumber})이 룸을 떠났습니다.");
+        //CheckPlayersInRoom();
     }
 
     public override void OnJoinRoomFailed(short returnCode, string message)
