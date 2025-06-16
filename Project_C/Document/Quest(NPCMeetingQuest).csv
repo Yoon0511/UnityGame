@@ -1,4 +1,4 @@
-﻿ID,TargetNPCId,TargetNPCName
-2004,5,도적
-2005,2,bb
-2006,3,cc
+﻿ID,TargetNPCId,TargetNPCName,IsAutoComplete
+2004,5,도적,0
+2005,6,Guard,0
+2006,7,Kachujin,1

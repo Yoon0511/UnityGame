@@ -11,7 +11,15 @@ public class QuestNPC : NPC
     public override void Init()
     {
         base.Init();
-        Quest = Shared.DataMgr.GetQuest(QuestId);
+        if(QuestId != 0)
+        {
+            Quest = Shared.DataMgr.GetQuest(QuestId);
+        }
+        else
+        {
+            Quest = new NpcMeetingQuest();
+            Quest.StateChange(QUEST_STATE.COMPLETE);
+        }
         Quest.SetOwnerNPC(this);
         //int count = Quest.GetConversation().Length;
         //ConverstationTexts = new string[count];
@@ -55,5 +63,10 @@ public class QuestNPC : NPC
     public override void UpdateMiniMapIcon()
     {
         Quest.UpdateMiniMapIcon();
+    }
+
+    public void SetQuest(QuestBase _quest)
+    {
+        Quest = _quest;
     }
 }

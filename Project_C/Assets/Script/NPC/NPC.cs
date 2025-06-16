@@ -69,4 +69,9 @@ public partial class NPC : Character
         MeetingMsg.SetMsg((int)QUEST_TYPE.MEETING, GetId());
         Shared.GameMgr.PLAYER.QusetProgress(MeetingMsg);
     }
+
+    public virtual void UpdateMapIcon()
+    {
+        AllUpdateMapIcon("NPC", 5, 5);
+    }
 }

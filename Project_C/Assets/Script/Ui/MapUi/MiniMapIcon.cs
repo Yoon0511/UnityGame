@@ -22,6 +22,7 @@ public class MiniMapIcon : PoolAble
                 SetImage("NPC");
                 break;
             default:
+                //SetImage("NPC");
                 break;
         }
     }

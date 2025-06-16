@@ -10,6 +10,8 @@ public class NpcMeetingQuest : QuestBase
     [SerializeField]
     string TargetNPCName;
 
+    bool IsAutoComplete;
+
     private void Start()
     {
         SetQusetName(GetContents());
@@ -32,10 +34,10 @@ public class NpcMeetingQuest : QuestBase
 
     public override void Complete()
     {
-        GiveQuestReward();
-        StateChange(QUEST_STATE.COMPLETE);
-        UpdateMiniMapIcon();
         IsComplete = true;
+        //StateChange(QUEST_STATE.COMPLETE);
+        GiveQuestReward();
+        UpdateMiniMapIcon();
         StateChange(QUEST_STATE.END);
     }
 
@@ -66,7 +68,15 @@ public class NpcMeetingQuest : QuestBase
 
         if(TargetNPCId == _questmsg.GetDicMsgValue("TargetId"))
         {
-            Complete();
+            if(IsAutoComplete)
+            {
+                StateChange(QUEST_STATE.COMPLETE);
+                Complete();
+            }
+            else
+            {
+                StateChange(QUEST_STATE.COMPLETE);
+            }
         }
     }
 
@@ -79,6 +89,7 @@ public class NpcMeetingQuest : QuestBase
     {
         TargetNPCId = _info.TargetNPCId;
         TargetNPCName = _info.TargetNPCName;
+        IsAutoComplete = Convert.ToBoolean(_info.IsAutoComplete);
     }
 
     public override void UpdateMiniMapIcon()
@@ -92,11 +103,22 @@ public class NpcMeetingQuest : QuestBase
                 OwnerNPC.AllUpdateMapIcon("Exclamation_mark", 12, 12);
                 break;
             case QUEST_STATE.PROGRESS: // 진행중 - 타겟NPC아이콘 변경 - 미니맵 아이콘 = (?)
-                OwnerNPC.AllUpdateMapIcon("NPC", 5, 5);
-                Shared.GameMgr.GetNPCinList(TargetNPCId).AllUpdateMapIcon("Question_mark", 12, 12);
-                break;
+                {
+                    OwnerNPC.AllUpdateMapIcon("NPC", 5, 5);
+                    NPC npc = Shared.GameMgr.GetNPCinList(TargetNPCId);
+                    npc.AllUpdateMapIcon("Question_mark", 12, 12);
+
+                    QuestNPC questNPC = Shared.GameMgr.GetNPCinList(TargetNPCId) as QuestNPC;
+                    if(questNPC != null)
+                    {
+                        questNPC.SetQuest(this);
+                    }
+                    break;
+                }
             case QUEST_STATE.COMPLETE:
-                Shared.GameMgr.GetNPCinList(TargetNPCId).AllUpdateMapIcon("NPC", 5, 5);
+                Shared.GameMgr.GetNPCinList(TargetNPCId).UpdateMapIcon();
+                //Shared.GameMgr.GetNPCinList(TargetNPCId).AllUpdateMapIcon("NPC", 5, 5);
+                //Shared.GameMgr.GetNPCinList(TargetNPCId).UpdateMiniMapIcon();
                 break;
             default: // 기본 아이콘
                 OwnerNPC.AllUpdateMapIcon("Exclamation_mark", 12, 12);

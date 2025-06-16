@@ -36,6 +36,7 @@ public class TableQuest : TableBase
         public int Id;
         public int TargetNPCId;
         public string TargetNPCName;
+        public int IsAutoComplete;
     }
 
     string[] ItemFile = { "Quest(QuestBase)", "Quest(HuntingQuest)", "Quest(NPCMeetingQuest)"};
@@ -133,6 +134,7 @@ public class TableQuest : TableBase
         _Reader.get(_Row, ref _Info.Id);
         _Reader.get(_Row, ref _Info.TargetNPCId);
         _Reader.get(_Row, ref _Info.TargetNPCName);
+        _Reader.get(_Row, ref _Info.IsAutoComplete);
 
         return true;
     }
