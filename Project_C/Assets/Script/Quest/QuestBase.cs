@@ -47,6 +47,10 @@ public abstract class QuestBase : MonoBehaviour
     public abstract string GetRewardDetail();
     public QUEST_STATE GetQuestState() { return QuestState; }
 
+    private void Start()
+    {
+        QuestState = QUEST_STATE.START;
+    }
     public void StateChange(QUEST_STATE _state)
     {
         QuestState = _state;

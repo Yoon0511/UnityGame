@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharaterNameText : MonoBehaviour
+public class CharacterNameText : MonoBehaviour
 {
     public Character Character;
     public float Distance;
@@ -11,6 +11,7 @@ public class CharaterNameText : MonoBehaviour
     Transform Ctransform;
 
     GameObject NameText;
+    CharacterNameTextUi CharacterNameTextUi;
     GameObject PlayerObj;
 
     bool OnText = false;
@@ -25,6 +26,10 @@ public class CharaterNameText : MonoBehaviour
     {
         OnText = true;
         NameText = Shared.PoolMgr.GetObject("CharaterNameText");
+
+        CharacterNameTextUi = NameText.GetComponent<CharacterNameTextUi>();
+        CharacterNameTextUi.Init(Character);
+
         NameText.transform.SetParent(Shared.GameMgr.CANVAS.transform, false);
         NameText.transform.SetAsFirstSibling();
         NameText.GetComponent<Text>().text = Character.GetCharacterName();
@@ -75,5 +80,10 @@ public class CharaterNameText : MonoBehaviour
                 OffName();
             }
         }
+    }
+
+    public CharacterNameTextUi GetSpecialMark()
+    {
+        return CharacterNameTextUi;
     }
 }

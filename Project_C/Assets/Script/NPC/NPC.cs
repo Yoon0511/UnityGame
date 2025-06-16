@@ -10,6 +10,7 @@ public partial class NPC : Character
     [SerializeField]
     protected string NPC_NAME;
 
+    protected CharacterNameText CharacterNameText;
     public override void Fsm_Init()
     {
         
@@ -29,7 +30,10 @@ public partial class NPC : Character
     {
 
     }
-
+    private void Awake()
+    {
+        CharacterNameText = GetComponent<CharacterNameText>();
+    }
     public override void Init()
     {
         CharacterName = NPC_NAME;
@@ -73,5 +77,17 @@ public partial class NPC : Character
     public virtual void UpdateMapIcon()
     {
         AllUpdateMapIcon("NPC", 5, 5);
+        if (CharacterNameText.GetSpecialMark() != null)
+        {
+            SetCharacterSpecialMark(null);
+        }
+    }
+
+    public void SetCharacterSpecialMark(string _markName)
+    {
+        if(CharacterNameText != null && CharacterNameText.GetSpecialMark() != null)
+        {
+            CharacterNameText.GetSpecialMark().SetMark(_markName);
+        }
     }
 }

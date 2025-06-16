@@ -100,8 +100,10 @@ public class NpcMeetingQuest : QuestBase
         switch (QuestState)
         {
             case QUEST_STATE.START: // 시작가능상태 - 미니맵 아이콘 = (!)
-                OwnerNPC.AllUpdateMapIcon("Exclamation_mark", 12, 12);
-                break;
+                {
+                    OwnerNPC.AllUpdateMapIcon("Exclamation_mark", 12, 12);
+                    break;
+                }
             case QUEST_STATE.PROGRESS: // 진행중 - 타겟NPC아이콘 변경 - 미니맵 아이콘 = (?)
                 {
                     OwnerNPC.AllUpdateMapIcon("NPC", 5, 5);
