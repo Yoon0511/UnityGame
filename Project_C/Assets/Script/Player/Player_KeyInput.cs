@@ -121,7 +121,7 @@ public partial class Player
             }
         }
 
-        //KeyBoardMove();
+        KeyBoardMove();
     }
 
     void KeyBoardMove()

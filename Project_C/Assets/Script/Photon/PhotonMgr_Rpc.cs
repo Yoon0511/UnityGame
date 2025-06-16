@@ -26,6 +26,7 @@ public partial class PhotonMgr : MonoBehaviourPunCallbacks
         {
             GameObject AtkCircle = Shared.PoolMgr.GetObject("AtkRange_Circle");
             AtkCircle.transform.position = _positions[i];
+            AtkCircle.GetComponent<AtkRange>().Init(true);
             AtkCircle.GetComponent<AtkRange>().SetDesiredTime(_photonTime[i]);
             //GameObject AtkCircle = Instantiate(AtkRangeCircle, _positions[i], Quaternion.identity);
         }

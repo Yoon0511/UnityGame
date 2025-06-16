@@ -39,6 +39,11 @@ public partial class Player : Character
             return;
         }
 
+        if(Shared.UiMgr.GetIsOpenUi())
+        {
+            return;
+        }
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
@@ -149,6 +154,8 @@ public partial class Player : Character
         BuffUi = Shared.UiMgr.BuffUi;
         UnitFrame = Shared.UiMgr.UnitFrame;
         QUESTLISTUI = Shared.UiMgr.QuestListUi;
+        equiment = Shared.UiMgr.EquipmentWindow;
+
         Shared.GameMgr.AddPlayer(this);
 
         if (PV.IsMine == false) return;

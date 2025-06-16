@@ -61,11 +61,11 @@ public partial class Player : Character
         //}
         float baseSpeed = Statdata.GetData(STAT_TYPE.SPEED);
         int newState;
-        //Debug.Log($"[Speed] {_speed}, [Thresholds] run: {_speed * 0.5f}, walk: {_speed * 0.2f}");
+
         if (_speed >= baseSpeed * 0.5f)
         {
             newState = IsRiding ? (int)RIDING_STATE.RUN : (int)STATE.RUN;
-            //if (IsRiding) Debug.Log($"run = {_speed}");
+            if (IsRiding) Debug.Log($"run = {_speed}");
         }
         else if (_speed > baseSpeed * 0.2f)
         {
@@ -74,7 +74,7 @@ public partial class Player : Character
         else
         {
             newState = IsRiding ? (int)RIDING_STATE.IDLE : (int)STATE.IDLE;
-            //if (IsRiding) Debug.Log($"idle = {_speed}");
+            if (IsRiding) Debug.Log($"idle = {_speed}");
         }
 
         if (IsRiding)

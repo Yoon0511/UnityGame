@@ -17,6 +17,7 @@ public class Player_RidingState : StateBase
     {
         OrgSpeed = player.Statdata.GetData(STAT_TYPE.SPEED);
         player.PlayAnimation("Ani_State", (int)PLAYER_ANI_STATE.RIDING);
+        player.Statdata.SetStat(STAT_TYPE.SPEED, Riding.GetSpeedforState());
     }
 
     public override void OnStateExit()
@@ -26,6 +27,6 @@ public class Player_RidingState : StateBase
 
     public override void OnStateUpdate()
     {
-        player.Statdata.SetStat(STAT_TYPE.SPEED, Riding.GetSpeedforState());
+        //player.Statdata.SetStat(STAT_TYPE.SPEED, Riding.GetSpeedforState());
     }
 }

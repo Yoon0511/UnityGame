@@ -11,10 +11,11 @@ public class AtkRange : PoolAble
     public bool ScaleX;
     public bool ScaleZ;
     public ATKRANGE_TYPE ATKRANGE_TYPE;
-
+    
     private float StartTime;
-
     public bool ACTIVE_CONTROL;
+
+    bool IsRpcInstance;
     private void Start()
     {
         StartTime = Time.time;
@@ -26,6 +27,10 @@ public class AtkRange : PoolAble
         StartTime = Time.time;
     }
 
+    public void Init(bool _isRpcInstance)
+    {
+        IsRpcInstance = _isRpcInstance;
+    }
     private void FixedUpdate()
     {
         StartSizeUp();
@@ -53,6 +58,14 @@ public class AtkRange : PoolAble
             //scale.x = ScaleX ? StretchProgress : scale.x;
             //scale.z = ScaleZ ? StretchProgress : scale.z;
             //DAMAGE_RANGE.transform.localScale = scale;
+        }
+
+        if(IsRpcInstance)
+        {
+            if(IsStretchEnd())
+            {
+                Destroy(gameObject);
+            }
         }
     }
 

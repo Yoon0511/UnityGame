@@ -26,11 +26,16 @@ public class Dragon_IdleState : StateBase
 
     public override void OnStateUpdate()
     {
-        ElapsedTime += Time.deltaTime;
-        if (ElapsedTime >= ChangeStateTime)
+        //ElapsedTime += Time.deltaTime;
+        //if (ElapsedTime >= ChangeStateTime)
+        //{
+        //    Dragon.ChangeState((int)DRAGON_STATE.MOVE);
+        //    ElapsedTime = 0f;
+        //}
+
+        if (Dragon.IsPlayerInDetectionRange())
         {
             Dragon.ChangeState((int)DRAGON_STATE.MOVE);
-            ElapsedTime = 0f;
         }
     }
 }

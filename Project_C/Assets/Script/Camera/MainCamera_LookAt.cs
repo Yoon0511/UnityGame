@@ -44,7 +44,14 @@ public partial class MainCamera : MonoBehaviour
 
     private void Update()
     {
-        if (CameraShake) return;
+        if (CameraShake)
+        {
+            return;
+        }
+        if(Shared.UiMgr.GetIsOpenUi())
+        {
+            return;
+        }    
 
         if (Input.GetMouseButton(0) && Shared.GameMgr.IsJoystickDrag() == false)
         {

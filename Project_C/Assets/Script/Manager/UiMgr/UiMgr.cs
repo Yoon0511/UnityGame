@@ -17,7 +17,10 @@ public class UiMgr : MonoBehaviour
     public WorldMap WorldMap;
     public SkillBook SkillBook;
     public PartyFrame PartyFrame;
+    public EquipmentWindow EquipmentWindow;
 
+    public List<GameObject> ListOpenUi = new List<GameObject>();
+    bool IsOpenUi;
     /// <test>
     public Text Text;
     /// </test>
@@ -26,6 +29,21 @@ public class UiMgr : MonoBehaviour
         Shared.UiMgr = this;
     }
 
+    private void FixedUpdate()
+    {
+        IsOpenUi = false;
+        for (int i = 0;i< ListOpenUi.Count;++i)
+        {
+            if(ListOpenUi[i] != null)
+            {
+                if (ListOpenUi[i].activeInHierarchy)
+                {
+                    IsOpenUi = true;
+                }
+            }
+        }
+    }
+    public bool GetIsOpenUi() { return IsOpenUi; }
     public void CreateSystemMsg(string _msg,SYSTEM_MSG_TYPE _system_msg_type)
     {
         SystemMsg Msg = Shared.PoolMgr.GetObject("SystemMsg").GetComponent<SystemMsg>();

@@ -11,7 +11,7 @@ public partial class Monster : Character
     [SerializeField]
     protected GameObject Target;
     protected GameObject player;
-    List<Player> ListPlayer;
+    protected List<Player> ListPlayer;
 
     [SerializeField]
     protected float detectionRange;
@@ -22,7 +22,7 @@ public partial class Monster : Character
     bool IsDead = false;
 
     [SerializeField]
-    PhotonView PV;
+    protected PhotonView PV;
     private void FixedUpdate()
     {
         if(ListPlayer == null)
@@ -55,7 +55,6 @@ public partial class Monster : Character
         CharacterType = (int)CHARACTER_TYPE.MONSTER;
         Id = (int)MONSTER_ID.GOLEM;
         //player = Shared.GameMgr.PLAYEROBJ;
-        
         Fsm_Init();
     }
     public void SetPlayer(GameObject _player)

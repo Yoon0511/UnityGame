@@ -57,6 +57,11 @@ public partial class GameMgr
                         return false;
                     }
                 }
+            case MONSTER_ID.DRAGON:
+                {
+                    _path = "Prefabs/Monster/Dragon/Dragon";
+                    return true;
+                }
             default:
                 return false;
         }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
+using Photon.Realtime;
 using UnityEngine;
 
 public class Skill_FallingRock : Skill
@@ -20,6 +21,15 @@ public class Skill_FallingRock : Skill
     public override void UseSkill()
     {
         base.UseSkill();
+        Player player = Owner.GetComponent<Character>() as Player;
+        if(player != null)
+        {
+            if(player.GetPVIsMine() == false)
+            {
+                return;
+            }
+        }
+
         if(Owner.GetComponent<Character>().GetCharacterType() ==
             (int)CHARACTER_TYPE.MONSTER)
         {
@@ -45,6 +55,7 @@ public class Skill_FallingRock : Skill
                 //GameObject AtkCircle = Instantiate(AtkRangeCircle, pos, Quaternion.identity);
                 GameObject AtkCircle = Shared.PoolMgr.GetObject("AtkRange_Circle");
                 AtkCircle.transform.position = pos;
+                AtkCircle.GetComponent<AtkRange>().Init(false);
                 AtkCircle.GetComponent<AtkRange>().SetDesiredTime(Random.Range(3.0f, 10.0f));
                 ListAtkRangeCircle.Add(AtkCircle.GetComponent<AtkRange>());
 
@@ -59,6 +70,33 @@ public class Skill_FallingRock : Skill
         
         base.SkillEnd();
     }
+
+    //private void FixedUpdate()
+    //{
+    //    int i = 0;
+    //    if(ListAtkRangeCircle.Count > 0)
+    //    {
+    //        i = i % ListAtkRangeCircle.Count;
+    //        if (ListAtkRangeCircle[i].IsStretchEnd())
+    //        {
+    //            //µ¹ »ý¼º
+    //            int random = Random.Range(0, Rock.Length);
+    //            //GameObject rockobj = Instantiate(Rock[random]);
+    //            GameObject rockobj = PhotonNetwork.Instantiate(RockPrefapPath, ListAtkRangeCircle[i].transform.position,Quaternion.identity,0);
+    //            float RockSpeed = Random.Range(ROCK_MIN_SPEED, ROCK_MAX_SPEED);
+    //            rockobj.GetComponent<Rock>().Init(ListAtkRangeCircle[i].transform.position,
+    //                RockSpeed, Atk, Random.Range(4.0f, 7.0f), Random.Range(MIN_STUN_DURATION, MAX_STUN_DURATION));
+    //
+    //            Destroy(ListAtkRangeCircle[i].gameObject);
+    //            ListAtkRangeCircle.RemoveAt(i);
+    //        }
+    //        //else
+    //        //{
+    //        //    ListAtkRangeCircle[i].StartSizeUp();
+    //        //}
+    //        ++i;
+    //    }
+    //}
 
     IEnumerator IFallingRock()
     {

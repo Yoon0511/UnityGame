@@ -11,25 +11,29 @@ public class EquipmentWindow : MonoBehaviour, IPointerClickHandler
 
     [SerializeField]
     InfoPlayer infoPlayer;
-    Player player;
+    Player Player;
 
     private void Start()
     {
-        player = Shared.GameMgr.PLAYER;
+        Player = Shared.GameMgr.PLAYER;
     }
 
     public void EquippedItem(EquipmentItem _equipmentItem)
     {
-        player.GetDicEquitmentItem().Add(_equipmentItem.EquimentType, _equipmentItem);
+        if(Player == null)
+        {
+            Player = Shared.GameMgr.PLAYER;
+        }
+        Player.GetDicEquitmentItem().Add(_equipmentItem.EquimentType, _equipmentItem);
         dicEquitmentSlot[_equipmentItem.EquimentType].InputEquipmentItem(_equipmentItem);
-        player.ApplyEquipItem(_equipmentItem);
+        Player.ApplyEquipItem(_equipmentItem);
         infoPlayer.Refresh();
     }
 
     public void Unequip(EQUITMENT_TYPE _type)
     {
-        player.ApplyEquipItem(player.GetDicEquitmentItem()[_type], true);
-        player.GetDicEquitmentItem().Remove(_type);
+        Player.ApplyEquipItem(Player.GetDicEquitmentItem()[_type], true);
+        Player.GetDicEquitmentItem().Remove(_type);
         infoPlayer.Refresh();
     }
 
