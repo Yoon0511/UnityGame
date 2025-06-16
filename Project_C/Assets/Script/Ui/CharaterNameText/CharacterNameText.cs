@@ -41,6 +41,7 @@ public class CharacterNameText : MonoBehaviour
         if (NameText == null) return;
 
         NameText.GetComponent<RectTransform>().position = Camera.main.WorldToScreenPoint(TextPos.position);
+        CharacterNameTextUi.MarkUpdate();
     }
 
     public void OffName()
@@ -50,6 +51,7 @@ public class CharacterNameText : MonoBehaviour
         {
             NameText.GetComponent<PoolAble>().ReleaseObject();
             NameText = null;
+            CharacterNameTextUi.MarkUpdate();
         }
     }
 

@@ -84,8 +84,10 @@ public partial class Player : Character
         Fsm_Init();
         UpdateUnitFrame();
         InventoryInit();
+
         //자동회복
-        StartCoroutine(AutomaticRecovery(1.0f));
+        //StartCoroutine(AutomaticRecovery(1.0f));
+
         //PhotonViewIsMine();
         //Shared.GameMgr.PLAYER = this;
         //Shared.GameMgr.PLAYEROBJ = this.gameObject;

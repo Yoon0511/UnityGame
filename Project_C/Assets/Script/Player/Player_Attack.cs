@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,13 +37,41 @@ public partial class Player
 
     public override void Hit(DamageData _damagedata)
     {
+        if(PV.IsMine == false)
+        {
+            return;
+        }
+
         if (IsGuard)
         {
             GuardSuccess();
             return;
         }
-        Statdata.TakeDamage(_damagedata);
+
+        if (PhotonNetwork.IsMasterClient)
+        {
+            PV.RPC("RpcPlayerTakeDamage", RpcTarget.All, _damagedata.Damage, (int)_damagedata.DamageFont_Type);
+        }
+        //Statdata.TakeDamage(_damagedata);
+
+        //rpc로 HP동기화
+        
         UpdateHpbar();
+    }
+
+    [PunRPC]
+    void RpcPlayerTakeDamage(float _damage, int _damagefontType)
+    {
+        DamageData damgedata = Shared.GameMgr.DamageDataPool.Get(_damage, (DAMAGEFONT_TYPE)_damagefontType);
+        Statdata.TakeDamage(damgedata);
+
+        PV.RPC("SyncHp", RpcTarget.All, GetInStatData(STAT_TYPE.HP));
+    }
+
+    [PunRPC]
+    void SyncHp(float _hp)
+    {
+        Statdata.SetStat(STAT_TYPE.HP, _hp);
     }
 
     public void OnTriggerEnter(Collider other)

@@ -3,21 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.UI.GridLayoutGroup;
 
 public class CharacterNameTextUi : PoolAble
 {
     [SerializeField]
     Image SpecialMark;
-    QuestNPC Owner;
+    Character Owner;
     string PrevIconName;
     public void Init(Character _owner)
     {
-        QuestNPC npc = _owner as QuestNPC;
-        if(npc != null )
-        {
-            Owner = npc;
-        }
-
+        Owner = _owner;
         PrevIconName = null;
         MarkUpdate();
     }
@@ -25,12 +21,13 @@ public class CharacterNameTextUi : PoolAble
     {
         if(_markName != null)
         {
+            SpecialMark.color = new Color(255f, 255f, 255f, 255f);
             SpecialMark.gameObject.SetActive(true);
             SpecialMark.sprite = Shared.GameMgr.GetSpriteAtlas("SpecialMark", _markName);
         }
         else
         {
-            SpecialMark.gameObject.SetActive(false);
+            SpecialMark.color = new Color(255f, 255f, 255f, 0f);
         }
     }
     public void Update()

@@ -118,7 +118,13 @@ public class NpcMeetingQuest : QuestBase
                     break;
                 }
             case QUEST_STATE.COMPLETE:
-                Shared.GameMgr.GetNPCinList(TargetNPCId).UpdateMapIcon();
+                {
+                    if(Shared.GameMgr.GetNPCinList(TargetNPCId) != null)
+                    {
+                        Shared.GameMgr.GetNPCinList(TargetNPCId).UpdateMapIcon();
+
+                    }
+                }
                 //Shared.GameMgr.GetNPCinList(TargetNPCId).AllUpdateMapIcon("NPC", 5, 5);
                 //Shared.GameMgr.GetNPCinList(TargetNPCId).UpdateMiniMapIcon();
                 break;

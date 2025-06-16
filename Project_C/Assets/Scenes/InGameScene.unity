@@ -7023,7 +7023,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   detectionRange: 6
   attackRange: 2
-  OnPatrol: 0
+  OnPatrol: 1
   PV: {fileID: 0}
   BasicAttackCollider: {fileID: 309613439}
   PatrolPointTransform: []
@@ -17916,6 +17916,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1121472018}
     m_Modifications:
     - target: {fileID: 2242331338054835509, guid: e332d7b099b46764d91bcca2a021c86c, type: 3}
+      propertyPath: Id
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2242331338054835509, guid: e332d7b099b46764d91bcca2a021c86c, type: 3}
       propertyPath: SERVICEUI
       value: 
       objectReference: {fileID: 382158291}
@@ -18228,7 +18232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127199259177895372, guid: 87af3cb2fd6859a4a94abd66af3371c2, type: 3}
       propertyPath: QuestId
-      value: 2001
+      value: 2007
       objectReference: {fileID: 0}
     - target: {fileID: 7688558514901597417, guid: 87af3cb2fd6859a4a94abd66af3371c2, type: 3}
       propertyPath: uihead

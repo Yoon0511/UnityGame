@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using ExitGames.Client.Photon.StructWrapping;
 using Photon.Pun;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -84,12 +85,36 @@ public partial class Monster : Character
     // Monster가 Damage를 받을 시 실행되는 함수
     public override void Hit(DamageData _damagedata)
     {
-        Shake(0.1f, 0.05f);
-        Statdata.TakeDamage(_damagedata);
+        Shake(0.1f, 0.1f);
+        
+        if(PhotonNetwork.IsMasterClient)
+        {
+            Statdata.TakeDamage(_damagedata);
+            PV.RPC("RpcMonsterTakeDamage", RpcTarget.Others, _damagedata.Damage, (int)_damagedata.DamageFont_Type);
+        }
+        else
+        {
+            //rpc로 HP동기화
+            PV.RPC("RpcMonsterTakeDamage", RpcTarget.All, _damagedata.Damage, (int)_damagedata.DamageFont_Type);
 
+        }
+        //Statdata.TakeDamage(_damagedata);
+        //PV.RPC("RpcMonsterTakeDamage", RpcTarget.All, _damagedata.Damage, (int)_damagedata.DamageFont_Type);
         CheckHP();
     }
 
+    [PunRPC]
+    void RpcMonsterTakeDamage(float _damage,int _damagefontType)
+    {
+        DamageData damgedata = Shared.GameMgr.DamageDataPool.Get(_damage, (DAMAGEFONT_TYPE)_damagefontType);
+        Statdata.TakeDamage(damgedata);
+        PV.RPC("RpcSyncHp", RpcTarget.All, GetInStatData(STAT_TYPE.HP));
+    }
+    [PunRPC]
+    void RpcSyncHp(float _hp)
+    {
+        Statdata.SetStat(STAT_TYPE.HP, _hp);
+    }
 
     protected bool CheckHP() 
     {
