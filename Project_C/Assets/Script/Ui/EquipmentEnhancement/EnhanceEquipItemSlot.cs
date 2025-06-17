@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class EnhanceEquipItemSlot : ItemSlot
 {
-    public Text EnhanceValue;
     public Text ItemName;
     EquipmentItem EquipmentItem;
     EnhanceView EnhanceView;
@@ -14,7 +13,6 @@ public class EnhanceEquipItemSlot : ItemSlot
         EquipmentItem = _equipmentItem;
         InputItem(EquipmentItem);
 
-        EnhanceValue.text = "+" + EquipmentItem.GetEnhanceValue().ToString();
         ItemName.text = EquipmentItem.GetItemName();
 
         EnhanceView = _enhanceView;
@@ -22,5 +20,10 @@ public class EnhanceEquipItemSlot : ItemSlot
     public override void OnClickSlot()
     {
         EnhanceView.Init(EquipmentItem);
+    }
+
+    public override void ReleaseObject()
+    {
+        Pool.Release(gameObject);
     }
 }

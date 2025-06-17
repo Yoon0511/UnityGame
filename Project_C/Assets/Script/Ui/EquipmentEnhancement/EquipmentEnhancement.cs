@@ -21,11 +21,12 @@ public class EquipmentEnhancement : MonoBehaviour
     {
         Init();
     }
-
-    public void Init()
+    private void OnDisable()
     {
         EnhaceEquipSlotReset();
-
+    }
+    public void Init()
+    {
         //장착중인 장비, 인벤에 있는 장비 가져와서 리스트 만들기
         if (Player == null)
         {
@@ -71,6 +72,7 @@ public class EquipmentEnhancement : MonoBehaviour
                 if (poolAble != null)
                 {
                     poolAble.ReleaseObject();
+                    //ListEnhaceEquipItemSlot.RemoveAt(i);
                 }
             }
         }

@@ -77,7 +77,7 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
     public void DeleteItem(ItemBase _item)
     {
         items.Remove(_item);
-        _item.ReleaseObject();
+        //_item.ReleaseObject();
         Refresh();
     }
     public void OnPointerClick(PointerEventData eventData)

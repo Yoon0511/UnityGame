@@ -49,7 +49,7 @@ MonoBehaviour:
   SpriteName: UI_Skill_Icon_PsycicAttack
   CoolTime: 12
   SkillName: "\uC911\uB3C5"
-  Atk: 150
+  Atk: 15
   UseMp: 5
   Explanation: "\uC801\uC744 \uC911\uB3C5\uC2DC\uD0A8\uB2E4"
   SkillMotion: 8
@@ -58,4 +58,4 @@ MonoBehaviour:
   Instant: 0
   IsAtkRange: 0
   Duration: 5
-  DotInterval: 0.3
+  DotInterval: 0.5

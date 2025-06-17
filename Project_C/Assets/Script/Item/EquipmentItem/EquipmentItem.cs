@@ -85,4 +85,9 @@ public abstract class EquipmentItem : ItemBase
         //Stat
         DicEquipmentItemStat[(STAT_TYPE)_stat.StatType] = _stat.Value;
     }
+
+    public override string GetItemName()
+    {
+        return $"<color=#{GetStrGradeColor()}><b>+{EnhanceValue} {ItemName}</b></color>";
+    }
 }

@@ -9,11 +9,8 @@ public class PoolMgr : MonoBehaviour
     public int LoadCount = 3;
     [NonReorderable]
     Dictionary<string, GameObject> DicPoolObjects = new Dictionary<string, GameObject>();
-
-    string SelectObjectName;
-
     Dictionary<string, IObjectPool<GameObject>> DicObjectsPool = new Dictionary<string, IObjectPool<GameObject>>();
-
+    string SelectObjectName;
 
     private void Awake()
     {

@@ -86,19 +86,19 @@ public partial class Monster : Character
     {
         Shake(0.1f, 0.1f);
         
-        if(PhotonNetwork.IsMasterClient)
-        {
-            Statdata.TakeDamage(_damagedata);
-            PV.RPC("RpcMonsterTakeDamage", RpcTarget.Others, _damagedata.Damage, (int)_damagedata.DamageFont_Type);
-        }
-        else
-        {
-            //rpc로 HP동기화
-            PV.RPC("RpcMonsterTakeDamage", RpcTarget.All, _damagedata.Damage, (int)_damagedata.DamageFont_Type);
-
-        }
+        //if(PhotonNetwork.IsMasterClient)
+        //{
+        //    Statdata.TakeDamage(_damagedata);
+        //    PV.RPC("RpcMonsterTakeDamage", RpcTarget.Others, _damagedata.Damage, (int)_damagedata.DamageFont_Type);
+        //}
+        //else
+        //{
+        //    //rpc로 HP동기화
+        //    PV.RPC("RpcMonsterTakeDamage", RpcTarget.All, _damagedata.Damage, (int)_damagedata.DamageFont_Type);
+        //
+        //}
         //Statdata.TakeDamage(_damagedata);
-        //PV.RPC("RpcMonsterTakeDamage", RpcTarget.All, _damagedata.Damage, (int)_damagedata.DamageFont_Type);
+        PV.RPC("RpcMonsterTakeDamage", RpcTarget.All, _damagedata.Damage, (int)_damagedata.DamageFont_Type);
         CheckHP();
     }
 

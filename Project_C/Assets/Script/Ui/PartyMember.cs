@@ -10,11 +10,21 @@ public class PartyMember : PoolAble
 
     [SerializeField]
     Text Name;
-    Player player;
+    Player Player;
     public void Init(Player _player)
     {
-        player = _player;
+        Player = _player;
 
         Name.text = _player.GetCharacterName();
+    }
+
+    private void FixedUpdate()
+    {
+        if (Player != null)
+        {
+            float CurrHp = Player.GetInStatData(STAT_TYPE.HP);
+            float MaxHp = Player.GetInStatData(STAT_TYPE.MAXHP);
+            Image.fillAmount = Mathf.Clamp01(CurrHp / MaxHp);
+        }
     }
 }

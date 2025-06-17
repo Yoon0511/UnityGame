@@ -48,10 +48,7 @@ public partial class Player
             return;
         }
 
-        if (PhotonNetwork.IsMasterClient)
-        {
-            PV.RPC("RpcPlayerTakeDamage", RpcTarget.All, _damagedata.Damage, (int)_damagedata.DamageFont_Type);
-        }
+        PV.RPC("RpcPlayerTakeDamage", RpcTarget.All, _damagedata.Damage, (int)_damagedata.DamageFont_Type);
         //Statdata.TakeDamage(_damagedata);
 
         //rpc로 HP동기화

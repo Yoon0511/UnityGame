@@ -19,7 +19,7 @@ public class EnhanceView : MonoBehaviour
         Item = _item;
 
         EQUIP_IMG.sprite = Shared.GameMgr.GetSpriteAtlas("Items", Item.SpriteName);
-        EQUIP_NAME.text = "+" + Item.GetEnhanceValue().ToString() + " " + Item.GetItemName();
+        EQUIP_NAME.text = Item.GetItemName();
         EQUIPSTAT_PREVIEW.text = Item.GetEnhanceInfo();
         UpdateMaterialGoldText();
     }
