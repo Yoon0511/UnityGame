@@ -12,8 +12,16 @@ public class VillageCollider : MonoBehaviour
         bool check = Shared.GameMgr.IsCheckCharacterType(other, (int)CHARACTER_TYPE.PLAYER);
         if(check)
         {
-            VillageName villageName = Shared.PoolMgr.GetObject("VillageName").GetComponent<VillageName>();
-            villageName.Init(Name);
+            Player Player;
+            other.transform.TryGetComponent<Player>(out Player);
+            if(Player != null)
+            {
+                if(Player.GetPVIsMine())
+                {
+                    VillageName villageName = Shared.PoolMgr.GetObject("VillageName").GetComponent<VillageName>();
+                    villageName.Init(Name);
+                }
+            }
         }
     }
 }

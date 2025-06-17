@@ -23,7 +23,8 @@ public partial class Player : Character
     PhotonView PV;
     private void FixedUpdate()
     {
-        Fsm.UpdateState();
+        StateUpdate();
+        AlignToTerrainHeight();
         //KeyboardMove();
     }
     // Update is called once per frame
@@ -97,9 +98,10 @@ public partial class Player : Character
         //Shared.GameMgr.PLAYER = this;
         //Shared.GameMgr.PLAYEROBJ = this.gameObject;
 
+        //자기 이름 표시
         if(PV.IsMine)
         {
-            Shared.UiMgr.Text.text = CharacterName;
+            //Shared.UiMgr.Text.text = CharacterName;
         }
     }
 
@@ -183,6 +185,9 @@ public partial class Player : Character
 
         //탈것
         RidingInit();
+
+        //페이드인
+        Shared.GameMgr.FadeInOut.FadeIn();
     }
 
     public int GetPhotonViewId()

@@ -43,6 +43,7 @@ public partial class Monster : Character
         }
 
         StateUpdate();
+        AlignToTerrainHeight();
     }
     private void Awake()
     {
@@ -66,19 +67,6 @@ public partial class Monster : Character
     public override void RayTargetEvent(Character _character)
     {
         Shared.GameMgr.Hphud.SetTarget(this);
-    }
-
-    void Test()
-    {
-        StatBuff buff_1 = new StatBuff(STAT_TYPE.HP, 0.0f, 10.0f, gameObject, "UI_Skill_Icon_Arrow_Barrage");
-        StatBuff buff_2 = new StatBuff(STAT_TYPE.HP, 0.0f, 20.0f, gameObject, "UI_Skill_Icon_PsycicAttack");
-        StatBuff buff_3 = new StatBuff(STAT_TYPE.HP, 0.0f, 30.0f, gameObject, "UI_Skill_Icon_Slide");
-        StatBuff buff_4 = new StatBuff(STAT_TYPE.HP, 0.0f, 40.0f, gameObject, "UI_Skill_Icon_SpiritArrows");
-
-        BuffSystem.AddBuff(buff_1);
-        BuffSystem.AddBuff(buff_2);
-        BuffSystem.AddBuff(buff_3);
-        BuffSystem.AddBuff(buff_4);
     }
 
     // Monster가 Damage를 받을 시 실행되는 함수

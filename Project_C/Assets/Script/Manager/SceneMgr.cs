@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneMgr : MonoBehaviour
 {
     SCENE NextScene = SCENE.TITLE;
     public SCENE Scene = SCENE.TITLE;
-
+    public AsyncOperation AsyncOper;
+    public Image Image;
     private void Awake()
     {
         Shared.SceneMgr = this;
@@ -21,10 +23,6 @@ public class SceneMgr : MonoBehaviour
         if (_Loading)
         {
             NextScene = _e;
-
-            //SceneManager.LoadScene("Loading");
-
-            //SceneManager.LoadSceneAsync()
             return;
         }
         else
@@ -33,10 +31,13 @@ public class SceneMgr : MonoBehaviour
         switch (_e)
         {
             case SCENE.TITLE:
-                SceneManager.LoadScene("Title");
+                SceneManager.LoadScene((int)SCENE.TITLE);
+                break;
+            case SCENE.LOADING:
+                SceneManager.LoadScene((int)SCENE.LOADING);
                 break;
             case SCENE.INGAME:
-                SceneManager.LoadScene("Title");
+                SceneManager.LoadScene((int)SCENE.INGAME);
                 break;
         }
     }
@@ -45,4 +46,11 @@ public class SceneMgr : MonoBehaviour
     {
         ChangeScene(NextScene);
     }
+
+    public float GetLoadingProgress()
+    {
+        return AsyncOper.progress;
+    }
+
+ 
 }

@@ -20,6 +20,7 @@ public partial class GameMgr : MonoBehaviourPun
     public Hphud Hphud;
     public BuffUi BUFFUI;
     public GameObject CAMERAMOVE;
+    public FadeInOut FadeInOut;
     //UI
     public DamageDataPool DamageDataPool;
 
@@ -32,10 +33,18 @@ public partial class GameMgr : MonoBehaviourPun
     List<NPC> ListNPC = new List<NPC>();
     [SerializeField]
     List<Player> ListPlayer = new List<Player>();
+
+    public Transform SpwanPoint;
     private void Awake()
     {
         Shared.GameMgr = this;
         DamageDataPool = new DamageDataPool();
+    }
+
+    private void Start()
+    {
+        Shared.PhotonMgr.SpawnPoint = SpwanPoint;
+        Shared.PhotonMgr.JoinRoom();
     }
 
     public Sprite GetSpriteAtlas(string _Atlas, string _Name)

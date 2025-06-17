@@ -188,10 +188,15 @@ public partial class PhotonMgr : MonoBehaviourPunCallbacks
         Debug.Log("로비에 입장함.");
 
         // 기존 룸에 참여 시도, 없으면 생성
-        RoomOptions roomOptions = new RoomOptions { MaxPlayers = MaxPlayersPerRoom };
-        PhotonNetwork.JoinOrCreateRoom(RoomName, roomOptions, TypedLobby.Default);
+        //RoomOptions roomOptions = new RoomOptions { MaxPlayers = MaxPlayersPerRoom };
+        //PhotonNetwork.JoinOrCreateRoom(RoomName, roomOptions, TypedLobby.Default);
     }
 
+    public void JoinRoom()
+    {
+        RoomOptions roomOptions = new RoomOptions { MaxPlayers = MaxPlayersPerRoom };
+        PhotonNetwork.JoinOrCreateRoom(RoomName, roomOptions, TypedLobby.Default);
+    }   
     public override void OnJoinedRoom()
     {
         EnablePhotonMessageQueue();
@@ -224,7 +229,7 @@ public partial class PhotonMgr : MonoBehaviourPunCallbacks
 
         //CheckPlayersInRoom();
 
-        StatusText.text = PhotonNetwork.CloudRegion;
+        //StatusText.text = PhotonNetwork.CloudRegion;
     }
 
     public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
@@ -271,6 +276,11 @@ public partial class PhotonMgr : MonoBehaviourPunCallbacks
     /// <param name="message">표시할 메시지입니다.</param>
     private void UpdateStatusText(string message)
     {
+        if(StatusText == null)
+        {
+            return;
+        }
+            
         if (StatusText != null)
         {
             StatusText.text = message;

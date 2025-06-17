@@ -145,7 +145,7 @@ Material:
     - _DistortionMask: 0
     - _DistortionOnly: 0
     - _DistortionStrength: 1
-    - _DistortionStrengthScaled: 0
+    - _DistortionStrengthScaled: 0.1
     - _DoubleSidedEnable: 0
     - _DoubleSidedNormalMode: 2
     - _Dst1: 10

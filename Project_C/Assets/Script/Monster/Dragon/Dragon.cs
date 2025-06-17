@@ -24,7 +24,8 @@ public partial class Dragon : Monster
             return;
         }
 
-        Fsm.UpdateState();
+        StateUpdate();
+        AlignToTerrainHeight();
     }
     
     public override void Hit(DamageData _damagedata)

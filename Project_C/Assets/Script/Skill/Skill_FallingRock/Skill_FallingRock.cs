@@ -35,6 +35,32 @@ public class Skill_FallingRock : Skill
         {
             //몬스터가 사용시 카메라 흔들기
             //Shared.MainCamera.Shake(0);
+            Vector3[] RpcAtkPos = new Vector3[ROCKCOUNT];
+            float[] RpcAtkTime = new float[ROCKCOUNT];
+
+            //공격 범위 생성
+            for (int i = 0; i < ROCKCOUNT; i++)
+            {
+                float RandomX = Random.Range(-15f, 15f);
+                float RandomZ = Random.Range(-15f, 15f);
+                Vector3 randpos = new Vector3(RandomX, 0, RandomZ);
+                Vector3 pos = Owner.transform.position + randpos;
+                pos.y = Shared.GameMgr.GetTerrainHeight(pos) + 0.1f;
+
+                //GameObject AtkCircle = Instantiate(AtkRangeCircle, pos, Quaternion.identity);
+                GameObject AtkCircle = Shared.PoolMgr.GetObject("AtkRange_Circle");
+                AtkCircle.transform.position = pos;
+                AtkCircle.GetComponent<AtkRange>().Init(false);
+                AtkCircle.GetComponent<AtkRange>().SetDesiredTime(Random.Range(3.0f, 10.0f));
+                ListAtkRangeCircle.Add(AtkCircle.GetComponent<AtkRange>());
+
+                //Rpc
+                RpcAtkPos[i] = AtkCircle.transform.position;
+                RpcAtkTime[i] = AtkCircle.GetComponent<AtkRange>().GetDesiredTime();
+            }
+            Shared.PhotonMgr.SendAtkRange(RpcAtkPos, RpcAtkTime);
+
+            StartCoroutine(IFallingRock());
         }
 
         Player Player;

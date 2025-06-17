@@ -84,4 +84,12 @@ public abstract partial class Character : Object
                 break;
         }
     }
+
+    protected void AlignToTerrainHeight()
+    {
+        float TerrainHegiht = Shared.GameMgr.GetTerrainHeight(transform.position);
+        Vector3 pos = transform.position;
+        pos.y = TerrainHegiht + 0.1f;
+        transform.position = pos;
+    }
 }

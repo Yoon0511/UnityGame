@@ -275,8 +275,8 @@ public enum ITEM_GRADE
 
 public enum SCENE
 {
-    NONE,
     TITLE,
+    LOADING,
     INGAME,
     ENUM_END
 }
