@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using ExitGames.Client.Photon.StructWrapping;
 using Photon.Pun;
 using Unity.VisualScripting;
@@ -110,10 +111,11 @@ public partial class Monster : Character
             SendQuestMsg(); //Monster -> Player 퀘스트 메시지 발송
             DropItem(); //전리품 드랍
 
-            //삭제
-            AllRemoveMapIcon();
-            Shared.GameMgr.RemoveMonster(this);
-            Destroy(gameObject);
+            //사망
+            //AllRemoveMapIcon();
+            //Shared.GameMgr.RemoveMonster(this);
+            //Destroy(gameObject);
+            ChangeState((int)MONSTER_STATE.DIE);
             return true;
         }
         return false;

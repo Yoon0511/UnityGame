@@ -47,4 +47,10 @@ public class MiniMapIcon : PoolAble
     {
         return ImgName;
     }
+
+    public override void ReleaseObject()
+    {
+        SetIconSize(5, 5);
+        base.ReleaseObject();
+    }
 }
