@@ -1,109 +1,3 @@
-//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
-//using Photon.Pun;
-//using Photon.Realtime;
-//using UnityEngine.UI;
-
-//public partial class PhotonMgr : MonoBehaviourPunCallbacks
-//{
-//    public PhotonView PV;
-//    public Transform SpwanPoint;
-//    public Text Test;
-//    private void Awake()
-//    {
-//        Shared.PhotonMgr = this;
-
-//        DontDestroyOnLoad(this);
-
-//        PhotonNetwork.GameVersion = "1.0.0";
-//        PhotonNetwork.SendRate = 20;
-//        PhotonNetwork.SerializationRate = 10;
-
-//        PhotonNetwork.ConnectUsingSettings();
-
-//        Test.text = "서버 연결";
-//        Debug.Log("서버 연결");
-
-//        if(SpwanPoint == null)
-//        {
-//            Debug.Log("스폰포인트업슴");
-//            Test.text = "스폰포인트업슴";
-//        }
-//    }
-
-//    public override void OnDisconnected(DisconnectCause cause)
-//    {
-//        base.OnDisconnected(cause);
-//    }
-//    public override void OnConnectedToMaster()
-//    {
-//        base.OnConnectedToMaster();
-//        Test.text = "Photon 마스터 서버에 연결됨";
-//        Debug.Log("Photon 마스터 서버에 연결됨");
-//        //PhotonNetwork.JoinRandomRoom();
-//        PhotonNetwork.JoinLobby(); // 로비 입장
-
-//        //RoomOptions roomOptions = new RoomOptions();
-//        //roomOptions.MaxPlayers = 4;
-//        //PhotonNetwork.JoinOrCreateRoom("TEST5534", roomOptions, TypedLobby.Default);
-//    }
-//    public override void OnJoinedLobby()
-//    {
-//        Test.text = "로비입장";
-//        Debug.Log("로비입장");
-//        PhotonNetwork.JoinOrCreateRoom("TestRoom", new RoomOptions { MaxPlayers = 4 }, TypedLobby.Default);
-//    }
-//    public override void OnJoinedRoom()
-//    {
-//        Test.text = "룸 참가 완료";
-//        Debug.Log("룸 참가 완료!");
-
-//        PhotonNetwork.Instantiate("Prefabs/Player", SpwanPoint.position, SpwanPoint.rotation, 0);
-//        CheckPlayersInRoom();
-//    }
-
-//    public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
-//    {
-//        base.OnPlayerEnteredRoom(newPlayer);
-//        Test.text = "다른 플레이어 입장";
-//        Debug.Log("다른 클라 입장");
-//        CheckPlayersInRoom();
-//    }
-//    public override void OnJoinRoomFailed(short returnCode, string message)
-//    {
-//       base.OnJoinRoomFailed(returnCode, message);
-//        Debug.Log("실패");
-
-//    }
-//    void CheckPlayersInRoom()
-//    {
-//        int playerCount = PhotonNetwork.CurrentRoom.PlayerCount;
-//        Debug.Log("현재 플레이어 수: " + playerCount);
-//        Test.text = $"현재 플레이어 수 : {playerCount}";
-
-//    }
-//    public override void OnJoinRandomFailed(short returnCode, string message)
-//    {
-//        base.OnJoinRandomFailed(returnCode, message);
-
-//        Test.text = "방생성";
-//        Debug.Log("방 생성");
-//        // 룸이 없으면 생성
-//        RoomOptions roomOptions = new RoomOptions();
-//        roomOptions.MaxPlayers = 4;
-//        PhotonNetwork.CreateRoom(null, roomOptions);
-//    }
-//    public void OnLobby()
-//    {
-//        PhotonNetwork.IsMessageQueueRunning = true;
-//    }
-
-//    public void LeaveLobby()
-//    {
-//        PhotonNetwork.LeaveLobby();
-//    }
-//}
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -154,11 +48,11 @@ public partial class PhotonMgr : MonoBehaviourPunCallbacks
         Debug.Log("Photon 서버에 연결 시도 중.");
 
         // 중요 체크: SpawnPoint가 할당되었는지 확인
-        if (SpawnPoint == null)
-        {
-            Debug.LogError("오류: 인스펙터에 SpawnPoint가 할당되지 않았습니다! 플레이어 인스턴스화가 실패할 것입니다.");
-            UpdateStatusText("오류: 스폰 포인트 누락!");
-        }
+        //if (SpawnPoint == null)
+        //{
+        //    Debug.LogError("오류: 인스펙터에 SpawnPoint가 할당되지 않았습니다! 플레이어 인스턴스화가 실패할 것입니다.");
+        //    UpdateStatusText("오류: 스폰 포인트 누락!");
+        //}
     }
 
     // --- Photon 콜백 ---

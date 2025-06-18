@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class SelectUi : PoolAble
 {
@@ -28,6 +27,7 @@ public class SelectUi : PoolAble
     {
         Player = _player;
         Target = Player.transform;
+        StartCoroutine(IAutoClose());
     }
 
     public void OnInviteParty()
@@ -45,5 +45,11 @@ public class SelectUi : PoolAble
     {
         Player = null;
         ReleaseObject();
+    }
+
+    IEnumerator IAutoClose()
+    {
+        yield return new WaitForSeconds(3.0f);
+        OnExit();
     }
 }
