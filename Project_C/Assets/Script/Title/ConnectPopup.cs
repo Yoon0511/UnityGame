@@ -30,14 +30,9 @@ public class ConnectPopup : MonoBehaviour
             float t = time / Duration;
             ProgressBar.fillAmount = t;
             time += Time.deltaTime;
-
-            if(t >= 0.9f)
-            {
-                yield return new WaitForSeconds(1.0f);
-                ChangeScene();
-            }
             yield return null;
         }
+        ChangeScene();
     }
 
     IEnumerator IAnimationText()

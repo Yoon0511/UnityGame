@@ -10,6 +10,7 @@ public static class Shared
     public static DataMgr DataMgr;
     public static PhotonMgr PhotonMgr;
     public static SceneMgr SceneMgr;
+    public static SoundMgr SoundMgr;
 
     //////////////////////////////////////
     public static MainCamera MainCamera;

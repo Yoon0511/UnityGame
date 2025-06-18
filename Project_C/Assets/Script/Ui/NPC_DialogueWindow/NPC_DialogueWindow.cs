@@ -75,6 +75,7 @@ public class NPC_DialogueWindow : MonoBehaviour
     IEnumerator ITypingText(string _text)
     {
         NPC_CONVERSTATIONTEXT.text = "";
+        
         for (int i = 0;i<_text.Length;i++)
         {
             Typing = true;

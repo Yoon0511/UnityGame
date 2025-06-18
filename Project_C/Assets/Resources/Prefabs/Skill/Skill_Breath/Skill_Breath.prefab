@@ -78,21 +78,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c3bb31763f3bbc48947ca83f5738645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PLAYER_SKILL_ID: 0
+  Owner: {fileID: 0}
   SpriteName: 
   CoolTime: 0
   SkillName: 
-  Atk: 10
+  Atk: 25
   UseMp: 0
   Explanation: 
   SkillMotion: 8
-  SkillUseState: 0
+  CurrentState: 0
   SkillType: 1
+  Instant: 0
+  IsAtkRange: 0
   BREATH_EFFECT: {fileID: 1876018095863508973}
   Duration: 5
   DamageInterval: 0.5
   P0: {fileID: 4071841261712616561}
   P1: {fileID: 6960357490035022596}
   P2: {fileID: 7919187662688182779}
+  BoxCollider: {fileID: 5097222368648258471}
 --- !u!65 &5097222368648258471
 BoxCollider:
   m_ObjectHideFlags: 0

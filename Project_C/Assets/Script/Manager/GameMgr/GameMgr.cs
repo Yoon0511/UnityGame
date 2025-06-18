@@ -186,4 +186,9 @@ public partial class GameMgr : MonoBehaviourPun
     {
         return Terrain.activeTerrain.SampleHeight(position);
     }
+
+    public void OnPlayerAttack()
+    {
+        PLAYER.OnAttack();
+    }
 }

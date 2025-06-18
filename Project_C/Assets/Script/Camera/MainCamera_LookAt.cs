@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.SceneView;
 using static UnityEngine.GraphicsBuffer;
 
 public partial class MainCamera : MonoBehaviour
@@ -28,6 +30,9 @@ public partial class MainCamera : MonoBehaviour
     private float MinYaw = -30f;
     [SerializeField]
     private float MaxYaw = 60f;
+
+    [SerializeField]
+    float ZoomSpeed;
 
     private void Start()
     {
@@ -70,11 +75,20 @@ public partial class MainCamera : MonoBehaviour
     {
         if (CameraShake) return;
         if (Target == null) return;
-        
+
+        //마우스 휠 - 카메라 줌인/줌아웃
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        Offset -= Offset.normalized * scroll * ZoomSpeed;
+
+        // 최소/최대 줌 거리 제한
+        float distance = Offset.magnitude;
+        distance = Mathf.Clamp(distance, 5f, 20f);
+        Offset = Offset.normalized * distance;
+
         //메인 카메라
         Quaternion rotation = Quaternion.Euler(Pitch, Yaw, 0);
         Vector3 desiredPosition = Target.position + rotation * Offset;
-
+       
         CAMERAMOVE.transform.localPosition = desiredPosition;
         CAMERAMOVE.transform.LookAt(Target);
 

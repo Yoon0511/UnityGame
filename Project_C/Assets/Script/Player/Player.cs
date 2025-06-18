@@ -188,6 +188,16 @@ public partial class Player : Character
 
         //페이드인
         Shared.GameMgr.FadeInOut.FadeIn();
+
+        //소환 이펙트
+        StartCoroutine(ISpwanEffect());
+    }
+
+    IEnumerator ISpwanEffect()
+    {
+        yield return new WaitForSeconds(0.5f);
+        //소환이펙트
+        Shared.ParticleMgr.CreateParticle("SpwanEffect", transform, 3.0f);
     }
 
     public int GetPhotonViewId()

@@ -294,3 +294,10 @@ public enum PLAYER_SKILL_ID
     RIDING,
     ENUM_END
 }
+
+public enum SOUNDEFECT
+{
+    NONE,
+
+    ENUM_END
+}
