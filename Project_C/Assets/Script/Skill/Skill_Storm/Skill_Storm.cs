@@ -7,21 +7,17 @@ public class Skill_Storm : Skill
 {
     public int Count;
     public GameObject Stome;
-    public float DistX = 0.0f;
-    public float DistXInterval = 0.0f;
-    public float DistZ = 0.0f;
     public GameObject SpwanPoint;
     public override void UseSkill()
     {
         base.UseSkill();
+        float AngleGap = 15.0f;
+        Shared.SoundMgr.PlaySFX("FIRE_STOME");
         for(int i = 0;i<Count;++i)
         {
-            GameObject obj =  Instantiate(Stome);
-            float distx = DistX * (DistXInterval * i);
-
-            obj.transform.position = SpwanPoint.transform.position;
-            obj.transform.rotation = Owner.transform.rotation;
-            obj.GetComponent<FireStorm>().Init(distx, DistZ,Atk);
+            float angleOffset = (i - (Count - 1) / 2f) * AngleGap;
+            GameObject obj =  Instantiate(Stome, transform.position, Quaternion.identity);
+            obj.GetComponent<FireStorm>().Init(Atk,angleOffset,Owner.transform.forward);
         }
         base.SkillEnd();
     }

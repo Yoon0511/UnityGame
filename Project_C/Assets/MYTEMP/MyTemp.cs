@@ -34,7 +34,7 @@ public class MyTemp : MonoBehaviour
     //    StartCoroutine(DBPost(Http + ConnectUrl,"dev"));
     //}
 
-    string[] name = { "Oakridge", "Redhill", "Brimford", "Greenbrook" };
+    string[] Villgename = { "Oakridge", "Redhill", "Brimford", "Greenbrook" };
 
     public Store Store;
     private void Update()
@@ -48,7 +48,7 @@ public class MyTemp : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.O))
         {
             VillageName villageName = Shared.PoolMgr.GetObject("VillageName").GetComponent<VillageName>();
-            villageName.Init(name[Random.Range(0,name.Length)]);
+            villageName.Init(Villgename[Random.Range(0, Villgename.Length)]);
         }
 
         if(Input.GetKeyDown(KeyCode.P))

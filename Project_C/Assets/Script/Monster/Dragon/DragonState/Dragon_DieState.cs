@@ -11,7 +11,7 @@ public class Dragon_DieState : StateBase
     }
     public override void OnStateEnter()
     {
-
+        Dragon.PlayAnimation("Ani_State", (int)DRAGON_ANI_STATE.DIE);
     }
 
     public override void OnStateExit()

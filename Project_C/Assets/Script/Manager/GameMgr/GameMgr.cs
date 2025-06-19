@@ -11,6 +11,7 @@ public partial class GameMgr : MonoBehaviourPun
     public GameObject PLAYEROBJ;
     public Player PLAYER;
     public Terrain Terrain;
+    
     //UI
     public DamageFont DAMAGE_FONT;
     public Canvas CANVAS;
@@ -35,6 +36,7 @@ public partial class GameMgr : MonoBehaviourPun
     List<Player> ListPlayer = new List<Player>();
 
     public Transform SpwanPoint;
+    public Transform RespwanPoint;
     private void Awake()
     {
         Shared.GameMgr = this;
@@ -190,5 +192,10 @@ public partial class GameMgr : MonoBehaviourPun
     public void OnPlayerAttack()
     {
         PLAYER.OnAttack();
+    }
+
+    public void OnGameClose()
+    {
+        Application.Quit();
     }
 }

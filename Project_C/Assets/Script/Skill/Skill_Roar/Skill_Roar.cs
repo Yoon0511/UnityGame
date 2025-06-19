@@ -18,6 +18,7 @@ public class Skill_Roar : Skill
 
     IEnumerator IRoar()
     {
+        Shared.SoundMgr.PlaySFX("DRAGON_ROAR");
         Shared.MainCamera.Shake(0, 0, 1.0f, new Vector3(0.5f, 0.5f, 0.0f), 8f, 2f, 3);
 
         Transform PlayerTs = Shared.GameMgr.PLAYEROBJ.transform;

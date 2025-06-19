@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using System.Xml;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -99,16 +100,41 @@ public class QuestUi : MonoBehaviour
 
     List<QuestBase> CreateStartQuest()
     {
+        //int Count = Random.Range(4, 12);
+        //
+        //for(int i = 0;i< Count; ++i)
+        //{
+        //    QuestBase quest = new HuntingQuest();
+        //    ((HuntingQuest)quest).Init(i, "½ÃÀÛÄù½ºÆ®-" + i.ToString(), i.ToString() + " - ½ÃÀÛÄù½ºÆ®",
+        //        Random.Range(10, 30), i, Random.Range(500, 3000), null);
+        //
+        //    list.Add(quest);
+        //}
         List<QuestBase> list = new List<QuestBase>();
-        int Count = Random.Range(4, 12);
 
-        for(int i = 0;i< Count; ++i)
+        foreach (var pair in Shared.DataMgr.TableQuest.DicQuestBase)
         {
-            QuestBase quest = new HuntingQuest();
-            ((HuntingQuest)quest).Init(i, "½ÃÀÛÄù½ºÆ®-" + i.ToString(), i.ToString() + " - ½ÃÀÛÄù½ºÆ®",
-                Random.Range(10, 30), i, Random.Range(500, 3000), null);
+            list.Add(Shared.DataMgr.GetQuest(pair.Key));
+        }
 
-            list.Add(quest);
+        HashSet<int> excludeQuestIds = new HashSet<int>();
+
+        foreach (var quest in Shared.GameMgr.PLAYER.GetProgressQusetList())
+        {
+            excludeQuestIds.Add(quest.GetId());
+        }
+
+        foreach (var quest in Shared.GameMgr.PLAYER.GetCompleteQuestList())
+        {
+            excludeQuestIds.Add(quest.GetId());
+        }
+
+        for (int i = list.Count - 1; i >= 0; --i)
+        {
+            if (excludeQuestIds.Contains(list[i].GetId()))
+            {
+                list.RemoveAt(i);
+            }
         }
         return list;
     }

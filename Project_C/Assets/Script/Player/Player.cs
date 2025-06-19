@@ -9,17 +9,13 @@ public partial class Player : Character
 {
     //아이템, 인벤토리 테스트
     public GameObject item;
-    int itemcount = 0;
 
     public EquipmentItem weapon;
     public EquipmentItem amor;
     public EquipmentItem ring;
     //아이템, 인벤토리 테스트
 
-    //private void Awake()
-    //{
-    //    
-    //}
+    bool IsDead;
     PhotonView PV;
     private void FixedUpdate()
     {
@@ -92,7 +88,7 @@ public partial class Player : Character
         InventoryInit();
 
         //자동회복
-        //StartCoroutine(AutomaticRecovery(1.0f));
+        StartCoroutine(AutomaticRecovery(1.0f));
 
         //PhotonViewIsMine();
         //Shared.GameMgr.PLAYER = this;
@@ -107,7 +103,7 @@ public partial class Player : Character
 
     public override void RayTargetEvent(Character _character)
     {
-        Shared.GameMgr.Hphud.SetTarget(this);
+        //Shared.GameMgr.Hphud.SetTarget(this);
 
         //다른 플레이어 클릭 시
         if(PV.IsMine == false)
@@ -197,7 +193,8 @@ public partial class Player : Character
     {
         yield return new WaitForSeconds(0.5f);
         //소환이펙트
-        Shared.ParticleMgr.CreateParticle("SpwanEffect", transform, 3.0f);
+        GameObject Effect =  Shared.ParticleMgr.CreateParticle("SpwanEffect", transform, 3.0f);
+        Effect.transform.SetParent(transform);
     }
 
     public int GetPhotonViewId()
@@ -245,5 +242,15 @@ public partial class Player : Character
         // 가장 가까운 아이템 탐색 후 습득 - 인벤토리 적립
         
         // 필드 아이템 리스트 -> 검색 -> 습득
+    }
+
+    public void SetIsDead(bool _isDead)
+    {
+        IsDead = _isDead;
+    }
+
+    public bool GetIsDead()
+    {
+        return IsDead;
     }
 }

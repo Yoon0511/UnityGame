@@ -28,14 +28,13 @@ public class PartyInvitePopup : PoolAble
     }
     public void OnAccept()
     {
-        Debug.Log("Accpet");
+        Shared.SoundMgr.PlaySFX("SUCCESS");
         Shared.PhotonMgr.SendPartyAccept(Player.GetPhotonViewId(), Player.GetSelectPlayerViewId());
         ReleaseObject();
     }
 
     public void OnRefuse()
     {
-        Debug.Log("Refuse");
         ReleaseObject();
     }
 }

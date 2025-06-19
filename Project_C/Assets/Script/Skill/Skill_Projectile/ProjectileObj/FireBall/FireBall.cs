@@ -15,7 +15,7 @@ public class FireBall : ProjectileObjBase
         Atk = _atk;
         Dir = (_target.transform.position - transform.position).normalized;
         Shared.ParticleMgr.CreateParticle("Explosion",transform,0.7f);
-
+        Shared.SoundMgr.PlaySFX("FIRE_BALL");
     }
 
     private void FixedUpdate()

@@ -1,4 +1,5 @@
 
+using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,11 +14,13 @@ public class Player_DieState : StateBase
 
     public override void OnStateEnter()
     {
-
+        player.SetIsDead(true);
+        Shared.UiMgr.RespwanPopup.gameObject.SetActive(true);
     }
 
     public override void OnStateExit()
     {
+        player.SetIsDead(false);
         //Debug.Log("OnIdleExit");
     }
 

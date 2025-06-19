@@ -1,52 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class FireStorm : MonoBehaviour
 {
-    Vector3 startPoint;
-    Vector3 controlPoint;
-    Vector3 endPoint;
-    public float moveSpeed = 0.3f;
-
-    private float progress = 0f;
-    float DistX = 0f;
-    float DistZ = 0f;
+    public float MoveSpeed = 0.3f;
     float Atk = 0f;
+    Vector3 MoveDir;
 
-    public void Init(float _distx,float _distz,float _atk)
+    public void Init(float _atk,float _angleOffset, Vector3 _forwardDir)
     {
         Atk = _atk;
 
-        DistX = _distx;
-        DistZ = _distz;
+        // 전방에서 _angleOffset만큼 회전된 방향 계산
+        Quaternion rotation = Quaternion.Euler(0, _angleOffset, 0);
+        MoveDir = rotation * _forwardDir;
 
-        startPoint = transform.localPosition;
-
-        endPoint = startPoint + transform.forward * _distz;
-        endPoint.z += _distx;
-
-        float ControlZ = DistZ * 0.8f;
-        float ControlX = DistX * 0.3f;
-
-        controlPoint.z = startPoint.z + ControlZ;
-        controlPoint.x = startPoint.x + ControlX;
+        // 이동 방향 기준으로 시각적으로 회전
+        transform.rotation = Quaternion.LookRotation(MoveDir);
     }
-
+    IEnumerator IAutoRemove()
+    {
+        yield return new WaitForSeconds(3.0f);
+        Destroy(gameObject);
+    }
     private void FixedUpdate()
     {
-        progress += moveSpeed * Time.deltaTime;
-        progress = Mathf.Clamp01(progress);
-        
-        //Vector3 m1 = Vector3.Slerp(startPoint, controlPoint, progress);
-        //Vector3 m2 = Vector3.Slerp(controlPoint, endPoint, progress);
-        //transform.localPosition = Vector3.Slerp(m1, m2, progress);
-        transform.localPosition = Vector3.Slerp(startPoint, endPoint, progress);
-
-        if (progress >= 1.0f)
-        {
-            Destroy(gameObject);
-        }
+        transform.position += MoveDir * MoveSpeed;
     }
 
     private void OnTriggerEnter(Collider other)

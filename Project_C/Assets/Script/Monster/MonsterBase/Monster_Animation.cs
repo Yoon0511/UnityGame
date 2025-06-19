@@ -10,6 +10,7 @@ public partial class Monster
     public void OnBasicAttackCollider()
     {
         BasicAttackCollider.SetActive(true);
+        Shared.SoundMgr.PlaySFX("GOLEM_ATK");
     }
 
     public void OffBasicAttackCollider()

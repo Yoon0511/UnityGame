@@ -50,7 +50,7 @@ MonoBehaviour:
   SpriteName: UI_Skill_Icon_Dash
   CoolTime: 7
   SkillName: "\uB3CC\uC9C4"
-  Atk: 20
+  Atk: 100
   UseMp: 1
   Explanation: "\uC804\uBC29\uC73C\uB85C \uB3CC\uC9C4\uD55C\uB2E4."
   SkillMotion: 9
@@ -58,7 +58,7 @@ MonoBehaviour:
   SkillType: 1
   Instant: 1
   IsAtkRange: 0
-  Speed: 15
+  Speed: 20
   Distance: 15
   HITBOX: {fileID: 4634200373796353147}
 --- !u!65 &4634200373796353147

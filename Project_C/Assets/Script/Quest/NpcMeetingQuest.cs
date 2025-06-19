@@ -39,6 +39,7 @@ public class NpcMeetingQuest : QuestBase
         GiveQuestReward();
         UpdateMiniMapIcon();
         StateChange(QUEST_STATE.END);
+        Shared.SoundMgr.PlaySFX("QUEST_COMPLETE");
     }
 
     public override void Fail()
@@ -129,7 +130,7 @@ public class NpcMeetingQuest : QuestBase
                 //Shared.GameMgr.GetNPCinList(TargetNPCId).UpdateMiniMapIcon();
                 break;
             default: // 기본 아이콘
-                OwnerNPC.AllUpdateMapIcon("Exclamation_mark", 12, 12);
+                OwnerNPC.AllUpdateMapIcon("NPC", 5, 5);
                 break;
         }
     }

@@ -18,6 +18,10 @@ public class UiMgr : MonoBehaviour
     public SkillBook SkillBook;
     public PartyFrame PartyFrame;
     public EquipmentWindow EquipmentWindow;
+    public InfoPlayer InfoPlayer;
+    public RespwanPopup RespwanPopup;
+    public SoundOptionPopup SoundOptionPopup;
+    public GameObject GameClosePopup;
 
     public List<GameObject> ListOpenUi = new List<GameObject>();
     bool IsOpenUi;

@@ -71,12 +71,13 @@ public class ParticleMgr : MonoBehaviour
         return DicParticlePool[SelectParticleName].Get();
     }
 
-    public void CreateParticle(string _name,Transform _transform,float _duration)
+    public GameObject CreateParticle(string _name,Transform _transform,float _duration)
     {
         GameObject obj = GetParticle(_name);
         obj.transform.position = _transform.position;
         obj.transform.rotation = _transform.rotation;
         obj.GetComponent<Particle>().Duration = _duration;
+        return obj;
     }
 
     public void CreateParticle(string _name, Transform _transform, float _duration,Transform _parent)

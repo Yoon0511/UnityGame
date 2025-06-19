@@ -45,11 +45,21 @@ public partial class Dragon : Monster
 
         SkillInit();
         Fsm_Init();
-
     }
 
     public override void RayTargetEvent(Character _character)
     {
         Shared.GameMgr.Hphud.SetTarget(this);
+    }
+
+    protected override bool CheckHP()
+    {
+        if (Statdata.GetData(STAT_TYPE.HP) <= 0)
+        {
+            SendQuestMsg();
+            ChangeState((int)DRAGON_STATE.DIE);
+            return true;
+        }
+        return false;
     }
 }

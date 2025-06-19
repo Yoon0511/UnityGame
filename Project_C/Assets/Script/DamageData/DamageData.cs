@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class DamageData
 {
-    public float Damage;
+    public int Damage;
     public DAMAGEFONT_TYPE DamageFont_Type;
     public DamageDataPool Pool;
 
     public DamageData(float _damage,DAMAGEFONT_TYPE _damagefont_type)
     {
-        Damage = _damage;
+        Damage = (int)_damage;
         DamageFont_Type = _damagefont_type;
     }
 

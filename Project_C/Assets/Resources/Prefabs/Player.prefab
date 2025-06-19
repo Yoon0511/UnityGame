@@ -343,6 +343,7 @@ MonoBehaviour:
   ProjectilePoint: {fileID: 5308579304984422552}
   MaxSkillCount: 4
   CurrentSkill: []
+  UnitFrame: {fileID: 0}
   item: {fileID: 3288734687280227402, guid: c056d6e6aba53b74aa9c623157c9b595, type: 3}
   weapon: {fileID: 1730676618807979461, guid: 7a2d4e9b0c4e2c04fae21eb10022ba16, type: 3}
   amor: {fileID: -8377694153036047605, guid: 782d8aed6342e9748a421ef38f301700, type: 3}
@@ -362,7 +363,6 @@ MonoBehaviour:
   Sanddle: {fileID: 7720314451137140363}
   Riding: {fileID: 6540128684458656345}
   BuffUi: {fileID: 0}
-  UnitFrame: {fileID: 0}
 --- !u!54 &3407704953908177111
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -455,7 +455,7 @@ MonoBehaviour:
     - Key: 3
       Value: 5
     - Key: 4
-      Value: 100
+      Value: 70
     - Key: 5
       Value: 3
     - Key: 6
@@ -723,7 +723,7 @@ PrefabInstance:
       objectReference: {fileID: 8404807537615280901}
     - target: {fileID: 5974816840508695883, guid: 6ce4c8174ad02d64389a53a7501a2af7, type: 3}
       propertyPath: HealAmount
-      value: 600
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7173080791007491561, guid: 6ce4c8174ad02d64389a53a7501a2af7, type: 3}
       propertyPath: m_Name

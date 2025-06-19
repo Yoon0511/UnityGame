@@ -26,6 +26,13 @@ public class Potion : ItemBase
 
         //사용시 삭제
         Shared.GameMgr.PLAYER.GetInventory().DeleteItem(this);
+
+        Player Player;
+        Owner.TryGetComponent<Player>(out Player);
+        if(Player != null)
+        {
+            Shared.SoundMgr.PlaySFX("EAT_POTION");
+        }
     }
 
     public void InputUseItemData(TableItem.UseItemInfo _info)

@@ -22,6 +22,7 @@ public class Monster_DieState : StateBase
         //Debug.Log("OnMoveEnter");
         SpwanPos = monster.transform.position; //죽은 위치 저장
         DiePos = new Vector3(800f, 0f, 800f);
+        monster.SetIsDead(true);
     }
 
     public override void OnStateExit()
@@ -29,6 +30,8 @@ public class Monster_DieState : StateBase
         //Debug.Log("OnMoveExit");
         RespwanElapsedTime = 0.0f;
         monster.transform.position = SpwanPos;
+        monster.EnhanceStat(STAT_TYPE.HP, monster.GetInStatData(STAT_TYPE.MAXHP));
+        monster.SetIsDead(false);
     }
 
     public override void OnStateUpdate()

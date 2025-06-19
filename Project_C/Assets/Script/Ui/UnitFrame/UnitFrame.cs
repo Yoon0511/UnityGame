@@ -37,7 +37,7 @@ public class UnitFrame : MonoBehaviour
         }
 
         int intcurrentMp = (int)_currentmp;
-        MPTEXT.text = _currentmp.ToString() + "/" + _maxmp.ToString();
+        MPTEXT.text = intcurrentMp.ToString() + "/" + _maxmp.ToString();
         StartCoroutine(IUpdateBar(MP_BAR, _currentmp, _maxmp));
     }
 

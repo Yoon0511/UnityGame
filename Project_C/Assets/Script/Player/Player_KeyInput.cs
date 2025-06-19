@@ -110,15 +110,9 @@ public partial class Player
             AddGold(3000);
         }
 
-        if(Input.GetKeyDown(KeyCode.H))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            foreach (var player in Party)
-            {
-                if (player != null)
-                {
-                    Debug.Log(player.GetCharacterName());
-                }
-            }
+            Shared.UiMgr.SoundOptionPopup.gameObject.SetActive(true);
         }
 
         KeyBoardMove();

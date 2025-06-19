@@ -28,6 +28,11 @@ public partial class Player
 
     public void OnRiding()
     {
+        if(PV.IsMine)
+        {
+            Shared.SoundMgr.PlaySFX("SPWANRIDING");
+        }
+
         Shared.ParticleMgr.CreateParticle("Smoke", transform, 0.7f);
 
         Riding.OnRiding();

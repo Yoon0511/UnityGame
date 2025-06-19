@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class DataMgr : MonoBehaviour
 {
     private TableItem TableItem = new TableItem();
-    private TableQuest TableQuest = new TableQuest();
+    public TableQuest TableQuest = new TableQuest();
     private void Awake()
     {
         Shared.DataMgr = this;

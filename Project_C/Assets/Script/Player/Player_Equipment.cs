@@ -16,8 +16,10 @@ public partial class Player
     }
 
     public EquipmentWindow GetEquipmentWindow() { return equiment; }
+    //장비 장착 및 해제
     public void ApplyEquipItem(EquipmentItem _equipmentItem, bool UnEquip = false)
     {
+        Shared.SoundMgr.PlaySFX("ITEM_EQUIP");
         for (int i = 1; i < (int)STAT_TYPE.ENUM_END; ++i)
         {
             float statValue = 0.0f;

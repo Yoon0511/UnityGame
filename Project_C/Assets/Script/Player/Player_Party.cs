@@ -11,6 +11,7 @@ public partial class Player
     int SelectPlayerViewId;
     public void PartyInvite(int _inviteid)
     {
+        Shared.SoundMgr.PlaySFX("NOTIFICATION");
         Shared.UiMgr.CreatePartyInvitePopup(this);
         SelectPlayerViewId = _inviteid;
     }
@@ -30,6 +31,7 @@ public partial class Player
         if(PV.IsMine)
         {
             Shared.UiMgr.PartyFrame.AddPartyPlayer(_member);
+            Shared.SoundMgr.PlaySFX("SUCCESS");
         }
 
         Shared.UiMgr.CreateSystemMsg($"{GetCharacterName()}님의 파티에 가입하였습니다.", SYSTEM_MSG_TYPE.UI);

@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a3f44f679e4b7c4c8441a13acf903b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PLAYER_SKILL_ID: 0
   Owner: {fileID: 0}
   SpriteName: 
   CoolTime: 5
@@ -56,9 +57,6 @@ MonoBehaviour:
   SkillType: 1
   Instant: 0
   IsAtkRange: 0
-  Count: 4
+  Count: 5
   Stome: {fileID: 698923103168874, guid: e724af8005dd6bb4b9e8e554d59696e9, type: 3}
-  DistX: 2
-  DistXInterval: 3
-  DistZ: 15
   SpwanPoint: {fileID: 4332192318685034020}

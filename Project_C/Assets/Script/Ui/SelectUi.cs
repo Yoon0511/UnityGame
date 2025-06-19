@@ -32,7 +32,6 @@ public class SelectUi : PoolAble
 
     public void OnInviteParty()
     {
-        Debug.Log("InveiteParty");
         Shared.PhotonMgr.SendPartyInvite(Player.GetPhotonViewId(),Player.GetSelectPlayerViewId());
         
         Player invitePlayer = Shared.GameMgr.GetPlayerinListforViewid(Player.GetPhotonViewId());

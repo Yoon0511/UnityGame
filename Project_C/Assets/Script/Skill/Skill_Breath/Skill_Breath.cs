@@ -25,6 +25,7 @@ public class Skill_Breath : Skill
     public override void UseSkill()
     {
         base.UseSkill();
+        Shared.SoundMgr.PlaySFX("FIRE_BREATH");
         IBreathCorutine = StartCoroutine(IBreath());
     }
 
@@ -34,17 +35,23 @@ public class Skill_Breath : Skill
         BREATH_EFFECT.Play();
 
         float elapsedTime = 0;
+        float interval = 0;
         while (elapsedTime < Duration)
         {
-            elapsedTime += DamageInterval;
+            elapsedTime += Time.deltaTime;
+            interval += Time.deltaTime;
 
-            if (Target != null && IsPointInTriangle(Target.transform.position))
+            if (interval >= DamageInterval)
             {
-                DamageData damgedata = Shared.GameMgr.DamageDataPool.Get(Atk, DAMAGEFONT_TYPE.YELLOW);
-                Target.Hit(damgedata);
+                interval = 0;
+                
+                if (IsPointInTriangle(Shared.GameMgr.PLAYER.transform.position))
+                {
+                    DamageData damgedata = Shared.GameMgr.DamageDataPool.Get(Atk, DAMAGEFONT_TYPE.YELLOW);
+                    Shared.GameMgr.PLAYER.Hit(damgedata);
+                }
             }
-
-            yield return new WaitForSeconds(DamageInterval);
+            yield return null;
         }
 
         BoxCollider.enabled = false;

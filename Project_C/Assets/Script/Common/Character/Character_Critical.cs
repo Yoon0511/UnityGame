@@ -13,7 +13,7 @@ public abstract partial class Character
 
         if(isCritical)
         {
-            _damagedata.Damage *= CiritcalMultiplier;
+            _damagedata.Damage *= (int)CiritcalMultiplier;
             _damagedata.DamageFont_Type = DAMAGEFONT_TYPE.CRITICAL;
         }
     }

@@ -11,10 +11,11 @@ public class BasicAttack : MonoBehaviour
         bool IsPlayer = Shared.GameMgr.IsCheckCharacterType(other, (int)CHARACTER_TYPE.PLAYER);
         if(IsPlayer)
         {
+            Shared.SoundMgr.PlaySFX("GOLEM_ATK_HIT");
             DamageData damgedata = Shared.GameMgr.DamageDataPool.Get(monster.GetInStatData(STAT_TYPE.ATK), DAMAGEFONT_TYPE.YELLOW);
             Character character = other.GetComponent<Character>();
             character.Hit(damgedata);
-            Shared.ParticleMgr.CreateParticle("WhiteHit", character.GetBodyParticlePointObj().transform, 0.5f);
+            Shared.ParticleMgr.CreateParticle("WhiteHit", character.GetBodyParticlePointObj().transform, 0.5f);   
         }
     }
 }

@@ -12,7 +12,8 @@ public partial class Player
         if (!PV.IsMine) return;
 
         if (CurrState == (int)STATE.ATTACK ||
-            IsStun == true || IsGuard == true)
+            IsStun == true || IsGuard == true ||
+            CurrState == (int)STATE.DIE)
         {
             return;
         }

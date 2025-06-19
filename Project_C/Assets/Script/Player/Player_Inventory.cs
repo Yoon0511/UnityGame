@@ -13,7 +13,8 @@ public partial class Player
     void InventoryInit() { Inventory.SetOwner(Shared.GameMgr.PLAYER); }
     public int GetGold() { return Gold; }
     public void AddGold(int _gold) 
-    { 
+    {
+        Shared.SoundMgr.PlaySFX("ADD_GOLD");
         Gold += _gold;
         Inventory.UpdateGoldText();
     }
@@ -30,6 +31,7 @@ public partial class Player
 
     public void AddItem(int _itemid)
     {
+        Shared.SoundMgr.PlaySFX("ITEM_PICKUP");
         Inventory.AddItem(Shared.DataMgr.GetItem(_itemid));
         Inventory.UpdateGoldText();
     }

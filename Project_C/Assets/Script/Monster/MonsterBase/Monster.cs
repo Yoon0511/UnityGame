@@ -53,7 +53,7 @@ public partial class Monster : Character
     // Monster Init - 몬스터 생성시 기본 세팅값 설정
     public override void Init()
     {
-        CharacterName = gameObject.name;
+        CharacterName = gameObject.name.Replace("(Clone)", "").Trim();
         CharacterType = (int)CHARACTER_TYPE.MONSTER;
         Id = (int)MONSTER_ID.GOLEM;
         //player = Shared.GameMgr.PLAYEROBJ;
@@ -73,21 +73,13 @@ public partial class Monster : Character
     // Monster가 Damage를 받을 시 실행되는 함수
     public override void Hit(DamageData _damagedata)
     {
+        if(IsDead)
+        {
+            return;
+        }
         Shake(0.1f, 0.1f);
-        
-        //if(PhotonNetwork.IsMasterClient)
-        //{
-        //    Statdata.TakeDamage(_damagedata);
-        //    PV.RPC("RpcMonsterTakeDamage", RpcTarget.Others, _damagedata.Damage, (int)_damagedata.DamageFont_Type);
-        //}
-        //else
-        //{
-        //    //rpc로 HP동기화
-        //    PV.RPC("RpcMonsterTakeDamage", RpcTarget.All, _damagedata.Damage, (int)_damagedata.DamageFont_Type);
-        //
-        //}
-        //Statdata.TakeDamage(_damagedata);
-        PV.RPC("RpcMonsterTakeDamage", RpcTarget.All, _damagedata.Damage, (int)_damagedata.DamageFont_Type);
+       
+        PV.RPC("RpcMonsterTakeDamage", RpcTarget.All, (float)_damagedata.Damage, (int)_damagedata.DamageFont_Type);
         CheckHP();
     }
 
@@ -104,7 +96,7 @@ public partial class Monster : Character
         Statdata.SetStat(STAT_TYPE.HP, _hp);
     }
 
-    protected bool CheckHP() 
+    protected virtual bool CheckHP() 
     {
         if(Statdata.GetData(STAT_TYPE.HP) <= 0)
         {
@@ -122,7 +114,7 @@ public partial class Monster : Character
     }
     void DropItem()
     {
-        
+        Shared.GameMgr.PLAYER.AddExp(25.0f);
     }
     public void ChangeTarget(GameObject _target)
     {
@@ -148,4 +140,5 @@ public partial class Monster : Character
     }
 
     public bool GetIsDead() { return IsDead; }
+    public void SetIsDead(bool _isDead) { IsDead = _isDead; }
 }

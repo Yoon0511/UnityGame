@@ -35,6 +35,7 @@ public class Hphud : MonoBehaviour
     private void Start()
     {
         ChangeColor();
+        HP_HUDUI.transform.GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, 180f);
     }
 
     public void SetTarget(Character _target)
@@ -47,6 +48,7 @@ public class Hphud : MonoBehaviour
         MaxHp = Target.GetInStatData(STAT_TYPE.MAXHP);
         CurrHp = Target.GetInStatData(STAT_TYPE.HP);
         previousHp = CurrHp;
+        ChangeColor();
 
         NAMETEXT.text = Target.GetCharacterName();
         MaxCount = 10;
@@ -66,7 +68,7 @@ public class Hphud : MonoBehaviour
         if(DivisionHp == MaxDivisionHp) // 풀피일 경우 색상 초기화
         {
             UsedColors.Clear();
-            ChangeColor();
+            //ChangeColor();
             for (int i = 0; i < Count; i++)
             {
                 UsedColors.Add(CurrColor);
@@ -116,14 +118,14 @@ public class Hphud : MonoBehaviour
                 if(ElaspedTime >= 3.0f)
                 {
                     IsShow = false;
-                    HP_HUDUI.transform.GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, 165f);
+                    HP_HUDUI.transform.GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, 180f);
                 }
             }
 
             if(CurrHp <= 0 && IsShow)
             {
                 IsShow = false;
-                HP_HUDUI.transform.GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, 165f);
+                HP_HUDUI.transform.GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, 180f);
             }
 
             if (Mathf.Abs(diff) < 0.01f) continue;
@@ -221,10 +223,22 @@ public class Hphud : MonoBehaviour
     {
         CurrColor = NextColor;
         CURRHP.color = CurrColor;
-        //CURRHP.fillAmount = 1.0f;
+        
+        // HP 비율 (0 = 0%, 1 = 100%)
+        float hpRatio = CurrHp / MaxHp;
+
+        // 빨강(1,0,0) → 파랑(0,0,1)로 선형 보간
+        //CurrColor = Color.Lerp(Color.blue, Color.red, hpRatio);
+        //CURRHP.color = CurrColor;
+
+        // 다음 색상도 같은 방식으로 설정
+        NextColor = Color.Lerp(Color.blue, Color.red, hpRatio);
+        //NEXTHP.color = NextColor;
+
+        CURRHP.fillAmount = 1.0f;
 
         // 새로운 랜덤 색상
-        NextColor = new Color(Random.Range(0.7f, 1f), 0.3f,0.3f);
+        //NextColor = new Color(Random.Range(0.7f, 1f), 0.3f,0.3f);
         NEXTHP.color = NextColor;
     }
 }

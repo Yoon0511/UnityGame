@@ -120,7 +120,7 @@ MonoBehaviour:
   dicstat:
     _serializedList:
     - Key: 1
-      Value: 9999
+      Value: 1500
     - Key: 2
       Value: 9999
     - Key: 3
@@ -130,7 +130,7 @@ MonoBehaviour:
     - Key: 5
       Value: 2
     - Key: 6
-      Value: 9999
+      Value: 1500
     - Key: 7
       Value: 9999
     - Key: 8
@@ -1141,7 +1141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1876018095863508973, guid: 361d7875dcf8b2b4ea841f372a35c3df, type: 3}
       propertyPath: lengthInSec
-      value: 5.63
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1876018095863508973, guid: 361d7875dcf8b2b4ea841f372a35c3df, type: 3}
       propertyPath: ShapeModule.m_Scale.y
@@ -1261,7 +1261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5600241777170692085, guid: 361d7875dcf8b2b4ea841f372a35c3df, type: 3}
       propertyPath: DamageInterval
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

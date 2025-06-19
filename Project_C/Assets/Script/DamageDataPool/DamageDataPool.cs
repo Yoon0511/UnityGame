@@ -10,7 +10,7 @@ public class DamageDataPool
     {
         DamageData data = Pool.Count > 0 ? Pool.Dequeue() : new DamageData(_damage, _damagefont_type);
         data.Pool = this;
-        data.Damage = _damage;
+        data.Damage = (int)_damage;
         data.DamageFont_Type = _damagefont_type;
         return data;
     }

@@ -63,6 +63,7 @@ public class HuntingQuest : QuestBase
         StateChange(QUEST_STATE.END);
         UpdateMiniMapIcon();
         GiveQuestReward();
+        Shared.SoundMgr.PlaySFX("QUEST_COMPLETE");
     }
 
     public override void Fail()
