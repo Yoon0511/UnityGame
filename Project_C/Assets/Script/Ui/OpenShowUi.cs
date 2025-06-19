@@ -9,5 +9,6 @@ public class OpenShowUi : MonoBehaviour
     public void OnOpen()
     {
         OPENUI.SetActive(IsOpen);
+        Shared.SoundMgr.PlaySFX("UI_NOTIFICATION");
     }
 }

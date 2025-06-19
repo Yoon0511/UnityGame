@@ -109,5 +109,6 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
     public void OpenUi()
     {
         Ui.SetActive(true);
+        Shared.SoundMgr.PlaySFX("UI_NOTIFICATION");
     }
 }

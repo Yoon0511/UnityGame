@@ -25,12 +25,14 @@ public class Store : MonoBehaviour
         Init();
         Shared.GameMgr.PLAYER.OpenInventory();
         Shared.GameMgr.PLAYER.SetUseStore(true);
+        Shared.SoundMgr.PlaySFX("UI_NOTIFICATION");
     }
 
     public void OnDisable()
     {
         StroeItemSlotReset();
         Shared.GameMgr.PLAYER.SetUseStore(false);
+        Shared.SoundMgr.PlaySFX("UI_NOTIFICATION");
     }
 
     public void Init()

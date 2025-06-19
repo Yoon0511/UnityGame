@@ -47,5 +47,6 @@ public class SoundOptionPopup : MonoBehaviour
     public void OnGameClosePopup()
     {
         Shared.UiMgr.GameClosePopup.SetActive(true);
+        Shared.SoundMgr.PlaySFX("UI_NOTIFICATION");
     }
 }

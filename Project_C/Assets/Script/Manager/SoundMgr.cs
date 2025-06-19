@@ -26,11 +26,11 @@ public class SoundMgr : MonoBehaviour
                 Dicsfx[clip.name] = clip;
         }
     }
-    public void PlaySFX(string clipName, float volume = 0.2f)
+    public void PlaySFX(string clipName)
     {
         if (Dicsfx.TryGetValue(clipName, out AudioClip clip))
         {
-            SfxSource.PlayOneShot(clip, volume);
+            SfxSource.PlayOneShot(clip);
         }
         else
         {

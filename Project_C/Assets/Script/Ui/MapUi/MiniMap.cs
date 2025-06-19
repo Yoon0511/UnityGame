@@ -204,6 +204,7 @@ public class MiniMap : MonoBehaviour
     public void OnOpenWorldMap()
     {
         Shared.UiMgr.WORLDMAPUI.SetActive(true);
+        Shared.SoundMgr.PlaySFX("UI_NOTIFICATION");
     }
 
     public void OnZoomIn()

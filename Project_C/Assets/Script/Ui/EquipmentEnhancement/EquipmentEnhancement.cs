@@ -32,6 +32,7 @@ public class EquipmentEnhancement : MonoBehaviour
         {
             Player = Shared.GameMgr.PLAYER;
         }
+        Shared.SoundMgr.PlaySFX("UI_NOTIFICATION");
 
         foreach(EquipmentItem item in Player.GetDicEquitmentItem().Values)
         {

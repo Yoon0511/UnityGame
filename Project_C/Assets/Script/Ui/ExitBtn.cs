@@ -9,5 +9,6 @@ public class ExitBtn : MonoBehaviour
     public void OnExit()
     {
         TARGET.SetActive(false);
+        Shared.SoundMgr.PlaySFX("UI_NOTIFICATION");
     }
 }

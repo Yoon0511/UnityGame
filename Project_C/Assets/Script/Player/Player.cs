@@ -195,6 +195,8 @@ public partial class Player : Character
         //º“»Ø¿Ã∆Â∆Æ
         GameObject Effect =  Shared.ParticleMgr.CreateParticle("SpwanEffect", transform, 3.0f);
         Effect.transform.SetParent(transform);
+
+        Shared.SoundMgr.PlaySFX("LEVELUP");
     }
 
     public int GetPhotonViewId()
