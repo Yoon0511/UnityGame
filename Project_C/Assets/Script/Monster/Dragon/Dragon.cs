@@ -5,6 +5,7 @@ using UnityEngine;
 
 public partial class Dragon : Monster
 {
+   
     private void FixedUpdate()
     {
         if (ListPlayer == null)
@@ -23,7 +24,7 @@ public partial class Dragon : Monster
         {
             return;
         }
-
+        
         StateUpdate();
         AlignToTerrainHeight();
     }
@@ -42,7 +43,7 @@ public partial class Dragon : Monster
         CharacterType = (int)CHARACTER_TYPE.MONSTER;
         Id = (int)MONSTER_ID.DRAGON;
         transform.localEulerAngles = new Vector3(0, 180f, 0);
-
+        SetIsDead(false);
         SkillInit();
         Fsm_Init();
     }
@@ -54,6 +55,11 @@ public partial class Dragon : Monster
 
     protected override bool CheckHP()
     {
+        if(GetIsDead())
+        {
+            return false;
+        }
+
         if (Statdata.GetData(STAT_TYPE.HP) <= 0)
         {
             SendQuestMsg();

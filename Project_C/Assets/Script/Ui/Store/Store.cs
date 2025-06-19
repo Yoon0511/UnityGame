@@ -18,7 +18,7 @@ public class Store : MonoBehaviour
 
     // table연결필요
     //int[] StoreItemIds = { 1001, 1004, 1007, 1010, 1012, 1013,1016,1017 };
-    int[] StoreItemIds = { 1016, 1017, 1018, 1019, 1020, 1021 };
+    int[] StoreItemIds = { 1005, 1010, 1011, 1019, 1020, 1021 ,1024};
 
     public void OnEnable()
     {
@@ -38,7 +38,7 @@ public class Store : MonoBehaviour
     public void Init()
     {
         //상점 아이템 랜덤 6개
-        RandomStoreItem();
+        //RandomStoreItem();
 
         //상점목록생성
         for (int i = 0; i < StoreItemIds.Length; ++i)

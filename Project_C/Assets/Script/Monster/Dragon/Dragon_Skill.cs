@@ -8,7 +8,7 @@ public partial class Dragon
     AtkRange[] AttackRange;
 
     bool IsOnAttackRange = false;
-
+    public int SkillCount = 0;
     void SkillInit()
     {
         foreach (var skill in GetSkillList())

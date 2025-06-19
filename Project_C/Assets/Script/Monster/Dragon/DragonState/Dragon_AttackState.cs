@@ -17,7 +17,6 @@ public class Dragon_AttackState : StateBase
     float SequenceElapsedTime;
     float SequenceDelayTime;    //추가 스킬 공격 대기
 
-
     int CurrSkill = 0;
     public Dragon_AttackState(Dragon _dragon)
     {
@@ -86,6 +85,13 @@ public class Dragon_AttackState : StateBase
             //Dragon.UseDragonSkill((int)DRAGON_SKILL.RUSH);
             //CurrSkill = (int)DRAGON_SKILL.RUSH;
             //RandomSkil = (int)DRAGON_SKILL.BREATH;
+
+            RandomSkil = Dragon.SkillCount;
+            Dragon.SkillCount++;
+            if(Dragon.SkillCount >= 6)
+            {
+                Dragon.SkillCount = 0;
+            }
             Dragon.UseDragonSkill(RandomSkil);
         }
 

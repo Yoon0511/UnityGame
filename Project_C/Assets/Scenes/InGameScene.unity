@@ -6265,7 +6265,7 @@ MonoBehaviour:
   ListMonster: []
   ListNPC: []
   ListPlayer: []
-  SpwanPoint: {fileID: 1747245890}
+  SpwanPoint: {fileID: 2023047966}
   RespwanPoint: {fileID: 705914682}
 --- !u!4 &366247449
 Transform:
@@ -8929,7 +8929,7 @@ MonoBehaviour:
   Offset: {x: 0, y: 6, z: -9}
   MouseSensitivity: 3
   MinPitch: -30
-  MaxPitch: 60
+  MaxPitch: 50
   MinYaw: -30
   MaxYaw: 60
   ZoomSpeed: 10
