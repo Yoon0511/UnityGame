@@ -108,17 +108,30 @@ public class SkillBtn: MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
     public void OnBeginDrag(PointerEventData eventData)
     {
         Dragobj = Instantiate(DragAndDropSkill);
-        Dragobj.GetComponent<DragAndDropSkill>().Init(Skill,this);
-        Dragobj.transform.SetParent(Canvas.transform);
+        if(Dragobj != null)
+        {
+            Dragobj.GetComponent<DragAndDropSkill>().Init(Skill,this);
+            Dragobj.transform.SetParent(Canvas.transform);
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
-    {
+    { 
+        if(Dragobj == null)
+        {
+            return;
+        }
+
         Dragobj.transform.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (Dragobj == null)
+        {
+            return;
+        }
+
         Dragobj.GetComponent<DragAndDropSkill>().DropSkill();
         Destroy(Dragobj);
     }

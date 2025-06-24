@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract partial class Character
+public abstract partial class Character : Object
 {
     protected StateMachine Fsm = new StateMachine();
     protected int CurrState;

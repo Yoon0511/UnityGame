@@ -331,6 +331,7 @@ MonoBehaviour:
   BodyParticlePoint: {fileID: 8724662615707469574}
   Id: 0
   Animator: {fileID: 8972083999283936779}
+  PathNode: []
   SkillList:
   - {fileID: 3772014849582412571, guid: eb37aedd3cf3adb40b6a8b7932b8b9bb, type: 3}
   - {fileID: 8051906282922564941, guid: cc6e10bb58af0fb45ad0cec7a290dd2d, type: 3}
@@ -344,10 +345,6 @@ MonoBehaviour:
   MaxSkillCount: 4
   CurrentSkill: []
   UnitFrame: {fileID: 0}
-  item: {fileID: 3288734687280227402, guid: c056d6e6aba53b74aa9c623157c9b595, type: 3}
-  weapon: {fileID: 1730676618807979461, guid: 7a2d4e9b0c4e2c04fae21eb10022ba16, type: 3}
-  amor: {fileID: -8377694153036047605, guid: 782d8aed6342e9748a421ef38f301700, type: 3}
-  ring: {fileID: -7994469555400598412, guid: dd61008d9388d8a498151906bac6c7cc, type: 3}
   HITBOX: {fileID: 3561283084199956153}
   SLASH_TRAIL: {fileID: 442765054576788088}
   equiment: {fileID: 0}

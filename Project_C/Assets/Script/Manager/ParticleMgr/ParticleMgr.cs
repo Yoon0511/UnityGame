@@ -6,15 +6,14 @@ using UnityEngine.U2D;
 
 public class ParticleMgr : MonoBehaviour
 {
+    [SerializeField]
+    GameObject Particles;
     public int MaxPoolSize = 10;
     public int LoadCount = 3;
     [NonReorderable]
     Dictionary<string, GameObject> DicParticleObjects = new Dictionary<string, GameObject>();
-
     string SelectParticleName;
-
     Dictionary<string, IObjectPool<GameObject>> DicParticlePool = new Dictionary<string, IObjectPool<GameObject>>();
-
 
     private void Awake()
     {
@@ -44,6 +43,7 @@ public class ParticleMgr : MonoBehaviour
     {
         GameObject obj = Instantiate(DicParticleObjects[SelectParticleName]);
         obj.GetComponent<PoolAble>().Pool = DicParticlePool[SelectParticleName];
+        obj.transform.SetParent(Particles.transform, false);
         return obj;
     }
     void OnReturnedToPool(GameObject _obj)

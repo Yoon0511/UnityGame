@@ -286,7 +286,8 @@ namespace Photon.Pun.UtilityScripts
                             if (lastUsedSpawnPointIndex >= SpawnPoints.Count)
                                 lastUsedSpawnPointIndex = 0;
 
-                            /// Use Vector.Zero and Quaternion.Identity if we are dealing with no or a null spawnpoint.
+                            /// Use Vector
+                            /// .Zero and Quaternion.Identity if we are dealing with no or a null spawnpoint.
                             return SpawnPoints == null || SpawnPoints.Count == 0 ? null : SpawnPoints[lastUsedSpawnPointIndex];
                         }
 

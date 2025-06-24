@@ -26,7 +26,7 @@ public class UiMgr : MonoBehaviour
     public List<GameObject> ListOpenUi = new List<GameObject>();
     bool IsOpenUi;
     /// <test>
-    public Text Text;
+    public Text SystemMsg;
     /// </test>
     private void Awake()
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public abstract partial class Character
+public abstract partial class Character : Object
 {
     [SerializeField]
     List<Skill> SkillList = new();

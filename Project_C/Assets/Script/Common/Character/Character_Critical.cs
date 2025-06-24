@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract partial class Character
+public abstract partial class Character : Object
 {
     public void IsCritical(ref DamageData _damagedata)
     {

@@ -83,6 +83,7 @@ MonoBehaviour:
   BodyParticlePoint: {fileID: 8602995777514708942}
   Id: 0
   Animator: {fileID: 4543379460965074039}
+  PathNode: []
   SkillList:
   - {fileID: 2174708344044946963}
   - {fileID: 9201172919139831484}
@@ -99,7 +100,6 @@ MonoBehaviour:
   OnPatrol: 0
   PV: {fileID: 1325800567762644438}
   BasicAttackCollider: {fileID: 8417154215137542368}
-  PatrolPointTransform: []
   AttackRange:
   - {fileID: 4671389203937129936}
   - {fileID: 7039757310843641476}

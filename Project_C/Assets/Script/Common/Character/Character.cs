@@ -24,6 +24,8 @@ public abstract partial class Character : Object
         Init();
         AddGameMgrList();
     }
+    protected virtual void FixedUpdate() { }
+
     //케릭터 생성시 기본 세팅을 위한 Init();
     public abstract void Init();
     //케릭터 별로 Damage Hit처리를 위한 함수

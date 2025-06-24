@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
+using static UnityEngine.ParticleSystem;
 
 public class PoolMgr : MonoBehaviour
 {
+    [SerializeField]
+    GameObject PoolObjs;
     public int MaxPoolSize = 30;
     public int LoadCount = 3;
     [NonReorderable]
@@ -43,6 +46,7 @@ public class PoolMgr : MonoBehaviour
     {
         GameObject obj = Instantiate(DicPoolObjects[SelectObjectName]);
         obj.GetComponent<PoolAble>().Pool = DicObjectsPool[SelectObjectName];
+        obj.transform.SetParent(PoolObjs.transform, false);
         return obj;
     }
     void OnReturnedToPool(GameObject _obj)

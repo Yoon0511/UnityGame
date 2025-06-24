@@ -11,7 +11,6 @@ public partial class GameMgr : MonoBehaviourPun
     public GameObject PLAYEROBJ;
     public Player PLAYER;
     public Terrain Terrain;
-    
     //UI
     public DamageFont DAMAGE_FONT;
     public Canvas CANVAS;
@@ -37,6 +36,7 @@ public partial class GameMgr : MonoBehaviourPun
 
     public Transform SpwanPoint;
     public Transform RespwanPoint;
+    public GameObject Monsters;
     private void Awake()
     {
         Shared.GameMgr = this;
@@ -46,7 +46,7 @@ public partial class GameMgr : MonoBehaviourPun
     private void Start()
     {
         Shared.PhotonMgr.SpawnPoint = SpwanPoint;
-        Shared.PhotonMgr.JoinRoom();
+        //Shared.PhotonMgr.JoinRoom();
     }
 
     public Sprite GetSpriteAtlas(string _Atlas, string _Name)

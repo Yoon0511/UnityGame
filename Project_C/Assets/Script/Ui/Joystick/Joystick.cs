@@ -23,6 +23,7 @@ public class Joystick : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHan
     public void OnBeginDrag(PointerEventData eventData)
     {
         IsDrag = true;
+        Player.AutoMoveCancle();
     }
 
     public void OnDrag(PointerEventData eventData)

@@ -252,6 +252,11 @@ MonoBehaviour:
   BodyParticlePoint: {fileID: 4375224580326033134}
   Id: 0
   Animator: {fileID: 1969641326546743470}
+  PathNode:
+  - {fileID: 4364854001071376665}
+  - {fileID: 6866818147780020680}
+  - {fileID: 6436578849556708535}
+  - {fileID: 8799623525991770633}
   SkillList: []
   ProjectilePoint: {fileID: 0}
   MaxSkillCount: 3
@@ -262,16 +267,8 @@ MonoBehaviour:
   OnPatrol: 1
   PV: {fileID: 0}
   BasicAttackCollider: {fileID: 6942212298059654803}
-  PatrolPointTransform:
-  - {fileID: 4364854001071376665}
-  - {fileID: 6866818147780020680}
-  - {fileID: 6436578849556708535}
-  - {fileID: 8799623525991770633}
   IsLeader: 1
-  ListColleagueMonsters:
-  - {fileID: 1739190282939269064, guid: 2f8fa9281b1168242a952cf4a42ce3b3, type: 3}
-  - {fileID: 1739190282939269064, guid: 2f8fa9281b1168242a952cf4a42ce3b3, type: 3}
-  - {fileID: 1739190282939269064, guid: 2f8fa9281b1168242a952cf4a42ce3b3, type: 3}
+  ListColleagueMonster: []
 --- !u!114 &8615692650275024200
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class QuestInfo : MonoBehaviour
 {
+    public GameObject AutoMovePopupPrefap;
     public Text QUEST_NAME;
     public Text QUEST_CONTENTS;
     public Text QUEST_REWARD;
@@ -40,4 +41,10 @@ public class QuestInfo : MonoBehaviour
     }
 
     public QuestBase GetQuest() { return Quest; }
+
+    public void OnAutoMovePopup()
+    {
+        GameObject popup = Instantiate(AutoMovePopupPrefap);
+        popup.transform.SetParent(Shared.GameMgr.CANVAS.transform, false);
+    }
 }

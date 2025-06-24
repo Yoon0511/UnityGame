@@ -11,6 +11,7 @@ public static class Shared
     public static PhotonMgr PhotonMgr;
     public static SceneMgr SceneMgr;
     public static SoundMgr SoundMgr;
+    public static PathNodeMgr PathNodeMgr;
 
     //////////////////////////////////////
     public static MainCamera MainCamera;

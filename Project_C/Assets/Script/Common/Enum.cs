@@ -9,6 +9,7 @@ public enum STATE
     ATTACK,
     DIE,
     RIDING,
+    AUTOMOVE,
     ENUM_END
 }
 public enum PLAYER_ANI_STATE
