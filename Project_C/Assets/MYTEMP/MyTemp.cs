@@ -34,28 +34,42 @@ public class MyTemp : MonoBehaviour
     //    StartCoroutine(DBPost(Http + ConnectUrl,"dev"));
     //}
 
-    string[] Villgename = { "Oakridge", "Redhill", "Brimford", "Greenbrook" };
+    //string[] Villgename = { "Oakridge", "Redhill", "Brimford", "Greenbrook" };
 
     public Store Store;
+
+    private void Start()
+    {
+        
+    }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.I))
+        //if(Input.GetKeyDown(KeyCode.I))
+        //{
+        //    Enhancement.gameObject.SetActive(true);
+        //    Enhancement.Init();
+        //}
+        //
+        //if(Input.GetKeyDown(KeyCode.O))
+        //{
+        //    VillageName villageName = Shared.PoolMgr.GetObject("VillageName").GetComponent<VillageName>();
+        //    villageName.Init(Villgename[Random.Range(0, Villgename.Length)]);
+        //}
+        //
+        //if(Input.GetKeyDown(KeyCode.P))
+        //{
+        //    Store.gameObject.SetActive(true);
+        //    //
+        //    //Store.Init();
+        //}
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            Enhancement.gameObject.SetActive(true);
-            Enhancement.Init();
+            Shared.GameMgr.Save();
         }
 
-        if(Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.O))
         {
-            VillageName villageName = Shared.PoolMgr.GetObject("VillageName").GetComponent<VillageName>();
-            villageName.Init(Villgename[Random.Range(0, Villgename.Length)]);
-        }
-
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            Store.gameObject.SetActive(true);
-            //
-            //Store.Init();
+            Shared.GameMgr.Load();
         }
     }
 }

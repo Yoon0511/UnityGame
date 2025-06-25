@@ -55,4 +55,34 @@ public class StatData : MonoBehaviour
     }
 
     public Transform GetUiHeadTransform() {return uihead;}
+
+    public void Print()
+    {
+        //Debug.Log("==== Stat Data ====");
+        //foreach (var pair in dicstat)
+        //{
+        //    Debug.Log($"{pair.Key}: {pair.Value}");
+        //}
+        
+    }
+
+    public StatDataJson ToJsonData()
+    {
+        StatDataJson json = new StatDataJson();
+
+        foreach (var pair in dicstat)
+        {
+            json.ListStat.Add(new StatDataJson.StatEntry { type = pair.Key, value = pair.Value });
+        }
+        return json;
+    }
+
+    public void ApplyJsonData(StatDataJson _json)
+    {
+        //dicstat.Clear();
+        foreach(var entry in _json.ListStat)
+        {
+            dicstat[entry.type] = entry.value;
+        }
+    }
 }

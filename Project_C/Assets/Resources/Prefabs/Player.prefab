@@ -344,7 +344,6 @@ MonoBehaviour:
   ProjectilePoint: {fileID: 5308579304984422552}
   MaxSkillCount: 4
   CurrentSkill: []
-  UnitFrame: {fileID: 0}
   HITBOX: {fileID: 3561283084199956153}
   SLASH_TRAIL: {fileID: 442765054576788088}
   equiment: {fileID: 0}
@@ -360,6 +359,7 @@ MonoBehaviour:
   Sanddle: {fileID: 7720314451137140363}
   Riding: {fileID: 6540128684458656345}
   BuffUi: {fileID: 0}
+  UnitFrame: {fileID: 0}
 --- !u!54 &3407704953908177111
 Rigidbody:
   m_ObjectHideFlags: 0

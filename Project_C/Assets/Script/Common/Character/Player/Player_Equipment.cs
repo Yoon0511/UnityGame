@@ -1,4 +1,5 @@
 using AYellowpaper.SerializedCollections;
+using Photon.Pun.Demo.Cockpit;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,6 +33,33 @@ public partial class Player : Character
             else if (IsInStat && UnEquip) //장비 스탯 해제
             {
                 Statdata.EnhanceStat((STAT_TYPE)i, -statValue);
+            }
+        }
+    }
+
+    public EquipmentItemJson EquipmentItemToJson()
+    {
+        EquipmentItemJson json = new EquipmentItemJson();
+
+        foreach (var item in DicEquitmentItems)
+        {
+            json.ListItemId.Add(item.Value.Id);
+        }
+
+        return json;
+    }
+
+    public void ApplyEquipmentItemData(EquipmentItemJson _json)
+    {
+        for(int i =0; i<_json.ListItemId.Count; i++)
+        {
+            if(_json.ListItemId[i] != 0) // 0 = 아이템 없음
+            {
+                EquipmentItem equipItem = Shared.DataMgr.GetItem(_json.ListItemId[i]) as EquipmentItem;
+                if (equipItem != null)
+                {
+                    equiment.EquippedItem(equipItem);
+                }
             }
         }
     }

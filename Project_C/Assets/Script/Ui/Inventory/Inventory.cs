@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using SimpleJSON;
 
 public class Inventory : MonoBehaviour, IPointerClickHandler
 {
@@ -110,5 +111,38 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
     {
         Ui.SetActive(true);
         Shared.SoundMgr.PlaySFX("UI_NOTIFICATION");
+    }
+
+    public InventoryJson ToJsonData()
+    {
+        InventoryJson json = new InventoryJson();
+
+        Player player = Owner as Player;
+        if (player != null)
+        {
+            json.Gold = player.GetGold();
+        }
+
+        foreach (ItemBase item in items)
+        {
+            json.ListItemId.Add(item.Id);
+        }
+
+        return json;
+    }
+
+    public void ApplyJsonData(InventoryJson _json)
+    {
+        for(int i = 0;i<_json.ListItemId.Count;++i)
+        {
+            int itemid = _json.ListItemId[i];
+            AddItem(Shared.DataMgr.GetItem(itemid));
+        }
+
+        Player player = Owner as Player;
+        if (player != null)
+        {
+            player.SetGold(_json.Gold);
+        }
     }
 }

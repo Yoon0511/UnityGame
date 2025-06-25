@@ -23,6 +23,18 @@ public abstract partial class Character : Object
         SkillList.Add(_skill);
     }
 
+    public Skill GetSkill(int _id)
+    {
+        for(int i =0;i<SkillList.Count;i++)
+        {
+            if (SkillList[i].GetId() == _id)
+            {
+                return SkillList[i];
+            }
+        }
+        return null;
+    }
+
     public abstract void UseSkill(int _index);
     protected void UseSkill(int _index,int _state,int _skillmotion, bool _instant = false)
     {

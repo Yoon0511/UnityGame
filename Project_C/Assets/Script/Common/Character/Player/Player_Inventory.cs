@@ -53,4 +53,9 @@ public partial class Player : Character
     }
 
     public bool GetUseStore() { return UseStore; }
+
+    public void SetGold(int _gold)
+    {
+        Gold = _gold;
+    }
 }

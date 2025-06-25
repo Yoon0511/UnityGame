@@ -22,7 +22,7 @@ public class UiMgr : MonoBehaviour
     public RespwanPopup RespwanPopup;
     public SoundOptionPopup SoundOptionPopup;
     public GameObject GameClosePopup;
-
+    public SkillBtn[] SkillBtn;
     public List<GameObject> ListOpenUi = new List<GameObject>();
     bool IsOpenUi;
     /// <test>

@@ -47,6 +47,7 @@ public partial class GameMgr : MonoBehaviourPun
     {
         Shared.PhotonMgr.SpawnPoint = SpwanPoint;
         //Shared.PhotonMgr.JoinRoom();
+        SavePathInit();
     }
 
     public Sprite GetSpriteAtlas(string _Atlas, string _Name)

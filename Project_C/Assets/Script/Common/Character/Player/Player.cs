@@ -177,13 +177,13 @@ public partial class Player : Character
         //페이드인
         //Shared.GameMgr.FadeInOut.FadeIn();
 
-        //소환 이펙트 - 수정해야함
-        //StartCoroutine(ISpwanEffect());
+        //소환 이펙트
+        StartCoroutine(ISpwanEffect());
     }
 
     IEnumerator ISpwanEffect()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         //소환이펙트
         GameObject Effect =  Shared.ParticleMgr.CreateParticle("SpwanEffect", transform, 3.0f);
         Effect.transform.SetParent(transform);
