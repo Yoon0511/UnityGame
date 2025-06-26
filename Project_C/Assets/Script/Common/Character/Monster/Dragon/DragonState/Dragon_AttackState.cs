@@ -24,7 +24,7 @@ public class Dragon_AttackState : StateBase
     }
     public override void OnStateEnter()
     {
-        SkillDelayTime = 6.0f;
+        SkillDelayTime = 4.5f;
         BiteAtkDelayTime = 1.5f;
         SearchDelayTime = 0.5f;
         BiteAtkElapsedTime = 1.2f;
@@ -86,9 +86,10 @@ public class Dragon_AttackState : StateBase
             //CurrSkill = (int)DRAGON_SKILL.RUSH;
             //RandomSkil = (int)DRAGON_SKILL.BREATH;
 
+           
             RandomSkil = Dragon.SkillCount;
             Dragon.SkillCount++;
-            if(Dragon.SkillCount >= 6)
+            if(Dragon.SkillCount >= (int)DRAGON_SKILL.ENUM_END)
             {
                 Dragon.SkillCount = 0;
             }
@@ -132,15 +133,10 @@ public class Dragon_AttackState : StateBase
             Dragon.GetCurrentSkill().SetCurrentState((int)SKILL_STATE.READY);
 
             // 추가 스킬 공격
-            while(SequenceElapsedTime <= SequenceDelayTime)
-            {
-                SequenceElapsedTime += Time.deltaTime;
-            }
-
+            SequenceElapsedTime += Time.deltaTime;
             if (SequenceElapsedTime >= SequenceDelayTime)
             {
                 SequenceElapsedTime = 0.0f;
-
                 SequenceAtk(CurrSkill);
 
                 if (Dragon.IsPlayerInAttackRange() == false)
@@ -154,6 +150,7 @@ public class Dragon_AttackState : StateBase
 
     void SequenceAtk(int _CurrSkill)
     {
+        Debug.Log("SequenceAtk");
         switch (_CurrSkill)
         {
             case (int)DRAGON_SKILL.ROAR:

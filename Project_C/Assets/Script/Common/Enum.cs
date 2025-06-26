@@ -68,6 +68,14 @@ public enum MONSTER_STATE
     ENUM_END
 }
 
+public enum TREANT_STATE
+{
+    NONE,
+    CHASE,
+    ATTACK,
+    DIE,
+    ENUM_END
+}
 public enum MONSTER_ANI_STATE
 {
     NONE,
@@ -78,6 +86,15 @@ public enum MONSTER_ANI_STATE
     RUN,
     ENUM_END
 }
+public enum TREANT_ANI_STATE
+{
+    NONE,
+    RUN,
+    ATTACK,
+    DIE,
+    ENUM_END
+}
+
 public enum STAT_TYPE
 {
     NONE,
@@ -137,6 +154,7 @@ public enum DRAGON_SKILL
     ROAR,
     PROJECTILE,
     FIRESTOME,
+    SPWAN,
     ENUM_END
 }
 
@@ -219,6 +237,7 @@ public enum MONSTER_ID
     GOLEM,
     DRAGON,
     WOLF,
+    TREANT,
     ENUM_END
 }
 

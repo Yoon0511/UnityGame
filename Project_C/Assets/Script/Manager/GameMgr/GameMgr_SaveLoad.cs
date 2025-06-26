@@ -7,7 +7,6 @@ using UnityEngine;
 
 public partial class GameMgr
 {
-    public StatData StatData;
     string folderPath;
     string filePath;
 

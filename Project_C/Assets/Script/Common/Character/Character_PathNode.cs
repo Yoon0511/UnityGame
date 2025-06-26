@@ -79,6 +79,10 @@ public abstract partial class Character : Object
         PathNode = _pathnode;
     }
 
+    public Vector3 GetPathNodePos(int _index)
+    {
+        return PathNodePos[PathNodeIndex];
+    }
     public bool GetIsPathComplete()
     {
         return IsPathComplete;

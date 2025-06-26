@@ -98,6 +98,4 @@ public partial class Monster
         yield return new WaitForSeconds(_time);
         ChangeState((int)MONSTER_STATE.PATROL);
     }
-
-
 }

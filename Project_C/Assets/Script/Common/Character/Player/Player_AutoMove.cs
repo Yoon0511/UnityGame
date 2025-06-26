@@ -16,7 +16,15 @@ public partial class Player : Character
     {
         SetPathNode(Shared.PathNodeMgr.GetPathNode(1));
         PathNodeInit(false);
+        int NearIndex = FindNearPathNodeIndex();
         SetPathNodeIndex(FindNearPathNodeIndex());
+
+        //자신부터 가장 가까운 지점까지 표시
+        Vector3 p2 = GetPathNodePos(NearIndex);
+        Shared.PathNodeMgr.CreatePathVisualizer(transform.position, p2, 5);
+        
+        //길 찾기 지점끼리 길 표시
+        Shared.PathNodeMgr.CreatePathVisualizerAll(PathNodePos, 5, NearIndex);
     }
 
     int FindNearPathNodeIndex()
@@ -57,5 +65,6 @@ public partial class Player : Character
         {
             ChangeState((int)STATE.IDLE);
         }
+        Shared.PathNodeMgr.DeleteAllPathVisualizer();
     }
 }

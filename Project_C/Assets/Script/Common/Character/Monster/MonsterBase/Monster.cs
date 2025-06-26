@@ -85,14 +85,14 @@ public partial class Monster : Character
     }
 
     [PunRPC]
-    void RpcMonsterTakeDamage(float _damage,int _damagefontType)
+    protected void RpcMonsterTakeDamage(float _damage,int _damagefontType)
     {
         DamageData damgedata = Shared.GameMgr.DamageDataPool.Get(_damage, (DAMAGEFONT_TYPE)_damagefontType);
         Statdata.TakeDamage(damgedata);
         PV.RPC("RpcSyncHp", RpcTarget.All, GetInStatData(STAT_TYPE.HP));
     }
     [PunRPC]
-    void RpcSyncHp(float _hp)
+    protected  void RpcSyncHp(float _hp)
     {
         Statdata.SetStat(STAT_TYPE.HP, _hp);
     }

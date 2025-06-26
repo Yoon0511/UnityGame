@@ -62,6 +62,11 @@ public partial class GameMgr
                     _path = "Prefabs/Monster/Dragon/Dragon";
                     return true;
                 }
+            case MONSTER_ID.TREANT:
+                {
+                    _path = "Prefabs/Monster/Treant/Treant";
+                    return true;
+                }
             default:
                 return false;
         }
