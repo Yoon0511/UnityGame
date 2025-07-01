@@ -41,6 +41,10 @@ public abstract partial class Character : Object
     { 
         return Statdata.GetData(_type);
     }
+    public string GetStatColor(STAT_TYPE _type)
+    {
+        return Statdata.GetStatColor(_type);
+    }
     public StatData GetStatData()
     {
         return Statdata;

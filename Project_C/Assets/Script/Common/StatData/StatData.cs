@@ -85,4 +85,19 @@ public class StatData : MonoBehaviour
             dicstat[entry.type] = entry.value;
         }
     }
+
+    public string GetStatColor(STAT_TYPE _type)
+    {
+        switch(_type)
+        {
+            case STAT_TYPE.ATK:
+                return "B22222";
+            case STAT_TYPE.DEF:
+                return "4682B4";
+            case STAT_TYPE.SPEED:
+                return "2E8B57";
+            default:
+                return "FFFFFF";
+        }
+    }
 }
