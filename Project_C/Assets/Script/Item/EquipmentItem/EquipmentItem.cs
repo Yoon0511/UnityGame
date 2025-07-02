@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using AYellowpaper.SerializedCollections;
-using static UnityEngine.Rendering.PostProcessing.HistogramMonitor;
 public abstract class EquipmentItem : ItemBase
 {
     public EQUITMENT_TYPE EquimentType;
@@ -25,6 +24,11 @@ public abstract class EquipmentItem : ItemBase
         //장비슬롯에 장착
         Shared.GameMgr.PLAYER.GetEquipmentWindow().EquippedItem(this);
         Shared.GameMgr.PLAYER.GetInventory().DeleteItem(this);
+    }
+    //장비 해제시 호출
+    public virtual void UnEquip()
+    {
+
     }
 
     public void SetRandomStat()

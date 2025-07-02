@@ -36,6 +36,8 @@ public abstract class ItemBase : PoolAble
                 return "사용 아이템";
             case ITEM_TYPE.EQUIPMENT:
                 return "장비 아이템";
+            case ITEM_TYPE.PETITEM:
+                return "펫";
             default:
                 return null;
         }

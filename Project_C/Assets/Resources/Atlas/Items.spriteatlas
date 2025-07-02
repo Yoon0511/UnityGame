@@ -108,6 +108,7 @@ SpriteAtlas:
     - 3f5b302f67e2fc24ba1ff12ffd0da746: 21300000
     - 38d7473fda2d3af4a93c182957738997: 21300000
     - f024e34fafedf0448ac06e53c4043de7: 21300000
+    - 4c55374f49f79eb42bd7bf9bdab69d73: 21300000
     - ebcb0b4f7f861d44ea4f09d6903032cb: 21300000
     - 2478f8cf7e8fc72428a23ba6ce8fbf0d: 21300000
   m_MasterAtlas: {fileID: 0}
@@ -170,6 +171,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 3f5b302f67e2fc24ba1ff12ffd0da746, type: 3}
   - {fileID: 21300000, guid: 38d7473fda2d3af4a93c182957738997, type: 3}
   - {fileID: 21300000, guid: f024e34fafedf0448ac06e53c4043de7, type: 3}
+  - {fileID: 21300000, guid: 4c55374f49f79eb42bd7bf9bdab69d73, type: 3}
   - {fileID: 21300000, guid: ebcb0b4f7f861d44ea4f09d6903032cb, type: 3}
   - {fileID: 21300000, guid: 2478f8cf7e8fc72428a23ba6ce8fbf0d, type: 3}
   m_PackedSpriteNamesToIndex:
@@ -231,6 +233,7 @@ SpriteAtlas:
   - Free-Fantasy-Items_04
   - Free-Fantasy-Items_11
   - Free-Fantasy-Items_30
+  - PetItem
   - Free-Fantasy-Items_44
   - Free-Fantasy-Items_29
   m_RenderDataMap: {}

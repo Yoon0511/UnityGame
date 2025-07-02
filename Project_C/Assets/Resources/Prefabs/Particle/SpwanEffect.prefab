@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5632941446517896978, guid: 8e7040312e161f64385d5ed469bd2e9e, type: 3}
       propertyPath: m_Name
-      value: SpwanEffect Variant
+      value: SpwanEffect
       objectReference: {fileID: 0}
     - target: {fileID: 6235028522445348303, guid: 8e7040312e161f64385d5ed469bd2e9e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -139,4 +139,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b34b0cf688e6e4dafbb1e871ee09e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 1
+  Duration: 0

@@ -33,6 +33,7 @@ public partial class Player : Character
             else if (IsInStat && UnEquip) //장비 스탯 해제
             {
                 Statdata.EnhanceStat((STAT_TYPE)i, -statValue);
+                _equipmentItem.UnEquip();
             }
         }
     }

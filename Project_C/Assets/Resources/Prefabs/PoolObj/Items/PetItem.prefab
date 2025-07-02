@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7768465418839894094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5841916412342843458}
+  - component: {fileID: 7454815265421496196}
+  m_Layer: 0
+  m_Name: PetItem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5841916412342843458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7768465418839894094}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 332.88184, y: 9.727053, z: 276.26572}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7454815265421496196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7768465418839894094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f74100f11ddc69841817fbfa04f13763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemType: 3
+  ItemName: PETITEM
+  Id: 0
+  SpriteName: PetItem
+  Owner: {fileID: 0}
+  SellPrice: 100
+  BuyPrice: 250
+  Grade: 3
+  EquimentType: 4
+  DicEquipmentItemStat:
+    _serializedList:
+    - Key: 6
+      Value: 250
+  EnhanceValue: 0
+  EnhanceRisingAmount: 5
+  PetPrefab: {fileID: 385769217398778641, guid: 38448f357a3ca7c42b5da06b48d6a651, type: 3}

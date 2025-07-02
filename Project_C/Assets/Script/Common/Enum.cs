@@ -44,6 +44,7 @@ public enum ITEM_TYPE
     NONE,
     EQUIPMENT,
     USE,
+    PETITEM,
     ENUM_END
 }
 
@@ -53,6 +54,7 @@ public enum EQUITMENT_TYPE
     WEAPON,
     AMOR,
     ACCESSORIES,
+    PET,
     ENUM_END
 }
 

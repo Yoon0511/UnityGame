@@ -17,16 +17,12 @@ public partial class Player : Character
             OnAttack();
         }
 
-        //라이딩 테스트
+        //펫 테스트
         if (Input.GetKeyDown(KeyCode.F1))
         {
-            OnRiding();
+            PetItem petitem = Shared.PoolMgr.GetObject("PetItem").GetComponent<PetItem>();
+            Inventory.AddItem(petitem);
         }
-        if (Input.GetKeyDown(KeyCode.F2))
-        {
-            OffRiding();
-        }
-
         //가드 테스트
         if (Input.GetKeyDown(KeyCode.Tab))
         {
