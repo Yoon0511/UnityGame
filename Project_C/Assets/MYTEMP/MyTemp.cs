@@ -10,41 +10,9 @@ public class MyTemp : MonoBehaviour
     public EquipmentEnhancement Enhancement;
     //Æ÷Åæ¼­¹ö
     //string Http = "http://58.78.211.182:3000/";
-    string Http = "http://127.0.0.1:3000/";
-
-    string ConnectUrl = "process/shopreset";
-
-    IEnumerator DBPost(string _Url, string _Num)
-    {
-        WWWForm form = new WWWForm();
-        form.AddField("num", _Num);
-
-        //UnityWebRequest www = UnityWebRequest.Post(_Url, form);
-        UnityWebRequest www = UnityWebRequest.Get(_Url);
-
-        yield return www.SendWebRequest();
-
-        Debug.Log(www.downloadHandler.text);
-
-        JSONNode node = JSONNode.Parse(www.downloadHandler.text);
-
-        string str = node;
-        Debug.Log(str);
-    }
-
-    public void OnBtnConnect()
-    {
-        StartCoroutine(DBPost(Http + ConnectUrl,"dev"));
-    }
-
     //string[] Villgename = { "Oakridge", "Redhill", "Brimford", "Greenbrook" };
 
     public Store Store;
-
-    private void Start()
-    {
-        
-    }
     private void Update()
     {
         //if(Input.GetKeyDown(KeyCode.I))
@@ -65,11 +33,6 @@ public class MyTemp : MonoBehaviour
         //    //
         //    //Store.Init();
         //}
-
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            OnBtnConnect();
-        }
         if (Input.GetKeyDown(KeyCode.P))
         {
             Shared.GameMgr.Save();
