@@ -323,3 +323,11 @@ public enum SOUNDEFECT
 
     ENUM_END
 }
+
+public enum DRAWPETITEM_ANI_STATE
+{
+    NONE,
+    ENTER,
+    EXIT,
+    ENUM_END
+}

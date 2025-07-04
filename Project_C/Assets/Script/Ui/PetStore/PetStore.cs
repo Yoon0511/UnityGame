@@ -10,6 +10,14 @@ public class PetStore : MonoBehaviour
     public GameObject DrawPetItemPrefab;
     public GameObject DrawItemParent;
     public List<GameObject> DrawPetItems = new();
+
+    int PetItemId = 0;
+
+    private void OnEnable()
+    {
+        DrawItemsClear();
+    }
+
     public void Buy(JSONNode _data)
     {
         float probability = float.Parse(_data[0]);
@@ -17,17 +25,8 @@ public class PetStore : MonoBehaviour
 
         GameObject DrawPetItem = Instantiate(DrawPetItemPrefab);
         DrawPetItem.transform.SetParent(DrawItemParent.transform, false);
-        DrawPetItem.GetComponent<DrawPetItem>().Init(Grade);
+        DrawPetItem.GetComponent<DrawPetItem>().Init(Grade, PetItemId);
         DrawPetItems.Add(DrawPetItem);
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Action<JSONNode> PetBuy = Buy;
-            Shared.ServerMgr.OnBtnConnect(PetBuy);
-        }
     }
 
     public void OnPetDrawOne()
@@ -57,27 +56,27 @@ public class PetStore : MonoBehaviour
     {
         if (_probability <= 0.05f)
         {
-            Debug.Log($"LEGENDARY - {_probability:00.00%}");
+            PetItemId = 1030;
             return ITEM_GRADE.LEGENDARY;
         }
         else if(_probability <= 0.1f)
         {
-            Debug.Log($"EPIC - {_probability:00.00%}");
+            PetItemId = 1029;
             return ITEM_GRADE.EPIC;
         }
         else if(_probability <= 0.15f)
         {
-            Debug.Log($"RARE - {_probability:00.00%}");
+            PetItemId = 1028;
             return ITEM_GRADE.RARE;
         }
         else if(_probability <= 0.3f)
         {
-            Debug.Log($"UNCOMMON - {_probability:00.00%}");
+            PetItemId = 1027;
             return ITEM_GRADE.UNCOMMON;
         }
         else
         {
-            Debug.Log($"COMMON - {_probability:00.00%}");
+            PetItemId = 1026;
             return ITEM_GRADE.COMMON;
         }
        

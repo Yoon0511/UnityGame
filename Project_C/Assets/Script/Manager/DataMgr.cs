@@ -30,18 +30,22 @@ public class DataMgr : MonoBehaviour
                 TableItem.EquipItemStatInfo EquipItemStatInfo = TableItem.GetEquipItemStatInfo(_id);
                 TableItem.EquipMentItemInfo EquipMentItemInfo = TableItem.GetEquipMentItemInfo(_id);
                 EquipmentItem Equipmentitem = Shared.PoolMgr.GetObject(ItemBaseInfo.Prefabs).GetComponent<EquipmentItem>();
-                //EquipmentItem Equipmentitem = new Weapon();
                 Equipmentitem.InputItemBaseData(ItemBaseInfo);
                 Equipmentitem.InputEquipMentData(EquipMentItemInfo, EquipItemStatInfo);
                 return Equipmentitem;
-
             case ITEM_TYPE.USE:
                 TableItem.UseItemInfo UseItemInfo = TableItem.GetUseItemInfo(_id);
                 Potion UseItem = Shared.PoolMgr.GetObject(ItemBaseInfo.Prefabs).GetComponent<Potion>();
                 UseItem.InputItemBaseData(ItemBaseInfo);
                 UseItem.InputUseItemData(UseItemInfo);
                 return UseItem;
-
+            case ITEM_TYPE.PETITEM:
+                TableItem.EquipItemStatInfo PetItemStatInfo = TableItem.GetEquipItemStatInfo(_id);
+                TableItem.EquipMentItemInfo PetItemInfo = TableItem.GetEquipMentItemInfo(_id);
+                PetItem PetItem = Shared.PoolMgr.GetObject(ItemBaseInfo.Prefabs).GetComponent<PetItem>();
+                PetItem.InputItemBaseData(ItemBaseInfo);
+                PetItem.InputEquipMentData(PetItemInfo, PetItemStatInfo);
+                return PetItem;
             default:
                 return null;
         }       

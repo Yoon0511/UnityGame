@@ -1,4 +1,4 @@
-﻿ID,TYPE,Prefab,ItemName,SpriteName,SellPrice,BuyPrice,Grade
+ID,TYPE,Prefab,ItemName,SpriteName,SellPrice,BuyPrice,Grade
 1001,1,Weapon_Item,Weapon,Free-Fantasy-Items_01,250,500,1
 1002,1,Weapon_Item,Weapon,Free-Fantasy-Items_02,300,600,2
 1003,1,Weapon_Item,Weapon,Free-Fantasy-Items_03,350,700,3
@@ -24,3 +24,12 @@
 1023,2,Potion,MP_Posion,GreatManaPotion_1,200,250,4
 1024,2,Potion,HP_Postion,HugeHealthPotion_1,300,350,5
 1025,2,Potion,MP_Posion,HugeManaPotion_1,300,350,5
+1026,3,PetItem,Pet,PetItem,100,500,1
+1027,3,PetItem,Pet,PetItem,200,600,2
+1028,3,PetItem,Pet,PetItem,300,700,3
+1029,3,PetItem,Pet,PetItem,400,800,4
+1030,3,PetItem,Pet,PetItem,500,900,5
+
+
+
+

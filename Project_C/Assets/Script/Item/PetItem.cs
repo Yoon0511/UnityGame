@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -59,8 +60,6 @@ public class PetItem : EquipmentItem
     public override string GetItemExplanation()
     {
         string explnation = $"<color=#FFFFFF>{GetStrSTAT_Type()}+</color> <color=#FF4500>{GetItemStat()}</color>";
-        explnation += "\n";
-        explnation += "PET ITEM";
         return explnation;
     }
 }
