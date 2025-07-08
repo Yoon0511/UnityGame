@@ -32,7 +32,7 @@ public partial class Player : Character
         //UpgradeStat(STAT_TYPE.ATK, 5);
         //UpgradeStat(STAT_TYPE.DEF, 1);
 
-        StatPoint += 5;
+        StatPoint += 3;
         MaxPoint = StatPoint;
 
         UpdateUnitFrame();

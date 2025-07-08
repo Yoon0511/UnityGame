@@ -17,6 +17,7 @@ public class VillageName : Particle
     public void Init(string _name)
     {
         Text.text = _name;
+        transform.SetParent(Shared.GameMgr.CANVAS.transform, false);
         RectTransform.anchoredPosition = new Vector2(0, 339);
     }
 }

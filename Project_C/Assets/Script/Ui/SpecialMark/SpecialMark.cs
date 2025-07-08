@@ -21,6 +21,7 @@ public class SpecialMark : Particle
     {        
         Owner = _owner;
         Duration = _duration;
+        transform.SetParent(Shared.GameMgr.CANVAS.transform, false);
         Image.sprite = Shared.GameMgr.GetSpriteAtlas("SpecialMark", _markname);
     }
 

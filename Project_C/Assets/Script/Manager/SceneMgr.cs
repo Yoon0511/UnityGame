@@ -10,6 +10,8 @@ public class SceneMgr : MonoBehaviour
     public SCENE Scene = SCENE.TITLE;
     public AsyncOperation AsyncOper;
     public Image Image;
+    bool IsDataLoad;
+
     private void Awake()
     {
         Shared.SceneMgr = this;
@@ -52,5 +54,13 @@ public class SceneMgr : MonoBehaviour
         return AsyncOper.progress;
     }
 
- 
+    public bool GetIsDataLoad()
+    {
+        return IsDataLoad;
+    }
+
+    public void SetIsDataLoad(bool _load)
+    {
+        IsDataLoad = _load;
+    }
 }

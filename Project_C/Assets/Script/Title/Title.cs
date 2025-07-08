@@ -14,12 +14,14 @@ public class Title : MonoBehaviour
         FadeInOut.FadeIn();
     }
 
-    public void OnGameStart()
+    public void OnGameStart(bool _load)
     {
         ConnectPopup.gameObject.SetActive(true);
         ConnectPopup.StartProgress();
         AsyncOper = SceneManager.LoadSceneAsync((int)SCENE.INGAME);
         SetallowSceneActivation(false);
+
+        Shared.SceneMgr.SetIsDataLoad(_load);
     }
 
     public void SetallowSceneActivation(bool _value)

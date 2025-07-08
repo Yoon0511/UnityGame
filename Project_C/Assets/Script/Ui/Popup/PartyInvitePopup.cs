@@ -22,6 +22,7 @@ public class PartyInvitePopup : PoolAble
     {
         Player = _player;
         RectTransform.anchoredPosition = Vector2.zero;
+        transform.SetParent(Shared.GameMgr.CANVAS.transform, false);
 
         Player player = Shared.GameMgr.GetPlayerinListforViewid(_player.GetPhotonViewId());
         text.text = $"<color=#1E90FF><b>{player.GetCharacterName()}</b></color>님 파티에 참가하시겠습니까?";

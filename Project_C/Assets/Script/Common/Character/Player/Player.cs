@@ -100,6 +100,7 @@ public partial class Player : Character
         //다른 플레이어 클릭 시
         if(PV.IsMine == false)
         {
+            Debug.Log("123");
             int OtherPVId = ((Player)_character).GetPhotonViewId();
             SelectPlayerViewId = OtherPVId;
             Shared.UiMgr.CreateSelectUi(GetPhotonViewId(),this);
@@ -175,10 +176,17 @@ public partial class Player : Character
         RidingInit();
 
         //페이드인
-        //Shared.GameMgr.FadeInOut.FadeIn();
+        Shared.GameMgr.FadeInOut.FadeIn();
 
         //소환 이펙트
         StartCoroutine(ISpwanEffect());
+
+        //불러오기 시 저장데이터 로드
+        bool SaveDataLoad = Shared.SceneMgr.GetIsDataLoad();
+        if(SaveDataLoad)
+        {
+            Shared.GameMgr.Load();
+        }
     }
 
     IEnumerator ISpwanEffect()

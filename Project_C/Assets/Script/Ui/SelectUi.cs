@@ -27,6 +27,7 @@ public class SelectUi : PoolAble
     {
         Player = _player;
         Target = Player.transform;
+        transform.SetParent(Shared.GameMgr.CANVAS.transform, false);
         StartCoroutine(IAutoClose());
     }
 

@@ -24,7 +24,7 @@ public class Dragon_AttackState : StateBase
     }
     public override void OnStateEnter()
     {
-        SkillDelayTime = 4.5f;
+        SkillDelayTime = 7.0f;//4.5f;
         BiteAtkDelayTime = 1.5f;
         SearchDelayTime = 0.5f;
         BiteAtkElapsedTime = 1.2f;
@@ -86,10 +86,9 @@ public class Dragon_AttackState : StateBase
             //CurrSkill = (int)DRAGON_SKILL.RUSH;
             //RandomSkil = (int)DRAGON_SKILL.BREATH;
 
-           
             RandomSkil = Dragon.SkillCount;
             Dragon.SkillCount++;
-            if(Dragon.SkillCount >= (int)DRAGON_SKILL.ENUM_END)
+            if(Dragon.SkillCount >= (int)DRAGON_SKILL.SPWAN)
             {
                 Dragon.SkillCount = 0;
             }
