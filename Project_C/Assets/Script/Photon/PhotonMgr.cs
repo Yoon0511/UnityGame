@@ -70,8 +70,8 @@ public partial class PhotonMgr : MonoBehaviourPunCallbacks
 
         // 기존 룸에 참여 시도, 없으면 생성
         // 인게임씬에서 연걸시 사용
-        //RoomOptions roomOptions = new RoomOptions { MaxPlayers = MaxPlayersPerRoom };
-        //PhotonNetwork.JoinOrCreateRoom(RoomName, roomOptions, TypedLobby.Default);
+        RoomOptions roomOptions = new RoomOptions { MaxPlayers = MaxPlayersPerRoom };
+        PhotonNetwork.JoinOrCreateRoom(RoomName, roomOptions, TypedLobby.Default);
     }
 
     //타이틀씬에서 인게임씬으로 넘어갈때 사용

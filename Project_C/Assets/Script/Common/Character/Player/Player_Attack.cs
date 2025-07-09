@@ -35,6 +35,21 @@ public partial class Player : Character
         }
     }
 
+    public void AutoAttack()
+    {
+        if (IsBasicAttack)
+        {
+            PlayAnimation("Ani_State", (int)PLAYER_ANI_STATE.ATTACK);
+        }
+
+        if (IsComboEnable)
+        {
+            ComboIndex++;
+            PlayAni_Trigger("Ani_SlashCombo");
+            IsComboEnable = false;
+        }
+    }
+
     public override void Hit(DamageData _damagedata)
     {
         if(PV.IsMine == false || IsDead)

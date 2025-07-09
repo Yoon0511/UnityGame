@@ -28,7 +28,7 @@ public partial class Monster
         for(int i = 0; i < ListPlayer.Count; ++i)
         {
             float dist = DistXZ(ListPlayer[i].transform.position, transform.position);
-            if (dist <= detectionRange)
+            if (dist <= DetectionRange)
             {
                 ChangeTarget(ListPlayer[i].gameObject);
                 return true;
@@ -50,10 +50,10 @@ public partial class Monster
     //    Gizmos.color = Color.blue;
     //    //float dist = Vector3.Distance(transform.position, Target.transform.position);
     //    //Debug.Log(dist);
-    //    Gizmos.DrawSphere(transform.position, detectionRange);
+    //    Gizmos.DrawSphere(transform.position, DetectionRange);
     //
     //    Gizmos.color = Color.red;
-    //    Gizmos.DrawSphere(transform.position, attackRange);
+    //    Gizmos.DrawSphere(transform.position, AttackRange);
     //}
     /////////////////// 범위 테스트 ///////////////////
     public bool IsPlayerInAttackRange()
@@ -67,7 +67,7 @@ public partial class Monster
         for (int i = 0; i < ListPlayer.Count; ++i)
         {
             float dist = DistXZ(ListPlayer[i].transform.position, transform.position);
-            if (dist <= attackRange)
+            if (dist <= AttackRange)
             {
                 return true;
             }

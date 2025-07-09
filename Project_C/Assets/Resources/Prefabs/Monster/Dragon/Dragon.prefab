@@ -83,6 +83,8 @@ MonoBehaviour:
   BodyParticlePoint: {fileID: 8602995777514708942}
   Id: 0
   Animator: {fileID: 4543379460965074039}
+  DetectionRange: 26
+  AttackRange: 15
   PathNode: []
   SkillList:
   - {fileID: 2174708344044946963}
@@ -95,13 +97,10 @@ MonoBehaviour:
   ProjectilePoint: {fileID: 8419198973356562674}
   MaxSkillCount: 7
   CurrentSkill: []
-  Target: {fileID: 0}
-  detectionRange: 28
-  attackRange: 15
   OnPatrol: 0
   PV: {fileID: 1325800567762644438}
   BasicAttackCollider: {fileID: 8417154215137542368}
-  AttackRange:
+  AtkRange:
   - {fileID: 4671389203937129936}
   - {fileID: 7039757310843641476}
   - {fileID: 3945862480233183458}

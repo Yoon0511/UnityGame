@@ -332,6 +332,8 @@ MonoBehaviour:
   BodyParticlePoint: {fileID: 8724662615707469574}
   Id: 0
   Animator: {fileID: 8972083999283936779}
+  DetectionRange: 2
+  AttackRange: 2
   PathNode: []
   SkillList:
   - {fileID: 3772014849582412571, guid: eb37aedd3cf3adb40b6a8b7932b8b9bb, type: 3}

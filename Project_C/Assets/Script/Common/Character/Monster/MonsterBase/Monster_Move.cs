@@ -33,19 +33,6 @@ public partial class Monster
         transform.LookAt(transform.position + dir, Vector3.up);
     }
 
-    public void MoveToTarget()
-    {
-        float speed = Statdata.GetData(STAT_TYPE.SPEED);
-        Vector3 dir = Target.transform.position - transform.position;
-        dir.y = 0f;
-        
-        Vector3 MovePos = dir.normalized * speed * Time.deltaTime;
-        transform.Translate(MovePos, Space.World);
-
-        if (dir != Vector3.zero)
-            transform.rotation = Quaternion.LookRotation(dir, Vector3.up);
-    }
-
     public void SetSpeed(float _speed)
     {
         Statdata.SetStat(STAT_TYPE.SPEED, _speed);

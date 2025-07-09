@@ -5,7 +5,7 @@ using UnityEngine;
 public partial class Dragon
 {
     [SerializeField]
-    AtkRange[] AttackRange;
+    AtkRange[] AtkRange;
 
     bool IsOnAttackRange = false;
     public int SkillCount = 0;
@@ -27,17 +27,17 @@ public partial class Dragon
     {
         if(CurrentSkill[_skillindex].IsAtkRange) //스킬에 공격사거리표시가 있을 경우 실행
         {
-            if (AttackRange[_skillindex].ACTIVE_CONTROL) //공격사거리표시가 끝나야 발동되는 스킬
+            if (AtkRange[_skillindex].ACTIVE_CONTROL) //공격사거리표시가 끝나야 발동되는 스킬
             {
-                AttackRange[_skillindex].gameObject.SetActive(true);
+                AtkRange[_skillindex].gameObject.SetActive(true);
                 IsOnAttackRange = true;
 
                 while (true)
                 {
-                    AttackRange[_skillindex].StartSizeUp();
-                    if (AttackRange[_skillindex].IsStretchEnd())
+                    AtkRange[_skillindex].StartSizeUp();
+                    if (AtkRange[_skillindex].IsStretchEnd())
                     {
-                        AttackRange[_skillindex].gameObject.SetActive(false);
+                        AtkRange[_skillindex].gameObject.SetActive(false);
                         IsOnAttackRange = false;
                         break;
                     }

@@ -44,6 +44,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 1204929603642372910}
     m_Modifications:
     - target: {fileID: 3924945776276062082, guid: a653197aca838e647add3cc421e345bf, type: 3}
+      propertyPath: AttackRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3924945776276062082, guid: a653197aca838e647add3cc421e345bf, type: 3}
+      propertyPath: DetectionRange
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3924945776276062082, guid: a653197aca838e647add3cc421e345bf, type: 3}
       propertyPath: PathNode.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -161,6 +169,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1204929603642372910}
     m_Modifications:
+    - target: {fileID: 1739190282939269064, guid: 2f8fa9281b1168242a952cf4a42ce3b3, type: 3}
+      propertyPath: AttackRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739190282939269064, guid: 2f8fa9281b1168242a952cf4a42ce3b3, type: 3}
+      propertyPath: DetectionRange
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2936714615041129154, guid: 2f8fa9281b1168242a952cf4a42ce3b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.39
@@ -227,6 +243,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1204929603642372910}
     m_Modifications:
+    - target: {fileID: 1739190282939269064, guid: 2f8fa9281b1168242a952cf4a42ce3b3, type: 3}
+      propertyPath: AttackRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739190282939269064, guid: 2f8fa9281b1168242a952cf4a42ce3b3, type: 3}
+      propertyPath: DetectionRange
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2936714615041129154, guid: 2f8fa9281b1168242a952cf4a42ce3b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -304,6 +328,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1204929603642372910}
     m_Modifications:
+    - target: {fileID: 1739190282939269064, guid: 2f8fa9281b1168242a952cf4a42ce3b3, type: 3}
+      propertyPath: AttackRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739190282939269064, guid: 2f8fa9281b1168242a952cf4a42ce3b3, type: 3}
+      propertyPath: DetectionRange
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1739190282939269064, guid: 2f8fa9281b1168242a952cf4a42ce3b3, type: 3}
       propertyPath: PathNode.Array.size
       value: 4

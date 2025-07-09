@@ -9,15 +9,8 @@ using UnityEngine;
 //Character를 상속받는 Monster
 public partial class Monster : Character
 {
-    [SerializeField]
-    protected GameObject Target;
     protected GameObject player;
     protected List<Player> ListPlayer;
-
-    [SerializeField]
-    protected float detectionRange;
-    [SerializeField]
-    protected float attackRange;
 
     public bool OnPatrol = false;
     bool IsDead = false;
@@ -117,11 +110,6 @@ public partial class Monster : Character
     {
         Shared.GameMgr.PLAYER.AddExp(25.0f);
     }
-    public void ChangeTarget(GameObject _target)
-    {
-        Target = _target;
-    }
-
 
     public override void UseSkill(int _index)
     {

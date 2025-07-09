@@ -12,7 +12,7 @@ public partial class Player : Character
             //ChangeState((int)STATE.ATTACK,(int)PLAYER_ANI_STATE.ATTACK);
             OnAttack();
         }
-        if (IsComboEnable)
+        if (IsComboEnable && IsAutoMode == false)
         {
             OnAttack();
         }

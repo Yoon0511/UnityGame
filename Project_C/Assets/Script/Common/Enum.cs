@@ -12,6 +12,14 @@ public enum STATE
     AUTOMOVE,
     ENUM_END
 }
+
+public enum AUTO_STATE
+{
+    NONE = STATE.ENUM_END + 1,
+    CHASE,
+    ATTACK,
+    ENUM_END
+}
 public enum PLAYER_ANI_STATE
 {
     NONE,
