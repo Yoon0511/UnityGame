@@ -7,7 +7,6 @@ using UnityEngine.UI;
 //Character를 상속받는 Player
 public partial class Player : Character
 {
-    bool IsDead;
     PhotonView PV;
     protected override void FixedUpdate()
     {
@@ -19,7 +18,6 @@ public partial class Player : Character
     void Update()
     {
         KeyInput();
-        Debug.Log(CurrState);
     }
 
     public void ClickToRay()
@@ -246,15 +244,5 @@ public partial class Player : Character
         // 가장 가까운 아이템 탐색 후 습득 - 인벤토리 적립
         
         // 필드 아이템 리스트 -> 검색 -> 습득
-    }
-
-    public void SetIsDead(bool _isDead)
-    {
-        IsDead = _isDead;
-    }
-
-    public bool GetIsDead()
-    {
-        return IsDead;
     }
 }

@@ -43,7 +43,8 @@ public abstract partial class Character : Object
             if (DicSkillCoolTime[CurrentSkill[_index].SkillName] <= 0f)
             {                
                 CurrUseSkillIndex = _index;
-                ChangeState(_state, _skillmotion);
+                PlayAnimation("Ani_State", _skillmotion);
+                //ChangeState(_state, _skillmotion);
                 // MP¼Ò¸ð
                 Statdata.EnhanceStat(STAT_TYPE.MP, -CurrentSkill[CurrUseSkillIndex].UseMp);
 

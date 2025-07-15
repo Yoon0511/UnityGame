@@ -18,7 +18,7 @@ public abstract partial class Character : Object
 
     [SerializeField]
     protected int Id;
-
+    protected bool IsDead = false;
     private void Start()
     {
         Init();
@@ -98,4 +98,7 @@ public abstract partial class Character : Object
         pos.y = TerrainHegiht + 0.1f;
         transform.position = pos;
     }
+
+    public bool GetIsDead() { return IsDead; }
+    public void SetIsDead(bool _isDead) { IsDead = _isDead; }
 }

@@ -21,7 +21,7 @@ public partial class Player : Character
 
     public void OnAttackAniEnd()
     {
-        if(IsRiding == false || IsAutoMode == false)
+        if(IsRiding == false && IsAutoMode == false)
         {
             ChangeState((int)STATE.IDLE);
         }

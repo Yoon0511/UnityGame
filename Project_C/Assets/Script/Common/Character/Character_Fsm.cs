@@ -9,7 +9,7 @@ public abstract partial class Character : Object
     protected float DetectionRange;
     [SerializeField]
     protected float AttackRange;
-    GameObject Target;
+    protected GameObject Target;
 
     protected StateMachine Fsm = new StateMachine();
     protected int CurrState;
@@ -56,6 +56,7 @@ public abstract partial class Character : Object
     public void ChangeTarget(GameObject _target)
     {
         Target = _target;
+        TargetCharacter = _target.GetComponent<Character>();
     }
 
     public void MoveToTarget()

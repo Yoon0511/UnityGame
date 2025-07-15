@@ -13,7 +13,6 @@ public partial class Monster : Character
     protected List<Player> ListPlayer;
 
     public bool OnPatrol = false;
-    bool IsDead = false;
 
     [SerializeField]
     protected PhotonView PV;
@@ -128,6 +127,5 @@ public partial class Monster : Character
         return Statdata.GetUiHeadTransform();
     }
 
-    public bool GetIsDead() { return IsDead; }
-    public void SetIsDead(bool _isDead) { IsDead = _isDead; }
+
 }

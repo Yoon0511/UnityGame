@@ -15,8 +15,7 @@ public class Player_AutoAttackState : StateBase
 
     public override void OnStateEnter()
     {
-        AttackCoolTime = 4.0f;
-        Player.AutoAttack();
+
     }
 
     public override void OnStateExit()
@@ -26,12 +25,13 @@ public class Player_AutoAttackState : StateBase
 
     public override void OnStateUpdate()
     {
-        ATtackElpsedTime += Time.deltaTime;
+        Player.AutoAttack();
 
-        if(ATtackElpsedTime >= AttackCoolTime)
+        if(Player.GetTargetCharacter().GetIsDead())
         {
-            ATtackElpsedTime = 0.0f;
-            Player.AutoAttack();
+            Player.ChangeState((int)AUTO_STATE.CHASE);
         }
     }
+
+    
 }

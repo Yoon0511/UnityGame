@@ -6498,7 +6498,7 @@ MonoBehaviour:
   ListMonster: []
   ListNPC: []
   ListPlayer: []
-  SpwanPoint: {fileID: 2023047966}
+  SpwanPoint: {fileID: 1006580830}
   RespwanPoint: {fileID: 705914682}
   Monsters: {fileID: 889543217}
 --- !u!4 &366247449
@@ -9790,6 +9790,37 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6126578882457730855, guid: 1398b1ece1b48494796b0fcd7fed7305, type: 3}
   m_PrefabInstance: {fileID: 979588707}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1006580829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1006580830}
+  m_Layer: 0
+  m_Name: SpwanPoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1006580830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006580829}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 403.47, y: 8.62, z: 300.04}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1006684913 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 672617489350089282, guid: 8b3238f3f829dd24790954683a6d3ec9, type: 3}
@@ -24222,6 +24253,7 @@ SceneRoots:
   - {fileID: 1224696525}
   - {fileID: 5383503695651919018}
   - {fileID: 2023047966}
+  - {fileID: 1006580830}
   - {fileID: 705914682}
   - {fileID: 1747245890}
   - {fileID: 1434191141}

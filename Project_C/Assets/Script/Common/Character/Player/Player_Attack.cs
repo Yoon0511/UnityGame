@@ -37,6 +37,11 @@ public partial class Player : Character
 
     public void AutoAttack()
     {
+        if (PV.IsMine == false)
+        {
+            return;
+        }
+
         if (IsBasicAttack)
         {
             PlayAnimation("Ani_State", (int)PLAYER_ANI_STATE.ATTACK);

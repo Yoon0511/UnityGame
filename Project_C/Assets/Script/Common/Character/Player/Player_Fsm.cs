@@ -82,6 +82,11 @@ public partial class Player : Character
         float MinDist = float.MaxValue;
         for (int i = 0; i < ListMonster.Count; ++i)
         {
+            if(ListMonster[i] == null || ListMonster[i].GetIsDead() == true)
+            {
+                continue;
+            }
+
             float dist = DistXZ(transform.position, ListMonster[i].transform.position);
             if (dist < MinDist)
             {
