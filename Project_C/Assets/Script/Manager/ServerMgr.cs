@@ -73,7 +73,8 @@ public class ServerMgr : MonoBehaviour
         _callback?.Invoke(node);
     }
 
-    public void OnBtnConnect(Action<JSONNode> _callback)
+    public void 
+        OnBtnConnect(Action<JSONNode> _callback)
     {
         StartCoroutine(DBGet(Http + ConnectUrl, "dev", _callback));
     }

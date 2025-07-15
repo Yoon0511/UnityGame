@@ -24,7 +24,10 @@ public partial class Player : Character
         int skillId = CurrentSkill[_index].GetId();
 
         // 자기 자신 먼저 처리
-        SetCurrentSkill(_index, skillId);
+        if(GetCurrentSkill(_index) == null)
+        {
+            SetCurrentSkill(_index, skillId);
+        }
         UseOtherPlayerSkill(_index);
 
         // 다른 클라에게 스킬 전송

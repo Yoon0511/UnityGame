@@ -21,9 +21,14 @@ public partial class Player : Character
 
     public void OnAttackAniEnd()
     {
-        if(IsRiding == false && IsAutoMode == false)
+        //if(IsRiding == false && IsAutoMode == false)
+        //{
+        //    PlayAnimation("Ani_State",(int)PLAYER_ANI_STATE.IDLE);
+        //}
+
+        if (IsRiding == false)
         {
-            ChangeState((int)STATE.IDLE);
+            PlayAnimation("Ani_State", (int)PLAYER_ANI_STATE.IDLE);
         }
     }
 

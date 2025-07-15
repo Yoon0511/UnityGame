@@ -195,11 +195,6 @@ public partial class GameMgr : MonoBehaviourPun
         PLAYER.OnAttack();
     }
 
-    public void OnAutoMode()
-    {
-        PLAYER.OnSwitchAutoMode();
-    }
-
     public void OnGameClose()
     {
         Save();

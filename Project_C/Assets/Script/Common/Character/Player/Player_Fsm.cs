@@ -140,6 +140,10 @@ public partial class Player : Character
             OnEndAutoMode();
         }
     }
+    public bool GetIsAutoMode()
+    {
+        return IsAutoMode;
+    }
 
     void OnStartAutoMode()
     {

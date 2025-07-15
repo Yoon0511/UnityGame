@@ -41,7 +41,8 @@ public abstract partial class Character : Object
         if (_index < MaxSkillCount && CurrentSkill[_index] != null)
         {
             if (DicSkillCoolTime[CurrentSkill[_index].SkillName] <= 0f)
-            {                
+            {
+                CurrentSkill[_index].SetCurrentState((int)SKILL_STATE.RUNNING);
                 CurrUseSkillIndex = _index;
                 PlayAnimation("Ani_State", _skillmotion);
                 //ChangeState(_state, _skillmotion);
@@ -68,6 +69,7 @@ public abstract partial class Character : Object
         {
             if (DicSkillCoolTime[CurrentSkill[_index].SkillName] <= 0f)
             {
+                CurrentSkill[_index].SetCurrentState((int)SKILL_STATE.RUNNING);
                 CurrUseSkillIndex = _index;
                 // MP소모
                 Statdata.EnhanceStat(STAT_TYPE.MP, -CurrentSkill[CurrUseSkillIndex].UseMp);
@@ -95,6 +97,7 @@ public abstract partial class Character : Object
         {
             if (DicSkillCoolTime[CurrentSkill[_index].SkillName] <= 0f)
             {
+                CurrentSkill[_index].SetCurrentState((int)SKILL_STATE.RUNNING);
                 CurrUseSkillIndex = _index;
                 // MP소모
                 Statdata.EnhanceStat(STAT_TYPE.MP, -CurrentSkill[CurrUseSkillIndex].UseMp);
@@ -213,6 +216,11 @@ public abstract partial class Character : Object
                 {
                     DicSkillCoolTime[skill.SkillName] -= Time.deltaTime;
                     IsCoolTimeSkill = true;
+
+                    if(DicSkillCoolTime[skill.SkillName] <= 0.0f)
+                    {
+                        skill.SetCurrentState((int)SKILL_STATE.READY);
+                    }
                 }
             }
 

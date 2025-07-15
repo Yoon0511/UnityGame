@@ -58,4 +58,5 @@ public abstract partial class Character : Object
     public bool GetIsAniRunning() { return IsAniRunning; }
     public void SetIsAniRunning(bool _value) { IsAniRunning = _value; }
     public int GetCurrAnimation() { return CurrAnimation; }
+    public Animator GetAnimator() { return Animator; }
 }
