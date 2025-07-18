@@ -18,12 +18,14 @@ public partial class Player : Character
     public void EquipPet(Pet _pet)
     {
         Pet = _pet;
-        Pet.transform.localPosition = PetPos.position;
-        Pet.transform.SetParent(PetPos, true);
+        Pet.transform.SetParent(PetPos, false);
+        Pet.transform.localPosition = new Vector3(0, 0, 0);
+        Pet.Equip();
     }
 
     public void UnEquipPet()
     {
+        Pet.UnEquip();
         Destroy(Pet.gameObject);
         Pet = null;
     }

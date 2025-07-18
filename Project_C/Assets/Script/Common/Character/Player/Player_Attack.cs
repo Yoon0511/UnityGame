@@ -24,6 +24,7 @@ public partial class Player : Character
 
         if(IsBasicAttack)
         {
+            SetAnimatorBool("Ani_IsSlashCombo", true);
             PlayAnimation("Ani_State", (int)PLAYER_ANI_STATE.ATTACK);
         }
 
@@ -44,6 +45,7 @@ public partial class Player : Character
 
         if (IsBasicAttack)
         {
+            SetAnimatorBool("Ani_IsSlashCombo", true);
             PlayAnimation("Ani_State", (int)PLAYER_ANI_STATE.ATTACK);
         }
 

@@ -523,7 +523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &163100465
 Transform:
   m_ObjectHideFlags: 0
@@ -6498,7 +6498,7 @@ MonoBehaviour:
   ListMonster: []
   ListNPC: []
   ListPlayer: []
-  SpwanPoint: {fileID: 1006580830}
+  SpwanPoint: {fileID: 2023047966}
   RespwanPoint: {fileID: 705914682}
   Monsters: {fileID: 889543217}
 --- !u!4 &366247449
@@ -7391,7 +7391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &550657156
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13541,7 +13541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1787658595
 RectTransform:
   m_ObjectHideFlags: 0

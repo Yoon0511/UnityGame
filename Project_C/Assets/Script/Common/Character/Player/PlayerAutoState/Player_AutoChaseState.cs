@@ -13,10 +13,10 @@ public class Player_AutoChaseState : StateBase
     {
         Player.FindNearMonster();
 
-        if (Player.GetAnimator().GetBool("Ani_IsSlashCombo") == true)
-        {
-            Player.GetAnimator().SetBool("Ani_IsSlashCombo", false);
-        }
+        //if (Player.GetAnimator().GetBool("Ani_IsSlashCombo") == true)
+        //{
+        //    Player.GetAnimator().SetBool("Ani_IsSlashCombo", false);
+        //}
         Player.PlayAnimation("Ani_State", (int)PLAYER_ANI_STATE.RUN);
     }
 
@@ -36,6 +36,7 @@ public class Player_AutoChaseState : StateBase
 
         if(Player.IsMonsterInDetectionRange())
         {
+            Player.PlayAnimation("Ani_State", (int)PLAYER_ANI_STATE.IDLE);
             Player.ChangeState((int)AUTO_STATE.ATTACK);
         }
     }

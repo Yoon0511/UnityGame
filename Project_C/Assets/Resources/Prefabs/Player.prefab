@@ -473,6 +473,8 @@ MonoBehaviour:
       Value: 0.5
     - Key: 12
       Value: 1.2
+  DicStatBonus:
+    _serializedList: []
   uihead: {fileID: 7904693369663878659}
 --- !u!114 &8491907350605480104
 MonoBehaviour:

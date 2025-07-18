@@ -52,24 +52,30 @@ public class PetStore : MonoBehaviour
         }
     }
 
+    //COMMON, - 30
+    //UNCOMMON, - 25
+    //RARE, - 20
+    //EPIC, - 15
+    //LEGENDARY, - 10
+
     ITEM_GRADE GetGrade(float _probability)
     {
-        if (_probability <= 0.05f)
+        if (_probability <= 0.10f)
         {
             PetItemId = 1030;
             return ITEM_GRADE.LEGENDARY;
         }
-        else if(_probability <= 0.1f)
+        else if (_probability <= 0.25f)
         {
             PetItemId = 1029;
             return ITEM_GRADE.EPIC;
         }
-        else if(_probability <= 0.15f)
+        else if (_probability <= 0.45f)
         {
             PetItemId = 1028;
             return ITEM_GRADE.RARE;
         }
-        else if(_probability <= 0.3f)
+        else if (_probability <= 0.70f)
         {
             PetItemId = 1027;
             return ITEM_GRADE.UNCOMMON;
@@ -79,7 +85,7 @@ public class PetStore : MonoBehaviour
             PetItemId = 1026;
             return ITEM_GRADE.COMMON;
         }
-       
+
     }
 
     public void DrawItemsClear()
@@ -90,10 +96,4 @@ public class PetStore : MonoBehaviour
         }
         DrawPetItems.Clear();
     }
-   
-    //COMMON, - 40
-    //UNCOMMON, - 30
-    //RARE, - 15
-    //EPIC, - 10
-    //LEGENDARY, - 5
 }

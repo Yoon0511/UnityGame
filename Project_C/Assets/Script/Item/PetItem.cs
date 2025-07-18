@@ -59,7 +59,10 @@ public class PetItem : EquipmentItem
 
     public override string GetItemExplanation()
     {
-        string explnation = $"<color=#FFFFFF>{GetStrSTAT_Type()}+</color> <color=#FF4500>{GetItemStat()}</color>";
+        string explnation = $"<color=#FF4C4C>{GetStrSTAT_Type()}+</color> <color=#FFFFFF>{GetItemStat()}</color>\n";
+        explnation += $"<color=#3498DB><b>방어력</b></color> <color=#FFFF66><b>버프</b></color>를 사용합니다.\n";
+        explnation += $"<color=#F39C12><b>상승량</b> : (1 ~ 10)</color>\n";
+        explnation += $"<color=#1ABC9C><b>지속시간</b> : (5 ~ 10)</color>초";
         return explnation;
     }
 }

@@ -312,6 +312,8 @@ MonoBehaviour:
       Value: 0.2
     - Key: 11
       Value: 1.5
+  DicStatBonus:
+    _serializedList: []
   uihead: {fileID: 6232581445276920320}
 --- !u!54 &5613287462210327524
 Rigidbody:

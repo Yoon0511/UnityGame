@@ -46,7 +46,7 @@ public partial class GameMgr : MonoBehaviourPun
     private void Start()
     {
         Shared.PhotonMgr.SpawnPoint = SpwanPoint;
-        //Shared.PhotonMgr.JoinRoom();
+        Shared.PhotonMgr.JoinRoom();
         SavePathInit();
     }
 

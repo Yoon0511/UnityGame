@@ -9,8 +9,19 @@ public class StatData : MonoBehaviour
     private SerializedDictionary<STAT_TYPE, float> dicstat;
 
     [SerializeField]
+    private SerializedDictionary<STAT_TYPE, float> DicStatBonus;
+
+    [SerializeField]
     Transform uihead;
 
+    private void Start()
+    {
+        //DicStatBonus 초기화
+        for(STAT_TYPE i = STAT_TYPE.HP;i<STAT_TYPE.ENUM_END;++i)
+        {
+            DicStatBonus.Add(i, 0);
+        }
+    }
     public void TakeDamage(DamageData _damagedata)
     {
         _damagedata.Damage = _damagedata.Damage - (int)dicstat[STAT_TYPE.DEF];
@@ -21,7 +32,9 @@ public class StatData : MonoBehaviour
     public void EnhanceStat(STAT_TYPE _type,float _value)
     {
         int type = (int) _type;
-        dicstat[_type] += _value;
+        dicstat[_type] += _value; //스탯에 추가
+        DicStatBonus[_type] += _value;
+
         switch (type)
         {
             case (int)STAT_TYPE.HP:
@@ -36,6 +49,11 @@ public class StatData : MonoBehaviour
     public float GetData(STAT_TYPE _type)
     {
         return dicstat[_type];
+    }
+
+    public float GetStatBonus(STAT_TYPE type)
+    {
+        return DicStatBonus[type];
     }
 
     public void SetStat(STAT_TYPE _type,float _value)

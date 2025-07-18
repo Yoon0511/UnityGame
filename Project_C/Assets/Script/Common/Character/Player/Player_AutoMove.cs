@@ -8,6 +8,7 @@ public partial class Player : Character
     bool IsAutoMove = false;
     public void OnAutoMove(int _pathid)
     {
+        Debug.Log("asd");
         PathId = _pathid;
         ChangeState((int)STATE.AUTOMOVE);
     }

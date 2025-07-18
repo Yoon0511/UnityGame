@@ -36,11 +36,17 @@ public class InfoPlayer : MonoBehaviour
             statenhance.StatEnhace = StatEnhaces[i];
             DicStatEnhance.Add(StatEnhaces[i].STAT_TYPE, statenhance);
         }
+
+        StartCoroutine(IAutoRefresh());
     }
-    //private void OnEnable()
-    //{
-    //    Refresh();
-    //}
+
+    IEnumerator IAutoRefresh()
+    {
+        Refresh();
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(IAutoRefresh());
+    }
+
     public void Refresh()
     {
         player = Shared.GameMgr.PLAYER;
@@ -55,13 +61,28 @@ public class InfoPlayer : MonoBehaviour
         string EnhanceColor = null;
         TextColor(DicStatEnhance[STAT_TYPE.ATK].value, out EnhanceColor);
         ATK.text = $"<color=#{player.GetStatColor(STAT_TYPE.ATK)}><b>ATK</b></color> : <color=#{EnhanceColor}>{player.GetInStatData(STAT_TYPE.ATK) + DicStatEnhance[STAT_TYPE.ATK].value}</color>";
-        
+        int bonusStat = (int)(player.GetStatData().GetStatBonus(STAT_TYPE.ATK));
+        if(bonusStat > 0)
+        {
+            ATK.text += $"<color=#00E676><b> +{bonusStat}</b></color>";
+        }
+
         TextColor(DicStatEnhance[STAT_TYPE.DEF].value, out EnhanceColor);
         DEF.text = $"<color=#{player.GetStatColor(STAT_TYPE.DEF)}><b>DEF</b></color> : <color=#{EnhanceColor}>{player.GetInStatData(STAT_TYPE.DEF) + DicStatEnhance[STAT_TYPE.DEF].value}</color>";
-        
+        bonusStat = (int)(player.GetStatData().GetStatBonus(STAT_TYPE.DEF));
+        if (bonusStat > 0)
+        {
+            DEF.text += $"<color=#00E676><b> +{bonusStat}</b></color>";
+        }
+
         TextColor(DicStatEnhance[STAT_TYPE.SPEED].value, out EnhanceColor);
         SPEED.text = $"<color=#{player.GetStatColor(STAT_TYPE.SPEED)}><b>SPEED</b></color> : <color=#{EnhanceColor}>{player.GetInStatData(STAT_TYPE.SPEED) + DicStatEnhance[STAT_TYPE.SPEED].value}</color>";
-        
+        bonusStat = (int)(player.GetStatData().GetStatBonus(STAT_TYPE.SPEED));
+        if (bonusStat > 0)
+        {
+            SPEED.text += $"<color=#00E676><b> +{bonusStat}</b></color>";
+        }
+
         StatPoint.text = $"<color=#FFD700><b>{player.GetStatPoint().ToString()}</b></color>";
     
         if(player.GetStatPoint() > 0)

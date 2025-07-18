@@ -57,6 +57,20 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
+      - time: 0.4778325
+        functionName: OnHitBoxActive
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.55172414
+        functionName: OffHitBoxActive
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 0.77564245
         functionName: OnComboEnable
         data: 
@@ -73,20 +87,6 @@ ModelImporter:
         messageOptions: 0
       - time: 1
         functionName: OnComboExit
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.4778325
-        functionName: OnHitBoxActive
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.55172414
-        functionName: OffHitBoxActive
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

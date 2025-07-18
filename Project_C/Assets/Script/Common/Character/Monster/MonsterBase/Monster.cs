@@ -71,7 +71,8 @@ public partial class Monster : Character
             return;
         }
         Shake(0.1f, 0.1f);
-       
+
+        Shared.GameMgr.Hphud.SetTarget(this);
         PV.RPC("RpcMonsterTakeDamage", RpcTarget.All, (float)_damagedata.Damage, (int)_damagedata.DamageFont_Type);
         CheckHP();
     }

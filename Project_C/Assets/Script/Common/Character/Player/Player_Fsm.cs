@@ -21,7 +21,7 @@ public partial class Player : Character
         DicState.Add((int)STATE.ATTACK, new Player_AttackState(this));
         DicState.Add((int)STATE.DIE, new Player_DieState(this));
         DicState.Add((int)STATE.RIDING, new Player_RidingState(this));
-        DicState.Add((int)STATE.AUTOMOVE, new Player_AutoChaseState(this));
+        DicState.Add((int)STATE.AUTOMOVE, new Player_AutoMoveState(this));
 
         //자동사냥 상태
         DicState.Add((int)AUTO_STATE.CHASE, new Player_AutoChaseState(this));

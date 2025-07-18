@@ -443,6 +443,8 @@ MonoBehaviour:
       Value: 0
     - Key: 9
       Value: 1
+  DicStatBonus:
+    _serializedList: []
   uihead: {fileID: 7733358511410467467}
 --- !u!54 &8942143390153546707
 Rigidbody:
