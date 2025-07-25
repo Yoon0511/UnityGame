@@ -18,6 +18,7 @@ public class Hphud : MonoBehaviour
     int MaxCount = 0;
     int Count = 0;
     float previousHp = 0.0f;
+    float DisappearElaspedTime = 0.0f; // 사라지는 시간 초기화용
 
     Color CurrColor = Color.red;
     Color NextColor = Color.red;
@@ -40,6 +41,7 @@ public class Hphud : MonoBehaviour
 
     public void SetTarget(Character _target)
     {
+        DisappearElaspedTime = 0.0f;
         Target = _target;
 
         if (Target == null)
@@ -52,7 +54,7 @@ public class Hphud : MonoBehaviour
 
         NAMETEXT.text = Target.GetCharacterName();
         MaxCount = 10;
-        HPTEXT.text = CurrHp.ToString("F0") + "/" + MaxHp.ToString("F0");
+        HPTEXT.text = $"<color=#FFFAFA><b>{CurrHp.ToString("F0")} / {MaxHp.ToString("F0")}</b></color>";
 
         MaxDivisionHp = MaxHp / MaxCount;
 
@@ -94,9 +96,20 @@ public class Hphud : MonoBehaviour
         testCoroutine = StartCoroutine(IUpdateHpHud());
     }
 
+    public void ShowHud(Character _target)
+    {
+        if (IsShow == false)
+        {
+            DisappearElaspedTime = 0.0f;
+            SetTarget(_target);
+        }
+        else //HP HUD가 이미 보이는 상태라면
+        {
+            DisappearElaspedTime = 0.0f; //사라지는 시간 초기화
+        }
+    }
     IEnumerator IUpdateHpHud()
     {
-        float ElaspedTime = 0.0f;
         while (Target != null)
         {
             //yield return new WaitForSeconds(0.1f);
@@ -110,12 +123,13 @@ public class Hphud : MonoBehaviour
             CurrHp = currentHp;
             previousHp = currentHp;
 
-            HPTEXT.text = CurrHp.ToString("F0") + "/" + MaxHp.ToString("F0");
+            //HPTEXT.text = CurrHp.ToString("F0") + "/" + MaxHp.ToString("F0");
+            HPTEXT.text = $"<color=#FFFAFA><b>{CurrHp.ToString("F0")} / {MaxHp.ToString("F0")}</b></color>";
 
-            if(IsShow)
+            if (IsShow)
             {
-                ElaspedTime += Time.deltaTime;
-                if(ElaspedTime >= 3.0f)
+                DisappearElaspedTime += Time.deltaTime;
+                if(DisappearElaspedTime >= 3.0f)
                 {
                     IsShow = false;
                     HP_HUDUI.transform.GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, 180f);
@@ -130,7 +144,7 @@ public class Hphud : MonoBehaviour
 
             if (Mathf.Abs(diff) < 0.01f) continue;
 
-            ElaspedTime = 0.0f;
+            DisappearElaspedTime = 0.0f;
 
             if (diff < 0)
             {

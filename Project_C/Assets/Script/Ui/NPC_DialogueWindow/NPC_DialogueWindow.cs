@@ -23,6 +23,8 @@ public class NPC_DialogueWindow : MonoBehaviour
 
     bool Typing = false;
     Coroutine TypeCorutine;
+
+    //대화 시작
     public void Init(NPC _npc,Player _player)
     {
         Player = _player;
@@ -38,6 +40,9 @@ public class NPC_DialogueWindow : MonoBehaviour
         TypeCorutine = StartCoroutine(ITypingText(ConverstaionTexts[TextIndex]));
 
         ShowBtns();
+
+        //시네머신 카메라 - NPC와 플레어를 중심으로 설정
+        Shared.CineMachineMgr.SetCinemachineTargetGroup(Player.transform, CurrentNPC.transform);
     }
     
 
@@ -159,6 +164,9 @@ public class NPC_DialogueWindow : MonoBehaviour
     //대화창꺼짐
     void DialogueEnd()
     {
+        //시네머신 카메라 종료
+        Shared.CineMachineMgr.EndCineMachine();
+
         DialogueReset();
         gameObject.SetActive(false);
     }

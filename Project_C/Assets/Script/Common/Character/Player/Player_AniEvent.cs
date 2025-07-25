@@ -68,6 +68,15 @@ public partial class Player : Character
         OnAttackAniEnd();
     }
 
+    public void OnAutoAttackComboExit()
+    {
+        SLASH_TRAIL.SetActive(false);
+        ComboIndex = 0;
+        IsComboEnable = false;
+        IsBasicAttack = true;
+        SetAnimatorBool("Ani_IsSlashCombo", false);
+    }
+
     public void OnBasicAttak()
     {
         IsBasicAttack = false;

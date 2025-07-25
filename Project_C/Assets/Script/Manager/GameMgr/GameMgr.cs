@@ -48,6 +48,8 @@ public partial class GameMgr : MonoBehaviourPun
         Shared.PhotonMgr.SpawnPoint = SpwanPoint;
         Shared.PhotonMgr.JoinRoom();
         SavePathInit();
+        //시네머신 설정
+        Shared.CineMachineMgr.EndCineMachine();
     }
 
     public Sprite GetSpriteAtlas(string _Atlas, string _Name)

@@ -82,13 +82,12 @@ public partial class Player : Character
         StartCoroutine(AutomaticRecovery(1.0f));
 
         ListMonster = Shared.GameMgr.GetListMonster();
-
         //PhotonViewIsMine();
         //Shared.GameMgr.PLAYER = this;
         //Shared.GameMgr.PLAYEROBJ = this.gameObject;
 
         //자기 이름 표시
-        if(PV.IsMine)
+        if (PV.IsMine)
         {
             //Shared.UiMgr.Text.text = CharacterName;
         }

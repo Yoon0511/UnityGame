@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Experimental.AI;
 
 public partial class MainCamera : MonoBehaviour
 {
@@ -32,8 +33,11 @@ public partial class MainCamera : MonoBehaviour
     [SerializeField]
     float ZoomSpeed;
 
+    [SerializeField]
+    Camera Camera;
     private void Start()
     {
+        Shared.MainCamera = this;
         Vector3 angles = CAMERAMOVE.transform.eulerAngles;
         Yaw = angles.y;
         Pitch = angles.x;
@@ -97,5 +101,17 @@ public partial class MainCamera : MonoBehaviour
     public void SetTarget(Transform _tartget)
     {
         Target = _tartget;
+    }
+
+    public void SaveCameraOption()
+    {
+
+    }
+
+    public void ReturnCameraOption()
+    {
+        transform.localPosition = Vector3.zero;
+        transform.localRotation = Quaternion.identity;
+        Camera.fieldOfView = 60f;
     }
 }

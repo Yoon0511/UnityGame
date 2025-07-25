@@ -50,7 +50,8 @@ public class Player_AutoAttackState : StateBase
                     // 평타 사용 중이면 캔슬하고 스킬 사용
                     if (Player.GetAnimator().GetBool("Ani_IsSlashCombo") == true)
                     {
-                        Player.SetAnimatorBool("Ani_IsSlashCombo", false);
+                        Player.OnAutoAttackComboExit();
+                        //Player.SetAnimatorBool("Ani_IsSlashCombo", false);
                     }
 
                     Shared.UiMgr.SkillBtn[i].UseSkill(); // 스킬 사용
@@ -73,7 +74,8 @@ public class Player_AutoAttackState : StateBase
                 // 평타 사용 중이면 캔슬하고 스킬 사용
                 if (Player.GetAnimator().GetBool("Ani_IsSlashCombo") == true)
                 {
-                    Player.SetAnimatorBool("Ani_IsSlashCombo", false);
+                    Player.OnAutoAttackComboExit();
+                    //Player.SetAnimatorBool("Ani_IsSlashCombo", false);
                 }
 
                 AutoUseSkillElpsedTime = 0.0f;
