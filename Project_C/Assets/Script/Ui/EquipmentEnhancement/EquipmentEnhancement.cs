@@ -102,8 +102,11 @@ public class EquipmentEnhancement : MonoBehaviour
     {
         ENHANCERESULT_VIEW.SetActive(true);
 
+        Shared.GameMgr.PLAYER.ApplyEquipItem(ENHANCEVIEW.GetEnhaceViewItem(), true); //강화된 아이템 적용
         bool Result = ENHANCEVIEW.TryEnhance(); //강화시도
+
         EnhanceResultView.Init(ENHANCEVIEW.GetEnhaceViewItem(),Result); //결과전달
+        Shared.GameMgr.PLAYER.ApplyEquipItem(ENHANCEVIEW.GetEnhaceViewItem()); //강화된 아이템 적용
     }
 
     public void OffEnhanceResult() //3.결과창 끔

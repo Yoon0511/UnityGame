@@ -90,9 +90,9 @@ public partial class Player : Character
         if (Input.GetKeyDown(KeyCode.F10)) //퀘스트 테스트
         {
             //Debug.Log("hunting");
-            HuntingMsg huntingMsg = new HuntingMsg();
-            huntingMsg.SetMsg(10, 10, (int)QUEST_TYPE.HUNTING, (int)MONSTER_ID.GOLEM, 3);
-            QusetProgress(huntingMsg);
+            //HuntingMsg huntingMsg = new HuntingMsg();
+            //huntingMsg.SetMsg(10, 10, (int)QUEST_TYPE.HUNTING, (int)MONSTER_ID.DRAGON, 3);
+            //QusetProgress(huntingMsg);
 
             //DeBuff deBuff = new DeBuff_Stun(0.5f, gameObject, "UI_Skill_Icon_Blackhole");
 
@@ -101,6 +101,8 @@ public partial class Player : Character
 
             //AddBuff(dot);
 
+            VillageName obj = Shared.PoolMgr.GetObject("CH_Clear").GetComponent<VillageName>();
+            obj.Init("Chapter.1 완료");
 
             //골드 테스트
             AddGold(3000);

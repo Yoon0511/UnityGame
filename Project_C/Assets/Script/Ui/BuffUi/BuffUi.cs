@@ -34,6 +34,7 @@ public class BuffUi : MonoBehaviour
         {
             if (IsRunningCoroutine == false)
             {
+                Debug.Log("123");
                 StartCoroutine(IBuffUiCoroutine());
             }
         }
@@ -53,7 +54,7 @@ public class BuffUi : MonoBehaviour
                 if (IsGetBuff)
                 {
                     BuffKvpList[i].Value.fillAmount = time / BuffKvpList[i].Key.Duration;
-
+                    //Debug.Log(BuffKvpList[i].Value.fillAmount);
                     if (time <= 0.1f)
                     {
                         Destroy(BuffKvpList[i].Value.gameObject);

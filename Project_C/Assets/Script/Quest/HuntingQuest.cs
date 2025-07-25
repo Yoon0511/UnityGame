@@ -64,6 +64,13 @@ public class HuntingQuest : QuestBase
         UpdateMiniMapIcon();
         GiveQuestReward();
         Shared.SoundMgr.PlaySFX("QUEST_COMPLETE");
+
+        //드래곤 처치 퀘스트의 경우
+        if(Id == 2003)
+        {
+            VillageName obj = Shared.PoolMgr.GetObject("CH_Clear").GetComponent<VillageName>();
+            obj.Init("Chapter.1 완료");
+        }
     }
 
     public override void Fail()
