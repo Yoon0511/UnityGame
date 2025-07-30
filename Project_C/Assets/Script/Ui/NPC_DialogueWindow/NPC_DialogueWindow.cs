@@ -43,6 +43,8 @@ public class NPC_DialogueWindow : MonoBehaviour
 
         //시네머신 카메라 - NPC와 플레어를 중심으로 설정
         Shared.CineMachineMgr.StartTalk(Player.transform, CurrentNPC.transform);
+
+        CurrentNPC.StartTalk();
     }
     
 
@@ -166,7 +168,7 @@ public class NPC_DialogueWindow : MonoBehaviour
     {
         //시네머신 카메라 종료
         Shared.CineMachineMgr.EndCineMachine();
-
+        CurrentNPC.EndTalk();
         DialogueReset();
         gameObject.SetActive(false);
     }

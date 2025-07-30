@@ -83,8 +83,8 @@ public partial class Player : Character
 
         ListMonster = Shared.GameMgr.GetListMonster();
 
-        //시네머신 카메라 - 플레이어를 중심으로 설정
-        Shared.CineMachineMgr.MainVirtulCamera.Init();
+        //시네머신 카메라 초기 설정
+        Shared.CineMachineMgr.CinemachineCameraInit();
 
         //PhotonViewIsMine();
         //Shared.GameMgr.PLAYER = this;

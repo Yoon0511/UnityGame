@@ -339,3 +339,11 @@ public enum DRAWPETITEM_ANI_STATE
     EXIT,
     ENUM_END
 }
+
+public enum NPC_ANIMATION_STATE
+{
+    NONE,
+    IDLE,
+    TALK,
+    ENUM_END
+}

@@ -252,7 +252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 48236096}
   m_Layer: 0
-  m_Name: TalkCamera
+  m_Name: TalkCameraParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12183,6 +12183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainVirtulCamera: {fileID: 1769667810}
   TalkCamera: {fileID: 1630718239}
+  TalkCameraParent: {fileID: 48236095}
   TargetGroup: {fileID: 946269198}
 --- !u!1 &1619040933 stripped
 GameObject:

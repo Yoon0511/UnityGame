@@ -11,9 +11,10 @@ public partial class NPC : Character
     protected string NPC_NAME;
 
     protected CharacterNameText CharacterNameText;
+    Quaternion OrgRotation;
     public override void Fsm_Init()
     {
-        
+
     }
 
     public override void Hit(DamageData _damagedata)
@@ -89,5 +90,27 @@ public partial class NPC : Character
         {
             CharacterNameText.GetSpecialMark().SetMark(_markName);
         }
+    }
+
+    public void StartTalk()
+    {
+        OrgRotation = transform.rotation;
+
+        //NPC가 플레이어를 바라보게 회전
+        Vector3 dir = Shared.GameMgr.PLAYER.transform.position - transform.position;
+        dir.y = 0f; //높이값 제외
+        if (dir != Vector3.zero)
+            transform.rotation = Quaternion.LookRotation(dir, Vector3.up);
+
+        int Animation = (int)NPC_ANIMATION_STATE.TALK;
+        PlayAnimation("Ani_State", Animation);
+    }
+
+    public void EndTalk()
+    {
+        transform.rotation = OrgRotation;
+
+        int Animation = (int)NPC_ANIMATION_STATE.IDLE;
+        PlayAnimation("Ani_State", Animation);
     }
 }
