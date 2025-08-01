@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.AI;
+using UnityEngine.UI;
 
 public class InvenSlot : ItemSlot
 {

@@ -6,16 +6,20 @@ using UnityEngine.EventSystems;
 
 public abstract class ItemSlot : PoolAble, IPointerEnterHandler, IPointerExitHandler
 {
-    protected ItemBase Item;
+    public Image GradeFrame; // 아이템 등급 프레임
     public Image Image;
+    protected ItemBase Item;
     ItemToolTip ItemToolTip;
     RectTransform RectTransform;
+
     public void Start()
     {
         RectTransform = GetComponent<RectTransform>();
     }
     public virtual void InputItem(ItemBase _Item)
     {
+        Refresh(_Item);
+
         if (_Item == null)
         {
             Item = null;
@@ -75,5 +79,25 @@ public abstract class ItemSlot : PoolAble, IPointerEnterHandler, IPointerExitHan
             ItemToolTip.ReleaseObject();
             ItemToolTip = null;
         }
+    }
+
+    public void Refresh(ItemBase _item)
+    {
+        if (_item == null)
+        {
+            Color color = new Color(1f, 1f, 1f, 0f); // 투명한 색상
+            GradeFrame.color = color; // 프레임 색상 투명화
+            return;
+        }
+        else
+        {
+            string Hexcolor = "#" + _item.GetStrGradeColor();
+            if (ColorUtility.TryParseHtmlString(Hexcolor, out Color color))
+            {
+                color.a = 1f; // 불투명하게 설정
+                GradeFrame.color = color;
+            }
+        }
+
     }
 }

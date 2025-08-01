@@ -347,3 +347,10 @@ public enum NPC_ANIMATION_STATE
     TALK,
     ENUM_END
 }
+
+public enum SORT_TYPE
+{
+    GRADE,
+    NAME,
+    TYPE,
+}

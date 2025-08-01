@@ -23,7 +23,8 @@ public class EquipmentSlot : ItemSlot
 
     public void UnEquipmentItem()
     {
-        DeleteItem();
+        //DeleteItem();
+        InputItem(null);
         quipmentItem = null;
     }
 

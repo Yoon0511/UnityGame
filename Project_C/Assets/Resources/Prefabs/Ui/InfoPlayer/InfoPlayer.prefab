@@ -3478,6 +3478,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8147734359042603870}
     m_Modifications:
+    - target: {fileID: 518920692425850262, guid: 360e98a9dcd5b6a4b9b7a92825ff0b4b, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1004069439028653806, guid: 360e98a9dcd5b6a4b9b7a92825ff0b4b, type: 3}
       propertyPath: equipmentWindow
       value: 
@@ -3704,6 +3708,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8147734359042603870}
     m_Modifications:
+    - target: {fileID: 518920692425850262, guid: 360e98a9dcd5b6a4b9b7a92825ff0b4b, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1004069439028653806, guid: 360e98a9dcd5b6a4b9b7a92825ff0b4b, type: 3}
       propertyPath: Image
       value: 
@@ -3945,6 +3953,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8147734359042603870}
     m_Modifications:
+    - target: {fileID: 518920692425850262, guid: 360e98a9dcd5b6a4b9b7a92825ff0b4b, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1004069439028653806, guid: 360e98a9dcd5b6a4b9b7a92825ff0b4b, type: 3}
       propertyPath: equipmentWindow
       value: 
@@ -4065,6 +4077,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8147734359042603870}
     m_Modifications:
+    - target: {fileID: 518920692425850262, guid: 360e98a9dcd5b6a4b9b7a92825ff0b4b, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1004069439028653806, guid: 360e98a9dcd5b6a4b9b7a92825ff0b4b, type: 3}
       propertyPath: equipmentWindow
       value: 

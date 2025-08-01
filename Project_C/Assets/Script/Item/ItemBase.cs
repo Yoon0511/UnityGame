@@ -48,7 +48,7 @@ public abstract class ItemBase : PoolAble
         return $"<color=#{GetStrGradeColor()}><b>{ItemName}</b></color>";
     }
 
-    protected string GetStrGradeColor()
+    public string GetStrGradeColor()
     {
         switch(Grade)
         {
