@@ -33,6 +33,7 @@ public partial class GameMgr : MonoBehaviourPun
     List<NPC> ListNPC = new List<NPC>();
     [SerializeField]
     List<Player> ListPlayer = new List<Player>();
+    List<QuestBase> ListQuest = new List<QuestBase>();
 
     public Transform SpwanPoint;
     public Transform RespwanPoint;
@@ -131,6 +132,11 @@ public partial class GameMgr : MonoBehaviourPun
             ListMonster.Add(monster);
         }
     }
+    public void AddQuest(QuestBase _quest)
+    {
+        ListQuest.Add(_quest);
+    }
+
     public void RemoveMonster(Monster _monster)
     {
         ListMonster.Remove(_monster);
@@ -152,6 +158,11 @@ public partial class GameMgr : MonoBehaviourPun
     public List<NPC> GetListNPC()
     {
         return ListNPC;
+    }
+
+    public List<QuestBase> GetListQuest()
+    {
+        return ListQuest;
     }
 
     public NPC GetNPCinList(int _id)

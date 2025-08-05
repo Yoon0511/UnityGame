@@ -77,4 +77,14 @@ public partial class Player : Character
             RemoveQuest(ListRemove[i]);
         }
     }
+
+    public CompletedQuestJson GetCompletedQuest()
+    {
+        CompletedQuestJson completedQuestJson = new CompletedQuestJson();
+        foreach (var quest in ListCompleteQuest)
+        {
+            completedQuestJson.ListCompletedQuestId.Add(quest.GetId());
+        }
+        return completedQuestJson;
+    }
 }

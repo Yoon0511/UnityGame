@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using SimpleJSON;
 using UnityEngine;
@@ -30,10 +31,32 @@ public partial class GameMgr
         {
             SaveData SaveData = LoadJsonFile<SaveData>(folderPath, "PlayerData");
             PLAYER.Load(SaveData);
+            LoadDataCompleteQuest(SaveData.CompletedQuestData);
         }
         else
         {
             Debug.Log("세이브파일이 없습니다.");
+        }
+    }
+
+    public void LoadDataCompleteQuest(CompletedQuestJson _data)
+    {
+        Debug.Log(_data.ListCompletedQuestId.Count);
+        for (int i = 0; i < _data.ListCompletedQuestId.Count; ++i)
+        {
+            for(int j = 0; j < Shared.GameMgr.GetListQuest().Count; ++j)
+            {
+                if (Shared.GameMgr.GetListQuest()[j].GetId() == _data.ListCompletedQuestId[i])
+                {
+                    Shared.GameMgr.GetListQuest()[j].SetIsComplete(true);
+                    Shared.GameMgr.GetListQuest()[j].StateChange(QUEST_STATE.END);
+                }
+            }
+        }
+
+        for (int j = 0; j < Shared.GameMgr.GetListQuest().Count; ++j)
+        {
+            Debug.Log($"퀘스트 아이디: {Shared.GameMgr.GetListQuest()[j].GetId()}, 완료 여부: {Shared.GameMgr.GetListQuest()[j].GetIsComplete()}");
         }
     }
 

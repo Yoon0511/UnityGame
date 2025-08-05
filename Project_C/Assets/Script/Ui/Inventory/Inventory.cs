@@ -208,12 +208,12 @@ public class Inventory : MonoBehaviour, IPointerClickHandler
                 {
                     // 옵션 Open - 퍼지는 방향
                     from = basePos;
-                    to = basePos + new Vector3(0, (i + 1) * -25f, 0);
+                    to = basePos + new Vector3(0, (i + 1) * -40f, 0);
                 }
                 else
                 {
                     // 옵션 Close - 다시 모이는 방향
-                    from = basePos + new Vector3(0, (i + 1) * -25f, 0);
+                    from = basePos + new Vector3(0, (i + 1) * -40f, 0);
                     to = basePos;
                 }
 

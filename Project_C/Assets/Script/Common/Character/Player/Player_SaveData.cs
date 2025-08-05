@@ -13,6 +13,7 @@ public partial class Player : Character
         SaveData.InventoryData = GetInventory().ToJsonData();
         SaveData.EquipmentItemData = EquipmentItemToJson();
         SaveData.CurrSkillData = CurrSkillToJson();
+        SaveData.CompletedQuestData = GetCompletedQuest();
 
         return SaveData;
     }

@@ -59,7 +59,9 @@ MonoBehaviour:
   IsAtkRange: 0
   AtkRangeCircle: {fileID: 1207430491662756871, guid: faa137a5271ba2047b64635696f01942, type: 3}
   Rock:
-  - {fileID: 7659556646641050925, guid: cc7d3969de5576a4c885316f14997da6, type: 3}
+  - {fileID: 439177466361698287, guid: 7fce8873888fd08408f78fbf9c7c1181, type: 3}
+  - {fileID: 181623273968209674, guid: 871c73b0d6fa94c44b5470717fd6db0e, type: 3}
+  - {fileID: 736474982571218730, guid: 441d561181f5c9c408e81d57ed6de3df, type: 3}
   ROCKCOUNT: 0
   ROCK_MIN_SPEED: 3
   ROCK_MAX_SPEED: 10

@@ -14,6 +14,7 @@ public class QuestNPC : NPC
         if(QuestId != 0)
         {
             Quest = Shared.DataMgr.GetQuest(QuestId);
+            Shared.GameMgr.AddQuest(Quest);
         }
         else
         {

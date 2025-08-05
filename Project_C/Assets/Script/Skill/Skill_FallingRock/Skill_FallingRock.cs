@@ -134,8 +134,8 @@ public class Skill_FallingRock : Skill
             {
                 //µ¹ »ý¼º
                 int random = Random.Range(0, Rock.Length);
-                //GameObject rockobj = Instantiate(Rock[random]);
-                GameObject rockobj = PhotonNetwork.Instantiate(RockPrefapPath, ListAtkRangeCircle[i].transform.position,Quaternion.identity,0);
+                GameObject rockobj = Instantiate(Rock[random]);
+                //GameObject rockobj = PhotonNetwork.Instantiate(RockPrefapPath, ListAtkRangeCircle[i].transform.position,Quaternion.identity,0);
                 float RockSpeed = Random.Range(ROCK_MIN_SPEED, ROCK_MAX_SPEED);
                 rockobj.GetComponent<Rock>().Init(ListAtkRangeCircle[i].transform.position, 
                     RockSpeed, Atk,Random.Range(4.0f,7.0f), Random.Range(MIN_STUN_DURATION, MAX_STUN_DURATION));

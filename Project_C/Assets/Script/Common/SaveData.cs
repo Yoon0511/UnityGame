@@ -12,6 +12,7 @@ public class SaveData
     public InventoryJson InventoryData;
     public EquipmentItemJson EquipmentItemData;
     public CurrSkillJson CurrSkillData;
+    public CompletedQuestJson CompletedQuestData;
 
     public SaveData()
     {
@@ -71,4 +72,10 @@ public class EquipmentItemJson
 public class CurrSkillJson
 {
     public List<int> ListCurrSkillId = new List<int>();
+}
+
+[Serializable]
+public class CompletedQuestJson
+{
+    public List<int> ListCompletedQuestId = new List<int>();
 }

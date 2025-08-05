@@ -9,12 +9,7 @@ public class Rock : MonoBehaviour
     float Atk;
     float StunDuration;
     Vector3 RotateDir;
-    PhotonView PV;
 
-    private void Awake()
-    {
-        PV = GetComponent<PhotonView>();
-    }
     public void Init(Vector3 _pos,float _speed, float _atk,float _height,float _stunduration)
     {
         transform.position = _pos;
@@ -40,14 +35,8 @@ public class Rock : MonoBehaviour
         {
             StunDuration = 1.0f;
             DeBuff Stun = new DeBuff_Stun(StunDuration, other.gameObject, "UI_Skill_Icon_Blackhole");
-            Debug.Log($"stun - {StunDuration}");
             other.gameObject.GetComponent<Character>().AddDeBuff(Stun);
         }
-        //Destroy(gameObject);
-
-        if(PV.IsMine)
-        {
-            PhotonNetwork.Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
 }
